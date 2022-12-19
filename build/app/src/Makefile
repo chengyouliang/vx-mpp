@@ -125,32 +125,32 @@ vx-mpp/fast:
 	cd /home/youliang/code/vx-mpp/build && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/build
 .PHONY : vx-mpp/fast
 
-buffer.o: buffer.c.o
+base/vx_log.o: base/vx_log.c.o
 
-.PHONY : buffer.o
+.PHONY : base/vx_log.o
 
 # target to build an object file
-buffer.c.o:
-	cd /home/youliang/code/vx-mpp/build && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/buffer.c.o
-.PHONY : buffer.c.o
+base/vx_log.c.o:
+	cd /home/youliang/code/vx-mpp/build && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/vx_log.c.o
+.PHONY : base/vx_log.c.o
 
-buffer.i: buffer.c.i
+base/vx_log.i: base/vx_log.c.i
 
-.PHONY : buffer.i
+.PHONY : base/vx_log.i
 
 # target to preprocess a source file
-buffer.c.i:
-	cd /home/youliang/code/vx-mpp/build && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/buffer.c.i
-.PHONY : buffer.c.i
+base/vx_log.c.i:
+	cd /home/youliang/code/vx-mpp/build && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/vx_log.c.i
+.PHONY : base/vx_log.c.i
 
-buffer.s: buffer.c.s
+base/vx_log.s: base/vx_log.c.s
 
-.PHONY : buffer.s
+.PHONY : base/vx_log.s
 
 # target to generate assembly for a file
-buffer.c.s:
-	cd /home/youliang/code/vx-mpp/build && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/buffer.c.s
-.PHONY : buffer.c.s
+base/vx_log.c.s:
+	cd /home/youliang/code/vx-mpp/build && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/vx_log.c.s
+.PHONY : base/vx_log.c.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... vx-mpp"
-	@echo "... buffer.o"
-	@echo "... buffer.i"
-	@echo "... buffer.s"
+	@echo "... base/vx_log.o"
+	@echo "... base/vx_log.i"
+	@echo "... base/vx_log.s"
 .PHONY : help
 
 

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/vx-mpp.dir/buffer.c.o"
+  "CMakeFiles/vx-mpp.dir/base/vx_log.c.o"
   "lib/libvx-mpp.a"
   "lib/libvx-mpp.pdb"
 )

@@ -1,9 +1,9 @@
 cmake_minimum_required (VERSION 3.0.0)
 
 PROJECT(vxmpp_test)
+include_directories(../include)
 
 ADD_EXECUTABLE(vxmpp_test main.c)
-
 
 INCLUDE_DIRECTORIES("${PROJECT_SOURCE_DIR}/include") #要到haha目录，否则找不到
 

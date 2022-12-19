@@ -4,12 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/youliang/code/vx-mpp/app/src/buffer.c" "/home/youliang/code/vx-mpp/build/app/src/CMakeFiles/vx-mpp.dir/buffer.c.o"
+  "/home/youliang/code/vx-mpp/app/src/base/vx_log.c" "/home/youliang/code/vx-mpp/build/app/src/CMakeFiles/vx-mpp.dir/base/vx_log.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "../app/src/../include"
   )
 
 # Targets to which this target links.

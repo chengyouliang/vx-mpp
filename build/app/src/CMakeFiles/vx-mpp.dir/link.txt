@@ -1,2 +1,2 @@
-/usr/bin/ar qc lib/libvx-mpp.a  CMakeFiles/vx-mpp.dir/buffer.c.o
+/usr/bin/ar qc lib/libvx-mpp.a  CMakeFiles/vx-mpp.dir/base/vx_log.c.o
 /usr/bin/ranlib lib/libvx-mpp.a

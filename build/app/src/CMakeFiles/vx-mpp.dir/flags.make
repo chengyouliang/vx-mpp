@@ -6,5 +6,5 @@ C_FLAGS =
 
 C_DEFINES = 
 
-C_INCLUDES = 
+C_INCLUDES = -I/home/youliang/code/vx-mpp/app/src/../include 
 

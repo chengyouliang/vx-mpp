@@ -6,7 +6,19 @@
 
 #IncludeRegexTransform: 
 
+../app/include/vx_log.h
+stdio.h
+-
+stdlib.h
+-
+vx_type.h
+../app/include/vx_type.h
+
+../app/include/vx_type.h
+
 /home/youliang/code/vx-mpp/app/test/main.c
 stdio.h
 -
+vx_log.h
+/home/youliang/code/vx-mpp/app/test/vx_log.h
 

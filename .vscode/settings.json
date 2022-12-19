@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "vx_log,c": "c",
+        "vx_log.h": "c",
+        "stdio.h": "c"
+    }
+}

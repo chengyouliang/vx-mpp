@@ -57,27 +57,27 @@ include app/src/CMakeFiles/vx-mpp.dir/progress.make
 # Include the compile flags for this target's objects.
 include app/src/CMakeFiles/vx-mpp.dir/flags.make
 
-app/src/CMakeFiles/vx-mpp.dir/buffer.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/buffer.c.o: ../app/src/buffer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object app/src/CMakeFiles/vx-mpp.dir/buffer.c.o"
-	cd /home/youliang/code/vx-mpp/build/app/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/buffer.c.o   -c /home/youliang/code/vx-mpp/app/src/buffer.c
+app/src/CMakeFiles/vx-mpp.dir/base/vx_log.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/base/vx_log.c.o: ../app/src/base/vx_log.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object app/src/CMakeFiles/vx-mpp.dir/base/vx_log.c.o"
+	cd /home/youliang/code/vx-mpp/build/app/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/base/vx_log.c.o   -c /home/youliang/code/vx-mpp/app/src/base/vx_log.c
 
-app/src/CMakeFiles/vx-mpp.dir/buffer.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/buffer.c.i"
-	cd /home/youliang/code/vx-mpp/build/app/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/buffer.c > CMakeFiles/vx-mpp.dir/buffer.c.i
+app/src/CMakeFiles/vx-mpp.dir/base/vx_log.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/base/vx_log.c.i"
+	cd /home/youliang/code/vx-mpp/build/app/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/base/vx_log.c > CMakeFiles/vx-mpp.dir/base/vx_log.c.i
 
-app/src/CMakeFiles/vx-mpp.dir/buffer.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/buffer.c.s"
-	cd /home/youliang/code/vx-mpp/build/app/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/buffer.c -o CMakeFiles/vx-mpp.dir/buffer.c.s
+app/src/CMakeFiles/vx-mpp.dir/base/vx_log.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/base/vx_log.c.s"
+	cd /home/youliang/code/vx-mpp/build/app/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/base/vx_log.c -o CMakeFiles/vx-mpp.dir/base/vx_log.c.s
 
 # Object files for target vx-mpp
 vx__mpp_OBJECTS = \
-"CMakeFiles/vx-mpp.dir/buffer.c.o"
+"CMakeFiles/vx-mpp.dir/base/vx_log.c.o"
 
 # External object files for target vx-mpp
 vx__mpp_EXTERNAL_OBJECTS =
 
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/buffer.c.o
+app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/base/vx_log.c.o
 app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/build.make
 app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/youliang/code/vx-mpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library lib/libvx-mpp.a"
