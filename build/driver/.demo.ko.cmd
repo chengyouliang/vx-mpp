@@ -1,0 +1,1 @@
+cmd_/home/youliang/code/vx-mpp/build/driver/demo.ko := aarch64-none-linux-gnu-ld -r  -EL  -maarch64elf -z noexecstack   --build-id  -T ./scripts/module-common.lds -T ./arch/arm64/kernel/module.lds -o /home/youliang/code/vx-mpp/build/driver/demo.ko /home/youliang/code/vx-mpp/build/driver/demo.o /home/youliang/code/vx-mpp/build/driver/demo.mod.o;  true

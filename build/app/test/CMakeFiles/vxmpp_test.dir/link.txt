@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/vxmpp_test.dir/main.c.o  -o bin/vxmpp_test  ../src/lib/libvx-mpp.a 
