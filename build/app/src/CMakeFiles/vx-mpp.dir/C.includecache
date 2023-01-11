@@ -6,3 +6,25 @@
 
 #IncludeRegexTransform: 
 
+../app/include/omx_il/OMX_Types.h
+
+../app/include/vx_log.h
+stdio.h
+-
+stdlib.h
+-
+omx_il/OMX_Types.h
+../app/include/omx_il/OMX_Types.h
+
+/home/youliang/code/vx-mpp/app/src/base/vx_log.c
+stdio.h
+-
+stdarg.h
+-
+string.h
+-
+syslog.h
+-
+vx_log.h
+/home/youliang/code/vx-mpp/app/src/base/vx_log.h
+

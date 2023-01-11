@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
+../app/include/omx_il/OMX_Types.h
+
 ../app/include/vx_log.h
 stdio.h
 -
 stdlib.h
 -
-vx_type.h
-../app/include/vx_type.h
-
-../app/include/vx_type.h
+omx_il/OMX_Types.h
+../app/include/omx_il/OMX_Types.h
 
 /home/youliang/code/vx-mpp/app/test/main.c
 stdio.h

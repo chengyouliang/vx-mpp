@@ -6,5 +6,5 @@ C_FLAGS =
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/youliang/code/vx-mpp/app/src/../include 
+C_INCLUDES = -I/home/youliang/code/vx-mpp/app/src/../include -I/home/youliang/code/vx-mpp/app/src/../include/omx_il 
 
