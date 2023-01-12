@@ -1,1 +1,0 @@
-cmd_/home/youliang/code/vx-mpp/build/driver/demo.o := aarch64-none-linux-gnu-ld  -EL  -maarch64elf -z noexecstack     -r -o /home/youliang/code/vx-mpp/build/driver/demo.o /home/youliang/code/vx-mpp/build/driver/demo_main.o

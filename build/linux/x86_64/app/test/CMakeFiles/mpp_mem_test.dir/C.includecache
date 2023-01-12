@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../../app/include/mpp_type.h
+OMX_Types.h
+../../../app/include/OMX_Types.h
+
+../../../app/include/omx_il/OMX_Types.h
+
+../../../app/src/osal/inc/mpp_env.h
+mpp_type.h
+../../../app/src/osal/inc/mpp_type.h
+
+../../../app/src/osal/inc/mpp_err.h
+
+../../../app/src/osal/inc/mpp_log.h
+stdio.h
+-
+stdlib.h
+-
+mpp_type.h
+../../../app/src/osal/inc/mpp_type.h
+
+../../../app/src/osal/inc/mpp_mem.h
+stdlib.h
+-
+mpp_type.h
+../../../app/src/osal/inc/mpp_type.h
+mpp_err.h
+../../../app/src/osal/inc/mpp_err.h
+
+/home/youliang/code/media/vx-mpp/app/test/mpp_mem_test.c
+mpp_log.h
+/home/youliang/code/media/vx-mpp/app/test/mpp_log.h
+mpp_env.h
+/home/youliang/code/media/vx-mpp/app/test/mpp_env.h
+mpp_mem.h
+/home/youliang/code/media/vx-mpp/app/test/mpp_mem.h
+

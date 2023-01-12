@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 3.0.0)
-project(driver_demo)
+project(mpp_core)
 
 # 由于我的系统更新过内核，所以这里需要设置内核源代码路径
 set(KDIR /home/youliang/code/sdk/kernel)
@@ -14,8 +14,11 @@ function(compile_module obj)
   		    )
 
   # 设置依赖，相当于Makefile中的 $(MODULE_NAME)-objs += demo_main.o
-  set(depend_objlist "demo_main.o")
-  
+  set(depend_objlist   "mpp_core.o  \
+   						mpp_dma_alloc.o \
+   						mpp_dmabuf.o \
+						")
+  #message(STATUS "depend_objlist   : ${depend_objlist}")
   # 设置编译命令
   add_custom_command(TARGET ${TARGET_NAME}
 		     POST_BUILD
