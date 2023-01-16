@@ -8,17 +8,16 @@ set(KDIR /home/youliang/code/sdk/kernel)
 function(compile_module obj)
   set(TARGET_NAME ${obj})
   # 添加目标，obj即为模块名称。由于我在build目录下构建，所以这里选择将.c和.h文件拷贝到该目录下
-  add_custom_target(${TARGET_NAME} ALL cp -f ${CMAKE_CURRENT_SOURCE_DIR}/*.c ${CMAKE_CURRENT_BINARY_DIR}/
-			COMMAND cp -f ${CMAKE_CURRENT_SOURCE_DIR}/*.h ${CMAKE_CURRENT_BINARY_DIR}/
+  add_custom_target(${TARGET_NAME} ALL cp  -rf ${CMAKE_CURRENT_SOURCE_DIR}/* ${CMAKE_CURRENT_BINARY_DIR}/
   			COMMAND echo "compiling module ${obj}.ko..."
   		    )
 
   # 设置依赖，相当于Makefile中的 $(MODULE_NAME)-objs += demo_main.o
-  set(depend_objlist   "mpp_core.o  \
-   						mpp_dma_alloc.o \
-   						mpp_dmabuf.o \
+  set(depend_objlist   "dmabuf/mpp_dma_alloc.o \
+   						dmabuf/mpp_dmabuf.o \
+						mpp_core.o  \
 						")
-  #message(STATUS "depend_objlist   : ${depend_objlist}")
+  message(STATUS "depend_objlist   : ${depend_objlist}")
   # 设置编译命令
   add_custom_command(TARGET ${TARGET_NAME}
 		     POST_BUILD

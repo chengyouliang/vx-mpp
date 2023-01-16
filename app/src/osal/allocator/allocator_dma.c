@@ -15,75 +15,166 @@
  */
 
 #include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <sys/ioctl.h>
 #include <sys/mman.h>
 
 #include "mpp_mem.h"
 #include "mpp_log.h"
 #include "os_mem.h"
-
+#include "mpp_env.h"
 #include "allocator_dma.h"
 
+static OMX_U32 dma_debug = 0;
+
+#define DMA_FUNCTION                (0x00000001)
+#define DMA_DEVICE                  (0x00000002)
+#define DMA_CLIENT                  (0x00000004)
+#define DMA_IOCTL                   (0x00000008)
+
+#define dma_dbg(flag, fmt, ...)     _mpp_dbg_f(dma_debug, flag, fmt, ## __VA_ARGS__)
+#define dma_dbg_func(fmt, ...)      dma_dbg(DMA_FUNCTION, fmt, ## __VA_ARGS__)
+
+
 typedef struct {
-    size_t alignment;
-} allocator_ctx;
+    OMX_U32  alignment;
+    OMX_S32  dma_device;
+    OMX_U32  flags;
+} allocator_ctx_dma;
 
-static MPP_RET allocator_ext_dma_open(void **ctx, MppAllocatorCfg *cfg)
+static const char *dev_dma = "/dev/mpp_dma";
+
+
+static int dma_ioctl(int fd, int req, void *arg)
 {
-    MPP_RET ret = MPP_OK;
-    allocator_ctx *p = NULL;
+    int ret;
 
-    if (NULL == ctx) {
-        mpp_err_f("do not accept NULL input\n");
-        return MPP_ERR_NULL_PTR;
-    }
+    do {
+        ret = ioctl(fd, req, arg);
+    } while (ret == -1 && (errno == EINTR || errno == EAGAIN));
 
-    p = mpp_malloc(allocator_ctx, 1);
-    if (NULL == p) {
-        mpp_err_f("failed to allocate context\n");
-        ret = MPP_ERR_MALLOC;
-    } else {
-        p->alignment = cfg->alignment;
-    }
+    dma_dbg(DMA_IOCTL, "dma_ioctl %x with code %d: %s\n", req,
+            ret, strerror(errno));
 
-    *ctx = p;
     return ret;
 }
 
-static MPP_RET allocator_ext_dma_alloc(void *ctx, MppBufferInfo *info)
+static MPP_RET allocator_dma_open(void **ctx, MppAllocatorCfg *cfg)
 {
+    MPP_RET ret = MPP_OK;
+    OMX_S32 fd;
+    allocator_ctx_dma *p;
+
+    dma_dbg_func("enter\n");
+
+    if (NULL == ctx) {
+        mpp_err_f("does not accept NULL input\n");
+        return MPP_ERR_NULL_PTR;
+    }
+
+    *ctx = NULL;
+
+    mpp_env_get_u32("dma_debug", &dma_debug, 0);
+
+    fd = open(dev_dma, O_RDWR | O_CLOEXEC);
+    if (fd < 0) {
+        mpp_err_f("open %s failed!\n", dev_dma);
+        return MPP_ERR_UNKNOW;
+    }
+
+    dma_dbg(DMA_DEVICE, "open drm dev fd %d\n", fd);
+
+    p = mpp_malloc(allocator_ctx_dma, 1);
+    if (NULL == p) {
+        close(fd);
+        mpp_err_f("failed to allocate context\n");
+        return MPP_ERR_MALLOC;
+    } else {
+        /*
+         * default drm use cma, do nothing here
+         */
+        p->alignment    = cfg->alignment;
+        p->flags        = cfg->flags;
+        p->dma_device   = fd;
+        *ctx = p;
+    }
+
+    dma_dbg_func("leave dev %d\n", fd);
+
+    return MPP_OK;
+}
+
+static MPP_RET allocator_dma_alloc(void *ctx, MppBufferInfo *info)
+{
+    allocator_ctx_dma *p;
+    int ret;
     if (!ctx || !info) {
         mpp_err_f("found NULL context input\n");
         return MPP_ERR_VALUE;
     }
+    p = (allocator_ctx_dma *)ctx;
 
-    return MPP_ERR_PERM;
+    dma_dbg_func("dev %d alloc alignment %d size %d\n", p->dma_device,
+                 p->alignment, info->size);
+    struct mpp_dma_info mppdma_info;
+    mppdma_info.size = (info->size + p->alignment - 1) & (~( p->alignment - 1));
+    ret = dma_ioctl(p->dma_device,MPP_DMA_IOCTL_ALLOC,(void *)&mppdma_info);
+    if (ret) {
+        mpp_err_f("drm_alloc failed ret %d\n", ret);
+        return ret;
+    }
+    return ret;
 }
 
-static MPP_RET allocator_ext_dma_free(void *ctx, MppBufferInfo *info)
+static MPP_RET allocator_dma_free(void *ctx, MppBufferInfo *info)
 {
+    allocator_ctx_dma *p;
+    int ret;
     if (!ctx || !info) {
         mpp_err_f("found NULL context input\n");
         return MPP_ERR_VALUE;
     }
+     p = (allocator_ctx_dma *)ctx;
 
-    return MPP_ERR_PERM;
-}
-
-static MPP_RET allocator_ext_dma_import(void *ctx, MppBufferInfo *info)
-{
-    allocator_ctx *p = (allocator_ctx *)ctx;
-    mpp_assert(p);
-    mpp_assert(info->size);
-
-    if (info->ptr) {
-        mpp_err_f("The ext_dma is not used for userptr\n");
-        return MPP_ERR_VALUE;
+    dma_dbg_func("dev %d alloc alignment %d size %d\n", p->dma_device,
+                 p->alignment, info->size);
+    struct mpp_dma_info mppdma_info;
+    mppdma_info.hander = info->hnd;
+    ret = dma_ioctl(p->dma_device,DRM_DMA_IOCTL_FREE,(void *)&mppdma_info);
+    if (ret) {
+        mpp_err_f("drm_alloc failed ret %d\n", ret);
+        return ret;
     }
 
-    return ((info->fd < 0) ? MPP_ERR_VALUE : MPP_OK);
+    return ret;
 }
 
-static MPP_RET allocator_ext_dma_mmap(void *ctx, MppBufferInfo *info)
+static MPP_RET allocator_dma_import(void *ctx, MppBufferInfo *info)
+{
+    allocator_ctx_dma *p;
+    int ret;
+    if (!ctx || !info) {
+        mpp_err_f("found NULL context input\n");
+        return MPP_ERR_VALUE;
+    }
+    p = (allocator_ctx_dma *)ctx;
+
+    dma_dbg_func("dev %d alloc alignment %d size %d\n", p->dma_device,
+                 p->alignment, info->size);
+    struct mpp_dma_info mppdma_info;
+    mppdma_info.hander = info->hnd;
+    ret = dma_ioctl(p->dma_device,DRM_DMA_IOCTL_IMPORT,(void *)&mppdma_info);
+    if (ret) {
+        mpp_err_f("drm_alloc failed ret %d\n", ret);
+        return ret;
+    }
+    return ret;
+}
+
+static MPP_RET allocator_dma_mmap(void *ctx, MppBufferInfo *info)
 {
     void *ptr = NULL;
     unsigned long offset = 0L;
@@ -108,39 +199,22 @@ static MPP_RET allocator_ext_dma_mmap(void *ctx, MppBufferInfo *info)
     return MPP_OK;
 }
 
-static MPP_RET allocator_ext_dma_release(void *ctx, MppBufferInfo *info)
-{
-    mpp_assert(ctx);
-    mpp_assert(info->size);
-
-    if (info->ptr)
-        munmap(info->ptr, info->size);
-
-    info->ptr   = NULL;
-    info->hnd   = NULL;
-    info->fd    = -1;
-    info->size  = 0;
-
-    return MPP_OK;
-}
-
-static MPP_RET allocator_ext_dma_close(void *ctx)
+static MPP_RET allocator_dma_close(void *ctx)
 {
     if (ctx) {
         mpp_free(ctx);
         return MPP_OK;
     }
-
     mpp_err_f("found NULL context input\n");
     return MPP_ERR_VALUE;
 }
 
 os_allocator allocator_dma = {
-    .open = allocator_ext_dma_open,
-    .close = allocator_ext_dma_close,
-    .alloc = allocator_ext_dma_alloc,
-    .free = allocator_ext_dma_free,
-    .import = allocator_ext_dma_import,
-    .release = allocator_ext_dma_release,
-    .mmap = allocator_ext_dma_mmap,
+    .open = allocator_dma_open,
+    .close = allocator_dma_close,
+    .alloc = allocator_dma_alloc,
+    .free = allocator_dma_free,
+    .import = allocator_dma_import,
+    .release = allocator_dma_free,
+    .mmap = allocator_dma_mmap,
 };

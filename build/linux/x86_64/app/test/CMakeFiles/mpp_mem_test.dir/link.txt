@@ -1,1 +1,0 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/mpp_mem_test.dir/mpp_mem_test.c.o  -o mpp_mem_test  ../src/lib/libvx-mpp.a -lpthread 

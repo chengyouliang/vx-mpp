@@ -2,6 +2,9 @@
     "files.associations": {
         "vx_log,c": "c",
         "vx_log.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "mpp_dma_alloc.h": "c",
+        "os_allocator.h": "c",
+        "allocator_dma.h": "c"
     }
 }

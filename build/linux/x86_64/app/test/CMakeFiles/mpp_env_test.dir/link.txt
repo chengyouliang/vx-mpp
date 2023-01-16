@@ -1,1 +1,0 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/mpp_env_test.dir/mpp_env_test.c.o  -o mpp_env_test  ../src/lib/libvx-mpp.a -lpthread 

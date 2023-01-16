@@ -1,1 +1,0 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/mpp_trace_test.dir/mpp_trace_test.c.o  -o mpp_trace_test  ../src/lib/libvx-mpp.a -lpthread 
