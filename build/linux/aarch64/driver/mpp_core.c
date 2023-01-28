@@ -23,8 +23,11 @@ static int mpp_core_init(void)
 {
     dev_t dev = 0;
 	int err;
+	printk("%s %d\n",__FUNCTION__,__LINE__);
     module_class = class_create(THIS_MODULE, "mpp_core_class");
+	printk("%s %d\n",__FUNCTION__,__LINE__);
 	if (codec_major == 0) {
+		printk("%s %d\n",__FUNCTION__,__LINE__);
 		err = alloc_chrdev_region(&dev, 0, codec_nr_devs, "vanxum_codec");
 		codec_major = MAJOR(dev);
 
@@ -34,6 +37,7 @@ static int mpp_core_init(void)
 			return err;
 		}
 	}
+	printk("%s %d\n",__FUNCTION__,__LINE__);
     mpp_setup_dma_cdev(&dma_cdev,module_class,codec_major,1,"mpp_dma");
 
     return 0;
