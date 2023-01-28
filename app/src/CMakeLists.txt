@@ -2,10 +2,11 @@ cmake_minimum_required (VERSION 3.0.0)
 
 SET(TARGET "vx-mpp")
 
+
+# include
 include_directories(../include)
 include_directories(./include/rk)
 include_directories(../include/omx_il)
-
 
 include_directories(./base)
 include_directories(./base/inc)
@@ -14,7 +15,7 @@ include_directories(./osal)
 include_directories(./osal/allocator)
 include_directories(./osal/inc)
 
-
+# src 
 aux_source_directory(base DIR_SRCS)
 aux_source_directory(osal DIR_SRCS)
 aux_source_directory(osal/allocator DIR_SRCS)

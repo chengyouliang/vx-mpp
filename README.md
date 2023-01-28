@@ -11,6 +11,6 @@
 
 
 编译流程：
-#cd  build 
-#cmake ..
+#cd  build/linux/aarch64
+#./make-Makefiles.bash
 #make
