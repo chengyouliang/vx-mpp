@@ -42,6 +42,7 @@ static int mpp_core_init(void)
 static void mpp_core_exit(void)
 {
       mpp_del_dma_cdev(&dma_cdev,module_class,codec_major,1);
+	  class_destroy(module_class);
 }
 
 module_init(mpp_core_init);

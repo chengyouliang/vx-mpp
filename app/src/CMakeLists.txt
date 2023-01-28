@@ -6,6 +6,10 @@ include_directories(../include)
 include_directories(./include/rk)
 include_directories(../include/omx_il)
 
+
+include_directories(./base)
+include_directories(./base/inc)
+
 include_directories(./osal)
 include_directories(./osal/allocator)
 include_directories(./osal/inc)

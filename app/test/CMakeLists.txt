@@ -47,3 +47,6 @@ add_mpp_osal_test(mpp_trace)
 add_mpp_osal_test(mpp_runtime)
 
 
+add_mpp_osal_test(mpp_buffer)
+
+

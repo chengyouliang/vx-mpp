@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/vx-mpp.dir/base/vx_log.c.o"
+  "CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o"
+  "CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o"
   "CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.o"
   "CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o"
   "CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.o"

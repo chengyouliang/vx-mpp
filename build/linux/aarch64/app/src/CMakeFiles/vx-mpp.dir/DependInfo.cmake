@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/youliang/code/media/vx-mpp/app/src/base/vx_log.c" "/home/youliang/code/media/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/base/vx_log.c.o"
   "/home/youliang/code/media/vx-mpp/app/src/osal/allocator/allocator_dma.c" "/home/youliang/code/media/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.o"
   "/home/youliang/code/media/vx-mpp/app/src/osal/allocator/allocator_drm.c" "/home/youliang/code/media/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o"
   "/home/youliang/code/media/vx-mpp/app/src/osal/allocator/allocator_ion.c" "/home/youliang/code/media/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.o"
@@ -35,11 +34,15 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../../../app/src/../include"
   "../../../app/src/./include/rk"
   "../../../app/src/../include/omx_il"
+  "../../../app/src/./base"
+  "../../../app/src/./base/inc"
   "../../../app/src/./osal"
   "../../../app/src/./osal/allocator"
   "../../../app/src/./osal/inc"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/youliang/code/media/vx-mpp/app/src/base/mpp_buffer.cpp" "/home/youliang/code/media/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o"
+  "/home/youliang/code/media/vx-mpp/app/src/base/mpp_buffer_impl.cpp" "/home/youliang/code/media/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o"
   "/home/youliang/code/media/vx-mpp/app/src/osal/linux/os_log.cpp" "/home/youliang/code/media/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.cpp.o"
   "/home/youliang/code/media/vx-mpp/app/src/osal/mpp_allocator.cpp" "/home/youliang/code/media/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o"
   "/home/youliang/code/media/vx-mpp/app/src/osal/mpp_common.cpp" "/home/youliang/code/media/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/osal/mpp_common.cpp.o"
@@ -66,6 +69,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../../../app/src/../include"
   "../../../app/src/./include/rk"
   "../../../app/src/../include/omx_il"
+  "../../../app/src/./base"
+  "../../../app/src/./base/inc"
   "../../../app/src/./osal"
   "../../../app/src/./osal/allocator"
   "../../../app/src/./osal/inc"

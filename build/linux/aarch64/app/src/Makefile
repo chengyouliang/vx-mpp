@@ -125,32 +125,59 @@ vx-mpp/fast:
 	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/build
 .PHONY : vx-mpp/fast
 
-base/vx_log.o: base/vx_log.c.o
+base/mpp_buffer.o: base/mpp_buffer.cpp.o
 
-.PHONY : base/vx_log.o
+.PHONY : base/mpp_buffer.o
 
 # target to build an object file
-base/vx_log.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/vx_log.c.o
-.PHONY : base/vx_log.c.o
+base/mpp_buffer.cpp.o:
+	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o
+.PHONY : base/mpp_buffer.cpp.o
 
-base/vx_log.i: base/vx_log.c.i
+base/mpp_buffer.i: base/mpp_buffer.cpp.i
 
-.PHONY : base/vx_log.i
+.PHONY : base/mpp_buffer.i
 
 # target to preprocess a source file
-base/vx_log.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/vx_log.c.i
-.PHONY : base/vx_log.c.i
+base/mpp_buffer.cpp.i:
+	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.i
+.PHONY : base/mpp_buffer.cpp.i
 
-base/vx_log.s: base/vx_log.c.s
+base/mpp_buffer.s: base/mpp_buffer.cpp.s
 
-.PHONY : base/vx_log.s
+.PHONY : base/mpp_buffer.s
 
 # target to generate assembly for a file
-base/vx_log.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/vx_log.c.s
-.PHONY : base/vx_log.c.s
+base/mpp_buffer.cpp.s:
+	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.s
+.PHONY : base/mpp_buffer.cpp.s
+
+base/mpp_buffer_impl.o: base/mpp_buffer_impl.cpp.o
+
+.PHONY : base/mpp_buffer_impl.o
+
+# target to build an object file
+base/mpp_buffer_impl.cpp.o:
+	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o
+.PHONY : base/mpp_buffer_impl.cpp.o
+
+base/mpp_buffer_impl.i: base/mpp_buffer_impl.cpp.i
+
+.PHONY : base/mpp_buffer_impl.i
+
+# target to preprocess a source file
+base/mpp_buffer_impl.cpp.i:
+	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.i
+.PHONY : base/mpp_buffer_impl.cpp.i
+
+base/mpp_buffer_impl.s: base/mpp_buffer_impl.cpp.s
+
+.PHONY : base/mpp_buffer_impl.s
+
+# target to generate assembly for a file
+base/mpp_buffer_impl.cpp.s:
+	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.s
+.PHONY : base/mpp_buffer_impl.cpp.s
 
 osal/allocator/allocator_dma.o: osal/allocator/allocator_dma.c.o
 
@@ -890,9 +917,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... vx-mpp"
-	@echo "... base/vx_log.o"
-	@echo "... base/vx_log.i"
-	@echo "... base/vx_log.s"
+	@echo "... base/mpp_buffer.o"
+	@echo "... base/mpp_buffer.i"
+	@echo "... base/mpp_buffer.s"
+	@echo "... base/mpp_buffer_impl.o"
+	@echo "... base/mpp_buffer_impl.i"
+	@echo "... base/mpp_buffer_impl.s"
 	@echo "... osal/allocator/allocator_dma.o"
 	@echo "... osal/allocator/allocator_dma.i"
 	@echo "... osal/allocator/allocator_dma.s"

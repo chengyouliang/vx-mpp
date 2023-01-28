@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
+../../../app/include/mpp_buffer.h
+mpp_type.h
+../../../app/include/mpp_type.h
+mpp_err.h
+../../../app/include/mpp_err.h
+
 ../../../app/include/mpp_type.h
 OMX_Types.h
 ../../../app/include/OMX_Types.h
 
 ../../../app/include/omx_il/OMX_Types.h
-
-../../../app/src/osal/inc/mpp_buffer.h
-mpp_type.h
-../../../app/src/osal/inc/mpp_type.h
-mpp_err.h
-../../../app/src/osal/inc/mpp_err.h
 
 ../../../app/src/osal/inc/mpp_err.h
 

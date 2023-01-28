@@ -640,7 +640,6 @@ const struct file_operations mpp_dma_fops = {
 int mpp_setup_dma_cdev(struct cdev *pcdev, struct class *module_class,int major,  int minor, const char *device_name)
 {
 	int err, devno;
-	printk("%s %d\n",__FUNCTION__,__LINE__);
 	gdma_buf_info = kzalloc(sizeof(mpp_dmabuf_info), GFP_KERNEL);
 	if (!gdma_buf_info)
 	{
@@ -651,13 +650,11 @@ int mpp_setup_dma_cdev(struct cdev *pcdev, struct class *module_class,int major,
 	devno =  MKDEV(major, minor);
 	cdev_init(pcdev, &mpp_dma_fops);
 	pcdev->owner = THIS_MODULE;
-	printk("%s %d\n",__FUNCTION__,__LINE__);
 	err = cdev_add(pcdev, devno, 1);
 	if (err) {
 		printk("Error %d adding allegro device number %d", err, minor);
 		return err;
 	}
-	printk("%s %d\n",__FUNCTION__,__LINE__);
 	if (device_name != NULL) {
 		gdma_buf_info->dma_device = device_create(module_class, NULL, devno, NULL,device_name);
 		if (IS_ERR(gdma_buf_info->dma_device)) {
@@ -666,7 +663,6 @@ int mpp_setup_dma_cdev(struct cdev *pcdev, struct class *module_class,int major,
 			return PTR_ERR(gdma_buf_info->dma_device);
 		}
 	}
-	printk("%s %d\n",__FUNCTION__,__LINE__);
 	return 0;
 }
 
