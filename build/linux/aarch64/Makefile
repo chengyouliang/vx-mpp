@@ -137,6 +137,19 @@ vx-mpp/fast:
 .PHONY : vx-mpp/fast
 
 #=============================================================================
+# Target rules for targets named mpp_dmabuffer_driver_test
+
+# Build rule for target.
+mpp_dmabuffer_driver_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mpp_dmabuffer_driver_test
+.PHONY : mpp_dmabuffer_driver_test
+
+# fast build rule for target.
+mpp_dmabuffer_driver_test/fast:
+	$(MAKE) -f app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build.make app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build
+.PHONY : mpp_dmabuffer_driver_test/fast
+
+#=============================================================================
 # Target rules for targets named mpp_buffer_test
 
 # Build rule for target.
@@ -237,6 +250,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... codec"
 	@echo "... vx-mpp"
+	@echo "... mpp_dmabuffer_driver_test"
 	@echo "... mpp_buffer_test"
 	@echo "... mpp_runtime_test"
 	@echo "... mpp_mem_pool_test"

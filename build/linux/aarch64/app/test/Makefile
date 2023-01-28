@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/rule:
+	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/rule
+.PHONY : app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/rule
+
+# Convenience name for target.
+mpp_dmabuffer_driver_test: app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/rule
+
+.PHONY : mpp_dmabuffer_driver_test
+
+# fast build rule for target.
+mpp_dmabuffer_driver_test/fast:
+	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build.make app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build
+.PHONY : mpp_dmabuffer_driver_test/fast
+
+# Convenience name for target.
 app/test/CMakeFiles/mpp_buffer_test.dir/rule:
 	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_buffer_test.dir/rule
 .PHONY : app/test/CMakeFiles/mpp_buffer_test.dir/rule
@@ -241,6 +256,33 @@ mpp_buffer_test.s: mpp_buffer_test.c.s
 mpp_buffer_test.c.s:
 	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_buffer_test.dir/build.make app/test/CMakeFiles/mpp_buffer_test.dir/mpp_buffer_test.c.s
 .PHONY : mpp_buffer_test.c.s
+
+mpp_dmabuffer_driver_test.o: mpp_dmabuffer_driver_test.c.o
+
+.PHONY : mpp_dmabuffer_driver_test.o
+
+# target to build an object file
+mpp_dmabuffer_driver_test.c.o:
+	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build.make app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.o
+.PHONY : mpp_dmabuffer_driver_test.c.o
+
+mpp_dmabuffer_driver_test.i: mpp_dmabuffer_driver_test.c.i
+
+.PHONY : mpp_dmabuffer_driver_test.i
+
+# target to preprocess a source file
+mpp_dmabuffer_driver_test.c.i:
+	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build.make app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.i
+.PHONY : mpp_dmabuffer_driver_test.c.i
+
+mpp_dmabuffer_driver_test.s: mpp_dmabuffer_driver_test.c.s
+
+.PHONY : mpp_dmabuffer_driver_test.s
+
+# target to generate assembly for a file
+mpp_dmabuffer_driver_test.c.s:
+	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build.make app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.s
+.PHONY : mpp_dmabuffer_driver_test.c.s
 
 mpp_env_test.o: mpp_env_test.c.o
 
@@ -411,6 +453,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... mpp_dmabuffer_driver_test"
 	@echo "... mpp_buffer_test"
 	@echo "... mpp_runtime_test"
 	@echo "... mpp_mem_pool_test"
@@ -422,6 +465,9 @@ help:
 	@echo "... mpp_buffer_test.o"
 	@echo "... mpp_buffer_test.i"
 	@echo "... mpp_buffer_test.s"
+	@echo "... mpp_dmabuffer_driver_test.o"
+	@echo "... mpp_dmabuffer_driver_test.i"
+	@echo "... mpp_dmabuffer_driver_test.s"
 	@echo "... mpp_env_test.o"
 	@echo "... mpp_env_test.i"
 	@echo "... mpp_env_test.s"

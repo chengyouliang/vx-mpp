@@ -121,6 +121,7 @@ static MPP_RET allocator_dma_alloc(void *ctx, MppBufferInfo *info)
                  p->alignment, info->size);
     struct mpp_dma_info mppdma_info;
     mppdma_info.size = (info->size + p->alignment - 1) & (~( p->alignment - 1));
+    printf("%s %d 0x%.8X\n", __FUNCTION__,__LINE__,MPP_DMA_IOCTL_ALLOC);
     ret = dma_ioctl(p->dma_device,MPP_DMA_IOCTL_ALLOC,(void *)&mppdma_info);
     if (ret) {
         mpp_err_f("drm_alloc failed ret %d\n", ret);
@@ -168,7 +169,7 @@ static MPP_RET allocator_dma_import(void *ctx, MppBufferInfo *info)
     mppdma_info.hander = info->hnd;
     ret = dma_ioctl(p->dma_device,DRM_DMA_IOCTL_IMPORT,(void *)&mppdma_info);
     if (ret) {
-        mpp_err_f("drm_alloc failed ret %d\n", ret);
+        mpp_err_f("dma alloc failed ret %d\n", ret);
         return ret;
     }
     return ret;
@@ -210,10 +211,10 @@ static MPP_RET allocator_dma_close(void *ctx)
 }
 
 os_allocator allocator_dma = {
-    .open = allocator_dma_open,
+    .open  =  allocator_dma_open,
     .close = allocator_dma_close,
-    .alloc = allocator_dma_alloc,
-    .free = allocator_dma_free,
+    .alloc  =  allocator_dma_alloc,
+    .free   =   allocator_dma_free,
     .import = allocator_dma_import,
     .release = allocator_dma_free,
     .mmap = allocator_dma_mmap,

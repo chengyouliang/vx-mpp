@@ -58,7 +58,7 @@ int main()
     memset(normal_buffer, 0, sizeof(normal_buffer));
 
     // create group with external type
-    ret = mpp_buffer_group_get_external(&group, MPP_BUFFER_TYPE_ION);
+    ret = mpp_buffer_group_get_external(&group, MPP_BUFFER_TYPE_DMA);
     if (MPP_OK != ret) {
         mpp_err("mpp_buffer_test mpp_buffer_group_get failed\n");
         goto MPP_BUFFER_failed;
@@ -66,7 +66,7 @@ int main()
 
     mpp_log("mpp_buffer_test commit mode with unused status start\n");
 
-    commit.type = MPP_BUFFER_TYPE_ION;
+    commit.type = MPP_BUFFER_TYPE_DMA;
     commit.size = size;
 
     // create misc ion buffer and commit to external group
@@ -123,13 +123,13 @@ int main()
 
     mpp_log("mpp_buffer_test commit mode with used status start\n");
 
-    ret = mpp_allocator_get(&allocator, &api, MPP_BUFFER_TYPE_ION);
+    ret = mpp_allocator_get(&allocator, &api, MPP_BUFFER_TYPE_DMA);
     if (MPP_OK != ret) {
         mpp_err("mpp_buffer_test mpp_allocator_get ion failed\n");
         goto MPP_BUFFER_failed;
     }
 
-    commit.type = MPP_BUFFER_TYPE_ION;
+    commit.type = MPP_BUFFER_TYPE_DMA;
     commit.size = size;
 
     for (i = 0; i < count; i++) {
@@ -203,7 +203,7 @@ int main()
 
     mpp_log("mpp_buffer_test normal mode start\n");
 
-    ret = mpp_buffer_group_get_internal(&group, MPP_BUFFER_TYPE_ION);
+    ret = mpp_buffer_group_get_internal(&group, MPP_BUFFER_TYPE_DMA);
     if (MPP_OK != ret) {
         mpp_err("mpp_buffer_test mpp_buffer_group_get failed\n");
         goto MPP_BUFFER_failed;

@@ -56,6 +56,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "driver/CMakeFiles/codec.dir/DependInfo.cmake"
   "app/src/CMakeFiles/vx-mpp.dir/DependInfo.cmake"
+  "app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/DependInfo.cmake"
   "app/test/CMakeFiles/mpp_buffer_test.dir/DependInfo.cmake"
   "app/test/CMakeFiles/mpp_runtime_test.dir/DependInfo.cmake"
   "app/test/CMakeFiles/mpp_mem_pool_test.dir/DependInfo.cmake"

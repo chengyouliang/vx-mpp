@@ -1,0 +1,1 @@
+/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -O3 -DNDEBUG  -rdynamic CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.o  -o mpp_dmabuffer_driver_test  ../src/lib/libvx-mpp.a -lpthread 

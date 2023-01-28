@@ -46,7 +46,12 @@ add_mpp_osal_test(mpp_trace)
 # software runtime feature detection unit test
 add_mpp_osal_test(mpp_runtime)
 
-
+# mpp buffer test 
 add_mpp_osal_test(mpp_buffer)
+
+
+#dma device test
+add_mpp_osal_test(mpp_dmabuffer_driver)
+
 
 

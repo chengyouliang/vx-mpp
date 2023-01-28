@@ -5,6 +5,7 @@
         "stdio.h": "c",
         "mpp_dma_alloc.h": "c",
         "os_allocator.h": "c",
-        "allocator_dma.h": "c"
+        "allocator_dma.h": "c",
+        "type_traits": "c"
     }
 }

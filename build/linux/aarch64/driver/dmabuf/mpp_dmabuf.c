@@ -371,16 +371,19 @@ struct mpp_dmabuf_priv *  mpp_allocate_dmabuf(struct device *dev, int size, u32 
 	struct mpp_dma_buffer *buffer;
 	struct dma_buf *dbuf;
 	struct mpp_dmabuf_priv *dinfo;
+	printk("%s %d\n",__FUNCTION__,__LINE__);
 	buffer = mpp_alloc_dma(dev, size);
 	if (!buffer) {
 		dev_err(dev, "Can't alloc DMA buffer\n");
 		return  NULL;
 	}
+	printk("%s %d\n",__FUNCTION__,__LINE__);
 	dbuf = mpp_create_dmabuf_fd(dev, size, buffer);
 	*fd = dma_buf_fd(dbuf, O_RDWR);
 	dinfo = dbuf->priv;
 	dinfo->fd = fd;
 	dma_handle = (void *)dinfo;
+	printk("%s %d\n",__FUNCTION__,__LINE__);
 	return dinfo;
 }
 
@@ -394,21 +397,23 @@ static int mpp_ioctl_dma_alloc(mpp_dmabuf_info  *dma_buf_inio,unsigned long arg)
 {
 	struct mpp_dma_info info;
 	struct mpp_dmabuf_priv *priv;
-
+	printk("%s %d\n",__FUNCTION__,__LINE__);
 	if (copy_from_user(&info, (struct mpp_dma_info *)arg, sizeof(info)))
 		return -EFAULT;
-
+	printk("%s %d\n",__FUNCTION__,__LINE__);
 	priv = mpp_allocate_dmabuf(dma_buf_inio->dma_device,info.size,&info.fd,(dma_addr_t *)&info.hander);
 	if (!priv)
 	{
 		return -EFAULT;
 	}
+	printk("%s %d\n",__FUNCTION__,__LINE__);
 	mutex_lock(&dma_buf_inio->dma_lock);
 	list_add(&priv->list,&dma_buf_inio->dma_list);
 	mutex_unlock(&dma_buf_inio->dma_lock);
+	printk("%s %d\n",__FUNCTION__,__LINE__);
 	if (copy_to_user((void *)arg, &info, sizeof(info)))
 		return -EFAULT;
-
+	printk("%s %d\n",__FUNCTION__,__LINE__);
 	return 0;
 }
 
@@ -588,16 +593,20 @@ static long mpp_dma_ioctl(struct file *file, unsigned int cmd,
 {
 
 	mpp_dmabuf_info *pdmabuf_info = (mpp_dmabuf_info *)file->private_data;
+	printk("%s %d\n",__FUNCTION__,__LINE__);
 	switch (cmd) {
 	case MPP_DMA_IOCTL_ALLOC:
+		printk("%s %d\n",__FUNCTION__,__LINE__);
 		return mpp_ioctl_dma_alloc(pdmabuf_info, arg);
 	case DRM_DMA_IOCTL_FREE:
+		printk("%s %d\n",__FUNCTION__,__LINE__);
 		return mpp_ioctl_dma_free(pdmabuf_info, arg);
 	case DRM_DMA_IOCTL_IMPORT:
+		printk("%s %d\n",__FUNCTION__,__LINE__);
 		return mpp_ioctl_dma_import(pdmabuf_info, arg);
 	default:
-		printk("Unknown ioctl: 0x%.8X\n", cmd);
-		return -EINVAL;
+		printk("%s %d Unknown ioctl: 0x%.8X   0x%.8X\n",__FUNCTION__,__LINE__,cmd,(int)MPP_DMA_IOCTL_ALLOC);
+		break;
 	}
     return 0;
 }
