@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "../../bin/mpp_runtime_test"
+  "../../bin/mpp_runtime_test.pdb"
   "CMakeFiles/mpp_runtime_test.dir/mpp_runtime_test.c.o"
-  "mpp_runtime_test"
-  "mpp_runtime_test.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

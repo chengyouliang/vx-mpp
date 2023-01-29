@@ -469,43 +469,43 @@ vx__mpp_OBJECTS = \
 # External object files for target vx-mpp
 vx__mpp_EXTERNAL_OBJECTS =
 
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_common.cpp.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.cpp.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_lock.cpp.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.cpp.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_queue.cpp.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_runtime.cpp.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_thread.cpp.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_trace.cpp.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.cpp.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/build.make
-app/src/lib/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX static library lib/libvx-mpp.a"
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_common.cpp.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.cpp.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_lock.cpp.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.cpp.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_queue.cpp.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_runtime.cpp.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_thread.cpp.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_trace.cpp.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.cpp.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/build.make
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX static library ../../bin/libvx-mpp.a"
 	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64/app/src && $(CMAKE_COMMAND) -P CMakeFiles/vx-mpp.dir/cmake_clean_target.cmake
 	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64/app/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vx-mpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-app/src/CMakeFiles/vx-mpp.dir/build: app/src/lib/libvx-mpp.a
+app/src/CMakeFiles/vx-mpp.dir/build: bin/libvx-mpp.a
 
 .PHONY : app/src/CMakeFiles/vx-mpp.dir/build
 

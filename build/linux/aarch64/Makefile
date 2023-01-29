@@ -124,6 +124,19 @@ codec/fast:
 .PHONY : codec/fast
 
 #=============================================================================
+# Target rules for targets named vx_mpp_share
+
+# Build rule for target.
+vx_mpp_share: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vx_mpp_share
+.PHONY : vx_mpp_share
+
+# fast build rule for target.
+vx_mpp_share/fast:
+	$(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/build
+.PHONY : vx_mpp_share/fast
+
+#=============================================================================
 # Target rules for targets named vx-mpp
 
 # Build rule for target.
@@ -249,6 +262,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... codec"
+	@echo "... vx_mpp_share"
 	@echo "... vx-mpp"
 	@echo "... mpp_dmabuffer_driver_test"
 	@echo "... mpp_buffer_test"

@@ -1,1 +1,1 @@
-/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -O3 -DNDEBUG  -rdynamic CMakeFiles/mpp_buffer_test.dir/mpp_buffer_test.c.o  -o mpp_buffer_test  ../src/lib/libvx-mpp.a -lpthread 
+/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -O3 -DNDEBUG  -rdynamic CMakeFiles/mpp_buffer_test.dir/mpp_buffer_test.c.o  -o ../../bin/mpp_buffer_test  ../../bin/libvx-mpp.a -lpthread 

@@ -848,6 +848,16 @@ deps_/home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/mpp_core.o := \
   include/linux/dma-fence.h \
     $(wildcard include/config/dma/fence/trace.h) \
   include/generated/uapi/linux/version.h \
+  include/linux/slab.h \
+    $(wildcard include/config/debug/slab.h) \
+    $(wildcard include/config/failslab.h) \
+    $(wildcard include/config/have/hardened/usercopy/allocator.h) \
+    $(wildcard include/config/slab.h) \
+    $(wildcard include/config/slub.h) \
+    $(wildcard include/config/slob.h) \
+  include/linux/kasan.h \
+    $(wildcard include/config/kasan/generic.h) \
+  include/linux/cdev.h \
   include/linux/module.h \
     $(wildcard include/config/modules/tree/lookup.h) \
     $(wildcard include/config/module/sig.h) \
@@ -883,16 +893,29 @@ deps_/home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/mpp_core.o := \
     $(wildcard include/config/have/mod/arch/specific.h) \
     $(wildcard include/config/modules/use/elf/rel.h) \
     $(wildcard include/config/modules/use/elf/rela.h) \
-  include/linux/slab.h \
-    $(wildcard include/config/debug/slab.h) \
-    $(wildcard include/config/failslab.h) \
-    $(wildcard include/config/have/hardened/usercopy/allocator.h) \
-    $(wildcard include/config/slab.h) \
-    $(wildcard include/config/slub.h) \
-    $(wildcard include/config/slob.h) \
-  include/linux/kasan.h \
-    $(wildcard include/config/kasan/generic.h) \
-  include/linux/cdev.h \
+  include/linux/platform_device.h \
+    $(wildcard include/config/suspend.h) \
+    $(wildcard include/config/hibernate/callbacks.h) \
+  include/linux/of_platform.h \
+    $(wildcard include/config/of/address.h) \
+    $(wildcard include/config/of/dynamic.h) \
+  include/linux/mod_devicetable.h \
+  include/linux/of_device.h \
+  include/linux/cpu.h \
+    $(wildcard include/config/pm/sleep/smp.h) \
+    $(wildcard include/config/pm/sleep/smp/nonzero/cpu.h) \
+    $(wildcard include/config/hotplug/smt.h) \
+  include/linux/node.h \
+    $(wildcard include/config/hmem/reporting.h) \
+    $(wildcard include/config/memory/hotplug/sparse.h) \
+  include/linux/cpuhotplug.h \
+  include/linux/of.h \
+    $(wildcard include/config/sparc.h) \
+    $(wildcard include/config/of/promtree.h) \
+    $(wildcard include/config/of/kobj.h) \
+    $(wildcard include/config/of/numa.h) \
+    $(wildcard include/config/of/overlay.h) \
+  include/linux/property.h \
   /home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.h \
   /home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dma_alloc.h \
 

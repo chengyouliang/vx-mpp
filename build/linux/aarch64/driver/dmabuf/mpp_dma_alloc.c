@@ -10,19 +10,17 @@ MODULE_DESCRIPTION("vanxum Common");
 
 struct mpp_dma_buffer *mpp_alloc_dma(struct device *dev, size_t size)
 {
-	printk("%s %d\n",__FUNCTION__,__LINE__);
 	struct mpp_dma_buffer *buf =
 		kmalloc(sizeof(struct mpp_dma_buffer),
 			GFP_KERNEL);
 
 	if (!buf)
 		return NULL;
-	printk("%s %d %d %p\n",__FUNCTION__,__LINE__,1024,dev);
-	buf->size = 1024;
+	printk("%s %d %p\n",__FUNCTION__,__LINE__,dev);
+	buf->size = size;
 	buf->cpu_handle = dma_alloc_coherent(dev, buf->size,
 					     &buf->dma_handle,
 					     GFP_KERNEL | GFP_DMA);
-
 	printk("%s %d\n",__FUNCTION__,__LINE__);
 	if (!buf->cpu_handle) {
 		kfree(buf);

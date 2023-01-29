@@ -25,6 +25,13 @@ macro(add_mpp_osal_test module)
         target_link_libraries(${test_name}  vx-mpp  pthread)
         set_target_properties(${test_name} PROPERTIES FOLDER "osal/test")
         add_test(NAME ${test_name} COMMAND ${test_name})
+        set_target_properties(${test_name} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+        
+        #"把DEBUG版的可执行Target放到${CMAKE_BINARY_DIR}/bin目录中"
+        #set_target_properties(${test_name} PROPERTIES RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_BINARY_DIR}/bin)
+        
+        #"把RELEASE版的可执行Target放到${CMAKE_BINARY_DIR}/bin目录中"
+        #set_target_properties(${target} PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}/bin)
     endif()
 endmacro()
 

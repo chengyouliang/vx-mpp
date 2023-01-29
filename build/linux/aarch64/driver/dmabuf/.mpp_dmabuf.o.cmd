@@ -894,6 +894,29 @@ deps_/home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmab
   include/linux/kasan.h \
     $(wildcard include/config/kasan/generic.h) \
   include/linux/cdev.h \
+  include/linux/platform_device.h \
+    $(wildcard include/config/suspend.h) \
+    $(wildcard include/config/hibernate/callbacks.h) \
+  include/linux/of_platform.h \
+    $(wildcard include/config/of/address.h) \
+    $(wildcard include/config/of/dynamic.h) \
+  include/linux/mod_devicetable.h \
+  include/linux/of_device.h \
+  include/linux/cpu.h \
+    $(wildcard include/config/pm/sleep/smp.h) \
+    $(wildcard include/config/pm/sleep/smp/nonzero/cpu.h) \
+    $(wildcard include/config/hotplug/smt.h) \
+  include/linux/node.h \
+    $(wildcard include/config/hmem/reporting.h) \
+    $(wildcard include/config/memory/hotplug/sparse.h) \
+  include/linux/cpuhotplug.h \
+  include/linux/of.h \
+    $(wildcard include/config/sparc.h) \
+    $(wildcard include/config/of/promtree.h) \
+    $(wildcard include/config/of/kobj.h) \
+    $(wildcard include/config/of/numa.h) \
+    $(wildcard include/config/of/overlay.h) \
+  include/linux/property.h \
   /home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dma_alloc.h \
 
 /home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.o: $(deps_/home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.o)

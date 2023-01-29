@@ -51,7 +51,7 @@ static const char *dev_dma = "/dev/mpp_dma";
 static int dma_ioctl(int fd, int req, void *arg)
 {
     int ret;
-
+    printf("dma_ioctl %x with code %d: %s\n", req);
     do {
         ret = ioctl(fd, req, arg);
     } while (ret == -1 && (errno == EINTR || errno == EAGAIN));

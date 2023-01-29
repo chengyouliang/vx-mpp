@@ -7,6 +7,8 @@
 #include <linux/slab.h>
 #include <linux/cdev.h>
 #include <linux/err.h>
+#include <linux/platform_device.h>
+#include <linux/of_platform.h>
 
 #include "mpp_dma_alloc.h"
 
@@ -20,5 +22,5 @@ struct mpp_dma_info {
 	u32 size;
 	void *hander;
 };
-int mpp_setup_dma_cdev(struct cdev *pcdev, struct class *module_class,int major,  int minor, const char *device_name);
+int mpp_setup_dma_cdev(struct cdev *pcdev, struct platform_device *pdev,struct class *module_class,int major,  int minor, const char *device_name);
 int mpp_del_dma_cdev(struct cdev *pcdev, struct class *module_class,int major,  int minor);

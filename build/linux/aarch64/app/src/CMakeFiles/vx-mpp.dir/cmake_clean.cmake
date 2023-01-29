@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "../../bin/libvx-mpp.a"
+  "../../bin/libvx-mpp.pdb"
   "CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o"
   "CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o"
   "CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.o"
@@ -28,8 +30,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.o"
   "CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.o"
   "CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o"
-  "lib/libvx-mpp.a"
-  "lib/libvx-mpp.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

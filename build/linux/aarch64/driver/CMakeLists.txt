@@ -24,6 +24,7 @@ function(compile_module obj)
 		     COMMAND echo "obj-m := ${obj}.o" > ${CMAKE_CURRENT_BINARY_DIR}/Makefile
 		     COMMAND echo "${obj}-objs:=${depend_objlist}" >>${CMAKE_CURRENT_BINARY_DIR}/Makefile
 		     COMMAND  make -C ${KDIR}  M=${CMAKE_CURRENT_BINARY_DIR} modules   ARCH=arm64  CROSS_COMPILE=aarch64-none-linux-gnu-
+			 COMMAND  cp ${obj}.ko ${CMAKE_BINARY_DIR}/bin
 		     )
 endfunction()
 

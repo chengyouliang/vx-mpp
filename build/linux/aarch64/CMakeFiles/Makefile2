@@ -95,6 +95,7 @@ app/clean: app/test/clean
 # Directory level rules for directory app/src
 
 # Recursive "all" directory target.
+app/src/all: app/src/CMakeFiles/vx_mpp_share.dir/all
 app/src/all: app/src/CMakeFiles/vx-mpp.dir/all
 
 .PHONY : app/src/all
@@ -105,6 +106,7 @@ app/src/preinstall:
 .PHONY : app/src/preinstall
 
 # Recursive "clean" directory target.
+app/src/clean: app/src/CMakeFiles/vx_mpp_share.dir/clean
 app/src/clean: app/src/CMakeFiles/vx-mpp.dir/clean
 
 .PHONY : app/src/clean
@@ -185,6 +187,33 @@ codec: driver/CMakeFiles/codec.dir/rule
 driver/CMakeFiles/codec.dir/clean:
 	$(MAKE) -f driver/CMakeFiles/codec.dir/build.make driver/CMakeFiles/codec.dir/clean
 .PHONY : driver/CMakeFiles/codec.dir/clean
+
+#=============================================================================
+# Target rules for target app/src/CMakeFiles/vx_mpp_share.dir
+
+# All Build rule for target.
+app/src/CMakeFiles/vx_mpp_share.dir/all:
+	$(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/depend
+	$(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76 "Built target vx_mpp_share"
+.PHONY : app/src/CMakeFiles/vx_mpp_share.dir/all
+
+# Build rule for subdir invocation for target.
+app/src/CMakeFiles/vx_mpp_share.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles 30
+	$(MAKE) -f CMakeFiles/Makefile2 app/src/CMakeFiles/vx_mpp_share.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles 0
+.PHONY : app/src/CMakeFiles/vx_mpp_share.dir/rule
+
+# Convenience name for target.
+vx_mpp_share: app/src/CMakeFiles/vx_mpp_share.dir/rule
+
+.PHONY : vx_mpp_share
+
+# clean rule for target.
+app/src/CMakeFiles/vx_mpp_share.dir/clean:
+	$(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/clean
+.PHONY : app/src/CMakeFiles/vx_mpp_share.dir/clean
 
 #=============================================================================
 # Target rules for target app/src/CMakeFiles/vx-mpp.dir

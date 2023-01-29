@@ -24,3 +24,5 @@ MODULE_INFO(retpoline, "Y");
 
 MODULE_INFO(depends, "");
 
+MODULE_ALIAS("of:N*T*Cvanxum_codec");
+MODULE_ALIAS("of:N*T*Cvanxum_codecC*");

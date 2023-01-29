@@ -389,7 +389,9 @@ struct mpp_dmabuf_priv *  mpp_allocate_dmabuf(struct device *dev, int size, u32 
 
 static int mpp_dma_open(struct inode *inode, struct file *filp)
 {
+	printk("%s %d\n",__FUNCTION__,__LINE__);
 	filp->private_data = gdma_buf_info;
+	printk("%s %d\n",__FUNCTION__,__LINE__);
     return 0;
 }
 
@@ -397,23 +399,18 @@ static int mpp_ioctl_dma_alloc(mpp_dmabuf_info  *dma_buf_inio,unsigned long arg)
 {
 	struct mpp_dma_info info;
 	struct mpp_dmabuf_priv *priv;
-	printk("%s %d\n",__FUNCTION__,__LINE__);
 	if (copy_from_user(&info, (struct mpp_dma_info *)arg, sizeof(info)))
 		return -EFAULT;
-	printk("%s %d\n",__FUNCTION__,__LINE__);
 	priv = mpp_allocate_dmabuf(dma_buf_inio->dma_device,info.size,&info.fd,(dma_addr_t *)&info.hander);
 	if (!priv)
 	{
 		return -EFAULT;
 	}
-	printk("%s %d\n",__FUNCTION__,__LINE__);
 	mutex_lock(&dma_buf_inio->dma_lock);
 	list_add(&priv->list,&dma_buf_inio->dma_list);
 	mutex_unlock(&dma_buf_inio->dma_lock);
-	printk("%s %d\n",__FUNCTION__,__LINE__);
 	if (copy_to_user((void *)arg, &info, sizeof(info)))
 		return -EFAULT;
-	printk("%s %d\n",__FUNCTION__,__LINE__);
 	return 0;
 }
 
@@ -591,18 +588,14 @@ fail_attach:
 static long mpp_dma_ioctl(struct file *file, unsigned int cmd,
 				    unsigned long arg)
 {
-
 	mpp_dmabuf_info *pdmabuf_info = (mpp_dmabuf_info *)file->private_data;
-	printk("%s %d\n",__FUNCTION__,__LINE__);
+	printk("%s %d %x\n",__FUNCTION__,__LINE__,cmd);
 	switch (cmd) {
 	case MPP_DMA_IOCTL_ALLOC:
-		printk("%s %d\n",__FUNCTION__,__LINE__);
 		return mpp_ioctl_dma_alloc(pdmabuf_info, arg);
 	case DRM_DMA_IOCTL_FREE:
-		printk("%s %d\n",__FUNCTION__,__LINE__);
 		return mpp_ioctl_dma_free(pdmabuf_info, arg);
 	case DRM_DMA_IOCTL_IMPORT:
-		printk("%s %d\n",__FUNCTION__,__LINE__);
 		return mpp_ioctl_dma_import(pdmabuf_info, arg);
 	default:
 		printk("%s %d Unknown ioctl: 0x%.8X   0x%.8X\n",__FUNCTION__,__LINE__,cmd,(int)MPP_DMA_IOCTL_ALLOC);
@@ -625,6 +618,17 @@ static long mpp_dma_compat_ioctl(struct file *file, unsigned int cmd,
 
 static int mpp_dma_release(struct inode *inode, struct file *filp)
 {
+	printk("%s  %d\n",__FUNCTION__,__LINE__);
+	mpp_dmabuf_info  *pdmabuf_info = (mpp_dmabuf_info *)filp->private_data;
+	struct mpp_dmabuf_priv *node,*n,*hander;
+	mutex_lock(&pdmabuf_info->dma_lock);
+	list_for_each_entry_safe(node,n, &pdmabuf_info->dma_list,list) {
+		printk("%s  %d\n",__FUNCTION__,__LINE__);
+		mpp_dmabuf_hander_release(node);
+		list_del(&node->list);
+		kfree(node);
+	}
+	mutex_unlock(&pdmabuf_info->dma_lock);
     return 0;
 }
 
@@ -646,7 +650,7 @@ const struct file_operations mpp_dma_fops = {
 	.mmap		     = mpp_dma_mmap,
 };
 
-int mpp_setup_dma_cdev(struct cdev *pcdev, struct class *module_class,int major,  int minor, const char *device_name)
+int mpp_setup_dma_cdev(struct cdev *pcdev, struct platform_device *pdev,struct class *module_class,int major,  int minor, const char *device_name)
 {
 	int err, devno;
 	gdma_buf_info = kzalloc(sizeof(mpp_dmabuf_info), GFP_KERNEL);
@@ -665,13 +669,14 @@ int mpp_setup_dma_cdev(struct cdev *pcdev, struct class *module_class,int major,
 		return err;
 	}
 	if (device_name != NULL) {
-		gdma_buf_info->dma_device = device_create(module_class, NULL, devno, NULL,device_name);
+		device_create(module_class, NULL, devno, NULL,device_name);
 		if (IS_ERR(gdma_buf_info->dma_device)) {
 			printk("device not created\n");
 			cdev_del(pcdev);
 			return PTR_ERR(gdma_buf_info->dma_device);
 		}
 	}
+	gdma_buf_info->dma_device = &pdev->dev;
 	return 0;
 }
 

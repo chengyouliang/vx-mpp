@@ -30,8 +30,22 @@ else()
     message(WARNING  "compile without drm support :")
     list(REMOVE_ITEM DIR_SRCS "osal/allocator/allocator_drm.c")
 endif()
-ADD_LIBRARY(vx-mpp STATIC  ${DIR_SRCS})
-#ADD_LIBRARY(vx-mpp SHARED buffer.c)
+ADD_LIBRARY(${TARGET} STATIC  ${DIR_SRCS})
+ADD_LIBRARY(vx_mpp_share SHARED  ${DIR_SRCS})
 
-SET(EXECUTABLE_OUTPUT_PATH "${CMAKE_CURRENT_BINARY_DIR}/lib")
-SET(LIBRARY_OUTPUT_PATH "${CMAKE_CURRENT_BINARY_DIR}/lib")
+set_target_properties(${TARGET} PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set_target_properties(vx_mpp_share PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+
+#静态库：     ARCHIVE_OUTPUT_DIRECTORY_<CONFIG>
+#动态库：     LIBRARY_OUTPUT_DIRECTORY_<CONFIG>
+#可执行文件：  RUNTIME_OUTPUT_DIRECTORY_<CONFIG>
+ 
+#"把可执行Target放到${CMAKE_BINARY_DIR}/bin目录中"
+#set_target_properties(${target} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+ 
+#"把DEBUG版的可执行Target放到${CMAKE_BINARY_DIR}/bin目录中"
+#set_target_properties(${target} PROPERTIES RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_BINARY_DIR}/bin)
+ 
+#"把RELEASE版的可执行Target放到${CMAKE_BINARY_DIR}/bin目录中"
+#set_target_properties(${target} PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}/bin)

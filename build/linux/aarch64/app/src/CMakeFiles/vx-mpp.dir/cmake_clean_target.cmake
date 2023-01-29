@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "lib/libvx-mpp.a"
+  "../../bin/libvx-mpp.a"
 )
