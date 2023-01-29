@@ -30,32 +30,7 @@ static mpp_dmabuf_info *gdma_buf_info;
 void mpp_dmabuf_hander_release(struct mpp_dmabuf_priv* mpp_hander)
 {
 	struct mpp_dma_buffer *buffer = mpp_hander->buffer;
-		
-	struct sg_table *sgt;
-	
-	if (mpp_hander->attachment)
-	{
-		sgt = &mpp_hander->attachment->sgt;
-		/* release the scatterlist cache */
-		if (mpp_hander->attachment->dma_dir != DMA_NONE)
-			dma_unmap_sg(mpp_hander->dev, sgt->sgl, sgt->orig_nents,
-			     	mpp_hander->attachment->dma_dir);
-		kfree(mpp_hander->attachment);
-	}
-	
-	if (mpp_hander->sgt_base) {
-		sg_free_table(mpp_hander->sgt_base);
-		kfree(mpp_hander->sgt_base);
-	}
-
-	if (buffer)
-	{
-		dma_free_coherent(mpp_hander->dev, buffer->size, buffer->cpu_handle,
-			  buffer->dma_handle);
-		kzfree(buffer);
-	}
-	put_device(mpp_hander->dev);
-	kfree(mpp_hander);
+	//mpp_free_dma(mpp_hander->dev,buffer);
 }
 
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 19, 0)
@@ -198,9 +173,29 @@ static int mpp_dmabuf_mmap(struct dma_buf *buf, struct vm_area_struct *vma)
 
 static void mpp_dmabuf_release(struct dma_buf *buf)
 {
-	struct mpp_dmabuf_priv *dinfo = buf->priv;
-	mpp_dmabuf_hander_release(dinfo);
-
+	struct mpp_dmabuf_priv *mpp_hander = buf->priv;
+	struct mpp_dma_buffer *buffer = mpp_hander->buffer;
+	
+	printk("%s %d %p",__FUNCTION__,__LINE__,mpp_hander);
+	struct sg_table *sgt;
+	
+	if (mpp_hander->attachment)
+	{
+		sgt = &mpp_hander->attachment->sgt;
+		/* release the scatterlist cache */
+		if (mpp_hander->attachment->dma_dir != DMA_NONE)
+			dma_unmap_sg(mpp_hander->dev, sgt->sgl, sgt->orig_nents,
+			     	mpp_hander->attachment->dma_dir);
+		kfree(mpp_hander->attachment);
+		mpp_hander->attachment = NULL;
+	}
+	
+	if (mpp_hander->sgt_base) {
+		sg_free_table(mpp_hander->sgt_base);
+		kfree(mpp_hander->sgt_base);
+		mpp_hander->sgt_base = NULL;
+	}
+	kfree(mpp_hander);
 }
 
 static void *mpp_dmabuf_kmap(struct dma_buf *dmabuf, unsigned long page_num)
@@ -312,11 +307,11 @@ static void *mpp_dmabuf_wrap(struct device *dev, unsigned long size,
 	if (!dinfo)
 		return ERR_PTR(-ENOMEM);
 
-	dinfo->dev = get_device(dev);
+	dinfo->dev = dev;
 	dinfo->buffer = buffer;
 	dinfo->dma_dir = DMA_BIDIRECTIONAL;
 	dinfo->sgt_base = mpp_get_base_sgt(dinfo);
-
+	printk("%s %d %p\n",__FUNCTION__,__LINE__,dinfo);
 	dbuf = mpp_get_dmabuf(dinfo);
 	if (IS_ERR_OR_NULL(dbuf))
 		return ERR_PTR(-EINVAL);
@@ -366,32 +361,28 @@ struct dma_buf *  mpp_create_dmabuf_fd(struct device *dev, unsigned long size,
 	return dbuf;
 }
 
-struct mpp_dmabuf_priv *  mpp_allocate_dmabuf(struct device *dev, int size, u32 *fd, void *dma_handle)
+struct mpp_dmabuf_priv *  mpp_allocate_dmabuf(struct device *dev, int size, u32 *fd)
 {
 	struct mpp_dma_buffer *buffer;
 	struct dma_buf *dbuf;
 	struct mpp_dmabuf_priv *dinfo;
-	printk("%s %d\n",__FUNCTION__,__LINE__);
+
 	buffer = mpp_alloc_dma(dev, size);
 	if (!buffer) {
 		dev_err(dev, "Can't alloc DMA buffer\n");
 		return  NULL;
 	}
-	printk("%s %d\n",__FUNCTION__,__LINE__);
 	dbuf = mpp_create_dmabuf_fd(dev, size, buffer);
 	*fd = dma_buf_fd(dbuf, O_RDWR);
+
 	dinfo = dbuf->priv;
 	dinfo->fd = fd;
-	dma_handle = (void *)dinfo;
-	printk("%s %d\n",__FUNCTION__,__LINE__);
 	return dinfo;
 }
 
 static int mpp_dma_open(struct inode *inode, struct file *filp)
 {
-	printk("%s %d\n",__FUNCTION__,__LINE__);
 	filp->private_data = gdma_buf_info;
-	printk("%s %d\n",__FUNCTION__,__LINE__);
     return 0;
 }
 
@@ -401,11 +392,12 @@ static int mpp_ioctl_dma_alloc(mpp_dmabuf_info  *dma_buf_inio,unsigned long arg)
 	struct mpp_dmabuf_priv *priv;
 	if (copy_from_user(&info, (struct mpp_dma_info *)arg, sizeof(info)))
 		return -EFAULT;
-	priv = mpp_allocate_dmabuf(dma_buf_inio->dma_device,info.size,&info.fd,(dma_addr_t *)&info.hander);
+	priv = mpp_allocate_dmabuf(dma_buf_inio->dma_device,info.size,&info.fd);
 	if (!priv)
 	{
 		return -EFAULT;
 	}
+	info.hander = priv;
 	mutex_lock(&dma_buf_inio->dma_lock);
 	list_add(&priv->list,&dma_buf_inio->dma_list);
 	mutex_unlock(&dma_buf_inio->dma_lock);
@@ -420,21 +412,29 @@ static int mpp_ioctl_dma_free(mpp_dmabuf_info  *dma_buf_inio,unsigned long arg)
 	struct mpp_dma_info info;
 	struct mpp_dmabuf_priv *node,*n,*hander;
 	int found = 0;
+	printk("%s %d\n",__FUNCTION__,__LINE__);
 	if (copy_from_user(&info, (struct mpp_dma_info *)arg, sizeof(info)))
 		return -EFAULT;
 	
-	hander = (struct mpp_dmabuf_priv *)&info.hander;
+	hander = (struct mpp_dmabuf_priv *)info.hander;
 	mutex_lock(&dma_buf_inio->dma_lock);
+	printk("%s %d %p\n",__FUNCTION__,__LINE__,hander);
 	list_for_each_entry_safe(node,n, &dma_buf_inio->dma_list,list) {
+		printk("%s %d\n",__FUNCTION__,__LINE__);
 		if (node == hander)
 		{
+			printk("%s %d\n",__FUNCTION__,__LINE__);
 			mpp_dmabuf_hander_release(node);
+			printk("%s %d\n",__FUNCTION__,__LINE__);
 			list_del(&node->list);
-			kfree(node);
+			printk("%s %d\n",__FUNCTION__,__LINE__);
+			//kfree(node);
+			printk("%s %d\n",__FUNCTION__,__LINE__);
 			found = 1;
 		}
 	}
 	mutex_unlock(&dma_buf_inio->dma_lock);
+	printk("%s %d\n",__FUNCTION__,__LINE__);
 	if (found == 0)
 	{
 		return -EFAULT;
@@ -618,17 +618,6 @@ static long mpp_dma_compat_ioctl(struct file *file, unsigned int cmd,
 
 static int mpp_dma_release(struct inode *inode, struct file *filp)
 {
-	printk("%s  %d\n",__FUNCTION__,__LINE__);
-	mpp_dmabuf_info  *pdmabuf_info = (mpp_dmabuf_info *)filp->private_data;
-	struct mpp_dmabuf_priv *node,*n,*hander;
-	mutex_lock(&pdmabuf_info->dma_lock);
-	list_for_each_entry_safe(node,n, &pdmabuf_info->dma_list,list) {
-		printk("%s  %d\n",__FUNCTION__,__LINE__);
-		mpp_dmabuf_hander_release(node);
-		list_del(&node->list);
-		kfree(node);
-	}
-	mutex_unlock(&pdmabuf_info->dma_lock);
     return 0;
 }
 

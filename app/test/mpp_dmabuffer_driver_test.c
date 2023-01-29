@@ -54,7 +54,7 @@ int main()
         mpp_err_f("drm_alloc failed ret %d\n", ret);
         return ret;
     }
-     ret = dma_ioctl(fd,DRM_DMA_IOCTL_FREE,(void *)&mppdma_info);
+    ret = dma_ioctl(fd,DRM_DMA_IOCTL_FREE,(void *)&mppdma_info);
     if (ret) {
         mpp_err_f("drm_alloc free ret %d\n", ret);
         return ret;
@@ -65,7 +65,7 @@ int main()
         mpp_err_f("drm_alloc failed ret %d\n", ret);
         return ret;
     }
-     ret = dma_ioctl(fd,DRM_DMA_IOCTL_FREE,(void *)&mppdma_info);
+    ret = dma_ioctl(fd,DRM_DMA_IOCTL_FREE,(void *)&mppdma_info);
     if (ret) {
         mpp_err_f("drm_alloc free ret %d\n", ret);
         return ret;

@@ -22,5 +22,6 @@ struct mpp_dma_info {
 	u32 size;
 	void *hander;
 };
+
 int mpp_setup_dma_cdev(struct cdev *pcdev, struct platform_device *pdev,struct class *module_class,int major,  int minor, const char *device_name);
 int mpp_del_dma_cdev(struct cdev *pcdev, struct class *module_class,int major,  int minor);
