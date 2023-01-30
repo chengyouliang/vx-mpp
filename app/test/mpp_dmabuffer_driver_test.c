@@ -39,7 +39,10 @@ static int dma_ioctl(int fd, int req, void *arg)
 
 int main()
 {
-    OMX_S32  fd,ret;   
+    OMX_S32  fd,ret; 
+    void *ptr = NULL; 
+    unsigned long offset = 0L;
+    char pchar[1023] = "hello world\n";
     fd = open(DMA_DEV, O_RDWR | O_CLOEXEC);
     if (fd < 0) {
         mpp_err_f("open %s failed!\n", DMA_DEV);
@@ -54,6 +57,18 @@ int main()
         mpp_err_f("drm_alloc failed ret %d\n", ret);
         return ret;
     }
+    
+    ptr = mmap(NULL, mppdma_info.size, PROT_READ | PROT_WRITE,
+               MAP_SHARED, mppdma_info.fd, offset);
+    if (ptr == MAP_FAILED)
+    {
+        mpp_err_f("drm_alloc failed ret %d\n", ret);
+        return -1;
+    }
+    printf("%s %d %p\n",__FUNCTION__,__LINE__,ptr);
+    memset(ptr,0, 4*1024);
+    memcpy(ptr,pchar,4*1024);
+     printf("%s %d %s\n",__FUNCTION__,__LINE__,ptr);
     ret = dma_ioctl(fd,DRM_DMA_IOCTL_FREE,(void *)&mppdma_info);
     if (ret) {
         mpp_err_f("drm_alloc free ret %d\n", ret);

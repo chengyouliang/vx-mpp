@@ -178,7 +178,6 @@ static void mpp_dmabuf_release(struct dma_buf *buf)
 	
 	printk("%s %d %p",__FUNCTION__,__LINE__,mpp_hander);
 	struct sg_table *sgt;
-	
 	if (mpp_hander->attachment)
 	{
 		sgt = &mpp_hander->attachment->sgt;
@@ -311,7 +310,6 @@ static void *mpp_dmabuf_wrap(struct device *dev, unsigned long size,
 	dinfo->buffer = buffer;
 	dinfo->dma_dir = DMA_BIDIRECTIONAL;
 	dinfo->sgt_base = mpp_get_base_sgt(dinfo);
-	printk("%s %d %p\n",__FUNCTION__,__LINE__,dinfo);
 	dbuf = mpp_get_dmabuf(dinfo);
 	if (IS_ERR_OR_NULL(dbuf))
 		return ERR_PTR(-EINVAL);
@@ -412,29 +410,20 @@ static int mpp_ioctl_dma_free(mpp_dmabuf_info  *dma_buf_inio,unsigned long arg)
 	struct mpp_dma_info info;
 	struct mpp_dmabuf_priv *node,*n,*hander;
 	int found = 0;
-	printk("%s %d\n",__FUNCTION__,__LINE__);
 	if (copy_from_user(&info, (struct mpp_dma_info *)arg, sizeof(info)))
 		return -EFAULT;
 	
 	hander = (struct mpp_dmabuf_priv *)info.hander;
 	mutex_lock(&dma_buf_inio->dma_lock);
-	printk("%s %d %p\n",__FUNCTION__,__LINE__,hander);
 	list_for_each_entry_safe(node,n, &dma_buf_inio->dma_list,list) {
-		printk("%s %d\n",__FUNCTION__,__LINE__);
 		if (node == hander)
 		{
-			printk("%s %d\n",__FUNCTION__,__LINE__);
 			mpp_dmabuf_hander_release(node);
-			printk("%s %d\n",__FUNCTION__,__LINE__);
 			list_del(&node->list);
-			printk("%s %d\n",__FUNCTION__,__LINE__);
-			//kfree(node);
-			printk("%s %d\n",__FUNCTION__,__LINE__);
 			found = 1;
 		}
 	}
 	mutex_unlock(&dma_buf_inio->dma_lock);
-	printk("%s %d\n",__FUNCTION__,__LINE__);
 	if (found == 0)
 	{
 		return -EFAULT;
@@ -511,7 +500,7 @@ static int mpp_ioctl_dma_import(mpp_dmabuf_info  *dma_buf_inio,unsigned long arg
     /* find  fd  */
 	mutex_lock(&dma_buf_inio->dma_lock);
 	list_for_each_entry_safe(phander,n,&dma_buf_inio->dma_list,list) {
-		if (*phander->fd == info.fd)
+		if (*(phander->fd) == info.fd)
 		{
 			mutex_unlock(&dma_buf_inio->dma_lock);
 			goto  succes;

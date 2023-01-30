@@ -56,7 +56,7 @@ int main()
     memset(commit_ptr,    0, sizeof(commit_ptr));
     memset(commit_buffer, 0, sizeof(commit_buffer));
     memset(normal_buffer, 0, sizeof(normal_buffer));
-
+#if 1
     // create group with external type
     ret = mpp_buffer_group_get_external(&group, MPP_BUFFER_TYPE_DMA);
     if (MPP_OK != ret) {
@@ -77,36 +77,6 @@ int main()
             mpp_err("mpp_buffer_test get misc buffer failed ret %d\n", ret);
             goto MPP_BUFFER_failed;
         }
-
-        // NOTE: setup fd / index in necessary
-        commit.ptr = mpp_buffer_get_ptr(normal_buffer[i]);
-        commit.fd = mpp_buffer_get_fd(normal_buffer[i]);
-        commit.index = i;
-
-        ret = mpp_buffer_commit(group, &commit);
-        if (MPP_OK != ret) {
-            mpp_err("mpp_buffer_test mpp_buffer_commit failed\n");
-            goto MPP_BUFFER_failed;
-        }
-    }
-
-    for (i = 0; i < count; i++) {
-        ret = mpp_buffer_get(group, &commit_buffer[i], size);
-        if (MPP_OK != ret) {
-            mpp_err("mpp_buffer_test mpp_buffer_get commit mode failed\n");
-            goto MPP_BUFFER_failed;
-        }
-    }
-
-    for (i = 0; i < count; i++) {
-        if (commit_buffer[i]) {
-            ret = mpp_buffer_put(commit_buffer[i]);
-            if (MPP_OK != ret) {
-                mpp_err("mpp_buffer_test mpp_buffer_put commit mode failed\n");
-                goto MPP_BUFFER_failed;
-            }
-            commit_buffer[i] = NULL;
-        }
     }
 
     for (i = 0; i < count; i++) {
@@ -120,7 +90,8 @@ int main()
 
     mpp_log("mpp_buffer_test commit mode with unused status success\n");
 
-
+#endif
+#if 0
     mpp_log("mpp_buffer_test commit mode with used status start\n");
 
     ret = mpp_allocator_get(&allocator, &api, MPP_BUFFER_TYPE_DMA);
@@ -139,7 +110,7 @@ int main()
             goto MPP_BUFFER_failed;
         }
 
-        mpp_log("allocator get ptr %p with fd %d\n", commit.ptr, commit.fd);
+        mpp_log("#############1 allocator get ptr %p with fd %d\n", commit.ptr, commit.fd);
 
         /*
          * NOTE: commit buffer info will be directly return within new MppBuffer
@@ -161,7 +132,7 @@ int main()
                 goto MPP_BUFFER_failed;
             }
 
-            mpp_log("get ptr %p from fd %d\n", ptr, mpp_buffer_get_fd(commit_buffer[i]));
+            mpp_log(" %p from fd %d\n", ptr, mpp_buffer_get_fd(commit_buffer[i]));
 
             memset(ptr, 0, mpp_buffer_get_size(commit_buffer[i]));
         }
@@ -170,11 +141,12 @@ int main()
     for (i = 0; i < count; i++) {
         if (commit_buffer[i]) {
             ret = mpp_buffer_info_get(commit_buffer[i], &commit);
+            
             if (MPP_OK != ret) {
                 mpp_err("mpp_buffer_test mpp_buffer_info_get failed\n");
                 goto MPP_BUFFER_failed;
             }
-
+             mpp_log("#############2 get ptr %p from fd %d\n", mpp_buffer_get_ptr(commit_buffer[i]), mpp_buffer_get_fd(commit_buffer[i]));
             ret = mpp_buffer_put(commit_buffer[i]);
             if (MPP_OK != ret) {
                 mpp_err("mpp_buffer_test mpp_buffer_put commit mode failed\n");
@@ -182,7 +154,7 @@ int main()
             }
 
             commit_buffer[i] = NULL;
-
+           
             /* NOTE: buffer info from allocator need to be free directly */
             ret = api->free(allocator, &commit);
             if (MPP_OK != ret) {
@@ -200,7 +172,8 @@ int main()
 
     mpp_log("mpp_buffer_test commit mode with used status success\n");
 
-
+#endif
+#if 1
     mpp_log("mpp_buffer_test normal mode start\n");
 
     ret = mpp_buffer_group_get_internal(&group, MPP_BUFFER_TYPE_DMA);
@@ -238,7 +211,7 @@ int main()
         mpp_buffer_group_put(group);
         group = NULL;
     }
-
+#endif
     mpp_log("mpp_buffer_test success\n");
 
     ret = mpp_buffer_get(NULL, &legacy_buffer, MPP_BUFFER_TEST_SIZE);

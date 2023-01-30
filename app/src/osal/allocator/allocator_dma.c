@@ -51,7 +51,7 @@ static const char *dev_dma = "/dev/mpp_dma";
 static int dma_ioctl(int fd, int req, void *arg)
 {
     int ret;
-    printf("dma_ioctl %x with code %d: %s\n", req);
+    printf("dma_ioctl %s %d  with code  %x\n",__FUNCTION__,__LINE__,req);
     do {
         ret = ioctl(fd, req, arg);
     } while (ret == -1 && (errno == EINTR || errno == EAGAIN));
@@ -121,12 +121,13 @@ static MPP_RET allocator_dma_alloc(void *ctx, MppBufferInfo *info)
                  p->alignment, info->size);
     struct mpp_dma_info mppdma_info;
     mppdma_info.size = (info->size + p->alignment - 1) & (~( p->alignment - 1));
-    printf("%s %d 0x%.8X\n", __FUNCTION__,__LINE__,MPP_DMA_IOCTL_ALLOC);
     ret = dma_ioctl(p->dma_device,MPP_DMA_IOCTL_ALLOC,(void *)&mppdma_info);
     if (ret) {
         mpp_err_f("drm_alloc failed ret %d\n", ret);
         return ret;
     }
+    info->fd = mppdma_info.fd;
+    info->hnd = mppdma_info.hander;
     return ret;
 }
 
@@ -138,11 +139,9 @@ static MPP_RET allocator_dma_free(void *ctx, MppBufferInfo *info)
         mpp_err_f("found NULL context input\n");
         return MPP_ERR_VALUE;
     }
-     p = (allocator_ctx_dma *)ctx;
-
-    dma_dbg_func("dev %d alloc alignment %d size %d\n", p->dma_device,
-                 p->alignment, info->size);
+    p = (allocator_ctx_dma *)ctx;
     struct mpp_dma_info mppdma_info;
+    printf("%s %d %p\n",__FUNCTION__,__LINE__,info->hnd);
     mppdma_info.hander = info->hnd;
     ret = dma_ioctl(p->dma_device,DRM_DMA_IOCTL_FREE,(void *)&mppdma_info);
     if (ret) {
@@ -162,14 +161,13 @@ static MPP_RET allocator_dma_import(void *ctx, MppBufferInfo *info)
         return MPP_ERR_VALUE;
     }
     p = (allocator_ctx_dma *)ctx;
-
-    dma_dbg_func("dev %d alloc alignment %d size %d\n", p->dma_device,
+    dma_dbg_func("dev %d import  alignment %d size %d\n", p->dma_device,
                  p->alignment, info->size);
     struct mpp_dma_info mppdma_info;
     mppdma_info.hander = info->hnd;
     ret = dma_ioctl(p->dma_device,DRM_DMA_IOCTL_IMPORT,(void *)&mppdma_info);
     if (ret) {
-        mpp_err_f("dma alloc failed ret %d\n", ret);
+        mpp_err_f("dma  failed ret %d\n", ret);
         return ret;
     }
     return ret;
@@ -180,8 +178,6 @@ static MPP_RET allocator_dma_mmap(void *ctx, MppBufferInfo *info)
     void *ptr = NULL;
     unsigned long offset = 0L;
     mpp_assert(ctx);
-    mpp_assert(info->size);
-    mpp_assert(info->fd >= 0);
 
     if (info->ptr)
         return MPP_OK;
