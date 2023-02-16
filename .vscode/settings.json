@@ -6,6 +6,10 @@
         "mpp_dma_alloc.h": "c",
         "os_allocator.h": "c",
         "allocator_dma.h": "c",
-        "type_traits": "c"
+        "type_traits": "c",
+        "common.h": "c",
+        "omx_videoenc_component.h": "c",
+        "omx_video.h": "c",
+        "omx_types.h": "c"
     }
 }

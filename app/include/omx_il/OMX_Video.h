@@ -63,6 +63,7 @@ typedef enum OMX_VIDEO_CODINGTYPE {
     OMX_VIDEO_CodingRV,         /**< all versions of Real Video */
     OMX_VIDEO_CodingAVC,        /**< H.264/AVC */
     OMX_VIDEO_CodingMJPEG,      /**< Motion JPEG */
+    OMX_VIDEO_CodingAV1,
     OMX_VIDEO_CodingMax = 0x7FFFFFFF
 } OMX_VIDEO_CODINGTYPE;
 
@@ -840,6 +841,90 @@ typedef struct OMX_VIDEO_PARAM_AVCTYPE {
 	OMX_VIDEO_AVCLOOPFILTERTYPE eLoopFilterMode;
 } OMX_VIDEO_PARAM_AVCTYPE;
 
+
+
+/** 
+ * AV1 params 
+ *
+ * STRUCT MEMBERS:
+ *  nSize                     : Size of the structure in bytes
+ *  nVersion                  : OMX specification version information
+ *  nPortIndex                : Port that this structure applies to
+ *  nSliceHeaderSpacing       : Number of macroblocks between slice header, put  
+ *                              zero if not used
+ *  nPFrames                  : Number of P frames between each I frame
+ *  nBFrames                  : Number of B frames between each I frame
+ *  bUseHadamard              : Enable/disable Hadamard transform
+ *  nRefFrames                : Max number of reference frames to use for inter
+ *                              motion search (1-16)
+ *  nRefIdxTrailing           : Pic param set ref frame index (index into ref
+ *                              frame buffer of trailing frames list), B frame
+ *                              support
+ *  nRefIdxForward            : Pic param set ref frame index (index into ref
+ *                              frame buffer of forward frames list), B frame
+ *                              support
+ *  bEnableUEP                : Enable/disable unequal error protection. This 
+ *                              is only valid of data partitioning is enabled.
+ *  bEnableFMO                : Enable/disable flexible macroblock ordering
+ *  bEnableASO                : Enable/disable arbitrary slice ordering
+ *  bEnableRS                 : Enable/disable sending of redundant slices
+ *  eProfile                  : AVC profile(s) to use
+ *  eLevel                    : AVC level(s) to use
+ *  nAllowedPictureTypes      : Specifies the picture types allowed in the 
+ *                              bitstream
+ *  bFrameMBsOnly             : specifies that every coded picture of the 
+ *                              coded video sequence is a coded frame 
+ *                              containing only frame macroblocks
+ *  bMBAFF                    : Enable/disable switching between frame and 
+ *                              field macroblocks within a picture
+ *  bEntropyCodingCABAC       : Entropy decoding method to be applied for the 
+ *                              syntax elements for which two descriptors appear 
+ *                              in the syntax tables
+ *  bWeightedPPrediction      : Enable/disable weighted prediction shall not 
+ *                              be applied to P and SP slices
+ *  nWeightedBipredicitonMode : Default weighted prediction is applied to B 
+ *                              slices 
+ *  bConstIpred               : Enable/disable intra prediction
+ *  bDirect8x8Inference       : Specifies the method used in the derivation 
+ *                              process for luma motion vectors for B_Skip, 
+ *                              B_Direct_16x16 and B_Direct_8x8 as specified 
+ *                              in subclause 8.4.1.2 of the AVC spec 
+ *  bDirectSpatialTemporal    : Flag indicating spatial or temporal direct
+ *                              mode used in B slice coding (related to 
+ *                              bDirect8x8Inference) . Spatial direct mode is 
+ *                              more common and should be the default.
+ *  nCabacInitIdx             : Index used to init CABAC contexts
+ *  eLoopFilterMode           : Enable/disable loop filter
+ */
+typedef struct OMX_VIDEO_PARAM_AV1TYPE {
+    OMX_U32 nSize;                 
+    OMX_VERSIONTYPE nVersion;      
+    OMX_U32 nPortIndex;            
+    OMX_U32 nSliceHeaderSpacing;  
+    OMX_U32 nPFrames;     
+    OMX_U32 nBFrames;     
+    OMX_BOOL bUseHadamard;
+    OMX_U32 nRefFrames;  
+	OMX_U32 nRefIdx10ActiveMinus1;
+	OMX_U32 nRefIdx11ActiveMinus1;
+    OMX_BOOL bEnableUEP;  
+    OMX_BOOL bEnableFMO;  
+    OMX_BOOL bEnableASO;  
+    OMX_BOOL bEnableRS;   
+    OMX_VIDEO_AVCPROFILETYPE eProfile;
+	OMX_VIDEO_AVCLEVELTYPE eLevel; 
+    OMX_U32 nAllowedPictureTypes;  
+	OMX_BOOL bFrameMBsOnly;        									
+    OMX_BOOL bMBAFF;               
+    OMX_BOOL bEntropyCodingCABAC;  
+    OMX_BOOL bWeightedPPrediction; 
+    OMX_U32 nWeightedBipredicitonMode; 
+    OMX_BOOL bconstIpred ;
+    OMX_BOOL bDirect8x8Inference;  
+	OMX_BOOL bDirectSpatialTemporal;
+	OMX_U32 nCabacInitIdc;
+	OMX_VIDEO_AVCLOOPFILTERTYPE eLoopFilterMode;
+} OMX_VIDEO_PARAM_AV1TYPE;
 
 #ifdef __cplusplus
 }

@@ -3,6 +3,7 @@ cmake_minimum_required (VERSION 3.0.0)
 add_definitions(-g)
 
 #关闭警告
+#add_definitions(-w)
 add_definitions(-W)
 
 
@@ -11,26 +12,29 @@ SET(TARGET "vx-mpp")
 
 # include
 include_directories(../include)
-include_directories(./include/rk)
+include_directories(../include/alsa)
 include_directories(../include/omx_il)
 
 include_directories(./base)
 include_directories(./base/inc)
 
-include_directories(./common)
+
 include_directories(./common/inc)
 
 include_directories(./osal)
 include_directories(./osal/allocator)
 include_directories(./osal/inc)
 
-# src 
+# src
 aux_source_directory(base DIR_SRCS)
 aux_source_directory(osal DIR_SRCS)
 aux_source_directory(osal/allocator DIR_SRCS)
 aux_source_directory(osal/android DIR_SRCS)
 aux_source_directory(osal/linux DIR_SRCS)
 aux_source_directory(osal/windows DIR_SRCS)
+aux_source_directory(common DIR_SRCS)
+#aux_source_directory(components/alsa  DIR_SRCS)
+aux_source_directory(components/av1  DIR_SRCS)
 
 
 if (HAVE_DRM)

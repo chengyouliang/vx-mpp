@@ -226,9 +226,9 @@ OMX_ERRORTYPE OMX_ComponentNameEnum(
 		OMX_U32 nIndex)
 {
   OMX_ERRORTYPE err = OMX_ErrorNone;
-  int i = 0;
-    int index = 0;
-    int offset = 0;
+  OMX_S32  i = 0;
+  OMX_U32 index = 0;
+  int offset = 0;
 
   DEBUG(DEB_LEV_FUNCTION_NAME, "In %s\n", __func__);
 
@@ -366,7 +366,8 @@ OMX_ERRORTYPE OMX_GetComponentsOfRole (
   OMX_U32 *pNumComps,
   OMX_U8  **compNames) {
   OMX_ERRORTYPE err = OMX_ErrorNone;
-  int i,j;
+  OMX_S32 i;
+  OMX_U32 j;
   int only_number_requested = 0, full_number=0;
   OMX_U32 temp_num_comp = 0;
 

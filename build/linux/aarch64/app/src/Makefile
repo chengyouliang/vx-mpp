@@ -410,6 +410,366 @@ base/omx_base_video_port.c.s:
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_video_port.c.s
 .PHONY : base/omx_base_video_port.c.s
 
+common/common.o: common/common.c.o
+
+.PHONY : common/common.o
+
+# target to build an object file
+common/common.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/common.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/common.c.o
+.PHONY : common/common.c.o
+
+common/common.i: common/common.c.i
+
+.PHONY : common/common.i
+
+# target to preprocess a source file
+common/common.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/common.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/common.c.i
+.PHONY : common/common.c.i
+
+common/common.s: common/common.c.s
+
+.PHONY : common/common.s
+
+# target to generate assembly for a file
+common/common.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/common.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/common.c.s
+.PHONY : common/common.c.s
+
+common/content_pipe_file.o: common/content_pipe_file.c.o
+
+.PHONY : common/content_pipe_file.o
+
+# target to build an object file
+common/content_pipe_file.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/content_pipe_file.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_file.c.o
+.PHONY : common/content_pipe_file.c.o
+
+common/content_pipe_file.i: common/content_pipe_file.c.i
+
+.PHONY : common/content_pipe_file.i
+
+# target to preprocess a source file
+common/content_pipe_file.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/content_pipe_file.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_file.c.i
+.PHONY : common/content_pipe_file.c.i
+
+common/content_pipe_file.s: common/content_pipe_file.c.s
+
+.PHONY : common/content_pipe_file.s
+
+# target to generate assembly for a file
+common/content_pipe_file.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/content_pipe_file.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_file.c.s
+.PHONY : common/content_pipe_file.c.s
+
+common/content_pipe_inet.o: common/content_pipe_inet.c.o
+
+.PHONY : common/content_pipe_inet.o
+
+# target to build an object file
+common/content_pipe_inet.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/content_pipe_inet.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_inet.c.o
+.PHONY : common/content_pipe_inet.c.o
+
+common/content_pipe_inet.i: common/content_pipe_inet.c.i
+
+.PHONY : common/content_pipe_inet.i
+
+# target to preprocess a source file
+common/content_pipe_inet.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/content_pipe_inet.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_inet.c.i
+.PHONY : common/content_pipe_inet.c.i
+
+common/content_pipe_inet.s: common/content_pipe_inet.c.s
+
+.PHONY : common/content_pipe_inet.s
+
+# target to generate assembly for a file
+common/content_pipe_inet.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/content_pipe_inet.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_inet.c.s
+.PHONY : common/content_pipe_inet.c.s
+
+common/omx_create_loaders_linux.o: common/omx_create_loaders_linux.c.o
+
+.PHONY : common/omx_create_loaders_linux.o
+
+# target to build an object file
+common/omx_create_loaders_linux.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/omx_create_loaders_linux.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/omx_create_loaders_linux.c.o
+.PHONY : common/omx_create_loaders_linux.c.o
+
+common/omx_create_loaders_linux.i: common/omx_create_loaders_linux.c.i
+
+.PHONY : common/omx_create_loaders_linux.i
+
+# target to preprocess a source file
+common/omx_create_loaders_linux.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/omx_create_loaders_linux.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/omx_create_loaders_linux.c.i
+.PHONY : common/omx_create_loaders_linux.c.i
+
+common/omx_create_loaders_linux.s: common/omx_create_loaders_linux.c.s
+
+.PHONY : common/omx_create_loaders_linux.s
+
+# target to generate assembly for a file
+common/omx_create_loaders_linux.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/omx_create_loaders_linux.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/omx_create_loaders_linux.c.s
+.PHONY : common/omx_create_loaders_linux.c.s
+
+common/omxcore.o: common/omxcore.c.o
+
+.PHONY : common/omxcore.o
+
+# target to build an object file
+common/omxcore.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/omxcore.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/omxcore.c.o
+.PHONY : common/omxcore.c.o
+
+common/omxcore.i: common/omxcore.c.i
+
+.PHONY : common/omxcore.i
+
+# target to preprocess a source file
+common/omxcore.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/omxcore.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/omxcore.c.i
+.PHONY : common/omxcore.c.i
+
+common/omxcore.s: common/omxcore.c.s
+
+.PHONY : common/omxcore.s
+
+# target to generate assembly for a file
+common/omxcore.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/omxcore.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/omxcore.c.s
+.PHONY : common/omxcore.c.s
+
+common/omxregister.o: common/omxregister.c.o
+
+.PHONY : common/omxregister.o
+
+# target to build an object file
+common/omxregister.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/omxregister.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/omxregister.c.o
+.PHONY : common/omxregister.c.o
+
+common/omxregister.i: common/omxregister.c.i
+
+.PHONY : common/omxregister.i
+
+# target to preprocess a source file
+common/omxregister.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/omxregister.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/omxregister.c.i
+.PHONY : common/omxregister.c.i
+
+common/omxregister.s: common/omxregister.c.s
+
+.PHONY : common/omxregister.s
+
+# target to generate assembly for a file
+common/omxregister.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/omxregister.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/omxregister.c.s
+.PHONY : common/omxregister.c.s
+
+common/queue.o: common/queue.c.o
+
+.PHONY : common/queue.o
+
+# target to build an object file
+common/queue.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/queue.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/queue.c.o
+.PHONY : common/queue.c.o
+
+common/queue.i: common/queue.c.i
+
+.PHONY : common/queue.i
+
+# target to preprocess a source file
+common/queue.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/queue.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/queue.c.i
+.PHONY : common/queue.c.i
+
+common/queue.s: common/queue.c.s
+
+.PHONY : common/queue.s
+
+# target to generate assembly for a file
+common/queue.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/queue.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/queue.c.s
+.PHONY : common/queue.c.s
+
+common/st_static_component_loader.o: common/st_static_component_loader.c.o
+
+.PHONY : common/st_static_component_loader.o
+
+# target to build an object file
+common/st_static_component_loader.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/st_static_component_loader.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/st_static_component_loader.c.o
+.PHONY : common/st_static_component_loader.c.o
+
+common/st_static_component_loader.i: common/st_static_component_loader.c.i
+
+.PHONY : common/st_static_component_loader.i
+
+# target to preprocess a source file
+common/st_static_component_loader.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/st_static_component_loader.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/st_static_component_loader.c.i
+.PHONY : common/st_static_component_loader.c.i
+
+common/st_static_component_loader.s: common/st_static_component_loader.c.s
+
+.PHONY : common/st_static_component_loader.s
+
+# target to generate assembly for a file
+common/st_static_component_loader.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/st_static_component_loader.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/st_static_component_loader.c.s
+.PHONY : common/st_static_component_loader.c.s
+
+common/tsemaphore.o: common/tsemaphore.c.o
+
+.PHONY : common/tsemaphore.o
+
+# target to build an object file
+common/tsemaphore.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/tsemaphore.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/tsemaphore.c.o
+.PHONY : common/tsemaphore.c.o
+
+common/tsemaphore.i: common/tsemaphore.c.i
+
+.PHONY : common/tsemaphore.i
+
+# target to preprocess a source file
+common/tsemaphore.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/tsemaphore.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/tsemaphore.c.i
+.PHONY : common/tsemaphore.c.i
+
+common/tsemaphore.s: common/tsemaphore.c.s
+
+.PHONY : common/tsemaphore.s
+
+# target to generate assembly for a file
+common/tsemaphore.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/common/tsemaphore.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/tsemaphore.c.s
+.PHONY : common/tsemaphore.c.s
+
+components/av1/library_entry_point.o: components/av1/library_entry_point.c.o
+
+.PHONY : components/av1/library_entry_point.o
+
+# target to build an object file
+components/av1/library_entry_point.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/library_entry_point.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/library_entry_point.c.o
+.PHONY : components/av1/library_entry_point.c.o
+
+components/av1/library_entry_point.i: components/av1/library_entry_point.c.i
+
+.PHONY : components/av1/library_entry_point.i
+
+# target to preprocess a source file
+components/av1/library_entry_point.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/library_entry_point.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/library_entry_point.c.i
+.PHONY : components/av1/library_entry_point.c.i
+
+components/av1/library_entry_point.s: components/av1/library_entry_point.c.s
+
+.PHONY : components/av1/library_entry_point.s
+
+# target to generate assembly for a file
+components/av1/library_entry_point.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/library_entry_point.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/library_entry_point.c.s
+.PHONY : components/av1/library_entry_point.c.s
+
+components/av1/omx_videodec_component.o: components/av1/omx_videodec_component.c.o
+
+.PHONY : components/av1/omx_videodec_component.o
+
+# target to build an object file
+components/av1/omx_videodec_component.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/omx_videodec_component.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/omx_videodec_component.c.o
+.PHONY : components/av1/omx_videodec_component.c.o
+
+components/av1/omx_videodec_component.i: components/av1/omx_videodec_component.c.i
+
+.PHONY : components/av1/omx_videodec_component.i
+
+# target to preprocess a source file
+components/av1/omx_videodec_component.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/omx_videodec_component.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/omx_videodec_component.c.i
+.PHONY : components/av1/omx_videodec_component.c.i
+
+components/av1/omx_videodec_component.s: components/av1/omx_videodec_component.c.s
+
+.PHONY : components/av1/omx_videodec_component.s
+
+# target to generate assembly for a file
+components/av1/omx_videodec_component.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/omx_videodec_component.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/omx_videodec_component.c.s
+.PHONY : components/av1/omx_videodec_component.c.s
+
+components/av1/omx_videoenc_component.o: components/av1/omx_videoenc_component.c.o
+
+.PHONY : components/av1/omx_videoenc_component.o
+
+# target to build an object file
+components/av1/omx_videoenc_component.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/omx_videoenc_component.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/omx_videoenc_component.c.o
+.PHONY : components/av1/omx_videoenc_component.c.o
+
+components/av1/omx_videoenc_component.i: components/av1/omx_videoenc_component.c.i
+
+.PHONY : components/av1/omx_videoenc_component.i
+
+# target to preprocess a source file
+components/av1/omx_videoenc_component.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/omx_videoenc_component.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/omx_videoenc_component.c.i
+.PHONY : components/av1/omx_videoenc_component.c.i
+
+components/av1/omx_videoenc_component.s: components/av1/omx_videoenc_component.c.s
+
+.PHONY : components/av1/omx_videoenc_component.s
+
+# target to generate assembly for a file
+components/av1/omx_videoenc_component.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/omx_videoenc_component.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/omx_videoenc_component.c.s
+.PHONY : components/av1/omx_videoenc_component.c.s
+
 osal/allocator/allocator_dma.o: osal/allocator/allocator_dma.c.o
 
 .PHONY : osal/allocator/allocator_dma.o
@@ -1047,6 +1407,42 @@ help:
 	@echo "... base/omx_base_video_port.o"
 	@echo "... base/omx_base_video_port.i"
 	@echo "... base/omx_base_video_port.s"
+	@echo "... common/common.o"
+	@echo "... common/common.i"
+	@echo "... common/common.s"
+	@echo "... common/content_pipe_file.o"
+	@echo "... common/content_pipe_file.i"
+	@echo "... common/content_pipe_file.s"
+	@echo "... common/content_pipe_inet.o"
+	@echo "... common/content_pipe_inet.i"
+	@echo "... common/content_pipe_inet.s"
+	@echo "... common/omx_create_loaders_linux.o"
+	@echo "... common/omx_create_loaders_linux.i"
+	@echo "... common/omx_create_loaders_linux.s"
+	@echo "... common/omxcore.o"
+	@echo "... common/omxcore.i"
+	@echo "... common/omxcore.s"
+	@echo "... common/omxregister.o"
+	@echo "... common/omxregister.i"
+	@echo "... common/omxregister.s"
+	@echo "... common/queue.o"
+	@echo "... common/queue.i"
+	@echo "... common/queue.s"
+	@echo "... common/st_static_component_loader.o"
+	@echo "... common/st_static_component_loader.i"
+	@echo "... common/st_static_component_loader.s"
+	@echo "... common/tsemaphore.o"
+	@echo "... common/tsemaphore.i"
+	@echo "... common/tsemaphore.s"
+	@echo "... components/av1/library_entry_point.o"
+	@echo "... components/av1/library_entry_point.i"
+	@echo "... components/av1/library_entry_point.s"
+	@echo "... components/av1/omx_videodec_component.o"
+	@echo "... components/av1/omx_videodec_component.i"
+	@echo "... components/av1/omx_videodec_component.s"
+	@echo "... components/av1/omx_videoenc_component.o"
+	@echo "... components/av1/omx_videoenc_component.i"
+	@echo "... components/av1/omx_videoenc_component.s"
 	@echo "... osal/allocator/allocator_dma.o"
 	@echo "... osal/allocator/allocator_dma.i"
 	@echo "... osal/allocator/allocator_dma.s"

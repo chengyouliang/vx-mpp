@@ -65,6 +65,24 @@ typedef enum OMX_INDEXTYPE {
     OMX_IndexParamImageInit, /**< reference: OMX_PORT_PARAM_TYPE  */
     OMX_IndexParamVideoInit, /**< reference: OMX_PORT_PARAM_TYPE  */
     OMX_IndexParamOtherInit, /**< reference: OMX_PORT_PARAM_TYPE  */
+    OMX_IndexParamNumAvailableStreams,      /**< reference: OMX_PARAM_U32TYPE */
+    OMX_IndexParamActiveStream,             /**< reference: OMX_PARAM_U32TYPE */
+    OMX_IndexParamSuspensionPolicy,         /**< reference: OMX_PARAM_SUSPENSIONPOLICYTYPE */
+    OMX_IndexParamComponentSuspended,       /**< reference: OMX_PARAM_SUSPENSIONTYPE */
+    OMX_IndexConfigCapturing,               /**< reference: OMX_CONFIG_BOOLEANTYPE */ 
+    OMX_IndexConfigCaptureMode,             /**< reference: OMX_CONFIG_CAPTUREMODETYPE */ 
+    OMX_IndexAutoPauseAfterCapture,         /**< reference: OMX_CONFIG_BOOLEANTYPE */ 
+    OMX_IndexParamContentURI,               /**< reference: OMX_PARAM_CONTENTURITYPE */
+    OMX_IndexParamCustomContentPipe,        /**< reference: OMX_PARAM_CONTENTPIPETYPE */ 
+    OMX_IndexParamDisableResourceConcealment, /**< reference: OMX_RESOURCECONCEALMENTTYPE */
+    OMX_IndexConfigMetadataItemCount,       /**< reference: OMX_CONFIG_METADATAITEMCOUNTTYPE */
+    OMX_IndexConfigContainerNodeCount,      /**< reference: OMX_CONFIG_CONTAINERNODECOUNTTYPE */
+    OMX_IndexConfigMetadataItem,            /**< reference: OMX_CONFIG_METADATAITEMTYPE */
+    OMX_IndexConfigCounterNodeID,           /**< reference: OMX_CONFIG_CONTAINERNODEIDTYPE */
+    OMX_IndexParamMetadataFilterType,       /**< reference: OMX_PARAM_METADATAFILTERTYPE */
+    OMX_IndexParamMetadataKeyFilter,        /**< reference: OMX_PARAM_METADATAFILTERTYPE */
+    OMX_IndexConfigPriorityMgmt,            /**< reference: OMX_PRIORITYMGMTTYPE */
+    OMX_IndexParamStandardComponentRole,    /**< reference: OMX_PARAM_COMPONENTROLETYPE */
 
     OMX_IndexPortStartUnused = 0x02000000,
     OMX_IndexParamPortDefinition, /**< reference: OMX_PARAM_PORTDEFINITIONTYPE */
@@ -147,6 +165,8 @@ typedef enum OMX_INDEXTYPE {
     OMX_IndexParamVideoRv,    /**< reference:OMX_VIDEO_PARAM_RVTYPE */
     OMX_IndexParamVideoAvc,   /**< reference:OMX_VIDEO_PARAM_AVCTYPE */
     OMX_IndexParamVideoH263,  /**< reference:OMX_VIDEO_PARAM_H263TYPE */
+    OMX_IndexParamVideoAv1,  /**< reference:OMX_VIDEO_PARAM_AV1TYPE */
+
 
     /* Image & Video common Configurations */
     OMX_IndexCommonStartUnused = 0x07000000,

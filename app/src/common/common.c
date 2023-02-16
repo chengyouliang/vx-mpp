@@ -32,7 +32,7 @@
 #include <errno.h>
 #include <sys/stat.h>
 
-#include "config.h"
+//#include "config.h"
 #include "common.h"
 
 #define REGISTRY_FILENAME ".omxregister"

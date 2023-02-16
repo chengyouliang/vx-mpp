@@ -46,7 +46,7 @@
 
 #include "st_static_component_loader.h"
 #include "common.h"
-
+#define   OMXILCOMPONENTSPATH "usr/lib"
 /** String element to be put in the .omxregistry file to indicate  an
  * OpenMAX component and its roles
  */

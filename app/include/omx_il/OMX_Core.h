@@ -221,6 +221,37 @@ typedef enum OMX_ERRORTYPE
   /** The port has lost one or more of its buffers and it thus unpopulated. */
   OMX_ErrorPortUnpopulated = 0x8000101C,
 
+  // add 
+   /** Component suspended due to temporary loss of resources */
+  OMX_ErrorComponentSuspended = (OMX_S32) 0x8000101D,
+
+  /** Component suspended due to an inability to acquire dynamic resources */
+  OMX_ErrorDynamicResourcesUnavailable = (OMX_S32) 0x8000101E,
+
+  /** When the macroblock error reporting is enabled the component returns new error 
+  for every frame that has errors */
+  OMX_ErrorMbErrorsInFrame = (OMX_S32) 0x8000101F,
+
+  /** A component reports this error when it cannot parse or determine the format of an input stream. */
+  OMX_ErrorFormatNotDetected = (OMX_S32) 0x80001020, 
+
+  /** The content open operation failed. */
+  OMX_ErrorContentPipeOpenFailed = (OMX_S32) 0x80001021,
+
+  /** The content creation operation failed. */
+  OMX_ErrorContentPipeCreationFailed = (OMX_S32) 0x80001022,
+
+  /** Separate table information is being used */
+  OMX_ErrorSeperateTablesUsed = (OMX_S32) 0x80001023,
+
+  /** Tunneling is unsupported by the component*/
+  OMX_ErrorTunnelingUnsupported = (OMX_S32) 0x80001024,
+
+  OMX_ErrorKhronosExtensions = (OMX_S32)0x8F000000, /**< Reserved region for introducing Khronos Standard Extensions */ 
+
+  OMX_ErrorVendorStartUnused = (OMX_S32)0x90000000, /**< Reserved region for introducing Vendor Extensions */
+
+
   OMX_ErrorMax = 0x7FFFFFFF,
 } OMX_ERRORTYPE;
 
