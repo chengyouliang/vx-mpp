@@ -1,4 +1,4 @@
-# Install script for directory: /home/youliang/code/media/vx-mpp/driver
+# Install script for directory: /home/youliang/code/vx-mpp/driver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

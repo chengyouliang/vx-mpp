@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/youliang/code/media/vx-mpp/app/test/mpp_runtime_test.c" "/home/youliang/code/media/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/mpp_runtime_test.dir/mpp_runtime_test.c.o"
+  "/home/youliang/code/vx-mpp/app/test/mpp_runtime_test.c" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/mpp_runtime_test.dir/mpp_runtime_test.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -25,7 +25,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/youliang/code/media/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/DependInfo.cmake"
+  "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

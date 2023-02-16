@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/youliang/code/media/vx-mpp
+CMAKE_SOURCE_DIR = /home/youliang/code/vx-mpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/youliang/code/media/vx-mpp/build/linux/aarch64
+CMAKE_BINARY_DIR = /home/youliang/code/vx-mpp/build/linux/aarch64
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles /home/youliang/code/media/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/progress.marks
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles 0
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles /home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/progress.marks
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/src/clean
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/src/preinstall
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/src/preinstall
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 app/src/CMakeFiles/vx_mpp_share.dir/rule:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/src/CMakeFiles/vx_mpp_share.dir/rule
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/src/CMakeFiles/vx_mpp_share.dir/rule
 .PHONY : app/src/CMakeFiles/vx_mpp_share.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ vx_mpp_share: app/src/CMakeFiles/vx_mpp_share.dir/rule
 
 # fast build rule for target.
 vx_mpp_share/fast:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/build
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/build
 .PHONY : vx_mpp_share/fast
 
 # Convenience name for target.
 app/src/CMakeFiles/vx-mpp.dir/rule:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/src/CMakeFiles/vx-mpp.dir/rule
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/src/CMakeFiles/vx-mpp.dir/rule
 .PHONY : app/src/CMakeFiles/vx-mpp.dir/rule
 
 # Convenience name for target.
@@ -137,7 +137,7 @@ vx-mpp: app/src/CMakeFiles/vx-mpp.dir/rule
 
 # fast build rule for target.
 vx-mpp/fast:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/build
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/build
 .PHONY : vx-mpp/fast
 
 base/mpp_buffer.o: base/mpp_buffer.cpp.o
@@ -146,8 +146,8 @@ base/mpp_buffer.o: base/mpp_buffer.cpp.o
 
 # target to build an object file
 base/mpp_buffer.cpp.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/mpp_buffer.cpp.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/mpp_buffer.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o
 .PHONY : base/mpp_buffer.cpp.o
 
 base/mpp_buffer.i: base/mpp_buffer.cpp.i
@@ -156,8 +156,8 @@ base/mpp_buffer.i: base/mpp_buffer.cpp.i
 
 # target to preprocess a source file
 base/mpp_buffer.cpp.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/mpp_buffer.cpp.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/mpp_buffer.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.i
 .PHONY : base/mpp_buffer.cpp.i
 
 base/mpp_buffer.s: base/mpp_buffer.cpp.s
@@ -166,8 +166,8 @@ base/mpp_buffer.s: base/mpp_buffer.cpp.s
 
 # target to generate assembly for a file
 base/mpp_buffer.cpp.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/mpp_buffer.cpp.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/mpp_buffer.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.s
 .PHONY : base/mpp_buffer.cpp.s
 
 base/mpp_buffer_impl.o: base/mpp_buffer_impl.cpp.o
@@ -176,8 +176,8 @@ base/mpp_buffer_impl.o: base/mpp_buffer_impl.cpp.o
 
 # target to build an object file
 base/mpp_buffer_impl.cpp.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/mpp_buffer_impl.cpp.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/mpp_buffer_impl.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o
 .PHONY : base/mpp_buffer_impl.cpp.o
 
 base/mpp_buffer_impl.i: base/mpp_buffer_impl.cpp.i
@@ -186,8 +186,8 @@ base/mpp_buffer_impl.i: base/mpp_buffer_impl.cpp.i
 
 # target to preprocess a source file
 base/mpp_buffer_impl.cpp.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/mpp_buffer_impl.cpp.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/mpp_buffer_impl.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.i
 .PHONY : base/mpp_buffer_impl.cpp.i
 
 base/mpp_buffer_impl.s: base/mpp_buffer_impl.cpp.s
@@ -196,9 +196,279 @@ base/mpp_buffer_impl.s: base/mpp_buffer_impl.cpp.s
 
 # target to generate assembly for a file
 base/mpp_buffer_impl.cpp.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/mpp_buffer_impl.cpp.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/mpp_buffer_impl.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.s
 .PHONY : base/mpp_buffer_impl.cpp.s
+
+base/omx_base_audio_port.o: base/omx_base_audio_port.c.o
+
+.PHONY : base/omx_base_audio_port.o
+
+# target to build an object file
+base/omx_base_audio_port.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_audio_port.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_audio_port.c.o
+.PHONY : base/omx_base_audio_port.c.o
+
+base/omx_base_audio_port.i: base/omx_base_audio_port.c.i
+
+.PHONY : base/omx_base_audio_port.i
+
+# target to preprocess a source file
+base/omx_base_audio_port.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_audio_port.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_audio_port.c.i
+.PHONY : base/omx_base_audio_port.c.i
+
+base/omx_base_audio_port.s: base/omx_base_audio_port.c.s
+
+.PHONY : base/omx_base_audio_port.s
+
+# target to generate assembly for a file
+base/omx_base_audio_port.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_audio_port.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_audio_port.c.s
+.PHONY : base/omx_base_audio_port.c.s
+
+base/omx_base_clock_port.o: base/omx_base_clock_port.c.o
+
+.PHONY : base/omx_base_clock_port.o
+
+# target to build an object file
+base/omx_base_clock_port.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_clock_port.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_clock_port.c.o
+.PHONY : base/omx_base_clock_port.c.o
+
+base/omx_base_clock_port.i: base/omx_base_clock_port.c.i
+
+.PHONY : base/omx_base_clock_port.i
+
+# target to preprocess a source file
+base/omx_base_clock_port.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_clock_port.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_clock_port.c.i
+.PHONY : base/omx_base_clock_port.c.i
+
+base/omx_base_clock_port.s: base/omx_base_clock_port.c.s
+
+.PHONY : base/omx_base_clock_port.s
+
+# target to generate assembly for a file
+base/omx_base_clock_port.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_clock_port.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_clock_port.c.s
+.PHONY : base/omx_base_clock_port.c.s
+
+base/omx_base_component.o: base/omx_base_component.c.o
+
+.PHONY : base/omx_base_component.o
+
+# target to build an object file
+base/omx_base_component.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_component.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_component.c.o
+.PHONY : base/omx_base_component.c.o
+
+base/omx_base_component.i: base/omx_base_component.c.i
+
+.PHONY : base/omx_base_component.i
+
+# target to preprocess a source file
+base/omx_base_component.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_component.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_component.c.i
+.PHONY : base/omx_base_component.c.i
+
+base/omx_base_component.s: base/omx_base_component.c.s
+
+.PHONY : base/omx_base_component.s
+
+# target to generate assembly for a file
+base/omx_base_component.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_component.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_component.c.s
+.PHONY : base/omx_base_component.c.s
+
+base/omx_base_filter.o: base/omx_base_filter.c.o
+
+.PHONY : base/omx_base_filter.o
+
+# target to build an object file
+base/omx_base_filter.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_filter.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_filter.c.o
+.PHONY : base/omx_base_filter.c.o
+
+base/omx_base_filter.i: base/omx_base_filter.c.i
+
+.PHONY : base/omx_base_filter.i
+
+# target to preprocess a source file
+base/omx_base_filter.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_filter.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_filter.c.i
+.PHONY : base/omx_base_filter.c.i
+
+base/omx_base_filter.s: base/omx_base_filter.c.s
+
+.PHONY : base/omx_base_filter.s
+
+# target to generate assembly for a file
+base/omx_base_filter.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_filter.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_filter.c.s
+.PHONY : base/omx_base_filter.c.s
+
+base/omx_base_image_port.o: base/omx_base_image_port.c.o
+
+.PHONY : base/omx_base_image_port.o
+
+# target to build an object file
+base/omx_base_image_port.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_image_port.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_image_port.c.o
+.PHONY : base/omx_base_image_port.c.o
+
+base/omx_base_image_port.i: base/omx_base_image_port.c.i
+
+.PHONY : base/omx_base_image_port.i
+
+# target to preprocess a source file
+base/omx_base_image_port.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_image_port.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_image_port.c.i
+.PHONY : base/omx_base_image_port.c.i
+
+base/omx_base_image_port.s: base/omx_base_image_port.c.s
+
+.PHONY : base/omx_base_image_port.s
+
+# target to generate assembly for a file
+base/omx_base_image_port.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_image_port.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_image_port.c.s
+.PHONY : base/omx_base_image_port.c.s
+
+base/omx_base_port.o: base/omx_base_port.c.o
+
+.PHONY : base/omx_base_port.o
+
+# target to build an object file
+base/omx_base_port.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_port.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_port.c.o
+.PHONY : base/omx_base_port.c.o
+
+base/omx_base_port.i: base/omx_base_port.c.i
+
+.PHONY : base/omx_base_port.i
+
+# target to preprocess a source file
+base/omx_base_port.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_port.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_port.c.i
+.PHONY : base/omx_base_port.c.i
+
+base/omx_base_port.s: base/omx_base_port.c.s
+
+.PHONY : base/omx_base_port.s
+
+# target to generate assembly for a file
+base/omx_base_port.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_port.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_port.c.s
+.PHONY : base/omx_base_port.c.s
+
+base/omx_base_sink.o: base/omx_base_sink.c.o
+
+.PHONY : base/omx_base_sink.o
+
+# target to build an object file
+base/omx_base_sink.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_sink.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_sink.c.o
+.PHONY : base/omx_base_sink.c.o
+
+base/omx_base_sink.i: base/omx_base_sink.c.i
+
+.PHONY : base/omx_base_sink.i
+
+# target to preprocess a source file
+base/omx_base_sink.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_sink.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_sink.c.i
+.PHONY : base/omx_base_sink.c.i
+
+base/omx_base_sink.s: base/omx_base_sink.c.s
+
+.PHONY : base/omx_base_sink.s
+
+# target to generate assembly for a file
+base/omx_base_sink.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_sink.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_sink.c.s
+.PHONY : base/omx_base_sink.c.s
+
+base/omx_base_source.o: base/omx_base_source.c.o
+
+.PHONY : base/omx_base_source.o
+
+# target to build an object file
+base/omx_base_source.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_source.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_source.c.o
+.PHONY : base/omx_base_source.c.o
+
+base/omx_base_source.i: base/omx_base_source.c.i
+
+.PHONY : base/omx_base_source.i
+
+# target to preprocess a source file
+base/omx_base_source.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_source.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_source.c.i
+.PHONY : base/omx_base_source.c.i
+
+base/omx_base_source.s: base/omx_base_source.c.s
+
+.PHONY : base/omx_base_source.s
+
+# target to generate assembly for a file
+base/omx_base_source.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_source.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_source.c.s
+.PHONY : base/omx_base_source.c.s
+
+base/omx_base_video_port.o: base/omx_base_video_port.c.o
+
+.PHONY : base/omx_base_video_port.o
+
+# target to build an object file
+base/omx_base_video_port.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_video_port.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_video_port.c.o
+.PHONY : base/omx_base_video_port.c.o
+
+base/omx_base_video_port.i: base/omx_base_video_port.c.i
+
+.PHONY : base/omx_base_video_port.i
+
+# target to preprocess a source file
+base/omx_base_video_port.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_video_port.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_video_port.c.i
+.PHONY : base/omx_base_video_port.c.i
+
+base/omx_base_video_port.s: base/omx_base_video_port.c.s
+
+.PHONY : base/omx_base_video_port.s
+
+# target to generate assembly for a file
+base/omx_base_video_port.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_video_port.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/base/omx_base_video_port.c.s
+.PHONY : base/omx_base_video_port.c.s
 
 osal/allocator/allocator_dma.o: osal/allocator/allocator_dma.c.o
 
@@ -206,8 +476,8 @@ osal/allocator/allocator_dma.o: osal/allocator/allocator_dma.c.o
 
 # target to build an object file
 osal/allocator/allocator_dma.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_dma.c.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_dma.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.o
 .PHONY : osal/allocator/allocator_dma.c.o
 
 osal/allocator/allocator_dma.i: osal/allocator/allocator_dma.c.i
@@ -216,8 +486,8 @@ osal/allocator/allocator_dma.i: osal/allocator/allocator_dma.c.i
 
 # target to preprocess a source file
 osal/allocator/allocator_dma.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_dma.c.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_dma.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.i
 .PHONY : osal/allocator/allocator_dma.c.i
 
 osal/allocator/allocator_dma.s: osal/allocator/allocator_dma.c.s
@@ -226,8 +496,8 @@ osal/allocator/allocator_dma.s: osal/allocator/allocator_dma.c.s
 
 # target to generate assembly for a file
 osal/allocator/allocator_dma.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_dma.c.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_dma.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.s
 .PHONY : osal/allocator/allocator_dma.c.s
 
 osal/allocator/allocator_drm.o: osal/allocator/allocator_drm.c.o
@@ -236,8 +506,8 @@ osal/allocator/allocator_drm.o: osal/allocator/allocator_drm.c.o
 
 # target to build an object file
 osal/allocator/allocator_drm.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_drm.c.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_drm.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o
 .PHONY : osal/allocator/allocator_drm.c.o
 
 osal/allocator/allocator_drm.i: osal/allocator/allocator_drm.c.i
@@ -246,8 +516,8 @@ osal/allocator/allocator_drm.i: osal/allocator/allocator_drm.c.i
 
 # target to preprocess a source file
 osal/allocator/allocator_drm.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_drm.c.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_drm.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.i
 .PHONY : osal/allocator/allocator_drm.c.i
 
 osal/allocator/allocator_drm.s: osal/allocator/allocator_drm.c.s
@@ -256,8 +526,8 @@ osal/allocator/allocator_drm.s: osal/allocator/allocator_drm.c.s
 
 # target to generate assembly for a file
 osal/allocator/allocator_drm.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_drm.c.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_drm.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.s
 .PHONY : osal/allocator/allocator_drm.c.s
 
 osal/allocator/allocator_ion.o: osal/allocator/allocator_ion.c.o
@@ -266,8 +536,8 @@ osal/allocator/allocator_ion.o: osal/allocator/allocator_ion.c.o
 
 # target to build an object file
 osal/allocator/allocator_ion.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_ion.c.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_ion.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.o
 .PHONY : osal/allocator/allocator_ion.c.o
 
 osal/allocator/allocator_ion.i: osal/allocator/allocator_ion.c.i
@@ -276,8 +546,8 @@ osal/allocator/allocator_ion.i: osal/allocator/allocator_ion.c.i
 
 # target to preprocess a source file
 osal/allocator/allocator_ion.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_ion.c.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_ion.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.i
 .PHONY : osal/allocator/allocator_ion.c.i
 
 osal/allocator/allocator_ion.s: osal/allocator/allocator_ion.c.s
@@ -286,8 +556,8 @@ osal/allocator/allocator_ion.s: osal/allocator/allocator_ion.c.s
 
 # target to generate assembly for a file
 osal/allocator/allocator_ion.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_ion.c.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_ion.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.s
 .PHONY : osal/allocator/allocator_ion.c.s
 
 osal/allocator/allocator_std.o: osal/allocator/allocator_std.c.o
@@ -296,8 +566,8 @@ osal/allocator/allocator_std.o: osal/allocator/allocator_std.c.o
 
 # target to build an object file
 osal/allocator/allocator_std.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_std.c.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_std.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.o
 .PHONY : osal/allocator/allocator_std.c.o
 
 osal/allocator/allocator_std.i: osal/allocator/allocator_std.c.i
@@ -306,8 +576,8 @@ osal/allocator/allocator_std.i: osal/allocator/allocator_std.c.i
 
 # target to preprocess a source file
 osal/allocator/allocator_std.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_std.c.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_std.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.i
 .PHONY : osal/allocator/allocator_std.c.i
 
 osal/allocator/allocator_std.s: osal/allocator/allocator_std.c.s
@@ -316,8 +586,8 @@ osal/allocator/allocator_std.s: osal/allocator/allocator_std.c.s
 
 # target to generate assembly for a file
 osal/allocator/allocator_std.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_std.c.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/allocator/allocator_std.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.s
 .PHONY : osal/allocator/allocator_std.c.s
 
 osal/android/os_allocator.o: osal/android/os_allocator.c.o
@@ -326,8 +596,8 @@ osal/android/os_allocator.o: osal/android/os_allocator.c.o
 
 # target to build an object file
 osal/android/os_allocator.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_allocator.c.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_allocator.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o
 .PHONY : osal/android/os_allocator.c.o
 
 osal/android/os_allocator.i: osal/android/os_allocator.c.i
@@ -336,8 +606,8 @@ osal/android/os_allocator.i: osal/android/os_allocator.c.i
 
 # target to preprocess a source file
 osal/android/os_allocator.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_allocator.c.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_allocator.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.i
 .PHONY : osal/android/os_allocator.c.i
 
 osal/android/os_allocator.s: osal/android/os_allocator.c.s
@@ -346,8 +616,8 @@ osal/android/os_allocator.s: osal/android/os_allocator.c.s
 
 # target to generate assembly for a file
 osal/android/os_allocator.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_allocator.c.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_allocator.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.s
 .PHONY : osal/android/os_allocator.c.s
 
 osal/android/os_env.o: osal/android/os_env.c.o
@@ -356,8 +626,8 @@ osal/android/os_env.o: osal/android/os_env.c.o
 
 # target to build an object file
 osal/android/os_env.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_env.c.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_env.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.o
 .PHONY : osal/android/os_env.c.o
 
 osal/android/os_env.i: osal/android/os_env.c.i
@@ -366,8 +636,8 @@ osal/android/os_env.i: osal/android/os_env.c.i
 
 # target to preprocess a source file
 osal/android/os_env.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_env.c.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_env.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.i
 .PHONY : osal/android/os_env.c.i
 
 osal/android/os_env.s: osal/android/os_env.c.s
@@ -376,8 +646,8 @@ osal/android/os_env.s: osal/android/os_env.c.s
 
 # target to generate assembly for a file
 osal/android/os_env.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_env.c.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_env.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.s
 .PHONY : osal/android/os_env.c.s
 
 osal/android/os_log.o: osal/android/os_log.c.o
@@ -386,8 +656,8 @@ osal/android/os_log.o: osal/android/os_log.c.o
 
 # target to build an object file
 osal/android/os_log.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_log.c.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_log.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.o
 .PHONY : osal/android/os_log.c.o
 
 osal/android/os_log.i: osal/android/os_log.c.i
@@ -396,8 +666,8 @@ osal/android/os_log.i: osal/android/os_log.c.i
 
 # target to preprocess a source file
 osal/android/os_log.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_log.c.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_log.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.i
 .PHONY : osal/android/os_log.c.i
 
 osal/android/os_log.s: osal/android/os_log.c.s
@@ -406,8 +676,8 @@ osal/android/os_log.s: osal/android/os_log.c.s
 
 # target to generate assembly for a file
 osal/android/os_log.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_log.c.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_log.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.s
 .PHONY : osal/android/os_log.c.s
 
 osal/android/os_mem.o: osal/android/os_mem.c.o
@@ -416,8 +686,8 @@ osal/android/os_mem.o: osal/android/os_mem.c.o
 
 # target to build an object file
 osal/android/os_mem.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_mem.c.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_mem.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.o
 .PHONY : osal/android/os_mem.c.o
 
 osal/android/os_mem.i: osal/android/os_mem.c.i
@@ -426,8 +696,8 @@ osal/android/os_mem.i: osal/android/os_mem.c.i
 
 # target to preprocess a source file
 osal/android/os_mem.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_mem.c.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_mem.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.i
 .PHONY : osal/android/os_mem.c.i
 
 osal/android/os_mem.s: osal/android/os_mem.c.s
@@ -436,8 +706,8 @@ osal/android/os_mem.s: osal/android/os_mem.c.s
 
 # target to generate assembly for a file
 osal/android/os_mem.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_mem.c.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_mem.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.s
 .PHONY : osal/android/os_mem.c.s
 
 osal/linux/os_allocator.o: osal/linux/os_allocator.c.o
@@ -446,8 +716,8 @@ osal/linux/os_allocator.o: osal/linux/os_allocator.c.o
 
 # target to build an object file
 osal/linux/os_allocator.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_allocator.c.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_allocator.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o
 .PHONY : osal/linux/os_allocator.c.o
 
 osal/linux/os_allocator.i: osal/linux/os_allocator.c.i
@@ -456,8 +726,8 @@ osal/linux/os_allocator.i: osal/linux/os_allocator.c.i
 
 # target to preprocess a source file
 osal/linux/os_allocator.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_allocator.c.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_allocator.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.i
 .PHONY : osal/linux/os_allocator.c.i
 
 osal/linux/os_allocator.s: osal/linux/os_allocator.c.s
@@ -466,8 +736,8 @@ osal/linux/os_allocator.s: osal/linux/os_allocator.c.s
 
 # target to generate assembly for a file
 osal/linux/os_allocator.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_allocator.c.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_allocator.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.s
 .PHONY : osal/linux/os_allocator.c.s
 
 osal/linux/os_env.o: osal/linux/os_env.c.o
@@ -476,8 +746,8 @@ osal/linux/os_env.o: osal/linux/os_env.c.o
 
 # target to build an object file
 osal/linux/os_env.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_env.c.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_env.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.o
 .PHONY : osal/linux/os_env.c.o
 
 osal/linux/os_env.i: osal/linux/os_env.c.i
@@ -486,8 +756,8 @@ osal/linux/os_env.i: osal/linux/os_env.c.i
 
 # target to preprocess a source file
 osal/linux/os_env.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_env.c.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_env.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.i
 .PHONY : osal/linux/os_env.c.i
 
 osal/linux/os_env.s: osal/linux/os_env.c.s
@@ -496,8 +766,8 @@ osal/linux/os_env.s: osal/linux/os_env.c.s
 
 # target to generate assembly for a file
 osal/linux/os_env.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_env.c.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_env.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.s
 .PHONY : osal/linux/os_env.c.s
 
 osal/linux/os_log.o: osal/linux/os_log.cpp.o
@@ -506,8 +776,8 @@ osal/linux/os_log.o: osal/linux/os_log.cpp.o
 
 # target to build an object file
 osal/linux/os_log.cpp.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_log.cpp.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_log.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.cpp.o
 .PHONY : osal/linux/os_log.cpp.o
 
 osal/linux/os_log.i: osal/linux/os_log.cpp.i
@@ -516,8 +786,8 @@ osal/linux/os_log.i: osal/linux/os_log.cpp.i
 
 # target to preprocess a source file
 osal/linux/os_log.cpp.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_log.cpp.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_log.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.cpp.i
 .PHONY : osal/linux/os_log.cpp.i
 
 osal/linux/os_log.s: osal/linux/os_log.cpp.s
@@ -526,8 +796,8 @@ osal/linux/os_log.s: osal/linux/os_log.cpp.s
 
 # target to generate assembly for a file
 osal/linux/os_log.cpp.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_log.cpp.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_log.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.cpp.s
 .PHONY : osal/linux/os_log.cpp.s
 
 osal/linux/os_mem.o: osal/linux/os_mem.c.o
@@ -536,8 +806,8 @@ osal/linux/os_mem.o: osal/linux/os_mem.c.o
 
 # target to build an object file
 osal/linux/os_mem.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_mem.c.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_mem.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.o
 .PHONY : osal/linux/os_mem.c.o
 
 osal/linux/os_mem.i: osal/linux/os_mem.c.i
@@ -546,8 +816,8 @@ osal/linux/os_mem.i: osal/linux/os_mem.c.i
 
 # target to preprocess a source file
 osal/linux/os_mem.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_mem.c.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_mem.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.i
 .PHONY : osal/linux/os_mem.c.i
 
 osal/linux/os_mem.s: osal/linux/os_mem.c.s
@@ -556,8 +826,8 @@ osal/linux/os_mem.s: osal/linux/os_mem.c.s
 
 # target to generate assembly for a file
 osal/linux/os_mem.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_mem.c.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_mem.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.s
 .PHONY : osal/linux/os_mem.c.s
 
 osal/mpp_allocator.o: osal/mpp_allocator.cpp.o
@@ -566,8 +836,8 @@ osal/mpp_allocator.o: osal/mpp_allocator.cpp.o
 
 # target to build an object file
 osal/mpp_allocator.cpp.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_allocator.cpp.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_allocator.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o
 .PHONY : osal/mpp_allocator.cpp.o
 
 osal/mpp_allocator.i: osal/mpp_allocator.cpp.i
@@ -576,8 +846,8 @@ osal/mpp_allocator.i: osal/mpp_allocator.cpp.i
 
 # target to preprocess a source file
 osal/mpp_allocator.cpp.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_allocator.cpp.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_allocator.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.i
 .PHONY : osal/mpp_allocator.cpp.i
 
 osal/mpp_allocator.s: osal/mpp_allocator.cpp.s
@@ -586,8 +856,8 @@ osal/mpp_allocator.s: osal/mpp_allocator.cpp.s
 
 # target to generate assembly for a file
 osal/mpp_allocator.cpp.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_allocator.cpp.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_allocator.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.s
 .PHONY : osal/mpp_allocator.cpp.s
 
 osal/mpp_common.o: osal/mpp_common.cpp.o
@@ -596,8 +866,8 @@ osal/mpp_common.o: osal/mpp_common.cpp.o
 
 # target to build an object file
 osal/mpp_common.cpp.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_common.cpp.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_common.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_common.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_common.cpp.o
 .PHONY : osal/mpp_common.cpp.o
 
 osal/mpp_common.i: osal/mpp_common.cpp.i
@@ -606,8 +876,8 @@ osal/mpp_common.i: osal/mpp_common.cpp.i
 
 # target to preprocess a source file
 osal/mpp_common.cpp.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_common.cpp.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_common.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_common.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_common.cpp.i
 .PHONY : osal/mpp_common.cpp.i
 
 osal/mpp_common.s: osal/mpp_common.cpp.s
@@ -616,8 +886,8 @@ osal/mpp_common.s: osal/mpp_common.cpp.s
 
 # target to generate assembly for a file
 osal/mpp_common.cpp.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_common.cpp.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_common.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_common.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_common.cpp.s
 .PHONY : osal/mpp_common.cpp.s
 
 osal/mpp_env.o: osal/mpp_env.cpp.o
@@ -626,8 +896,8 @@ osal/mpp_env.o: osal/mpp_env.cpp.o
 
 # target to build an object file
 osal/mpp_env.cpp.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_env.cpp.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_env.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.cpp.o
 .PHONY : osal/mpp_env.cpp.o
 
 osal/mpp_env.i: osal/mpp_env.cpp.i
@@ -636,8 +906,8 @@ osal/mpp_env.i: osal/mpp_env.cpp.i
 
 # target to preprocess a source file
 osal/mpp_env.cpp.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_env.cpp.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_env.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.cpp.i
 .PHONY : osal/mpp_env.cpp.i
 
 osal/mpp_env.s: osal/mpp_env.cpp.s
@@ -646,8 +916,8 @@ osal/mpp_env.s: osal/mpp_env.cpp.s
 
 # target to generate assembly for a file
 osal/mpp_env.cpp.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_env.cpp.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_env.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.cpp.s
 .PHONY : osal/mpp_env.cpp.s
 
 osal/mpp_lock.o: osal/mpp_lock.cpp.o
@@ -656,8 +926,8 @@ osal/mpp_lock.o: osal/mpp_lock.cpp.o
 
 # target to build an object file
 osal/mpp_lock.cpp.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_lock.cpp.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_lock.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_lock.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_lock.cpp.o
 .PHONY : osal/mpp_lock.cpp.o
 
 osal/mpp_lock.i: osal/mpp_lock.cpp.i
@@ -666,8 +936,8 @@ osal/mpp_lock.i: osal/mpp_lock.cpp.i
 
 # target to preprocess a source file
 osal/mpp_lock.cpp.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_lock.cpp.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_lock.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_lock.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_lock.cpp.i
 .PHONY : osal/mpp_lock.cpp.i
 
 osal/mpp_lock.s: osal/mpp_lock.cpp.s
@@ -676,8 +946,8 @@ osal/mpp_lock.s: osal/mpp_lock.cpp.s
 
 # target to generate assembly for a file
 osal/mpp_lock.cpp.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_lock.cpp.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_lock.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_lock.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_lock.cpp.s
 .PHONY : osal/mpp_lock.cpp.s
 
 osal/mpp_log.o: osal/mpp_log.cpp.o
@@ -686,8 +956,8 @@ osal/mpp_log.o: osal/mpp_log.cpp.o
 
 # target to build an object file
 osal/mpp_log.cpp.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_log.cpp.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_log.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.cpp.o
 .PHONY : osal/mpp_log.cpp.o
 
 osal/mpp_log.i: osal/mpp_log.cpp.i
@@ -696,8 +966,8 @@ osal/mpp_log.i: osal/mpp_log.cpp.i
 
 # target to preprocess a source file
 osal/mpp_log.cpp.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_log.cpp.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_log.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.cpp.i
 .PHONY : osal/mpp_log.cpp.i
 
 osal/mpp_log.s: osal/mpp_log.cpp.s
@@ -706,8 +976,8 @@ osal/mpp_log.s: osal/mpp_log.cpp.s
 
 # target to generate assembly for a file
 osal/mpp_log.cpp.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_log.cpp.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_log.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.cpp.s
 .PHONY : osal/mpp_log.cpp.s
 
 osal/mpp_mem.o: osal/mpp_mem.cpp.o
@@ -716,8 +986,8 @@ osal/mpp_mem.o: osal/mpp_mem.cpp.o
 
 # target to build an object file
 osal/mpp_mem.cpp.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_mem.cpp.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_mem.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o
 .PHONY : osal/mpp_mem.cpp.o
 
 osal/mpp_mem.i: osal/mpp_mem.cpp.i
@@ -726,8 +996,8 @@ osal/mpp_mem.i: osal/mpp_mem.cpp.i
 
 # target to preprocess a source file
 osal/mpp_mem.cpp.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_mem.cpp.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_mem.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.i
 .PHONY : osal/mpp_mem.cpp.i
 
 osal/mpp_mem.s: osal/mpp_mem.cpp.s
@@ -736,8 +1006,8 @@ osal/mpp_mem.s: osal/mpp_mem.cpp.s
 
 # target to generate assembly for a file
 osal/mpp_mem.cpp.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_mem.cpp.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_mem.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.s
 .PHONY : osal/mpp_mem.cpp.s
 
 osal/mpp_mem_pool.o: osal/mpp_mem_pool.cpp.o
@@ -746,8 +1016,8 @@ osal/mpp_mem_pool.o: osal/mpp_mem_pool.cpp.o
 
 # target to build an object file
 osal/mpp_mem_pool.cpp.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_mem_pool.cpp.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_mem_pool.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.o
 .PHONY : osal/mpp_mem_pool.cpp.o
 
 osal/mpp_mem_pool.i: osal/mpp_mem_pool.cpp.i
@@ -756,8 +1026,8 @@ osal/mpp_mem_pool.i: osal/mpp_mem_pool.cpp.i
 
 # target to preprocess a source file
 osal/mpp_mem_pool.cpp.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_mem_pool.cpp.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_mem_pool.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.i
 .PHONY : osal/mpp_mem_pool.cpp.i
 
 osal/mpp_mem_pool.s: osal/mpp_mem_pool.cpp.s
@@ -766,8 +1036,8 @@ osal/mpp_mem_pool.s: osal/mpp_mem_pool.cpp.s
 
 # target to generate assembly for a file
 osal/mpp_mem_pool.cpp.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_mem_pool.cpp.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_mem_pool.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.s
 .PHONY : osal/mpp_mem_pool.cpp.s
 
 osal/mpp_queue.o: osal/mpp_queue.cpp.o
@@ -776,8 +1046,8 @@ osal/mpp_queue.o: osal/mpp_queue.cpp.o
 
 # target to build an object file
 osal/mpp_queue.cpp.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_queue.cpp.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_queue.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_queue.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_queue.cpp.o
 .PHONY : osal/mpp_queue.cpp.o
 
 osal/mpp_queue.i: osal/mpp_queue.cpp.i
@@ -786,8 +1056,8 @@ osal/mpp_queue.i: osal/mpp_queue.cpp.i
 
 # target to preprocess a source file
 osal/mpp_queue.cpp.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_queue.cpp.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_queue.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_queue.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_queue.cpp.i
 .PHONY : osal/mpp_queue.cpp.i
 
 osal/mpp_queue.s: osal/mpp_queue.cpp.s
@@ -796,8 +1066,8 @@ osal/mpp_queue.s: osal/mpp_queue.cpp.s
 
 # target to generate assembly for a file
 osal/mpp_queue.cpp.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_queue.cpp.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_queue.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_queue.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_queue.cpp.s
 .PHONY : osal/mpp_queue.cpp.s
 
 osal/mpp_runtime.o: osal/mpp_runtime.cpp.o
@@ -806,8 +1076,8 @@ osal/mpp_runtime.o: osal/mpp_runtime.cpp.o
 
 # target to build an object file
 osal/mpp_runtime.cpp.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_runtime.cpp.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_runtime.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_runtime.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_runtime.cpp.o
 .PHONY : osal/mpp_runtime.cpp.o
 
 osal/mpp_runtime.i: osal/mpp_runtime.cpp.i
@@ -816,8 +1086,8 @@ osal/mpp_runtime.i: osal/mpp_runtime.cpp.i
 
 # target to preprocess a source file
 osal/mpp_runtime.cpp.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_runtime.cpp.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_runtime.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_runtime.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_runtime.cpp.i
 .PHONY : osal/mpp_runtime.cpp.i
 
 osal/mpp_runtime.s: osal/mpp_runtime.cpp.s
@@ -826,8 +1096,8 @@ osal/mpp_runtime.s: osal/mpp_runtime.cpp.s
 
 # target to generate assembly for a file
 osal/mpp_runtime.cpp.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_runtime.cpp.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_runtime.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_runtime.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_runtime.cpp.s
 .PHONY : osal/mpp_runtime.cpp.s
 
 osal/mpp_thread.o: osal/mpp_thread.cpp.o
@@ -836,8 +1106,8 @@ osal/mpp_thread.o: osal/mpp_thread.cpp.o
 
 # target to build an object file
 osal/mpp_thread.cpp.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_thread.cpp.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_thread.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_thread.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_thread.cpp.o
 .PHONY : osal/mpp_thread.cpp.o
 
 osal/mpp_thread.i: osal/mpp_thread.cpp.i
@@ -846,8 +1116,8 @@ osal/mpp_thread.i: osal/mpp_thread.cpp.i
 
 # target to preprocess a source file
 osal/mpp_thread.cpp.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_thread.cpp.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_thread.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_thread.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_thread.cpp.i
 .PHONY : osal/mpp_thread.cpp.i
 
 osal/mpp_thread.s: osal/mpp_thread.cpp.s
@@ -856,8 +1126,8 @@ osal/mpp_thread.s: osal/mpp_thread.cpp.s
 
 # target to generate assembly for a file
 osal/mpp_thread.cpp.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_thread.cpp.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_thread.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_thread.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_thread.cpp.s
 .PHONY : osal/mpp_thread.cpp.s
 
 osal/mpp_trace.o: osal/mpp_trace.cpp.o
@@ -866,8 +1136,8 @@ osal/mpp_trace.o: osal/mpp_trace.cpp.o
 
 # target to build an object file
 osal/mpp_trace.cpp.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_trace.cpp.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_trace.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_trace.cpp.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_trace.cpp.o
 .PHONY : osal/mpp_trace.cpp.o
 
 osal/mpp_trace.i: osal/mpp_trace.cpp.i
@@ -876,8 +1146,8 @@ osal/mpp_trace.i: osal/mpp_trace.cpp.i
 
 # target to preprocess a source file
 osal/mpp_trace.cpp.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_trace.cpp.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_trace.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_trace.cpp.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_trace.cpp.i
 .PHONY : osal/mpp_trace.cpp.i
 
 osal/mpp_trace.s: osal/mpp_trace.cpp.s
@@ -886,8 +1156,8 @@ osal/mpp_trace.s: osal/mpp_trace.cpp.s
 
 # target to generate assembly for a file
 osal/mpp_trace.cpp.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_trace.cpp.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_trace.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_trace.cpp.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/mpp_trace.cpp.s
 .PHONY : osal/mpp_trace.cpp.s
 
 osal/windows/os_allocator.o: osal/windows/os_allocator.c.o
@@ -896,8 +1166,8 @@ osal/windows/os_allocator.o: osal/windows/os_allocator.c.o
 
 # target to build an object file
 osal/windows/os_allocator.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_allocator.c.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_allocator.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.o
 .PHONY : osal/windows/os_allocator.c.o
 
 osal/windows/os_allocator.i: osal/windows/os_allocator.c.i
@@ -906,8 +1176,8 @@ osal/windows/os_allocator.i: osal/windows/os_allocator.c.i
 
 # target to preprocess a source file
 osal/windows/os_allocator.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_allocator.c.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_allocator.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.i
 .PHONY : osal/windows/os_allocator.c.i
 
 osal/windows/os_allocator.s: osal/windows/os_allocator.c.s
@@ -916,8 +1186,8 @@ osal/windows/os_allocator.s: osal/windows/os_allocator.c.s
 
 # target to generate assembly for a file
 osal/windows/os_allocator.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_allocator.c.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_allocator.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.s
 .PHONY : osal/windows/os_allocator.c.s
 
 osal/windows/os_env.o: osal/windows/os_env.c.o
@@ -926,8 +1196,8 @@ osal/windows/os_env.o: osal/windows/os_env.c.o
 
 # target to build an object file
 osal/windows/os_env.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_env.c.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_env.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.o
 .PHONY : osal/windows/os_env.c.o
 
 osal/windows/os_env.i: osal/windows/os_env.c.i
@@ -936,8 +1206,8 @@ osal/windows/os_env.i: osal/windows/os_env.c.i
 
 # target to preprocess a source file
 osal/windows/os_env.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_env.c.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_env.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.i
 .PHONY : osal/windows/os_env.c.i
 
 osal/windows/os_env.s: osal/windows/os_env.c.s
@@ -946,8 +1216,8 @@ osal/windows/os_env.s: osal/windows/os_env.c.s
 
 # target to generate assembly for a file
 osal/windows/os_env.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_env.c.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_env.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.s
 .PHONY : osal/windows/os_env.c.s
 
 osal/windows/os_log.o: osal/windows/os_log.c.o
@@ -956,8 +1226,8 @@ osal/windows/os_log.o: osal/windows/os_log.c.o
 
 # target to build an object file
 osal/windows/os_log.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_log.c.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_log.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.o
 .PHONY : osal/windows/os_log.c.o
 
 osal/windows/os_log.i: osal/windows/os_log.c.i
@@ -966,8 +1236,8 @@ osal/windows/os_log.i: osal/windows/os_log.c.i
 
 # target to preprocess a source file
 osal/windows/os_log.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_log.c.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_log.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.i
 .PHONY : osal/windows/os_log.c.i
 
 osal/windows/os_log.s: osal/windows/os_log.c.s
@@ -976,8 +1246,8 @@ osal/windows/os_log.s: osal/windows/os_log.c.s
 
 # target to generate assembly for a file
 osal/windows/os_log.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_log.c.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_log.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.s
 .PHONY : osal/windows/os_log.c.s
 
 osal/windows/os_mem.o: osal/windows/os_mem.c.o
@@ -986,8 +1256,8 @@ osal/windows/os_mem.o: osal/windows/os_mem.c.o
 
 # target to build an object file
 osal/windows/os_mem.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_mem.c.o
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_mem.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o
 .PHONY : osal/windows/os_mem.c.o
 
 osal/windows/os_mem.i: osal/windows/os_mem.c.i
@@ -996,8 +1266,8 @@ osal/windows/os_mem.i: osal/windows/os_mem.c.i
 
 # target to preprocess a source file
 osal/windows/os_mem.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_mem.c.i
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_mem.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.i
 .PHONY : osal/windows/os_mem.c.i
 
 osal/windows/os_mem.s: osal/windows/os_mem.c.s
@@ -1006,8 +1276,8 @@ osal/windows/os_mem.s: osal/windows/os_mem.c.s
 
 # target to generate assembly for a file
 osal/windows/os_mem.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_mem.c.s
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_mem.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.s
 .PHONY : osal/windows/os_mem.c.s
 
 # Help Target
@@ -1026,6 +1296,33 @@ help:
 	@echo "... base/mpp_buffer_impl.o"
 	@echo "... base/mpp_buffer_impl.i"
 	@echo "... base/mpp_buffer_impl.s"
+	@echo "... base/omx_base_audio_port.o"
+	@echo "... base/omx_base_audio_port.i"
+	@echo "... base/omx_base_audio_port.s"
+	@echo "... base/omx_base_clock_port.o"
+	@echo "... base/omx_base_clock_port.i"
+	@echo "... base/omx_base_clock_port.s"
+	@echo "... base/omx_base_component.o"
+	@echo "... base/omx_base_component.i"
+	@echo "... base/omx_base_component.s"
+	@echo "... base/omx_base_filter.o"
+	@echo "... base/omx_base_filter.i"
+	@echo "... base/omx_base_filter.s"
+	@echo "... base/omx_base_image_port.o"
+	@echo "... base/omx_base_image_port.i"
+	@echo "... base/omx_base_image_port.s"
+	@echo "... base/omx_base_port.o"
+	@echo "... base/omx_base_port.i"
+	@echo "... base/omx_base_port.s"
+	@echo "... base/omx_base_sink.o"
+	@echo "... base/omx_base_sink.i"
+	@echo "... base/omx_base_sink.s"
+	@echo "... base/omx_base_source.o"
+	@echo "... base/omx_base_source.i"
+	@echo "... base/omx_base_source.s"
+	@echo "... base/omx_base_video_port.o"
+	@echo "... base/omx_base_video_port.i"
+	@echo "... base/omx_base_video_port.s"
 	@echo "... osal/allocator/allocator_dma.o"
 	@echo "... osal/allocator/allocator_dma.i"
 	@echo "... osal/allocator/allocator_dma.s"
@@ -1118,6 +1415,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

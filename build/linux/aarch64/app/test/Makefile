@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/youliang/code/media/vx-mpp
+CMAKE_SOURCE_DIR = /home/youliang/code/vx-mpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/youliang/code/media/vx-mpp/build/linux/aarch64
+CMAKE_BINARY_DIR = /home/youliang/code/vx-mpp/build/linux/aarch64
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles /home/youliang/code/media/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/progress.marks
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles 0
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(CMAKE_COMMAND) -E cmake_progress_start /home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles /home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/progress.marks
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/clean
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/preinstall
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/preinstall
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/rule:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/rule
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/rule
 .PHONY : app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ mpp_dmabuffer_driver_test: app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/rul
 
 # fast build rule for target.
 mpp_dmabuffer_driver_test/fast:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build.make app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build.make app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build
 .PHONY : mpp_dmabuffer_driver_test/fast
 
 # Convenience name for target.
 app/test/CMakeFiles/mpp_buffer_test.dir/rule:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_buffer_test.dir/rule
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_buffer_test.dir/rule
 .PHONY : app/test/CMakeFiles/mpp_buffer_test.dir/rule
 
 # Convenience name for target.
@@ -137,12 +137,12 @@ mpp_buffer_test: app/test/CMakeFiles/mpp_buffer_test.dir/rule
 
 # fast build rule for target.
 mpp_buffer_test/fast:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_buffer_test.dir/build.make app/test/CMakeFiles/mpp_buffer_test.dir/build
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_buffer_test.dir/build.make app/test/CMakeFiles/mpp_buffer_test.dir/build
 .PHONY : mpp_buffer_test/fast
 
 # Convenience name for target.
 app/test/CMakeFiles/mpp_runtime_test.dir/rule:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_runtime_test.dir/rule
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_runtime_test.dir/rule
 .PHONY : app/test/CMakeFiles/mpp_runtime_test.dir/rule
 
 # Convenience name for target.
@@ -152,12 +152,12 @@ mpp_runtime_test: app/test/CMakeFiles/mpp_runtime_test.dir/rule
 
 # fast build rule for target.
 mpp_runtime_test/fast:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_runtime_test.dir/build.make app/test/CMakeFiles/mpp_runtime_test.dir/build
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_runtime_test.dir/build.make app/test/CMakeFiles/mpp_runtime_test.dir/build
 .PHONY : mpp_runtime_test/fast
 
 # Convenience name for target.
 app/test/CMakeFiles/mpp_mem_pool_test.dir/rule:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_mem_pool_test.dir/rule
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_mem_pool_test.dir/rule
 .PHONY : app/test/CMakeFiles/mpp_mem_pool_test.dir/rule
 
 # Convenience name for target.
@@ -167,12 +167,12 @@ mpp_mem_pool_test: app/test/CMakeFiles/mpp_mem_pool_test.dir/rule
 
 # fast build rule for target.
 mpp_mem_pool_test/fast:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_pool_test.dir/build.make app/test/CMakeFiles/mpp_mem_pool_test.dir/build
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_pool_test.dir/build.make app/test/CMakeFiles/mpp_mem_pool_test.dir/build
 .PHONY : mpp_mem_pool_test/fast
 
 # Convenience name for target.
 app/test/CMakeFiles/mpp_trace_test.dir/rule:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_trace_test.dir/rule
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_trace_test.dir/rule
 .PHONY : app/test/CMakeFiles/mpp_trace_test.dir/rule
 
 # Convenience name for target.
@@ -182,12 +182,12 @@ mpp_trace_test: app/test/CMakeFiles/mpp_trace_test.dir/rule
 
 # fast build rule for target.
 mpp_trace_test/fast:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_trace_test.dir/build.make app/test/CMakeFiles/mpp_trace_test.dir/build
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_trace_test.dir/build.make app/test/CMakeFiles/mpp_trace_test.dir/build
 .PHONY : mpp_trace_test/fast
 
 # Convenience name for target.
 app/test/CMakeFiles/mpp_mem_test.dir/rule:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_mem_test.dir/rule
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_mem_test.dir/rule
 .PHONY : app/test/CMakeFiles/mpp_mem_test.dir/rule
 
 # Convenience name for target.
@@ -197,12 +197,12 @@ mpp_mem_test: app/test/CMakeFiles/mpp_mem_test.dir/rule
 
 # fast build rule for target.
 mpp_mem_test/fast:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_test.dir/build.make app/test/CMakeFiles/mpp_mem_test.dir/build
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_test.dir/build.make app/test/CMakeFiles/mpp_mem_test.dir/build
 .PHONY : mpp_mem_test/fast
 
 # Convenience name for target.
 app/test/CMakeFiles/mpp_env_test.dir/rule:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_env_test.dir/rule
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_env_test.dir/rule
 .PHONY : app/test/CMakeFiles/mpp_env_test.dir/rule
 
 # Convenience name for target.
@@ -212,12 +212,12 @@ mpp_env_test: app/test/CMakeFiles/mpp_env_test.dir/rule
 
 # fast build rule for target.
 mpp_env_test/fast:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_env_test.dir/build.make app/test/CMakeFiles/mpp_env_test.dir/build
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_env_test.dir/build.make app/test/CMakeFiles/mpp_env_test.dir/build
 .PHONY : mpp_env_test/fast
 
 # Convenience name for target.
 app/test/CMakeFiles/mpp_log_test.dir/rule:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_log_test.dir/rule
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_log_test.dir/rule
 .PHONY : app/test/CMakeFiles/mpp_log_test.dir/rule
 
 # Convenience name for target.
@@ -227,7 +227,7 @@ mpp_log_test: app/test/CMakeFiles/mpp_log_test.dir/rule
 
 # fast build rule for target.
 mpp_log_test/fast:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_log_test.dir/build.make app/test/CMakeFiles/mpp_log_test.dir/build
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_log_test.dir/build.make app/test/CMakeFiles/mpp_log_test.dir/build
 .PHONY : mpp_log_test/fast
 
 mpp_buffer_test.o: mpp_buffer_test.c.o
@@ -236,7 +236,7 @@ mpp_buffer_test.o: mpp_buffer_test.c.o
 
 # target to build an object file
 mpp_buffer_test.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_buffer_test.dir/build.make app/test/CMakeFiles/mpp_buffer_test.dir/mpp_buffer_test.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_buffer_test.dir/build.make app/test/CMakeFiles/mpp_buffer_test.dir/mpp_buffer_test.c.o
 .PHONY : mpp_buffer_test.c.o
 
 mpp_buffer_test.i: mpp_buffer_test.c.i
@@ -245,7 +245,7 @@ mpp_buffer_test.i: mpp_buffer_test.c.i
 
 # target to preprocess a source file
 mpp_buffer_test.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_buffer_test.dir/build.make app/test/CMakeFiles/mpp_buffer_test.dir/mpp_buffer_test.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_buffer_test.dir/build.make app/test/CMakeFiles/mpp_buffer_test.dir/mpp_buffer_test.c.i
 .PHONY : mpp_buffer_test.c.i
 
 mpp_buffer_test.s: mpp_buffer_test.c.s
@@ -254,7 +254,7 @@ mpp_buffer_test.s: mpp_buffer_test.c.s
 
 # target to generate assembly for a file
 mpp_buffer_test.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_buffer_test.dir/build.make app/test/CMakeFiles/mpp_buffer_test.dir/mpp_buffer_test.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_buffer_test.dir/build.make app/test/CMakeFiles/mpp_buffer_test.dir/mpp_buffer_test.c.s
 .PHONY : mpp_buffer_test.c.s
 
 mpp_dmabuffer_driver_test.o: mpp_dmabuffer_driver_test.c.o
@@ -263,7 +263,7 @@ mpp_dmabuffer_driver_test.o: mpp_dmabuffer_driver_test.c.o
 
 # target to build an object file
 mpp_dmabuffer_driver_test.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build.make app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build.make app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.o
 .PHONY : mpp_dmabuffer_driver_test.c.o
 
 mpp_dmabuffer_driver_test.i: mpp_dmabuffer_driver_test.c.i
@@ -272,7 +272,7 @@ mpp_dmabuffer_driver_test.i: mpp_dmabuffer_driver_test.c.i
 
 # target to preprocess a source file
 mpp_dmabuffer_driver_test.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build.make app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build.make app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.i
 .PHONY : mpp_dmabuffer_driver_test.c.i
 
 mpp_dmabuffer_driver_test.s: mpp_dmabuffer_driver_test.c.s
@@ -281,7 +281,7 @@ mpp_dmabuffer_driver_test.s: mpp_dmabuffer_driver_test.c.s
 
 # target to generate assembly for a file
 mpp_dmabuffer_driver_test.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build.make app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build.make app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.s
 .PHONY : mpp_dmabuffer_driver_test.c.s
 
 mpp_env_test.o: mpp_env_test.c.o
@@ -290,7 +290,7 @@ mpp_env_test.o: mpp_env_test.c.o
 
 # target to build an object file
 mpp_env_test.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_env_test.dir/build.make app/test/CMakeFiles/mpp_env_test.dir/mpp_env_test.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_env_test.dir/build.make app/test/CMakeFiles/mpp_env_test.dir/mpp_env_test.c.o
 .PHONY : mpp_env_test.c.o
 
 mpp_env_test.i: mpp_env_test.c.i
@@ -299,7 +299,7 @@ mpp_env_test.i: mpp_env_test.c.i
 
 # target to preprocess a source file
 mpp_env_test.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_env_test.dir/build.make app/test/CMakeFiles/mpp_env_test.dir/mpp_env_test.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_env_test.dir/build.make app/test/CMakeFiles/mpp_env_test.dir/mpp_env_test.c.i
 .PHONY : mpp_env_test.c.i
 
 mpp_env_test.s: mpp_env_test.c.s
@@ -308,7 +308,7 @@ mpp_env_test.s: mpp_env_test.c.s
 
 # target to generate assembly for a file
 mpp_env_test.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_env_test.dir/build.make app/test/CMakeFiles/mpp_env_test.dir/mpp_env_test.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_env_test.dir/build.make app/test/CMakeFiles/mpp_env_test.dir/mpp_env_test.c.s
 .PHONY : mpp_env_test.c.s
 
 mpp_log_test.o: mpp_log_test.c.o
@@ -317,7 +317,7 @@ mpp_log_test.o: mpp_log_test.c.o
 
 # target to build an object file
 mpp_log_test.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_log_test.dir/build.make app/test/CMakeFiles/mpp_log_test.dir/mpp_log_test.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_log_test.dir/build.make app/test/CMakeFiles/mpp_log_test.dir/mpp_log_test.c.o
 .PHONY : mpp_log_test.c.o
 
 mpp_log_test.i: mpp_log_test.c.i
@@ -326,7 +326,7 @@ mpp_log_test.i: mpp_log_test.c.i
 
 # target to preprocess a source file
 mpp_log_test.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_log_test.dir/build.make app/test/CMakeFiles/mpp_log_test.dir/mpp_log_test.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_log_test.dir/build.make app/test/CMakeFiles/mpp_log_test.dir/mpp_log_test.c.i
 .PHONY : mpp_log_test.c.i
 
 mpp_log_test.s: mpp_log_test.c.s
@@ -335,7 +335,7 @@ mpp_log_test.s: mpp_log_test.c.s
 
 # target to generate assembly for a file
 mpp_log_test.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_log_test.dir/build.make app/test/CMakeFiles/mpp_log_test.dir/mpp_log_test.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_log_test.dir/build.make app/test/CMakeFiles/mpp_log_test.dir/mpp_log_test.c.s
 .PHONY : mpp_log_test.c.s
 
 mpp_mem_pool_test.o: mpp_mem_pool_test.c.o
@@ -344,7 +344,7 @@ mpp_mem_pool_test.o: mpp_mem_pool_test.c.o
 
 # target to build an object file
 mpp_mem_pool_test.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_pool_test.dir/build.make app/test/CMakeFiles/mpp_mem_pool_test.dir/mpp_mem_pool_test.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_pool_test.dir/build.make app/test/CMakeFiles/mpp_mem_pool_test.dir/mpp_mem_pool_test.c.o
 .PHONY : mpp_mem_pool_test.c.o
 
 mpp_mem_pool_test.i: mpp_mem_pool_test.c.i
@@ -353,7 +353,7 @@ mpp_mem_pool_test.i: mpp_mem_pool_test.c.i
 
 # target to preprocess a source file
 mpp_mem_pool_test.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_pool_test.dir/build.make app/test/CMakeFiles/mpp_mem_pool_test.dir/mpp_mem_pool_test.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_pool_test.dir/build.make app/test/CMakeFiles/mpp_mem_pool_test.dir/mpp_mem_pool_test.c.i
 .PHONY : mpp_mem_pool_test.c.i
 
 mpp_mem_pool_test.s: mpp_mem_pool_test.c.s
@@ -362,7 +362,7 @@ mpp_mem_pool_test.s: mpp_mem_pool_test.c.s
 
 # target to generate assembly for a file
 mpp_mem_pool_test.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_pool_test.dir/build.make app/test/CMakeFiles/mpp_mem_pool_test.dir/mpp_mem_pool_test.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_pool_test.dir/build.make app/test/CMakeFiles/mpp_mem_pool_test.dir/mpp_mem_pool_test.c.s
 .PHONY : mpp_mem_pool_test.c.s
 
 mpp_mem_test.o: mpp_mem_test.c.o
@@ -371,7 +371,7 @@ mpp_mem_test.o: mpp_mem_test.c.o
 
 # target to build an object file
 mpp_mem_test.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_test.dir/build.make app/test/CMakeFiles/mpp_mem_test.dir/mpp_mem_test.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_test.dir/build.make app/test/CMakeFiles/mpp_mem_test.dir/mpp_mem_test.c.o
 .PHONY : mpp_mem_test.c.o
 
 mpp_mem_test.i: mpp_mem_test.c.i
@@ -380,7 +380,7 @@ mpp_mem_test.i: mpp_mem_test.c.i
 
 # target to preprocess a source file
 mpp_mem_test.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_test.dir/build.make app/test/CMakeFiles/mpp_mem_test.dir/mpp_mem_test.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_test.dir/build.make app/test/CMakeFiles/mpp_mem_test.dir/mpp_mem_test.c.i
 .PHONY : mpp_mem_test.c.i
 
 mpp_mem_test.s: mpp_mem_test.c.s
@@ -389,7 +389,7 @@ mpp_mem_test.s: mpp_mem_test.c.s
 
 # target to generate assembly for a file
 mpp_mem_test.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_test.dir/build.make app/test/CMakeFiles/mpp_mem_test.dir/mpp_mem_test.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_test.dir/build.make app/test/CMakeFiles/mpp_mem_test.dir/mpp_mem_test.c.s
 .PHONY : mpp_mem_test.c.s
 
 mpp_runtime_test.o: mpp_runtime_test.c.o
@@ -398,7 +398,7 @@ mpp_runtime_test.o: mpp_runtime_test.c.o
 
 # target to build an object file
 mpp_runtime_test.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_runtime_test.dir/build.make app/test/CMakeFiles/mpp_runtime_test.dir/mpp_runtime_test.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_runtime_test.dir/build.make app/test/CMakeFiles/mpp_runtime_test.dir/mpp_runtime_test.c.o
 .PHONY : mpp_runtime_test.c.o
 
 mpp_runtime_test.i: mpp_runtime_test.c.i
@@ -407,7 +407,7 @@ mpp_runtime_test.i: mpp_runtime_test.c.i
 
 # target to preprocess a source file
 mpp_runtime_test.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_runtime_test.dir/build.make app/test/CMakeFiles/mpp_runtime_test.dir/mpp_runtime_test.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_runtime_test.dir/build.make app/test/CMakeFiles/mpp_runtime_test.dir/mpp_runtime_test.c.i
 .PHONY : mpp_runtime_test.c.i
 
 mpp_runtime_test.s: mpp_runtime_test.c.s
@@ -416,7 +416,7 @@ mpp_runtime_test.s: mpp_runtime_test.c.s
 
 # target to generate assembly for a file
 mpp_runtime_test.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_runtime_test.dir/build.make app/test/CMakeFiles/mpp_runtime_test.dir/mpp_runtime_test.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_runtime_test.dir/build.make app/test/CMakeFiles/mpp_runtime_test.dir/mpp_runtime_test.c.s
 .PHONY : mpp_runtime_test.c.s
 
 mpp_trace_test.o: mpp_trace_test.c.o
@@ -425,7 +425,7 @@ mpp_trace_test.o: mpp_trace_test.c.o
 
 # target to build an object file
 mpp_trace_test.c.o:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_trace_test.dir/build.make app/test/CMakeFiles/mpp_trace_test.dir/mpp_trace_test.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_trace_test.dir/build.make app/test/CMakeFiles/mpp_trace_test.dir/mpp_trace_test.c.o
 .PHONY : mpp_trace_test.c.o
 
 mpp_trace_test.i: mpp_trace_test.c.i
@@ -434,7 +434,7 @@ mpp_trace_test.i: mpp_trace_test.c.i
 
 # target to preprocess a source file
 mpp_trace_test.c.i:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_trace_test.dir/build.make app/test/CMakeFiles/mpp_trace_test.dir/mpp_trace_test.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_trace_test.dir/build.make app/test/CMakeFiles/mpp_trace_test.dir/mpp_trace_test.c.i
 .PHONY : mpp_trace_test.c.i
 
 mpp_trace_test.s: mpp_trace_test.c.s
@@ -443,7 +443,7 @@ mpp_trace_test.s: mpp_trace_test.c.s
 
 # target to generate assembly for a file
 mpp_trace_test.c.s:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_trace_test.dir/build.make app/test/CMakeFiles/mpp_trace_test.dir/mpp_trace_test.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_trace_test.dir/build.make app/test/CMakeFiles/mpp_trace_test.dir/mpp_trace_test.c.s
 .PHONY : mpp_trace_test.c.s
 
 # Help Target
@@ -497,6 +497,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

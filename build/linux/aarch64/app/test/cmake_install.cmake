@@ -1,4 +1,4 @@
-# Install script for directory: /home/youliang/code/media/vx-mpp/app/test
+# Install script for directory: /home/youliang/code/vx-mpp/app/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

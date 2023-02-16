@@ -1,8 +1,8 @@
-cmd_/home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.o := aarch64-none-linux-gnu-gcc -Wp,-MD,/home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/.mpp_dmabuf.o.d  -nostdinc -isystem /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/include -I./arch/arm64/include -I./arch/arm64/include/generated  -I./include -I./arch/arm64/include/uapi -I./arch/arm64/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -include ./include/linux/compiler_types.h -D__KERNEL__ -mlittle-endian -DKASAN_SHADOW_SCALE_SHIFT=3 -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Wno-format-security -std=gnu89 -mgeneral-regs-only -DCONFIG_AS_LSE=1 -DCONFIG_CC_HAS_K_CONSTRAINT=1 -fno-asynchronous-unwind-tables -Wno-psabi -mabi=lp64 -mbranch-protection=none -DKASAN_SHADOW_SCALE_SHIFT=3 -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -Os -fno-allow-store-data-races -Wframe-larger-than=4096 -fstack-protector-strong -Wimplicit-fallthrough -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -g -pg -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wno-stringop-truncation -Wno-zero-length-bounds -Wno-array-bounds -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -fno-strict-overflow -fno-merge-all-constants -fmerge-constants -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -fmacro-prefix-map=./= -Wno-packed-not-aligned -mstack-protector-guard=sysreg -mstack-protector-guard-reg=sp_el0 -mstack-protector-guard-offset=1248  -DMODULE  -DKBUILD_BASENAME='"mpp_dmabuf"' -DKBUILD_MODNAME='"codec"' -c -o /home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.o /home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.c
+cmd_/home/youliang/code/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.o := aarch64-none-linux-gnu-gcc -Wp,-MD,/home/youliang/code/vx-mpp/build/linux/aarch64/driver/dmabuf/.mpp_dmabuf.o.d  -nostdinc -isystem /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/include -I./arch/arm64/include -I./arch/arm64/include/generated  -I./include -I./arch/arm64/include/uapi -I./arch/arm64/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -include ./include/linux/compiler_types.h -D__KERNEL__ -mlittle-endian -DKASAN_SHADOW_SCALE_SHIFT=3 -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Wno-format-security -std=gnu89 -mgeneral-regs-only -DCONFIG_AS_LSE=1 -DCONFIG_CC_HAS_K_CONSTRAINT=1 -fno-asynchronous-unwind-tables -Wno-psabi -mabi=lp64 -mbranch-protection=none -DKASAN_SHADOW_SCALE_SHIFT=3 -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -Os -fno-allow-store-data-races -Wframe-larger-than=4096 -fstack-protector-strong -Wimplicit-fallthrough -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -g -pg -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wno-stringop-truncation -Wno-zero-length-bounds -Wno-array-bounds -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -fno-strict-overflow -fno-merge-all-constants -fmerge-constants -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -fmacro-prefix-map=./= -Wno-packed-not-aligned -mstack-protector-guard=sysreg -mstack-protector-guard-reg=sp_el0 -mstack-protector-guard-offset=1248  -DMODULE  -DKBUILD_BASENAME='"mpp_dmabuf"' -DKBUILD_MODNAME='"codec"' -c -o /home/youliang/code/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.o /home/youliang/code/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.c
 
-source_/home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.o := /home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.c
+source_/home/youliang/code/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.o := /home/youliang/code/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.c
 
-deps_/home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.o := \
+deps_/home/youliang/code/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.o := \
   include/linux/kconfig.h \
     $(wildcard include/config/cpu/big/endian.h) \
     $(wildcard include/config/booger.h) \
@@ -17,7 +17,7 @@ deps_/home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmab
     $(wildcard include/config/arm64.h) \
     $(wildcard include/config/retpoline.h) \
     $(wildcard include/config/arch/use/builtin/bswap.h) \
-  /home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.h \
+  /home/youliang/code/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.h \
   include/linux/device.h \
     $(wildcard include/config/acpi.h) \
     $(wildcard include/config/debug/devres.h) \
@@ -917,8 +917,8 @@ deps_/home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmab
     $(wildcard include/config/of/numa.h) \
     $(wildcard include/config/of/overlay.h) \
   include/linux/property.h \
-  /home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dma_alloc.h \
+  /home/youliang/code/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dma_alloc.h \
 
-/home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.o: $(deps_/home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.o)
+/home/youliang/code/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.o: $(deps_/home/youliang/code/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.o)
 
-$(deps_/home/youliang/code/media/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.o):
+$(deps_/home/youliang/code/vx-mpp/build/linux/aarch64/driver/dmabuf/mpp_dmabuf.o):

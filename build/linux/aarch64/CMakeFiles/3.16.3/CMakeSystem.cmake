@@ -3,7 +3,7 @@ set(CMAKE_HOST_SYSTEM_NAME "Linux")
 set(CMAKE_HOST_SYSTEM_VERSION "5.15.0-58-generic")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
-include("/home/youliang/code/media/vx-mpp/build/linux/aarch64/arm.linux.cross.cmake")
+include("/home/youliang/code/vx-mpp/build/linux/aarch64/arm.linux.cross.cmake")
 
 set(CMAKE_SYSTEM "Linux")
 set(CMAKE_SYSTEM_NAME "Linux")

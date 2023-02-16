@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/youliang/code/media/vx-mpp
+CMAKE_SOURCE_DIR = /home/youliang/code/vx-mpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/youliang/code/media/vx-mpp/build/linux/aarch64
+CMAKE_BINARY_DIR = /home/youliang/code/vx-mpp/build/linux/aarch64
 
 # Include any dependencies generated for this target.
 include app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/depend.make
@@ -59,16 +59,16 @@ include app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/flags.make
 
 app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.o: app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/flags.make
 app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.o: ../../../app/test/mpp_dmabuffer_driver_test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.o"
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64/app/test && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.o   -c /home/youliang/code/media/vx-mpp/app/test/mpp_dmabuffer_driver_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/test && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.o   -c /home/youliang/code/vx-mpp/app/test/mpp_dmabuffer_driver_test.c
 
 app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.i"
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64/app/test && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/media/vx-mpp/app/test/mpp_dmabuffer_driver_test.c > CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/test && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/test/mpp_dmabuffer_driver_test.c > CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.i
 
 app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.s"
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64/app/test && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/media/vx-mpp/app/test/mpp_dmabuffer_driver_test.c -o CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/test && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/test/mpp_dmabuffer_driver_test.c -o CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.s
 
 # Object files for target mpp_dmabuffer_driver_test
 mpp_dmabuffer_driver_test_OBJECTS = \
@@ -81,8 +81,8 @@ bin/mpp_dmabuffer_driver_test: app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir
 bin/mpp_dmabuffer_driver_test: app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build.make
 bin/mpp_dmabuffer_driver_test: bin/libvx-mpp.a
 bin/mpp_dmabuffer_driver_test: app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/mpp_dmabuffer_driver_test"
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64/app/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mpp_dmabuffer_driver_test.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/mpp_dmabuffer_driver_test"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mpp_dmabuffer_driver_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build: bin/mpp_dmabuffer_driver_test
@@ -90,10 +90,10 @@ app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build: bin/mpp_dmabuffer_drive
 .PHONY : app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/build
 
 app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/clean:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64/app/test && $(CMAKE_COMMAND) -P CMakeFiles/mpp_dmabuffer_driver_test.dir/cmake_clean.cmake
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/test && $(CMAKE_COMMAND) -P CMakeFiles/mpp_dmabuffer_driver_test.dir/cmake_clean.cmake
 .PHONY : app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/clean
 
 app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/depend:
-	cd /home/youliang/code/media/vx-mpp/build/linux/aarch64 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/youliang/code/media/vx-mpp /home/youliang/code/media/vx-mpp/app/test /home/youliang/code/media/vx-mpp/build/linux/aarch64 /home/youliang/code/media/vx-mpp/build/linux/aarch64/app/test /home/youliang/code/media/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/youliang/code/vx-mpp /home/youliang/code/vx-mpp/app/test /home/youliang/code/vx-mpp/build/linux/aarch64 /home/youliang/code/vx-mpp/build/linux/aarch64/app/test /home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/depend
 

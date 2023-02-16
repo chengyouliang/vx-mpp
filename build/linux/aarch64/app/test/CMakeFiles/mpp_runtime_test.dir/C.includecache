@@ -32,9 +32,9 @@ mpp_type.h
 mpp_buffer.h
 ../../../app/src/osal/inc/mpp_buffer.h
 
-/home/youliang/code/media/vx-mpp/app/test/mpp_runtime_test.c
+/home/youliang/code/vx-mpp/app/test/mpp_runtime_test.c
 mpp_log.h
-/home/youliang/code/media/vx-mpp/app/test/mpp_log.h
+/home/youliang/code/vx-mpp/app/test/mpp_log.h
 mpp_runtime.h
-/home/youliang/code/media/vx-mpp/app/test/mpp_runtime.h
+/home/youliang/code/vx-mpp/app/test/mpp_runtime.h
 

@@ -24,9 +24,9 @@ stdlib.h
 mpp_type.h
 ../../../app/src/osal/inc/mpp_type.h
 
-/home/youliang/code/media/vx-mpp/app/test/mpp_env_test.c
+/home/youliang/code/vx-mpp/app/test/mpp_env_test.c
 mpp_env.h
-/home/youliang/code/media/vx-mpp/app/test/mpp_env.h
+/home/youliang/code/vx-mpp/app/test/mpp_env.h
 mpp_log.h
-/home/youliang/code/media/vx-mpp/app/test/mpp_log.h
+/home/youliang/code/vx-mpp/app/test/mpp_log.h
 

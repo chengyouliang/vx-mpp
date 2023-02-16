@@ -174,9 +174,6 @@ static int mpp_dmabuf_mmap(struct dma_buf *buf, struct vm_area_struct *vma)
 static void mpp_dmabuf_release(struct dma_buf *buf)
 {
 	struct mpp_dmabuf_priv *mpp_hander = buf->priv;
-	struct mpp_dma_buffer *buffer = mpp_hander->buffer;
-	
-	printk("%s %d %p",__FUNCTION__,__LINE__,mpp_hander);
 	struct sg_table *sgt;
 	if (mpp_hander->attachment)
 	{

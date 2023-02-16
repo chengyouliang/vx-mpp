@@ -6,4 +6,4 @@ app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/mpp_dmabuffer_driver_test.c.o
  ../../../app/include/omx_il/OMX_Types.h
  ../../../app/src/osal/inc/mpp_common.h
  ../../../app/src/osal/inc/mpp_log.h
- /home/youliang/code/media/vx-mpp/app/test/mpp_dmabuffer_driver_test.c
+ /home/youliang/code/vx-mpp/app/test/mpp_dmabuffer_driver_test.c

@@ -58,19 +58,19 @@ stdlib.h
 mpp_type.h
 ../../../app/src/osal/inc/mpp_type.h
 
-/home/youliang/code/media/vx-mpp/app/test/mpp_buffer_test.c
+/home/youliang/code/vx-mpp/app/test/mpp_buffer_test.c
 string.h
 -
 vld.h
-/home/youliang/code/media/vx-mpp/app/test/vld.h
+/home/youliang/code/vx-mpp/app/test/vld.h
 mpp_log.h
-/home/youliang/code/media/vx-mpp/app/test/mpp_log.h
+/home/youliang/code/vx-mpp/app/test/mpp_log.h
 mpp_env.h
-/home/youliang/code/media/vx-mpp/app/test/mpp_env.h
+/home/youliang/code/vx-mpp/app/test/mpp_env.h
 mpp_common.h
-/home/youliang/code/media/vx-mpp/app/test/mpp_common.h
+/home/youliang/code/vx-mpp/app/test/mpp_common.h
 mpp_buffer.h
-/home/youliang/code/media/vx-mpp/app/test/mpp_buffer.h
+/home/youliang/code/vx-mpp/app/test/mpp_buffer.h
 mpp_allocator.h
-/home/youliang/code/media/vx-mpp/app/test/mpp_allocator.h
+/home/youliang/code/vx-mpp/app/test/mpp_allocator.h
 

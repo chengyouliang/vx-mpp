@@ -6,5 +6,5 @@ C_FLAGS = -O3 -DNDEBUG   -fPIC
 
 C_DEFINES = -DARMLINUX -D__gnu_linux__
 
-C_INCLUDES = -I/home/youliang/code/media/vx-mpp/app/test/../include -I/home/youliang/code/media/vx-mpp/app/test/../include/omx_il -I/home/youliang/code/media/vx-mpp/app/test/../src/osal -I/home/youliang/code/media/vx-mpp/app/test/../src/osal/allocator -I/home/youliang/code/media/vx-mpp/app/test/../src/osal/inc 
+C_INCLUDES = -I/home/youliang/code/vx-mpp/app/test/../include -I/home/youliang/code/vx-mpp/app/test/../include/omx_il -I/home/youliang/code/vx-mpp/app/test/../src/osal -I/home/youliang/code/vx-mpp/app/test/../src/osal/allocator -I/home/youliang/code/vx-mpp/app/test/../src/osal/inc 
 

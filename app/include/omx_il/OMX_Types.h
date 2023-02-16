@@ -96,8 +96,7 @@ extern "C" {
 /** OMX_ALL is used to as a wildcard to select all entities of the same type
  *  when specifying the index, or referring to a object by an index.  (i.e.
  *  use OMX_ALL to indicate all N channels) */
-#define OMX_ALL 0xFFFFFFFF;
-
+#define OMX_ALL 0xFFFFFFFF
 
 /** OMX_U8 is an 8 bit unsigned quantity that is byte aligned */
 typedef unsigned char OMX_U8;

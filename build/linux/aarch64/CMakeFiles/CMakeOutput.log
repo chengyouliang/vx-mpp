@@ -11,7 +11,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/3.16.3/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/3.16.3/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ 
@@ -24,29 +24,29 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/3.16.3/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/3.16.3/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp
+Change Dir: /home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_ff1f3/fast && /usr/bin/make -f CMakeFiles/cmTC_ff1f3.dir/build.make CMakeFiles/cmTC_ff1f3.dir/build
-make[1]: 进入目录“/home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_ff1f3.dir/testCCompiler.c.o
-/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc -DARMLINUX -D__gnu_linux__  -fPIC -o CMakeFiles/cmTC_ff1f3.dir/testCCompiler.c.o   -c /home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_ff1f3
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff1f3.dir/link.txt --verbose=1
-/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_ff1f3.dir/testCCompiler.c.o  -o cmTC_ff1f3 
-make[1]: 离开目录“/home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp”
+Run Build Command(s):/usr/bin/make cmTC_2f5f8/fast && /usr/bin/make -f CMakeFiles/cmTC_2f5f8.dir/build.make CMakeFiles/cmTC_2f5f8.dir/build
+make[1]: 进入目录“/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_2f5f8.dir/testCCompiler.c.o
+/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc -DARMLINUX -D__gnu_linux__  -fPIC -o CMakeFiles/cmTC_2f5f8.dir/testCCompiler.c.o   -c /home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_2f5f8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2f5f8.dir/link.txt --verbose=1
+/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_2f5f8.dir/testCCompiler.c.o  -o cmTC_2f5f8 
+make[1]: 离开目录“/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp”
 
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp
+Change Dir: /home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_f62b0/fast && /usr/bin/make -f CMakeFiles/cmTC_f62b0.dir/build.make CMakeFiles/cmTC_f62b0.dir/build
-make[1]: Entering directory '/home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o
-/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc -DARMLINUX -D__gnu_linux__  -fPIC -v -o CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c
+Run Build Command(s):/usr/bin/make cmTC_dabf0/fast && /usr/bin/make -f CMakeFiles/cmTC_dabf0.dir/build.make CMakeFiles/cmTC_dabf0.dir/build
+make[1]: Entering directory '/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o
+/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc -DARMLINUX -D__gnu_linux__  -fPIC -v -o CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c
 Using built-in specs.
 COLLECT_GCC=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc
 Target: aarch64-none-linux-gnu
@@ -54,8 +54,8 @@ Configured with: /tmp/dgboter/bbs/build04--cen7x86_64/buildbot/cen7x86_64--aarch
 Thread model: posix
 Supported LTO compression algorithms: zlib
 gcc version 10.2.1 20201103 (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)) 
-COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
- /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/cc1 -quiet -v -iprefix /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/ -isysroot /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc -D ARMLINUX -D __gnu_linux__ /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o -version -fPIC -o /tmp/ccA7zKnH.s
+COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
+ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/cc1 -quiet -v -iprefix /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/ -isysroot /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc -D ARMLINUX -D __gnu_linux__ /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o -version -fPIC -o /tmp/ccqAPVKj.s
 GNU C17 (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)) version 10.2.1 20201103 (aarch64-none-linux-gnu)
 	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39), GMP version 4.3.2, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
 
@@ -76,15 +76,15 @@ GNU C17 (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)) 
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 557171e29d60cade6f40fa125520c8f9
-COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
- /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o /tmp/ccA7zKnH.s
+COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
+ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o /tmp/ccqAPVKj.s
 GNU assembler version 2.35.1 (aarch64-none-linux-gnu) using BFD version (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)) 2.35.1.20201028
 COMPILER_PATH=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/bin/
 LIBRARY_PATH=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/
-COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
-Linking C executable cmTC_f62b0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f62b0.dir/link.txt --verbose=1
-/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc     -v -rdynamic CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o  -o cmTC_f62b0 
+COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
+Linking C executable cmTC_dabf0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dabf0.dir/link.txt --verbose=1
+/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc     -v -rdynamic CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o  -o cmTC_dabf0 
 Using built-in specs.
 COLLECT_GCC=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc
 COLLECT_LTO_WRAPPER=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/lto-wrapper
@@ -95,10 +95,10 @@ Supported LTO compression algorithms: zlib
 gcc version 10.2.1 20201103 (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)) 
 COMPILER_PATH=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/bin/
 LIBRARY_PATH=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f62b0' '-mlittle-endian' '-mabi=lp64'
- /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/collect2 -plugin /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/liblto_plugin.so -plugin-opt=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvwoPs8.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -o cmTC_f62b0 /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crt1.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crti.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtbegin.o -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtend.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f62b0' '-mlittle-endian' '-mabi=lp64'
-make[1]: Leaving directory '/home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_dabf0' '-mlittle-endian' '-mabi=lp64'
+ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/collect2 -plugin /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/liblto_plugin.so -plugin-opt=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9eYsrN.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -o cmTC_dabf0 /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crt1.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crti.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtbegin.o -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtend.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_dabf0' '-mlittle-endian' '-mabi=lp64'
+make[1]: Leaving directory '/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp'
 
 
 
@@ -119,12 +119,12 @@ Parsed C implicit include dir info from above output: rv=done
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(aarch64-none-linux-gnu-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_f62b0/fast && /usr/bin/make -f CMakeFiles/cmTC_f62b0.dir/build.make CMakeFiles/cmTC_f62b0.dir/build]
-  ignore line: [make[1]: Entering directory '/home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc -DARMLINUX -D__gnu_linux__  -fPIC -v -o CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_dabf0/fast && /usr/bin/make -f CMakeFiles/cmTC_dabf0.dir/build.make CMakeFiles/cmTC_dabf0.dir/build]
+  ignore line: [make[1]: Entering directory '/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc -DARMLINUX -D__gnu_linux__  -fPIC -v -o CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc]
   ignore line: [Target: aarch64-none-linux-gnu]
@@ -132,8 +132,8 @@ Parsed C implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib]
   ignore line: [gcc version 10.2.1 20201103 (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/cc1 -quiet -v -iprefix /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/ -isysroot /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc -D ARMLINUX -D __gnu_linux__ /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o -version -fPIC -o /tmp/ccA7zKnH.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/cc1 -quiet -v -iprefix /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/ -isysroot /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc -D ARMLINUX -D __gnu_linux__ /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o -version -fPIC -o /tmp/ccqAPVKj.s]
   ignore line: [GNU C17 (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)) version 10.2.1 20201103 (aarch64-none-linux-gnu)]
   ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39)  GMP version 4.3.2  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
   ignore line: []
@@ -154,15 +154,15 @@ Parsed C implicit link information from above output:
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 557171e29d60cade6f40fa125520c8f9]
-  ignore line: [COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o /tmp/ccA7zKnH.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o /tmp/ccqAPVKj.s]
   ignore line: [GNU assembler version 2.35.1 (aarch64-none-linux-gnu) using BFD version (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)) 2.35.1.20201028]
   ignore line: [COMPILER_PATH=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/bin/]
   ignore line: [LIBRARY_PATH=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [Linking C executable cmTC_f62b0]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f62b0.dir/link.txt --verbose=1]
-  ignore line: [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc     -v -rdynamic CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o  -o cmTC_f62b0 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [Linking C executable cmTC_dabf0]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dabf0.dir/link.txt --verbose=1]
+  ignore line: [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc     -v -rdynamic CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o  -o cmTC_dabf0 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/lto-wrapper]
@@ -173,13 +173,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 10.2.1 20201103 (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)) ]
   ignore line: [COMPILER_PATH=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/bin/]
   ignore line: [LIBRARY_PATH=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f62b0' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/collect2 -plugin /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/liblto_plugin.so -plugin-opt=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvwoPs8.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -o cmTC_f62b0 /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crt1.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crti.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtbegin.o -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtend.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_dabf0' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/collect2 -plugin /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/liblto_plugin.so -plugin-opt=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9eYsrN.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -o cmTC_dabf0 /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crt1.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crti.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtbegin.o -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtend.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crtn.o]
     arg [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccvwoPs8.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc9eYsrN.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -195,7 +195,7 @@ Parsed C implicit link information from above output:
     arg [-maarch64linux] ==> ignore
     arg [--fix-cortex-a53-843419] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_f62b0] ==> ignore
+    arg [cmTC_dabf0] ==> ignore
     arg [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crt1.o] ==> ignore
     arg [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crti.o] ==> ignore
     arg [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtbegin.o] ==> ignore
@@ -207,7 +207,7 @@ Parsed C implicit link information from above output:
     arg [-L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib] ==> dir [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib]
     arg [-L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib] ==> dir [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib]
     arg [-L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib] ==> dir [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib]
-    arg [CMakeFiles/cmTC_f62b0.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_dabf0.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -235,26 +235,26 @@ Parsed C implicit link information from above output:
 
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp
+Change Dir: /home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_e7f32/fast && /usr/bin/make -f CMakeFiles/cmTC_e7f32.dir/build.make CMakeFiles/cmTC_e7f32.dir/build
-make[1]: 进入目录“/home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_e7f32.dir/testCXXCompiler.cxx.o
-/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DARMLINUX -D__gnu_linux__  -fPIC -o CMakeFiles/cmTC_e7f32.dir/testCXXCompiler.cxx.o -c /home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_e7f32
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7f32.dir/link.txt --verbose=1
-/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_e7f32.dir/testCXXCompiler.cxx.o  -o cmTC_e7f32 
-make[1]: 离开目录“/home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp”
+Run Build Command(s):/usr/bin/make cmTC_938f8/fast && /usr/bin/make -f CMakeFiles/cmTC_938f8.dir/build.make CMakeFiles/cmTC_938f8.dir/build
+make[1]: 进入目录“/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_938f8.dir/testCXXCompiler.cxx.o
+/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DARMLINUX -D__gnu_linux__  -fPIC -o CMakeFiles/cmTC_938f8.dir/testCXXCompiler.cxx.o -c /home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_938f8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_938f8.dir/link.txt --verbose=1
+/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_938f8.dir/testCXXCompiler.cxx.o  -o cmTC_938f8 
+make[1]: 离开目录“/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp”
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp
+Change Dir: /home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_004c2/fast && /usr/bin/make -f CMakeFiles/cmTC_004c2.dir/build.make CMakeFiles/cmTC_004c2.dir/build
-make[1]: Entering directory '/home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o
-/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DARMLINUX -D__gnu_linux__  -fPIC -v -o CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
+Run Build Command(s):/usr/bin/make cmTC_eb749/fast && /usr/bin/make -f CMakeFiles/cmTC_eb749.dir/build.make CMakeFiles/cmTC_eb749.dir/build
+make[1]: Entering directory '/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o
+/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DARMLINUX -D__gnu_linux__  -fPIC -v -o CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
 Using built-in specs.
 COLLECT_GCC=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++
 Target: aarch64-none-linux-gnu
@@ -262,8 +262,8 @@ Configured with: /tmp/dgboter/bbs/build04--cen7x86_64/buildbot/cen7x86_64--aarch
 Thread model: posix
 Supported LTO compression algorithms: zlib
 gcc version 10.2.1 20201103 (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)) 
-COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
- /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/cc1plus -quiet -v -iprefix /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/ -isysroot /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc -D_GNU_SOURCE -D ARMLINUX -D __gnu_linux__ /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o -version -fPIC -o /tmp/ccUtEgZs.s
+COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/cc1plus -quiet -v -iprefix /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/ -isysroot /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc -D_GNU_SOURCE -D ARMLINUX -D __gnu_linux__ /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o -version -fPIC -o /tmp/ccZHv0Ej.s
 GNU C++14 (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)) version 10.2.1 20201103 (aarch64-none-linux-gnu)
 	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39), GMP version 4.3.2, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
 
@@ -290,15 +290,15 @@ GNU C++14 (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 936eda7bb9362af3c69a17a4200d3282
-COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
- /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccUtEgZs.s
+COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccZHv0Ej.s
 GNU assembler version 2.35.1 (aarch64-none-linux-gnu) using BFD version (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)) 2.35.1.20201028
 COMPILER_PATH=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/bin/
 LIBRARY_PATH=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/
-COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
-Linking CXX executable cmTC_004c2
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_004c2.dir/link.txt --verbose=1
-/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++      -v -rdynamic CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_004c2 
+COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+Linking CXX executable cmTC_eb749
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb749.dir/link.txt --verbose=1
+/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++      -v -rdynamic CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_eb749 
 Using built-in specs.
 COLLECT_GCC=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++
 COLLECT_LTO_WRAPPER=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/lto-wrapper
@@ -309,10 +309,10 @@ Supported LTO compression algorithms: zlib
 gcc version 10.2.1 20201103 (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)) 
 COMPILER_PATH=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/bin/
 LIBRARY_PATH=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_004c2' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
- /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/collect2 -plugin /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/liblto_plugin.so -plugin-opt=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccw4bJHY.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -o cmTC_004c2 /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crt1.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crti.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtbegin.o -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtend.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_004c2' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
-make[1]: Leaving directory '/home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_eb749' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/collect2 -plugin /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/liblto_plugin.so -plugin-opt=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNENMXN.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -o cmTC_eb749 /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crt1.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crti.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtbegin.o -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtend.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_eb749' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+make[1]: Leaving directory '/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp'
 
 
 
@@ -339,12 +339,12 @@ Parsed CXX implicit include dir info from above output: rv=done
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(aarch64-none-linux-gnu-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_004c2/fast && /usr/bin/make -f CMakeFiles/cmTC_004c2.dir/build.make CMakeFiles/cmTC_004c2.dir/build]
-  ignore line: [make[1]: Entering directory '/home/youliang/code/media/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DARMLINUX -D__gnu_linux__  -fPIC -v -o CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_eb749/fast && /usr/bin/make -f CMakeFiles/cmTC_eb749.dir/build.make CMakeFiles/cmTC_eb749.dir/build]
+  ignore line: [make[1]: Entering directory '/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DARMLINUX -D__gnu_linux__  -fPIC -v -o CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++]
   ignore line: [Target: aarch64-none-linux-gnu]
@@ -352,8 +352,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib]
   ignore line: [gcc version 10.2.1 20201103 (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/cc1plus -quiet -v -iprefix /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/ -isysroot /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc -D_GNU_SOURCE -D ARMLINUX -D __gnu_linux__ /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o -version -fPIC -o /tmp/ccUtEgZs.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/cc1plus -quiet -v -iprefix /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/ -isysroot /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc -D_GNU_SOURCE -D ARMLINUX -D __gnu_linux__ /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o -version -fPIC -o /tmp/ccZHv0Ej.s]
   ignore line: [GNU C++14 (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)) version 10.2.1 20201103 (aarch64-none-linux-gnu)]
   ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39)  GMP version 4.3.2  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
   ignore line: []
@@ -380,15 +380,15 @@ Parsed CXX implicit link information from above output:
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 936eda7bb9362af3c69a17a4200d3282]
-  ignore line: [COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccUtEgZs.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/bin/as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccZHv0Ej.s]
   ignore line: [GNU assembler version 2.35.1 (aarch64-none-linux-gnu) using BFD version (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)) 2.35.1.20201028]
   ignore line: [COMPILER_PATH=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/bin/]
   ignore line: [LIBRARY_PATH=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-  ignore line: [Linking CXX executable cmTC_004c2]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_004c2.dir/link.txt --verbose=1]
-  ignore line: [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++      -v -rdynamic CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_004c2 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' 'ARMLINUX' '-D' '__gnu_linux__' '-fPIC' '-v' '-o' 'CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [Linking CXX executable cmTC_eb749]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb749.dir/link.txt --verbose=1]
+  ignore line: [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++      -v -rdynamic CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_eb749 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++]
   ignore line: [COLLECT_LTO_WRAPPER=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/lto-wrapper]
@@ -399,13 +399,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 10.2.1 20201103 (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16)) ]
   ignore line: [COMPILER_PATH=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/bin/]
   ignore line: [LIBRARY_PATH=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/:/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_004c2' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/collect2 -plugin /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/liblto_plugin.so -plugin-opt=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccw4bJHY.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -o cmTC_004c2 /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crt1.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crti.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtbegin.o -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtend.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_eb749' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/collect2 -plugin /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/liblto_plugin.so -plugin-opt=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNENMXN.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -o cmTC_eb749 /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crt1.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crti.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtbegin.o -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64 -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib -L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtend.o /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crtn.o]
     arg [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../libexec/gcc/aarch64-none-linux-gnu/10.2.1/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccw4bJHY.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccNENMXN.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -421,7 +421,7 @@ Parsed CXX implicit link information from above output:
     arg [-maarch64linux] ==> ignore
     arg [--fix-cortex-a53-843419] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_004c2] ==> ignore
+    arg [cmTC_eb749] ==> ignore
     arg [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crt1.o] ==> ignore
     arg [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib/../lib64/crti.o] ==> ignore
     arg [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/crtbegin.o] ==> ignore
@@ -433,7 +433,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib] ==> dir [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../lib/gcc/aarch64-none-linux-gnu/10.2.1/../../../../aarch64-none-linux-gnu/lib]
     arg [-L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib] ==> dir [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/lib]
     arg [-L/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib] ==> dir [/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/../aarch64-none-linux-gnu/libc/usr/lib]
-    arg [CMakeFiles/cmTC_004c2.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_eb749.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]

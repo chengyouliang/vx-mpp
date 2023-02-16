@@ -40,7 +40,7 @@ stdlib.h
 mpp_type.h
 ../../../app/src/osal/inc/mpp_type.h
 
-/home/youliang/code/media/vx-mpp/app/test/mpp_dmabuffer_driver_test.c
+/home/youliang/code/vx-mpp/app/test/mpp_dmabuffer_driver_test.c
 stdio.h
 -
 unistd.h
@@ -56,7 +56,7 @@ sys/ioctl.h
 sys/mman.h
 -
 mpp_log.h
-/home/youliang/code/media/vx-mpp/app/test/mpp_log.h
+/home/youliang/code/vx-mpp/app/test/mpp_log.h
 mpp_common.h
-/home/youliang/code/media/vx-mpp/app/test/mpp_common.h
+/home/youliang/code/vx-mpp/app/test/mpp_common.h
 

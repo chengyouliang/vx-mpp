@@ -1,5 +1,11 @@
 cmake_minimum_required (VERSION 3.0.0)
 
+add_definitions(-g)
+
+#关闭警告
+add_definitions(-W)
+
+
 SET(TARGET "vx-mpp")
 
 
@@ -10,6 +16,9 @@ include_directories(../include/omx_il)
 
 include_directories(./base)
 include_directories(./base/inc)
+
+include_directories(./common)
+include_directories(./common/inc)
 
 include_directories(./osal)
 include_directories(./osal/allocator)
