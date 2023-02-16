@@ -33,7 +33,7 @@
 #include "mpp_mem.h"
 #include "mpp_log.h"
 #include "mpp_common.h"
-#include "mpp_runtime.h"
+//#include "mpp_runtime.h"
 
 
 static OMX_U32 drm_debug = 0;

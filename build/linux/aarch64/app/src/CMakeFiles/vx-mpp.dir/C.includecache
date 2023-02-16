@@ -264,10 +264,6 @@ mpp_type.h
 mpp_err.h
 ../../../app/src/osal/inc/mpp_err.h
 
-../../../app/src/osal/inc/mpp_runtime.h
-mpp_buffer.h
-../../../app/src/osal/inc/mpp_buffer.h
-
 ../../../app/src/osal/inc/mpp_thread.h
 semaphore.h
 ../../../app/src/osal/inc/semaphore.h
@@ -309,6 +305,8 @@ mpp_allocator.h
 ../../../app/src/osal/os_env.h
 mpp_type.h
 ../../../app/src/osal/mpp_type.h
+
+../../../app/src/osal/os_log.h
 
 ../../../app/src/osal/os_mem.h
 
@@ -491,8 +489,6 @@ mpp_log.h
 /home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_log.h
 mpp_common.h
 /home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_common.h
-mpp_runtime.h
-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_runtime.h
 
 /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_drm.h
 os_allocator.h
@@ -589,8 +585,6 @@ os_mem.h
 /home/youliang/code/vx-mpp/app/src/osal/linux/os_allocator.c
 mpp_log.h
 /home/youliang/code/vx-mpp/app/src/osal/linux/mpp_log.h
-mpp_runtime.h
-/home/youliang/code/vx-mpp/app/src/osal/linux/mpp_runtime.h
 allocator_drm.h
 /home/youliang/code/vx-mpp/app/src/osal/linux/allocator_drm.h
 allocator_dma.h
@@ -610,11 +604,75 @@ errno.h
 os_env.h
 /home/youliang/code/vx-mpp/app/src/osal/linux/os_env.h
 
+/home/youliang/code/vx-mpp/app/src/osal/linux/os_log.c
+stdio.h
+-
+stdarg.h
+-
+syslog.h
+-
+os_log.h
+/home/youliang/code/vx-mpp/app/src/osal/linux/os_log.h
+
 /home/youliang/code/vx-mpp/app/src/osal/linux/os_mem.c
 stdlib.h
 -
 os_mem.h
 /home/youliang/code/vx-mpp/app/src/osal/linux/os_mem.h
+
+/home/youliang/code/vx-mpp/app/src/osal/mpp_allocator.c
+mpp_log.h
+/home/youliang/code/vx-mpp/app/src/osal/mpp_log.h
+mpp_mem.h
+/home/youliang/code/vx-mpp/app/src/osal/mpp_mem.h
+mpp_common.h
+/home/youliang/code/vx-mpp/app/src/osal/mpp_common.h
+mpp_allocator.h
+/home/youliang/code/vx-mpp/app/src/osal/mpp_allocator.h
+mpp_allocator_impl.h
+/home/youliang/code/vx-mpp/app/src/osal/mpp_allocator_impl.h
+os_allocator.h
+/home/youliang/code/vx-mpp/app/src/osal/os_allocator.h
+linux/drm.h
+-
+
+/home/youliang/code/vx-mpp/app/src/osal/mpp_allocator_impl.h
+mpp_thread.h
+/home/youliang/code/vx-mpp/app/src/osal/mpp_thread.h
+os_allocator.h
+/home/youliang/code/vx-mpp/app/src/osal/os_allocator.h
+
+/home/youliang/code/vx-mpp/app/src/osal/mpp_env.c
+mpp_env.h
+/home/youliang/code/vx-mpp/app/src/osal/mpp_env.h
+os_env.h
+/home/youliang/code/vx-mpp/app/src/osal/os_env.h
+
+/home/youliang/code/vx-mpp/app/src/osal/mpp_log.c
+stdio.h
+-
+stdarg.h
+-
+string.h
+-
+mpp_log.h
+/home/youliang/code/vx-mpp/app/src/osal/mpp_log.h
+mpp_mem.h
+/home/youliang/code/vx-mpp/app/src/osal/mpp_mem.h
+mpp_common.h
+/home/youliang/code/vx-mpp/app/src/osal/mpp_common.h
+os_log.h
+/home/youliang/code/vx-mpp/app/src/osal/os_log.h
+
+/home/youliang/code/vx-mpp/app/src/osal/os_allocator.h
+mpp_allocator.h
+/home/youliang/code/vx-mpp/app/src/osal/mpp_allocator.h
+
+/home/youliang/code/vx-mpp/app/src/osal/os_env.h
+mpp_type.h
+/home/youliang/code/vx-mpp/app/src/osal/mpp_type.h
+
+/home/youliang/code/vx-mpp/app/src/osal/os_log.h
 
 /home/youliang/code/vx-mpp/app/src/osal/windows/os_allocator.c
 os_allocator.h

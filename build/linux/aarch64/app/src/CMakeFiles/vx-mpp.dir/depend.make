@@ -201,7 +201,6 @@ app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o: ../../../app/src
 app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o: ../../../app/src/osal/inc/mpp_err.h
 app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o: ../../../app/src/osal/inc/mpp_log.h
 app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o: ../../../app/src/osal/inc/mpp_mem.h
-app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o: ../../../app/src/osal/inc/mpp_runtime.h
 app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o: ../../../app/src/osal/linux/drm.h
 app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o: ../../../app/src/osal/linux/drm_mode.h
 app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o: ../../../app/src/osal/os_allocator.h
@@ -246,7 +245,6 @@ app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o: ../../../app/src/os
 app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o: ../../../app/src/osal/allocator/allocator_std.h
 app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o: ../../../app/src/osal/inc/mpp_allocator.h
 app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o: ../../../app/src/osal/inc/mpp_err.h
-app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o: ../../../app/src/osal/inc/mpp_runtime.h
 app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o: ../../../app/src/osal/os_allocator.h
 app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o: ../../../app/src/osal/android/os_allocator.c
 
@@ -270,7 +268,6 @@ app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o: ../../../app/src/osal
 app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o: ../../../app/src/osal/inc/mpp_allocator.h
 app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o: ../../../app/src/osal/inc/mpp_err.h
 app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o: ../../../app/src/osal/inc/mpp_log.h
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o: ../../../app/src/osal/inc/mpp_runtime.h
 app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o: ../../../app/src/osal/os_allocator.h
 app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o: ../../../app/src/osal/linux/os_allocator.c
 
@@ -279,8 +276,41 @@ app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.o: ../../../app/include/omx_il
 app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.o: ../../../app/src/osal/os_env.h
 app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.o: ../../../app/src/osal/linux/os_env.c
 
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.o: ../../../app/src/osal/os_log.h
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.o: ../../../app/src/osal/linux/os_log.c
+
 app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.o: ../../../app/src/osal/os_mem.h
 app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.o: ../../../app/src/osal/linux/os_mem.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: ../../../app/include/mpp_buffer.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: ../../../app/include/mpp_type.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: ../../../app/include/omx_il/OMX_Types.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: ../../../app/src/osal/inc/mpp_allocator.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: ../../../app/src/osal/inc/mpp_common.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: ../../../app/src/osal/inc/mpp_err.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: ../../../app/src/osal/inc/mpp_log.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: ../../../app/src/osal/inc/mpp_mem.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: ../../../app/src/osal/inc/mpp_thread.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: ../../../app/src/osal/linux/drm.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: ../../../app/src/osal/linux/drm_mode.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: ../../../app/src/osal/mpp_allocator.c
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: ../../../app/src/osal/mpp_allocator_impl.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: ../../../app/src/osal/os_allocator.h
+
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.c.o: ../../../app/include/mpp_type.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.c.o: ../../../app/include/omx_il/OMX_Types.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.c.o: ../../../app/src/osal/inc/mpp_env.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.c.o: ../../../app/src/osal/mpp_env.c
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.c.o: ../../../app/src/osal/os_env.h
+
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o: ../../../app/include/mpp_type.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o: ../../../app/include/omx_il/OMX_Types.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o: ../../../app/src/osal/inc/mpp_common.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o: ../../../app/src/osal/inc/mpp_err.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o: ../../../app/src/osal/inc/mpp_log.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o: ../../../app/src/osal/inc/mpp_mem.h
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o: ../../../app/src/osal/mpp_log.c
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o: ../../../app/src/osal/os_log.h
 
 app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.o: ../../../app/include/mpp_buffer.h
 app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.o: ../../../app/include/mpp_type.h
@@ -301,80 +331,6 @@ app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.o: ../../../app/src/osal/win
 app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o: ../../../app/src/osal/os_mem.h
 app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o: ../../../app/src/osal/windows/os_mem.c
 
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o: ../../../app/include/mpp_buffer.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o: ../../../app/include/mpp_type.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o: ../../../app/include/omx_il/OMX_Types.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o: ../../../app/src/base/inc/mpp_buffer_impl.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o: ../../../app/src/osal/inc/mpp_allocator.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o: ../../../app/src/osal/inc/mpp_common.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o: ../../../app/src/osal/inc/mpp_err.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o: ../../../app/src/osal/inc/mpp_hash.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o: ../../../app/src/osal/inc/mpp_list.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o: ../../../app/src/osal/inc/mpp_log.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o: ../../../app/src/osal/inc/mpp_mem.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o: ../../../app/src/osal/inc/mpp_thread.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer.cpp.o: ../../../app/src/base/mpp_buffer.cpp
-
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o: ../../../app/include/mpp_buffer.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o: ../../../app/include/mpp_type.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o: ../../../app/include/omx_il/OMX_Types.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o: ../../../app/src/base/inc/mpp_buffer_impl.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o: ../../../app/src/osal/inc/mpp_allocator.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o: ../../../app/src/osal/inc/mpp_common.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o: ../../../app/src/osal/inc/mpp_env.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o: ../../../app/src/osal/inc/mpp_err.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o: ../../../app/src/osal/inc/mpp_hash.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o: ../../../app/src/osal/inc/mpp_list.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o: ../../../app/src/osal/inc/mpp_log.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o: ../../../app/src/osal/inc/mpp_mem.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o: ../../../app/src/osal/inc/mpp_mem_pool.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o: ../../../app/src/osal/inc/mpp_thread.h
-app/src/CMakeFiles/vx-mpp.dir/base/mpp_buffer_impl.cpp.o: ../../../app/src/base/mpp_buffer_impl.cpp
-
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.cpp.o: ../../../app/src/osal/os_log.h
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.cpp.o: ../../../app/src/osal/linux/os_log.cpp
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o: ../../../app/include/mpp_buffer.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o: ../../../app/include/mpp_type.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o: ../../../app/include/omx_il/OMX_Types.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o: ../../../app/src/osal/inc/mpp_allocator.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o: ../../../app/src/osal/inc/mpp_common.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o: ../../../app/src/osal/inc/mpp_err.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o: ../../../app/src/osal/inc/mpp_log.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o: ../../../app/src/osal/inc/mpp_mem.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o: ../../../app/src/osal/inc/mpp_thread.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o: ../../../app/src/osal/linux/drm.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o: ../../../app/src/osal/linux/drm_mode.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o: ../../../app/src/osal/mpp_allocator.cpp
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o: ../../../app/src/osal/mpp_allocator_impl.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.cpp.o: ../../../app/src/osal/os_allocator.h
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_common.cpp.o: ../../../app/include/mpp_type.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_common.cpp.o: ../../../app/include/omx_il/OMX_Types.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_common.cpp.o: ../../../app/src/osal/inc/mpp_common.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_common.cpp.o: ../../../app/src/osal/mpp_common.cpp
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.cpp.o: ../../../app/include/mpp_type.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.cpp.o: ../../../app/include/omx_il/OMX_Types.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.cpp.o: ../../../app/src/osal/inc/mpp_env.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.cpp.o: ../../../app/src/osal/mpp_env.cpp
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.cpp.o: ../../../app/src/osal/os_env.h
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_lock.cpp.o: ../../../app/include/mpp_type.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_lock.cpp.o: ../../../app/include/omx_il/OMX_Types.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_lock.cpp.o: ../../../app/src/osal/inc/mpp_lock.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_lock.cpp.o: ../../../app/src/osal/inc/mpp_log.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_lock.cpp.o: ../../../app/src/osal/mpp_lock.cpp
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.cpp.o: ../../../app/include/mpp_type.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.cpp.o: ../../../app/include/omx_il/OMX_Types.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.cpp.o: ../../../app/src/osal/inc/mpp_common.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.cpp.o: ../../../app/src/osal/inc/mpp_err.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.cpp.o: ../../../app/src/osal/inc/mpp_log.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.cpp.o: ../../../app/src/osal/inc/mpp_mem.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.cpp.o: ../../../app/src/osal/mpp_log.cpp
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.cpp.o: ../../../app/src/osal/os_log.h
-
 app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o: ../../../app/include/mpp_type.h
 app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o: ../../../app/include/omx_il/OMX_Types.h
 app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o: ../../../app/src/osal/inc/mpp_common.h
@@ -386,47 +342,4 @@ app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o: ../../../app/src/osal/inc/mpp_
 app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o: ../../../app/src/osal/inc/mpp_thread.h
 app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o: ../../../app/src/osal/mpp_mem.cpp
 app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o: ../../../app/src/osal/os_mem.h
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.o: ../../../app/include/mpp_type.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.o: ../../../app/include/omx_il/OMX_Types.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.o: ../../../app/src/osal/inc/mpp_common.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.o: ../../../app/src/osal/inc/mpp_env.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.o: ../../../app/src/osal/inc/mpp_err.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.o: ../../../app/src/osal/inc/mpp_list.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.o: ../../../app/src/osal/inc/mpp_log.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.o: ../../../app/src/osal/inc/mpp_mem.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.o: ../../../app/src/osal/inc/mpp_mem_pool.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.o: ../../../app/src/osal/inc/mpp_thread.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem_pool.cpp.o: ../../../app/src/osal/mpp_mem_pool.cpp
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_queue.cpp.o: ../../../app/include/mpp_type.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_queue.cpp.o: ../../../app/include/omx_il/OMX_Types.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_queue.cpp.o: ../../../app/src/osal/inc/mpp_err.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_queue.cpp.o: ../../../app/src/osal/inc/mpp_list.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_queue.cpp.o: ../../../app/src/osal/inc/mpp_log.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_queue.cpp.o: ../../../app/src/osal/inc/mpp_queue.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_queue.cpp.o: ../../../app/src/osal/inc/mpp_thread.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_queue.cpp.o: ../../../app/src/osal/mpp_queue.cpp
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_runtime.cpp.o: ../../../app/include/mpp_buffer.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_runtime.cpp.o: ../../../app/include/mpp_type.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_runtime.cpp.o: ../../../app/include/omx_il/OMX_Types.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_runtime.cpp.o: ../../../app/src/osal/inc/mpp_common.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_runtime.cpp.o: ../../../app/src/osal/inc/mpp_err.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_runtime.cpp.o: ../../../app/src/osal/inc/mpp_log.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_runtime.cpp.o: ../../../app/src/osal/inc/mpp_runtime.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_runtime.cpp.o: ../../../app/src/osal/mpp_runtime.cpp
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_thread.cpp.o: ../../../app/include/mpp_type.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_thread.cpp.o: ../../../app/include/omx_il/OMX_Types.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_thread.cpp.o: ../../../app/src/osal/inc/mpp_common.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_thread.cpp.o: ../../../app/src/osal/inc/mpp_log.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_thread.cpp.o: ../../../app/src/osal/inc/mpp_thread.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_thread.cpp.o: ../../../app/src/osal/mpp_thread.cpp
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_trace.cpp.o: ../../../app/include/mpp_type.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_trace.cpp.o: ../../../app/include/omx_il/OMX_Types.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_trace.cpp.o: ../../../app/src/osal/inc/mpp_common.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_trace.cpp.o: ../../../app/src/osal/inc/mpp_trace.h
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_trace.cpp.o: ../../../app/src/osal/mpp_trace.cpp
 

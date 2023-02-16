@@ -126,66 +126,6 @@ mpp_dmabuffer_driver_test/fast:
 .PHONY : mpp_dmabuffer_driver_test/fast
 
 # Convenience name for target.
-app/test/CMakeFiles/mpp_buffer_test.dir/rule:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_buffer_test.dir/rule
-.PHONY : app/test/CMakeFiles/mpp_buffer_test.dir/rule
-
-# Convenience name for target.
-mpp_buffer_test: app/test/CMakeFiles/mpp_buffer_test.dir/rule
-
-.PHONY : mpp_buffer_test
-
-# fast build rule for target.
-mpp_buffer_test/fast:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_buffer_test.dir/build.make app/test/CMakeFiles/mpp_buffer_test.dir/build
-.PHONY : mpp_buffer_test/fast
-
-# Convenience name for target.
-app/test/CMakeFiles/mpp_runtime_test.dir/rule:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_runtime_test.dir/rule
-.PHONY : app/test/CMakeFiles/mpp_runtime_test.dir/rule
-
-# Convenience name for target.
-mpp_runtime_test: app/test/CMakeFiles/mpp_runtime_test.dir/rule
-
-.PHONY : mpp_runtime_test
-
-# fast build rule for target.
-mpp_runtime_test/fast:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_runtime_test.dir/build.make app/test/CMakeFiles/mpp_runtime_test.dir/build
-.PHONY : mpp_runtime_test/fast
-
-# Convenience name for target.
-app/test/CMakeFiles/mpp_mem_pool_test.dir/rule:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_mem_pool_test.dir/rule
-.PHONY : app/test/CMakeFiles/mpp_mem_pool_test.dir/rule
-
-# Convenience name for target.
-mpp_mem_pool_test: app/test/CMakeFiles/mpp_mem_pool_test.dir/rule
-
-.PHONY : mpp_mem_pool_test
-
-# fast build rule for target.
-mpp_mem_pool_test/fast:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_pool_test.dir/build.make app/test/CMakeFiles/mpp_mem_pool_test.dir/build
-.PHONY : mpp_mem_pool_test/fast
-
-# Convenience name for target.
-app/test/CMakeFiles/mpp_trace_test.dir/rule:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_trace_test.dir/rule
-.PHONY : app/test/CMakeFiles/mpp_trace_test.dir/rule
-
-# Convenience name for target.
-mpp_trace_test: app/test/CMakeFiles/mpp_trace_test.dir/rule
-
-.PHONY : mpp_trace_test
-
-# fast build rule for target.
-mpp_trace_test/fast:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_trace_test.dir/build.make app/test/CMakeFiles/mpp_trace_test.dir/build
-.PHONY : mpp_trace_test/fast
-
-# Convenience name for target.
 app/test/CMakeFiles/mpp_mem_test.dir/rule:
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_mem_test.dir/rule
 .PHONY : app/test/CMakeFiles/mpp_mem_test.dir/rule
@@ -229,33 +169,6 @@ mpp_log_test: app/test/CMakeFiles/mpp_log_test.dir/rule
 mpp_log_test/fast:
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_log_test.dir/build.make app/test/CMakeFiles/mpp_log_test.dir/build
 .PHONY : mpp_log_test/fast
-
-mpp_buffer_test.o: mpp_buffer_test.c.o
-
-.PHONY : mpp_buffer_test.o
-
-# target to build an object file
-mpp_buffer_test.c.o:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_buffer_test.dir/build.make app/test/CMakeFiles/mpp_buffer_test.dir/mpp_buffer_test.c.o
-.PHONY : mpp_buffer_test.c.o
-
-mpp_buffer_test.i: mpp_buffer_test.c.i
-
-.PHONY : mpp_buffer_test.i
-
-# target to preprocess a source file
-mpp_buffer_test.c.i:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_buffer_test.dir/build.make app/test/CMakeFiles/mpp_buffer_test.dir/mpp_buffer_test.c.i
-.PHONY : mpp_buffer_test.c.i
-
-mpp_buffer_test.s: mpp_buffer_test.c.s
-
-.PHONY : mpp_buffer_test.s
-
-# target to generate assembly for a file
-mpp_buffer_test.c.s:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_buffer_test.dir/build.make app/test/CMakeFiles/mpp_buffer_test.dir/mpp_buffer_test.c.s
-.PHONY : mpp_buffer_test.c.s
 
 mpp_dmabuffer_driver_test.o: mpp_dmabuffer_driver_test.c.o
 
@@ -338,33 +251,6 @@ mpp_log_test.c.s:
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_log_test.dir/build.make app/test/CMakeFiles/mpp_log_test.dir/mpp_log_test.c.s
 .PHONY : mpp_log_test.c.s
 
-mpp_mem_pool_test.o: mpp_mem_pool_test.c.o
-
-.PHONY : mpp_mem_pool_test.o
-
-# target to build an object file
-mpp_mem_pool_test.c.o:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_pool_test.dir/build.make app/test/CMakeFiles/mpp_mem_pool_test.dir/mpp_mem_pool_test.c.o
-.PHONY : mpp_mem_pool_test.c.o
-
-mpp_mem_pool_test.i: mpp_mem_pool_test.c.i
-
-.PHONY : mpp_mem_pool_test.i
-
-# target to preprocess a source file
-mpp_mem_pool_test.c.i:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_pool_test.dir/build.make app/test/CMakeFiles/mpp_mem_pool_test.dir/mpp_mem_pool_test.c.i
-.PHONY : mpp_mem_pool_test.c.i
-
-mpp_mem_pool_test.s: mpp_mem_pool_test.c.s
-
-.PHONY : mpp_mem_pool_test.s
-
-# target to generate assembly for a file
-mpp_mem_pool_test.c.s:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_pool_test.dir/build.make app/test/CMakeFiles/mpp_mem_pool_test.dir/mpp_mem_pool_test.c.s
-.PHONY : mpp_mem_pool_test.c.s
-
 mpp_mem_test.o: mpp_mem_test.c.o
 
 .PHONY : mpp_mem_test.o
@@ -392,60 +278,6 @@ mpp_mem_test.c.s:
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_test.dir/build.make app/test/CMakeFiles/mpp_mem_test.dir/mpp_mem_test.c.s
 .PHONY : mpp_mem_test.c.s
 
-mpp_runtime_test.o: mpp_runtime_test.c.o
-
-.PHONY : mpp_runtime_test.o
-
-# target to build an object file
-mpp_runtime_test.c.o:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_runtime_test.dir/build.make app/test/CMakeFiles/mpp_runtime_test.dir/mpp_runtime_test.c.o
-.PHONY : mpp_runtime_test.c.o
-
-mpp_runtime_test.i: mpp_runtime_test.c.i
-
-.PHONY : mpp_runtime_test.i
-
-# target to preprocess a source file
-mpp_runtime_test.c.i:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_runtime_test.dir/build.make app/test/CMakeFiles/mpp_runtime_test.dir/mpp_runtime_test.c.i
-.PHONY : mpp_runtime_test.c.i
-
-mpp_runtime_test.s: mpp_runtime_test.c.s
-
-.PHONY : mpp_runtime_test.s
-
-# target to generate assembly for a file
-mpp_runtime_test.c.s:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_runtime_test.dir/build.make app/test/CMakeFiles/mpp_runtime_test.dir/mpp_runtime_test.c.s
-.PHONY : mpp_runtime_test.c.s
-
-mpp_trace_test.o: mpp_trace_test.c.o
-
-.PHONY : mpp_trace_test.o
-
-# target to build an object file
-mpp_trace_test.c.o:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_trace_test.dir/build.make app/test/CMakeFiles/mpp_trace_test.dir/mpp_trace_test.c.o
-.PHONY : mpp_trace_test.c.o
-
-mpp_trace_test.i: mpp_trace_test.c.i
-
-.PHONY : mpp_trace_test.i
-
-# target to preprocess a source file
-mpp_trace_test.c.i:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_trace_test.dir/build.make app/test/CMakeFiles/mpp_trace_test.dir/mpp_trace_test.c.i
-.PHONY : mpp_trace_test.c.i
-
-mpp_trace_test.s: mpp_trace_test.c.s
-
-.PHONY : mpp_trace_test.s
-
-# target to generate assembly for a file
-mpp_trace_test.c.s:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_trace_test.dir/build.make app/test/CMakeFiles/mpp_trace_test.dir/mpp_trace_test.c.s
-.PHONY : mpp_trace_test.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -454,17 +286,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... mpp_dmabuffer_driver_test"
-	@echo "... mpp_buffer_test"
-	@echo "... mpp_runtime_test"
-	@echo "... mpp_mem_pool_test"
 	@echo "... rebuild_cache"
-	@echo "... mpp_trace_test"
 	@echo "... mpp_mem_test"
 	@echo "... mpp_env_test"
 	@echo "... mpp_log_test"
-	@echo "... mpp_buffer_test.o"
-	@echo "... mpp_buffer_test.i"
-	@echo "... mpp_buffer_test.s"
 	@echo "... mpp_dmabuffer_driver_test.o"
 	@echo "... mpp_dmabuffer_driver_test.i"
 	@echo "... mpp_dmabuffer_driver_test.s"
@@ -474,18 +299,9 @@ help:
 	@echo "... mpp_log_test.o"
 	@echo "... mpp_log_test.i"
 	@echo "... mpp_log_test.s"
-	@echo "... mpp_mem_pool_test.o"
-	@echo "... mpp_mem_pool_test.i"
-	@echo "... mpp_mem_pool_test.s"
 	@echo "... mpp_mem_test.o"
 	@echo "... mpp_mem_test.i"
 	@echo "... mpp_mem_test.s"
-	@echo "... mpp_runtime_test.o"
-	@echo "... mpp_runtime_test.i"
-	@echo "... mpp_runtime_test.s"
-	@echo "... mpp_trace_test.o"
-	@echo "... mpp_trace_test.i"
-	@echo "... mpp_trace_test.s"
 .PHONY : help
 
 

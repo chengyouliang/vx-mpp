@@ -163,58 +163,6 @@ mpp_dmabuffer_driver_test/fast:
 .PHONY : mpp_dmabuffer_driver_test/fast
 
 #=============================================================================
-# Target rules for targets named mpp_buffer_test
-
-# Build rule for target.
-mpp_buffer_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mpp_buffer_test
-.PHONY : mpp_buffer_test
-
-# fast build rule for target.
-mpp_buffer_test/fast:
-	$(MAKE) -f app/test/CMakeFiles/mpp_buffer_test.dir/build.make app/test/CMakeFiles/mpp_buffer_test.dir/build
-.PHONY : mpp_buffer_test/fast
-
-#=============================================================================
-# Target rules for targets named mpp_runtime_test
-
-# Build rule for target.
-mpp_runtime_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mpp_runtime_test
-.PHONY : mpp_runtime_test
-
-# fast build rule for target.
-mpp_runtime_test/fast:
-	$(MAKE) -f app/test/CMakeFiles/mpp_runtime_test.dir/build.make app/test/CMakeFiles/mpp_runtime_test.dir/build
-.PHONY : mpp_runtime_test/fast
-
-#=============================================================================
-# Target rules for targets named mpp_mem_pool_test
-
-# Build rule for target.
-mpp_mem_pool_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mpp_mem_pool_test
-.PHONY : mpp_mem_pool_test
-
-# fast build rule for target.
-mpp_mem_pool_test/fast:
-	$(MAKE) -f app/test/CMakeFiles/mpp_mem_pool_test.dir/build.make app/test/CMakeFiles/mpp_mem_pool_test.dir/build
-.PHONY : mpp_mem_pool_test/fast
-
-#=============================================================================
-# Target rules for targets named mpp_trace_test
-
-# Build rule for target.
-mpp_trace_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mpp_trace_test
-.PHONY : mpp_trace_test
-
-# fast build rule for target.
-mpp_trace_test/fast:
-	$(MAKE) -f app/test/CMakeFiles/mpp_trace_test.dir/build.make app/test/CMakeFiles/mpp_trace_test.dir/build
-.PHONY : mpp_trace_test/fast
-
-#=============================================================================
 # Target rules for targets named mpp_mem_test
 
 # Build rule for target.
@@ -265,10 +213,6 @@ help:
 	@echo "... vx_mpp_share"
 	@echo "... vx-mpp"
 	@echo "... mpp_dmabuffer_driver_test"
-	@echo "... mpp_buffer_test"
-	@echo "... mpp_runtime_test"
-	@echo "... mpp_mem_pool_test"
-	@echo "... mpp_trace_test"
 	@echo "... mpp_mem_test"
 	@echo "... mpp_env_test"
 	@echo "... mpp_log_test"

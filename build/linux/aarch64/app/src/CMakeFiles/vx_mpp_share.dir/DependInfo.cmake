@@ -24,7 +24,11 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/youliang/code/vx-mpp/app/src/osal/android/os_mem.c" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/android/os_mem.c.o"
   "/home/youliang/code/vx-mpp/app/src/osal/linux/os_allocator.c" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_allocator.c.o"
   "/home/youliang/code/vx-mpp/app/src/osal/linux/os_env.c" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_env.c.o"
+  "/home/youliang/code/vx-mpp/app/src/osal/linux/os_log.c" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_log.c.o"
   "/home/youliang/code/vx-mpp/app/src/osal/linux/os_mem.c" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_mem.c.o"
+  "/home/youliang/code/vx-mpp/app/src/osal/mpp_allocator.c" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_allocator.c.o"
+  "/home/youliang/code/vx-mpp/app/src/osal/mpp_env.c" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_env.c.o"
+  "/home/youliang/code/vx-mpp/app/src/osal/mpp_log.c" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_log.c.o"
   "/home/youliang/code/vx-mpp/app/src/osal/windows/os_allocator.c" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_allocator.c.o"
   "/home/youliang/code/vx-mpp/app/src/osal/windows/os_env.c" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_env.c.o"
   "/home/youliang/code/vx-mpp/app/src/osal/windows/os_log.c" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/windows/os_log.c.o"
@@ -53,20 +57,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../../../app/src/./osal/inc"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/youliang/code/vx-mpp/app/src/base/mpp_buffer.cpp" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/base/mpp_buffer.cpp.o"
-  "/home/youliang/code/vx-mpp/app/src/base/mpp_buffer_impl.cpp" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/base/mpp_buffer_impl.cpp.o"
-  "/home/youliang/code/vx-mpp/app/src/osal/linux/os_log.cpp" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/linux/os_log.cpp.o"
-  "/home/youliang/code/vx-mpp/app/src/osal/mpp_allocator.cpp" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_allocator.cpp.o"
-  "/home/youliang/code/vx-mpp/app/src/osal/mpp_common.cpp" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_common.cpp.o"
-  "/home/youliang/code/vx-mpp/app/src/osal/mpp_env.cpp" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_env.cpp.o"
-  "/home/youliang/code/vx-mpp/app/src/osal/mpp_lock.cpp" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_lock.cpp.o"
-  "/home/youliang/code/vx-mpp/app/src/osal/mpp_log.cpp" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_log.cpp.o"
   "/home/youliang/code/vx-mpp/app/src/osal/mpp_mem.cpp" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_mem.cpp.o"
-  "/home/youliang/code/vx-mpp/app/src/osal/mpp_mem_pool.cpp" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_mem_pool.cpp.o"
-  "/home/youliang/code/vx-mpp/app/src/osal/mpp_queue.cpp" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_queue.cpp.o"
-  "/home/youliang/code/vx-mpp/app/src/osal/mpp_runtime.cpp" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_runtime.cpp.o"
-  "/home/youliang/code/vx-mpp/app/src/osal/mpp_thread.cpp" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_thread.cpp.o"
-  "/home/youliang/code/vx-mpp/app/src/osal/mpp_trace.cpp" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/osal/mpp_trace.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

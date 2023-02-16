@@ -1,1 +1,0 @@
-/home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -O3 -DNDEBUG  -rdynamic CMakeFiles/mpp_trace_test.dir/mpp_trace_test.c.o  -o ../../bin/mpp_trace_test  ../../bin/libvx-mpp.a -lpthread 

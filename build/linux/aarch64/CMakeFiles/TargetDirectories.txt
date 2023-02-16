@@ -11,11 +11,7 @@
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/edit_cache.dir
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir
-/home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/mpp_buffer_test.dir
-/home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/mpp_runtime_test.dir
-/home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/mpp_mem_pool_test.dir
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/rebuild_cache.dir
-/home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/mpp_trace_test.dir
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/mpp_mem_test.dir
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/mpp_env_test.dir
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/mpp_log_test.dir
