@@ -77,6 +77,11 @@ char* registryGetFilename(void) {
 	return allRegistryGetFilename(REGISTRY_FILENAME);
 }
 
+
+char* registryGetDir(void) {
+	return  getenv("OMX_VX_REGISTRY");
+}
+
 /** This function creates the directory specified by newdir
  * It returns 1 if is not possible to create it
  * It returns 0 if the directory is created or it already exists

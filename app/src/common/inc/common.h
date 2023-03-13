@@ -33,6 +33,7 @@
 int makedir(const char *newdir);
 char* allRegistryGetFilename(char* registry_name);
 char *registryGetFilename(void);
+char* registryGetDir(void);
 
 typedef struct nameList {
 	char* name;

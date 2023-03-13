@@ -32,17 +32,17 @@
 #include <stdlib.h>
 #include <dlfcn.h>
 #include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <dirent.h>
+
 #include "component_loader.h"
 #include "omx_create_loaders.h"
 #include "st_static_component_loader.h"
 #include "common.h"
 
-#define OMX_LOADERS_FILENAME ".omxloaders"
-
-#ifndef INSTALL_PATH_STR
-#define INSTALL_PATH_STR "/usr/local/lib/bellagio"
-#endif
-#define DEFAULT_LOADER_LIBRARY_NAME "/libstbaseloader.so"
+#define PATH_LENGTH     1024     
 
 int createComponentLoaders() {
 	// load component loaders
@@ -50,73 +50,50 @@ int createComponentLoaders() {
 	void *handle;
 	void *functionPointer;
 	void (*fptr)(BOSA_COMPONENTLOADER *loader);
-	char *libraryFileName = NULL;
-	FILE *loaderFP;
-	size_t len = 0;
-	int read;
-	char *omxloader_registry_filename;
-	char *dir, *dirp;
-	int onlyDefault = 0;
 	int oneAtLeast = 0;
+	DIR *dir = NULL;
+	struct dirent *entry;
+    struct stat sta;
+	char *dir_path;
+    char path[PATH_LENGTH];
 
-	omxloader_registry_filename = allRegistryGetFilename(OMX_LOADERS_FILENAME);
+	dir_path = registryGetDir();
+	loader = NULL;
+	dir = opendir(dir_path);
+    if(dir == NULL) {
+		DEBUG(DEB_LEV_ERR, "please set up lib dir  OMX_VX_REGISTRY", path, dlerror());
+        return -1;
+    }
+	while(1) 
+    {
+		entry = readdir(dir);
 
-	/* make sure the registry directory exists */
-	dir = strdup(omxloader_registry_filename);
-	if (dir == NULL) {
-		DEBUG(DEB_LEV_ERR, "The directory has not been specified\n");
-		onlyDefault = 1;
-	}
-	dirp = strrchr(dir, '/');
-	if (dirp != NULL) {
-		*dirp = '\0';
-		if (makedir(dir)) {
-			DEBUG(DEB_LEV_ERR, "Cannot create OpenMAX registry directory %s\n", dir);
-			onlyDefault = 1;
-		}
-	}
-	free(dir);
-	/* test the existence of the file */
-	loaderFP = fopen(omxloader_registry_filename, "r");
-	if (loaderFP == NULL){
-		onlyDefault = 1;
-	}
-	if (onlyDefault) {
-		loader = calloc(1, sizeof(BOSA_COMPONENTLOADER));
-		if (loader == NULL) {
-				DEBUG(DEB_LEV_ERR, "not enough memory for this loader\n");
-				return OMX_ErrorInsufficientResources;
-		}
-		st_static_setup_component_loader(loader);
-		BOSA_AddComponentLoader(loader);
-		return 0;
-	}
-	free(omxloader_registry_filename);
-	/* add the ST static component loader */
-	loader = calloc(1, sizeof(BOSA_COMPONENTLOADER));
-	if (loader == NULL) {
-			DEBUG(DEB_LEV_ERR, "not enough memory for this loader\n");
-			return OMX_ErrorInsufficientResources;
-	}
-	// dlopen all loaders defined in .omxloaders file
-	while((read = getline(&libraryFileName, &len, loaderFP)) != -1) {
+        if(entry == NULL) {
+            break;
+        }
 
-		// strip delimeter, the dlopen doesn't like it
-		if(libraryFileName[read-1] == '\n') {
-			libraryFileName[read-1] = 0;
-		}
-		handle = dlopen(libraryFileName, RTLD_NOW);
+        if(strcmp(entry->d_name, ".") == 0 || strcmp(entry->d_name, "..") == 0) {
+            continue;
+        }
 
+        memset(path, 0, sizeof(path));
+        strcpy(path, dir_path);
+        if(path[strlen(path) - 1] != '/') {
+            strcat(path, "/");
+        }
+
+		strcat(path, entry->d_name);
+		handle = dlopen(path, RTLD_NOW);
 	    if (!handle)
 		{
-			DEBUG(DEB_LEV_ERR, "library %s dlopen error: %s\n", libraryFileName, dlerror());
+			DEBUG(DEB_LEV_ERR, "library %s dlopen error: %s\n", path, dlerror());
 			continue;
 	    }
 
 	    if ((functionPointer = dlsym(handle, "setup_component_loader")) == NULL)
 		{
-				DEBUG(DEB_LEV_ERR, "the library %s is not compatible - %s\n", libraryFileName, dlerror());
-				continue;
+			DEBUG(DEB_LEV_ERR, "the library %s is not compatible - %s\n", path, dlerror());
+			continue;
 		}
 	    fptr = functionPointer;
 
@@ -139,12 +116,6 @@ int createComponentLoaders() {
 		st_static_setup_component_loader(loader);
 		BOSA_AddComponentLoader(loader);
 	}
-	if (libraryFileName)
-	{
-		free(libraryFileName);
-	}
-
-	fclose(loaderFP);
-
+	closedir(dir);
 	return 0;
 }
