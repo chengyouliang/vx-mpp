@@ -680,96 +680,6 @@ common/tsemaphore.c.s:
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/common/tsemaphore.c.s
 .PHONY : common/tsemaphore.c.s
 
-components/av1/library_entry_point.o: components/av1/library_entry_point.c.o
-
-.PHONY : components/av1/library_entry_point.o
-
-# target to build an object file
-components/av1/library_entry_point.c.o:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/library_entry_point.c.o
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/library_entry_point.c.o
-.PHONY : components/av1/library_entry_point.c.o
-
-components/av1/library_entry_point.i: components/av1/library_entry_point.c.i
-
-.PHONY : components/av1/library_entry_point.i
-
-# target to preprocess a source file
-components/av1/library_entry_point.c.i:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/library_entry_point.c.i
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/library_entry_point.c.i
-.PHONY : components/av1/library_entry_point.c.i
-
-components/av1/library_entry_point.s: components/av1/library_entry_point.c.s
-
-.PHONY : components/av1/library_entry_point.s
-
-# target to generate assembly for a file
-components/av1/library_entry_point.c.s:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/library_entry_point.c.s
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/library_entry_point.c.s
-.PHONY : components/av1/library_entry_point.c.s
-
-components/av1/omx_videodec_component.o: components/av1/omx_videodec_component.c.o
-
-.PHONY : components/av1/omx_videodec_component.o
-
-# target to build an object file
-components/av1/omx_videodec_component.c.o:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/omx_videodec_component.c.o
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/omx_videodec_component.c.o
-.PHONY : components/av1/omx_videodec_component.c.o
-
-components/av1/omx_videodec_component.i: components/av1/omx_videodec_component.c.i
-
-.PHONY : components/av1/omx_videodec_component.i
-
-# target to preprocess a source file
-components/av1/omx_videodec_component.c.i:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/omx_videodec_component.c.i
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/omx_videodec_component.c.i
-.PHONY : components/av1/omx_videodec_component.c.i
-
-components/av1/omx_videodec_component.s: components/av1/omx_videodec_component.c.s
-
-.PHONY : components/av1/omx_videodec_component.s
-
-# target to generate assembly for a file
-components/av1/omx_videodec_component.c.s:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/omx_videodec_component.c.s
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/omx_videodec_component.c.s
-.PHONY : components/av1/omx_videodec_component.c.s
-
-components/av1/omx_videoenc_component.o: components/av1/omx_videoenc_component.c.o
-
-.PHONY : components/av1/omx_videoenc_component.o
-
-# target to build an object file
-components/av1/omx_videoenc_component.c.o:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/omx_videoenc_component.c.o
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/omx_videoenc_component.c.o
-.PHONY : components/av1/omx_videoenc_component.c.o
-
-components/av1/omx_videoenc_component.i: components/av1/omx_videoenc_component.c.i
-
-.PHONY : components/av1/omx_videoenc_component.i
-
-# target to preprocess a source file
-components/av1/omx_videoenc_component.c.i:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/omx_videoenc_component.c.i
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/omx_videoenc_component.c.i
-.PHONY : components/av1/omx_videoenc_component.c.i
-
-components/av1/omx_videoenc_component.s: components/av1/omx_videoenc_component.c.s
-
-.PHONY : components/av1/omx_videoenc_component.s
-
-# target to generate assembly for a file
-components/av1/omx_videoenc_component.c.s:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/components/av1/omx_videoenc_component.c.s
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/components/av1/omx_videoenc_component.c.s
-.PHONY : components/av1/omx_videoenc_component.c.s
-
 osal/allocator/allocator_dma.o: osal/allocator/allocator_dma.c.o
 
 .PHONY : osal/allocator/allocator_dma.o
@@ -1434,15 +1344,6 @@ help:
 	@echo "... common/tsemaphore.o"
 	@echo "... common/tsemaphore.i"
 	@echo "... common/tsemaphore.s"
-	@echo "... components/av1/library_entry_point.o"
-	@echo "... components/av1/library_entry_point.i"
-	@echo "... components/av1/library_entry_point.s"
-	@echo "... components/av1/omx_videodec_component.o"
-	@echo "... components/av1/omx_videodec_component.i"
-	@echo "... components/av1/omx_videodec_component.s"
-	@echo "... components/av1/omx_videoenc_component.o"
-	@echo "... components/av1/omx_videoenc_component.i"
-	@echo "... components/av1/omx_videoenc_component.s"
 	@echo "... osal/allocator/allocator_dma.o"
 	@echo "... osal/allocator/allocator_dma.i"
 	@echo "... osal/allocator/allocator_dma.s"

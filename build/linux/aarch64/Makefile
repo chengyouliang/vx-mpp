@@ -150,6 +150,19 @@ vx-mpp/fast:
 .PHONY : vx-mpp/fast
 
 #=============================================================================
+# Target rules for targets named vx_av1
+
+# Build rule for target.
+vx_av1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vx_av1
+.PHONY : vx_av1
+
+# fast build rule for target.
+vx_av1/fast:
+	$(MAKE) -f app/src/components/av1/CMakeFiles/vx_av1.dir/build.make app/src/components/av1/CMakeFiles/vx_av1.dir/build
+.PHONY : vx_av1/fast
+
+#=============================================================================
 # Target rules for targets named mpp_dmabuffer_driver_test
 
 # Build rule for target.
@@ -225,6 +238,7 @@ help:
 	@echo "... codec"
 	@echo "... vx_mpp_share"
 	@echo "... vx-mpp"
+	@echo "... vx_av1"
 	@echo "... mpp_dmabuffer_driver_test"
 	@echo "... vdec_test"
 	@echo "... mpp_mem_test"
