@@ -21,6 +21,8 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../../../app/test/../src/osal"
   "../../../app/test/../src/osal/allocator"
   "../../../app/test/../src/osal/inc"
+  "../../../app/test/../src/base/inc"
+  "../../../app/test/../src/common/inc"
   )
 
 # Targets to which this target links.

@@ -58,6 +58,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "app/src/CMakeFiles/vx_mpp_share.dir/DependInfo.cmake"
   "app/src/CMakeFiles/vx-mpp.dir/DependInfo.cmake"
   "app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/DependInfo.cmake"
+  "app/test/CMakeFiles/vdec_test.dir/DependInfo.cmake"
   "app/test/CMakeFiles/mpp_mem_test.dir/DependInfo.cmake"
   "app/test/CMakeFiles/mpp_env_test.dir/DependInfo.cmake"
   "app/test/CMakeFiles/mpp_log_test.dir/DependInfo.cmake"

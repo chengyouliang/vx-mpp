@@ -163,6 +163,19 @@ mpp_dmabuffer_driver_test/fast:
 .PHONY : mpp_dmabuffer_driver_test/fast
 
 #=============================================================================
+# Target rules for targets named vdec_test
+
+# Build rule for target.
+vdec_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vdec_test
+.PHONY : vdec_test
+
+# fast build rule for target.
+vdec_test/fast:
+	$(MAKE) -f app/test/CMakeFiles/vdec_test.dir/build.make app/test/CMakeFiles/vdec_test.dir/build
+.PHONY : vdec_test/fast
+
+#=============================================================================
 # Target rules for targets named mpp_mem_test
 
 # Build rule for target.
@@ -213,6 +226,7 @@ help:
 	@echo "... vx_mpp_share"
 	@echo "... vx-mpp"
 	@echo "... mpp_dmabuffer_driver_test"
+	@echo "... vdec_test"
 	@echo "... mpp_mem_test"
 	@echo "... mpp_env_test"
 	@echo "... mpp_log_test"

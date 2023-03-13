@@ -22,7 +22,9 @@ macro(add_mpp_osal_test module)
         include_directories(../src/osal)
         include_directories(../src/osal/allocator)
         include_directories(../src/osal/inc)
-        target_link_libraries(${test_name}  vx-mpp  pthread)
+        include_directories(../src/base/inc)
+        include_directories(../src/common/inc)
+        target_link_libraries(${test_name}  vx-mpp  pthread dl)
         set_target_properties(${test_name} PROPERTIES FOLDER "osal/test")
         add_test(NAME ${test_name} COMMAND ${test_name})
         set_target_properties(${test_name} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
@@ -47,5 +49,8 @@ add_mpp_osal_test(mpp_mem)
 #dma device test
 add_mpp_osal_test(mpp_dmabuffer_driver)
 
+
+#dma  test
+add_mpp_osal_test(vdec)
 
 

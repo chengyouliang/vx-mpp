@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/youliang/code/vx-mpp/app/test/mpp_env_test.c" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/mpp_env_test.dir/mpp_env_test.c.o"
+  "/home/youliang/code/vx-mpp/app/test/vdec_test.c" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/vdec_test.dir/vdec_test.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

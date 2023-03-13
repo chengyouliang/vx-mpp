@@ -126,6 +126,21 @@ mpp_dmabuffer_driver_test/fast:
 .PHONY : mpp_dmabuffer_driver_test/fast
 
 # Convenience name for target.
+app/test/CMakeFiles/vdec_test.dir/rule:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/vdec_test.dir/rule
+.PHONY : app/test/CMakeFiles/vdec_test.dir/rule
+
+# Convenience name for target.
+vdec_test: app/test/CMakeFiles/vdec_test.dir/rule
+
+.PHONY : vdec_test
+
+# fast build rule for target.
+vdec_test/fast:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/vdec_test.dir/build.make app/test/CMakeFiles/vdec_test.dir/build
+.PHONY : vdec_test/fast
+
+# Convenience name for target.
 app/test/CMakeFiles/mpp_mem_test.dir/rule:
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_mem_test.dir/rule
 .PHONY : app/test/CMakeFiles/mpp_mem_test.dir/rule
@@ -278,6 +293,33 @@ mpp_mem_test.c.s:
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_test.dir/build.make app/test/CMakeFiles/mpp_mem_test.dir/mpp_mem_test.c.s
 .PHONY : mpp_mem_test.c.s
 
+vdec_test.o: vdec_test.c.o
+
+.PHONY : vdec_test.o
+
+# target to build an object file
+vdec_test.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/vdec_test.dir/build.make app/test/CMakeFiles/vdec_test.dir/vdec_test.c.o
+.PHONY : vdec_test.c.o
+
+vdec_test.i: vdec_test.c.i
+
+.PHONY : vdec_test.i
+
+# target to preprocess a source file
+vdec_test.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/vdec_test.dir/build.make app/test/CMakeFiles/vdec_test.dir/vdec_test.c.i
+.PHONY : vdec_test.c.i
+
+vdec_test.s: vdec_test.c.s
+
+.PHONY : vdec_test.s
+
+# target to generate assembly for a file
+vdec_test.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/vdec_test.dir/build.make app/test/CMakeFiles/vdec_test.dir/vdec_test.c.s
+.PHONY : vdec_test.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -287,6 +329,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... mpp_dmabuffer_driver_test"
 	@echo "... rebuild_cache"
+	@echo "... vdec_test"
 	@echo "... mpp_mem_test"
 	@echo "... mpp_env_test"
 	@echo "... mpp_log_test"
@@ -302,6 +345,9 @@ help:
 	@echo "... mpp_mem_test.o"
 	@echo "... mpp_mem_test.i"
 	@echo "... mpp_mem_test.s"
+	@echo "... vdec_test.o"
+	@echo "... vdec_test.i"
+	@echo "... vdec_test.s"
 .PHONY : help
 
 
