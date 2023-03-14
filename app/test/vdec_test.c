@@ -357,8 +357,10 @@ OMX_CALLBACKTYPE videodeccallbacks = {
 int main(int argc, char** argv) {
 
   int err;
+  printf("%s %d\n",__FUNCTION__,__LINE__);
   char *full_component_name;
   err = OMX_Init();
+  printf("%s %d\n",__FUNCTION__,__LINE__);
   OMX_HANDLETYPE videodechandle;
   if (err != OMX_ErrorNone) {
     printf("The OpenMAX core can not be initialized. Exiting...\n");

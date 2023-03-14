@@ -10,6 +10,8 @@
         "common.h": "c",
         "omx_videoenc_component.h": "c",
         "omx_video.h": "c",
-        "omx_types.h": "c"
+        "omx_types.h": "c",
+        "component_loader.h": "c",
+        "omx_base_component.h": "c"
     }
 }

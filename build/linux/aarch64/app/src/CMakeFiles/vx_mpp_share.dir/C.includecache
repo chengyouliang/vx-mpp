@@ -68,6 +68,30 @@ OMX_Core.h
 OMX_IVCommon.h
 -
 
+../../../app/src/base/inc/omx_base_component.h
+stdlib.h
+-
+pthread.h
+-
+tsemaphore.h
+../../../app/src/base/inc/tsemaphore.h
+queue.h
+../../../app/src/base/inc/queue.h
+omx_classmagic.h
+../../../app/src/base/inc/omx_classmagic.h
+omx_base_port.h
+../../../app/src/base/inc/omx_base_port.h
+
+../../../app/src/base/inc/omx_base_port.h
+tsemaphore.h
+../../../app/src/base/inc/tsemaphore.h
+queue.h
+../../../app/src/base/inc/queue.h
+omx_classmagic.h
+../../../app/src/base/inc/omx_classmagic.h
+
+../../../app/src/base/inc/omx_classmagic.h
+
 ../../../app/src/common/inc/common.h
 
 ../../../app/src/common/inc/component_loader.h
@@ -77,8 +101,6 @@ OMX_Core.h
 ../../../app/src/common/inc/omx_comp_debug_levels.h
 stdio.h
 -
-
-../../../app/src/common/inc/omx_create_loaders.h
 
 ../../../app/src/common/inc/omxcore.h
 OMX_Component.h
@@ -94,31 +116,39 @@ component_loader.h
 omx_comp_debug_levels.h
 ../../../app/src/common/inc/omx_comp_debug_levels.h
 
+../../../app/src/common/inc/queue.h
+pthread.h
+-
+
 ../../../app/src/common/inc/st_static_component_loader.h
 omxcore.h
 ../../../app/src/common/inc/omxcore.h
 
-/home/youliang/code/vx-mpp/app/src/common/omx_create_loaders_linux.c
-stdlib.h
+../../../app/src/common/inc/tsemaphore.h
+
+/home/youliang/code/vx-mpp/app/src/common/st_static_component_loader.c
+stdio.h
 -
-dlfcn.h
+stdlib.h
 -
 string.h
 -
+dlfcn.h
+-
 sys/types.h
--
-sys/stat.h
--
-unistd.h
 -
 dirent.h
 -
-component_loader.h
-/home/youliang/code/vx-mpp/app/src/common/component_loader.h
-omx_create_loaders.h
-/home/youliang/code/vx-mpp/app/src/common/omx_create_loaders.h
-st_static_component_loader.h
-/home/youliang/code/vx-mpp/app/src/common/st_static_component_loader.h
+strings.h
+-
+errno.h
+-
+assert.h
+-
 common.h
 /home/youliang/code/vx-mpp/app/src/common/common.h
+st_static_component_loader.h
+/home/youliang/code/vx-mpp/app/src/common/st_static_component_loader.h
+omx_base_component.h
+/home/youliang/code/vx-mpp/app/src/common/omx_base_component.h
 

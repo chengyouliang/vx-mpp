@@ -99,9 +99,9 @@ OMX_ERRORTYPE OMX_Init() {
   OMX_ERRORTYPE err;
 
   DEBUG(DEB_LEV_FUNCTION_NAME, "In %s \n", __func__);
+  printf("%s %d\n",__FUNCTION__,__LINE__);
   if(initialized == 0) {
     initialized = 1;
-
     if (createComponentLoaders()) {
     	return OMX_ErrorInsufficientResources;
     }
