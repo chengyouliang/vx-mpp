@@ -137,16 +137,21 @@ OMX_ERRORTYPE BOSA_ST_InitComponentLoader(BOSA_COMPONENTLOADER *loader) {
         handleLibList[numLib]=handle;
         numLib++;
         if ((fptr = dlsym(handle, "omx_component_library_Setup")) == NULL) {
+          
             DEBUG(DEB_LEV_ERR, "the library %s is not compatible with ST static component loader - %s\n", path, dlerror());
         } else {
             num_of_comp = (int)(*fptr)(NULL);
+            printf("%s %d\n",__FUNCTION__,__LINE__);
             templateList = realloc(templateList, (listindex + num_of_comp + 1) * sizeof (stLoaderComponentType*));
             templateList[listindex + num_of_comp] = NULL;
+            printf("%s %d\n",__FUNCTION__,__LINE__);
             stComponentsTemp = calloc(num_of_comp,sizeof(stLoaderComponentType*));
             for (i = 0; i<num_of_comp; i++) {
               stComponentsTemp[i] = calloc(1,sizeof(stLoaderComponentType));
             }
+            printf("%s %d\n",__FUNCTION__,__LINE__);
             (*fptr)(stComponentsTemp);
+            printf("%s %d\n",__FUNCTION__,__LINE__);
             for (i = 0; i<num_of_comp; i++) {
               templateList[listindex + i] = stComponentsTemp[i];
               DEBUG(DEB_LEV_FULL_SEQ, "In %s comp name[%d]=%s\n",__func__,listindex + i,templateList[listindex + i]->name);
@@ -250,8 +255,10 @@ OMX_ERRORTYPE BOSA_ST_CreateComponent(
 
   DEBUG(DEB_LEV_FUNCTION_NAME, "In %s\n", __func__);
   templateList = (stLoaderComponentType**)loader->loaderPrivate;
+  DEBUG(DEB_LEV_FUNCTION_NAME, "In %s %p\n", __func__,templateList[i]);
   i = 0;
   while(templateList[i]) {
+    DEBUG(DEB_LEV_PARAMS, "In %s\n", __func__,templateList[i]->name,cComponentName);
     if(!strcmp(templateList[i]->name, cComponentName)) {
       //given component name matches with the general component names
       componentPosition = i;

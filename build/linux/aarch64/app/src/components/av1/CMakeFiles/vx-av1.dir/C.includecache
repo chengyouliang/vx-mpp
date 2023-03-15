@@ -104,12 +104,6 @@ queue.h
 omx_classmagic.h
 ../../../app/src/base/inc/omx_classmagic.h
 
-../../../app/src/base/inc/omx_base_video_port.h
-omx_classmagic.h
-../../../app/src/base/inc/omx_classmagic.h
-omx_base_port.h
-../../../app/src/base/inc/omx_base_port.h
-
 ../../../app/src/base/inc/omx_classmagic.h
 
 ../../../app/src/common/inc/component_loader.h
@@ -152,16 +146,6 @@ omx_videodec_component.h
 omx_videoenc_component.h
 /home/youliang/code/vx-mpp/app/src/components/av1/omx_videoenc_component.h
 
-/home/youliang/code/vx-mpp/app/src/components/av1/omx_videodec_component.c
-omxcore.h
--
-omx_base_video_port.h
--
-omx_videodec_component.h
-/home/youliang/code/vx-mpp/app/src/components/av1/omx_videodec_component.h
-OMX_Video.h
--
-
 /home/youliang/code/vx-mpp/app/src/components/av1/omx_videodec_component.h
 OMX_Types.h
 -
@@ -178,16 +162,6 @@ string.h
 omx_base_filter.h
 -
 string.h
--
-
-/home/youliang/code/vx-mpp/app/src/components/av1/omx_videoenc_component.c
-omxcore.h
--
-omx_base_video_port.h
--
-omx_videoenc_component.h
-/home/youliang/code/vx-mpp/app/src/components/av1/omx_videoenc_component.h
-OMX_Video.h
 -
 
 /home/youliang/code/vx-mpp/app/src/components/av1/omx_videoenc_component.h

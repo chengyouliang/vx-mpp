@@ -53,12 +53,11 @@
 */
 int omx_component_library_Setup(stLoaderComponentType **stComponents) {
   OMX_U32 i;
-  DEBUG(DEB_LEV_FUNCTION_NAME, "In %s \n",__func__);
+  DEBUG(DEB_LEV_FUNCTION_NAME, "In   fdfgdfg%s \n",__func__);
 
   if (stComponents == NULL) {
       return 2;
   }
-  
   /** component 0 - video encoder */
   stComponents[0]->componentVersion.s.nVersionMajor = 1; 
   stComponents[0]->componentVersion.s.nVersionMinor = 1; 
@@ -68,7 +67,7 @@ int omx_component_library_Setup(stLoaderComponentType **stComponents) {
   if (stComponents[0]->name == NULL) {
     return OMX_ErrorInsufficientResources;
   }
-  strcpy(stComponents[1]->name, "OMX.av1.video_encoder");
+  strcpy(stComponents[0]->name, "OMX.av1.video_encoder");
   stComponents[0]->name_specific_length = 1; 
   stComponents[0]->constructor = omx_videoenc_component_Constructor;  
 
@@ -88,7 +87,6 @@ int omx_component_library_Setup(stLoaderComponentType **stComponents) {
       return OMX_ErrorInsufficientResources;
     }
   }
-
   strcpy(stComponents[0]->name_specific[0], "OMX.st.video_encoder.mpeg4");
   strcpy(stComponents[0]->role_specific[0], "video_encoder.mpeg4");
 
@@ -101,7 +99,6 @@ int omx_component_library_Setup(stLoaderComponentType **stComponents) {
   if (stComponents[1]->name == NULL) {
     return OMX_ErrorInsufficientResources;
   }
-
   strcpy(stComponents[1]->name, "OMX.av1.video_decoder");
   stComponents[1]->name_specific_length = 2; 
   stComponents[1]->constructor = omx_videodec_component_Constructor;  
@@ -115,7 +112,6 @@ int omx_component_library_Setup(stLoaderComponentType **stComponents) {
       return OMX_ErrorInsufficientResources;
     }
   }
-
   for(i=0;i<stComponents[1]->name_specific_length;i++) {
     stComponents[1]->role_specific[i] = calloc(1, OMX_MAX_STRINGNAME_SIZE);
     if (stComponents[1]->role_specific[i] == NULL) {
@@ -124,6 +120,5 @@ int omx_component_library_Setup(stLoaderComponentType **stComponents) {
   }
   strcpy(stComponents[1]->name_specific[0], "OMX.st.video_decoder.mpeg4");
   strcpy(stComponents[1]->role_specific[0], "video_decoder.mpeg4");
-
   return 2;
 }

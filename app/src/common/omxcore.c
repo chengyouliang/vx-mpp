@@ -164,7 +164,7 @@ OMX_ERRORTYPE OMX_GetHandle(OMX_OUT OMX_HANDLETYPE* pHandle,
 
   OMX_ERRORTYPE err = OMX_ErrorNone;
   int i;
-  DEBUG(DEB_LEV_FUNCTION_NAME, "In %s\n", __func__);
+  DEBUG(DEB_LEV_FUNCTION_NAME, "In %s  bosa_loaders  %d\n", __func__,bosa_loaders);
 
   for (i = 0; i < bosa_loaders; i++) {
     err = loadersList[i]->BOSA_CreateComponent(
