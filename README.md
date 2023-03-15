@@ -14,3 +14,8 @@
 #cd  build/linux/aarch64
 #./make-Makefiles.bash
 #make
+
+
+
+export OMX_VX_REGISTRY=/mnt/vx-mpp/build/linux/aarch64/bin/component
+export LD_LIBRARY_PATH=/mnt/vx-mpp/build/linux/aarch64/bin

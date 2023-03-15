@@ -44,7 +44,7 @@
 #include <tsemaphore.h>
 
 
-#define COMPONENT_NAME_BASE "OMX.st.video_decoder"
+#define COMPONENT_NAME_BASE "OMX.av1.video_encoder"
 #define BASE_ROLE "video_decoder.avc"
 #define COMPONENT_NAME_BASE_LEN 20
 
@@ -340,7 +340,7 @@ OMX_ERRORTYPE videodecFillBufferDone(
   } else {
     DEBUG(DEB_LEV_ERR, "Ouch! In %s: had NULL buffer to output...\n", __func__);
   }
-#endif;
+#endif
   return OMX_ErrorNone;  
 }
 
@@ -357,10 +357,8 @@ OMX_CALLBACKTYPE videodeccallbacks = {
 int main(int argc, char** argv) {
 
   int err;
-  printf("%s %d\n",__FUNCTION__,__LINE__);
   char *full_component_name;
   err = OMX_Init();
-  printf("%s %d\n",__FUNCTION__,__LINE__);
   OMX_HANDLETYPE videodechandle;
   if (err != OMX_ErrorNone) {
     printf("The OpenMAX core can not be initialized. Exiting...\n");

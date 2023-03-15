@@ -79,26 +79,29 @@ OMX_ERRORTYPE BOSA_ST_InitComponentLoader(BOSA_COMPONENTLOADER *loader) {
   stLoaderComponentType** templateList;
   stLoaderComponentType** stComponentsTemp;
   void* handle;
-  size_t len;
   int (*fptr)(stLoaderComponentType **stComponents);
   int i;
   int index;
   int listindex;
-  char *registry_filename;
   DIR *dir = NULL;
 	struct dirent *entry;
 	char *dir_path = NULL;
   char path[1024];
-	dir_path = registryGetDir();
-	printf("%s %d %s\n",__FUNCTION__,__LINE__,dir_path);
-#if 0
-	if (dir_path == NULL);
+  if (loader == NULL)
 	{
-		DEBUG(DEB_LEV_ERR, "please set up lib dir  OMX_VX_REGISTRY");
-        return -1;
+		  DEBUG(DEB_LEV_ERR, "please input loader is null\n");
+      return -1;
 	}
-#endif
-	loader = NULL;
+	dir_path = registryGetDir();
+	if (dir_path == NULL)
+	{
+		  DEBUG(DEB_LEV_ERR, "please set up component lib dir OMX_VX_REGISTRY \n");
+      return -1;
+	}
+  listindex = 0;
+  templateList = malloc(sizeof (stLoaderComponentType*));
+  templateList[0] = NULL;
+
 	dir = opendir(dir_path);
   if(dir == NULL) {
 	    DEBUG(DEB_LEV_ERR, "open dir err %s  %d\n", path, dlerror());
@@ -130,14 +133,12 @@ OMX_ERRORTYPE BOSA_ST_InitComponentLoader(BOSA_COMPONENTLOADER *loader) {
 			      DEBUG(DEB_LEV_ERR, "library %s dlopen error: %s\n", path, dlerror());
 			      continue;
 	      }
-        printf("%s %d\n",__FUNCTION__,__LINE__);
+        printf("%s %d %s\n",__FUNCTION__,__LINE__,path);
         handleLibList[numLib]=handle;
         numLib++;
         if ((fptr = dlsym(handle, "omx_component_library_Setup")) == NULL) {
-           printf("%s %d %p\n",__FUNCTION__,__LINE__,fptr);
             DEBUG(DEB_LEV_ERR, "the library %s is not compatible with ST static component loader - %s\n", path, dlerror());
         } else {
-            printf("%s %d\n",__FUNCTION__,__LINE__);
             num_of_comp = (int)(*fptr)(NULL);
             templateList = realloc(templateList, (listindex + num_of_comp + 1) * sizeof (stLoaderComponentType*));
             templateList[listindex + num_of_comp] = NULL;
@@ -145,14 +146,11 @@ OMX_ERRORTYPE BOSA_ST_InitComponentLoader(BOSA_COMPONENTLOADER *loader) {
             for (i = 0; i<num_of_comp; i++) {
               stComponentsTemp[i] = calloc(1,sizeof(stLoaderComponentType));
             }
-             printf("%s %d\n",__FUNCTION__,__LINE__);
             (*fptr)(stComponentsTemp);
-             printf("%s %d\n",__FUNCTION__,__LINE__);
             for (i = 0; i<num_of_comp; i++) {
               templateList[listindex + i] = stComponentsTemp[i];
               DEBUG(DEB_LEV_FULL_SEQ, "In %s comp name[%d]=%s\n",__func__,listindex + i,templateList[listindex + i]->name);
             }
-             printf("%s %d\n",__FUNCTION__,__LINE__);
             free(stComponentsTemp);
             stComponentsTemp = NULL;
             listindex+= i;

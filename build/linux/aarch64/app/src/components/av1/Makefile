@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/youliang/code/vx-mpp/build/linux/aarch64
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,19 +111,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-app/src/components/av1/CMakeFiles/vx_av1.dir/rule:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/src/components/av1/CMakeFiles/vx_av1.dir/rule
-.PHONY : app/src/components/av1/CMakeFiles/vx_av1.dir/rule
+app/src/components/av1/CMakeFiles/vx-av1.dir/rule:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/src/components/av1/CMakeFiles/vx-av1.dir/rule
+.PHONY : app/src/components/av1/CMakeFiles/vx-av1.dir/rule
 
 # Convenience name for target.
-vx_av1: app/src/components/av1/CMakeFiles/vx_av1.dir/rule
+vx-av1: app/src/components/av1/CMakeFiles/vx-av1.dir/rule
 
-.PHONY : vx_av1
+.PHONY : vx-av1
 
 # fast build rule for target.
-vx_av1/fast:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/av1/CMakeFiles/vx_av1.dir/build.make app/src/components/av1/CMakeFiles/vx_av1.dir/build
-.PHONY : vx_av1/fast
+vx-av1/fast:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/av1/CMakeFiles/vx-av1.dir/build.make app/src/components/av1/CMakeFiles/vx-av1.dir/build
+.PHONY : vx-av1/fast
 
 library_entry_point.o: library_entry_point.c.o
 
@@ -131,7 +131,7 @@ library_entry_point.o: library_entry_point.c.o
 
 # target to build an object file
 library_entry_point.c.o:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/av1/CMakeFiles/vx_av1.dir/build.make app/src/components/av1/CMakeFiles/vx_av1.dir/library_entry_point.c.o
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/av1/CMakeFiles/vx-av1.dir/build.make app/src/components/av1/CMakeFiles/vx-av1.dir/library_entry_point.c.o
 .PHONY : library_entry_point.c.o
 
 library_entry_point.i: library_entry_point.c.i
@@ -140,7 +140,7 @@ library_entry_point.i: library_entry_point.c.i
 
 # target to preprocess a source file
 library_entry_point.c.i:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/av1/CMakeFiles/vx_av1.dir/build.make app/src/components/av1/CMakeFiles/vx_av1.dir/library_entry_point.c.i
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/av1/CMakeFiles/vx-av1.dir/build.make app/src/components/av1/CMakeFiles/vx-av1.dir/library_entry_point.c.i
 .PHONY : library_entry_point.c.i
 
 library_entry_point.s: library_entry_point.c.s
@@ -149,8 +149,62 @@ library_entry_point.s: library_entry_point.c.s
 
 # target to generate assembly for a file
 library_entry_point.c.s:
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/av1/CMakeFiles/vx_av1.dir/build.make app/src/components/av1/CMakeFiles/vx_av1.dir/library_entry_point.c.s
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/av1/CMakeFiles/vx-av1.dir/build.make app/src/components/av1/CMakeFiles/vx-av1.dir/library_entry_point.c.s
 .PHONY : library_entry_point.c.s
+
+omx_videodec_component.o: omx_videodec_component.c.o
+
+.PHONY : omx_videodec_component.o
+
+# target to build an object file
+omx_videodec_component.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/av1/CMakeFiles/vx-av1.dir/build.make app/src/components/av1/CMakeFiles/vx-av1.dir/omx_videodec_component.c.o
+.PHONY : omx_videodec_component.c.o
+
+omx_videodec_component.i: omx_videodec_component.c.i
+
+.PHONY : omx_videodec_component.i
+
+# target to preprocess a source file
+omx_videodec_component.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/av1/CMakeFiles/vx-av1.dir/build.make app/src/components/av1/CMakeFiles/vx-av1.dir/omx_videodec_component.c.i
+.PHONY : omx_videodec_component.c.i
+
+omx_videodec_component.s: omx_videodec_component.c.s
+
+.PHONY : omx_videodec_component.s
+
+# target to generate assembly for a file
+omx_videodec_component.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/av1/CMakeFiles/vx-av1.dir/build.make app/src/components/av1/CMakeFiles/vx-av1.dir/omx_videodec_component.c.s
+.PHONY : omx_videodec_component.c.s
+
+omx_videoenc_component.o: omx_videoenc_component.c.o
+
+.PHONY : omx_videoenc_component.o
+
+# target to build an object file
+omx_videoenc_component.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/av1/CMakeFiles/vx-av1.dir/build.make app/src/components/av1/CMakeFiles/vx-av1.dir/omx_videoenc_component.c.o
+.PHONY : omx_videoenc_component.c.o
+
+omx_videoenc_component.i: omx_videoenc_component.c.i
+
+.PHONY : omx_videoenc_component.i
+
+# target to preprocess a source file
+omx_videoenc_component.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/av1/CMakeFiles/vx-av1.dir/build.make app/src/components/av1/CMakeFiles/vx-av1.dir/omx_videoenc_component.c.i
+.PHONY : omx_videoenc_component.c.i
+
+omx_videoenc_component.s: omx_videoenc_component.c.s
+
+.PHONY : omx_videoenc_component.s
+
+# target to generate assembly for a file
+omx_videoenc_component.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/av1/CMakeFiles/vx-av1.dir/build.make app/src/components/av1/CMakeFiles/vx-av1.dir/omx_videoenc_component.c.s
+.PHONY : omx_videoenc_component.c.s
 
 # Help Target
 help:
@@ -158,12 +212,18 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... vx_av1"
+	@echo "... rebuild_cache"
+	@echo "... vx-av1"
 	@echo "... library_entry_point.o"
 	@echo "... library_entry_point.i"
 	@echo "... library_entry_point.s"
+	@echo "... omx_videodec_component.o"
+	@echo "... omx_videodec_component.i"
+	@echo "... omx_videodec_component.s"
+	@echo "... omx_videoenc_component.o"
+	@echo "... omx_videoenc_component.i"
+	@echo "... omx_videoenc_component.s"
 .PHONY : help
 
 

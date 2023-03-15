@@ -1,34 +1,26 @@
 cmake_minimum_required (VERSION 3.0.0)
 
 add_definitions(-g)
-
-#关闭警告
-#add_definitions(-w)
 add_definitions(-W)
 
-
-SET(TARGET "vx_av1")
-
 # include
-include_directories(../../../include/omx_il)
-include_directories(../base/inc)
-include_directories(../common/inc)
+include_directories(${PROJECT_SOURCE_DIR}/include/omx_il)
+include_directories(${PROJECT_SOURCE_DIR}/src/base/inc)
+include_directories(${PROJECT_SOURCE_DIR}/src/common/inc)
+include_directories(.)
 
+message(WARNING  "${PROJECT_SOURCE_DIR}")
 # src
-SET(SRC_LIST omx_videodec_component.c/
-             omx_videodec_component.h/
-             omx_videoenc_component.c/
-             omx_videoenc_component.h/
-             library_entry_point.c)
+aux_source_directory(.  SRC_LIST)
+
+link_directories(${CMAKE_BINARY_DIR}/bin)
+#lib
+ADD_LIBRARY(vx-av1 SHARED  ${SRC_LIST})
+target_link_libraries(vx-av1 vx_mpp_share)
 
 
-target_link_libraries(${test_name}  vx_mpp_share)
-#ADD_LIBRARY(${TARGET} STATIC  ${DIR_SRCS})
-ADD_LIBRARY(vx_av1 SHARED  ${SRC_LIST})
 
-
-set_target_properties(${TARGET} PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-set_target_properties(vx_av1 PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set_target_properties(vx-av1 PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/component )
 
 
 #静态库：     ARCHIVE_OUTPUT_DIRECTORY_<CONFIG>

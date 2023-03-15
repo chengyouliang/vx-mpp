@@ -174,269 +174,9 @@ app/src/CMakeFiles/vx-mpp.dir/base/omx_base_video_port.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/base/omx_base_video_port.c.s"
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/base/omx_base_video_port.c -o CMakeFiles/vx-mpp.dir/base/omx_base_video_port.c.s
 
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: ../../../app/src/osal/mpp_allocator.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/mpp_allocator.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/mpp_allocator.c > CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/mpp_allocator.c -o CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.c.o: ../../../app/src/osal/mpp_env.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/mpp_env.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/mpp_env.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/mpp_env.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/mpp_env.c > CMakeFiles/vx-mpp.dir/osal/mpp_env.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/mpp_env.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/mpp_env.c -o CMakeFiles/vx-mpp.dir/osal/mpp_env.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o: ../../../app/src/osal/mpp_log.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/mpp_log.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/mpp_log.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/mpp_log.c > CMakeFiles/vx-mpp.dir/osal/mpp_log.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/mpp_log.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/mpp_log.c -o CMakeFiles/vx-mpp.dir/osal/mpp_log.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o: ../../../app/src/osal/mpp_mem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o -c /home/youliang/code/vx-mpp/app/src/osal/mpp_mem.cpp
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/mpp_mem.cpp > CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/mpp_mem.cpp -o CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.o: ../../../app/src/osal/allocator/allocator_dma.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_dma.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_dma.c > CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_dma.c -o CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o: ../../../app/src/osal/allocator/allocator_drm.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_drm.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_drm.c > CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_drm.c -o CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.o: ../../../app/src/osal/allocator/allocator_ion.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_ion.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_ion.c > CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_ion.c -o CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.o: ../../../app/src/osal/allocator/allocator_std.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_std.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_std.c > CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_std.c -o CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o: ../../../app/src/osal/android/os_allocator.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/android/os_allocator.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/android/os_allocator.c > CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/android/os_allocator.c -o CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.o: ../../../app/src/osal/android/os_env.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/android/os_env.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/android/os_env.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/android/os_env.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/android/os_env.c > CMakeFiles/vx-mpp.dir/osal/android/os_env.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/android/os_env.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/android/os_env.c -o CMakeFiles/vx-mpp.dir/osal/android/os_env.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.o: ../../../app/src/osal/android/os_log.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/android/os_log.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/android/os_log.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/android/os_log.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/android/os_log.c > CMakeFiles/vx-mpp.dir/osal/android/os_log.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/android/os_log.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/android/os_log.c -o CMakeFiles/vx-mpp.dir/osal/android/os_log.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.o: ../../../app/src/osal/android/os_mem.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/android/os_mem.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/android/os_mem.c > CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/android/os_mem.c -o CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o: ../../../app/src/osal/linux/os_allocator.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/linux/os_allocator.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/linux/os_allocator.c > CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/linux/os_allocator.c -o CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.o: ../../../app/src/osal/linux/os_env.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/linux/os_env.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/linux/os_env.c > CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/linux/os_env.c -o CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.o: ../../../app/src/osal/linux/os_log.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/linux/os_log.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/linux/os_log.c > CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/linux/os_log.c -o CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.o: ../../../app/src/osal/linux/os_mem.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/linux/os_mem.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/linux/os_mem.c > CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/linux/os_mem.c -o CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.o: ../../../app/src/osal/windows/os_allocator.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/windows/os_allocator.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/windows/os_allocator.c > CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/windows/os_allocator.c -o CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.o: ../../../app/src/osal/windows/os_env.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/windows/os_env.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/windows/os_env.c > CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/windows/os_env.c -o CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.o: ../../../app/src/osal/windows/os_log.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/windows/os_log.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/windows/os_log.c > CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/windows/os_log.c -o CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.s
-
-app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
-app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o: ../../../app/src/osal/windows/os_mem.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/windows/os_mem.c
-
-app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.i"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/windows/os_mem.c > CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.i
-
-app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.s"
-	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/windows/os_mem.c -o CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.s
-
 app/src/CMakeFiles/vx-mpp.dir/common/common.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
 app/src/CMakeFiles/vx-mpp.dir/common/common.c.o: ../../../app/src/common/common.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/common.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/common.c.o"
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/common/common.c.o   -c /home/youliang/code/vx-mpp/app/src/common/common.c
 
 app/src/CMakeFiles/vx-mpp.dir/common/common.c.i: cmake_force
@@ -449,7 +189,7 @@ app/src/CMakeFiles/vx-mpp.dir/common/common.c.s: cmake_force
 
 app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_file.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
 app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_file.c.o: ../../../app/src/common/content_pipe_file.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_file.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_file.c.o"
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/common/content_pipe_file.c.o   -c /home/youliang/code/vx-mpp/app/src/common/content_pipe_file.c
 
 app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_file.c.i: cmake_force
@@ -462,7 +202,7 @@ app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_file.c.s: cmake_force
 
 app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_inet.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
 app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_inet.c.o: ../../../app/src/common/content_pipe_inet.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_inet.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_inet.c.o"
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/common/content_pipe_inet.c.o   -c /home/youliang/code/vx-mpp/app/src/common/content_pipe_inet.c
 
 app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_inet.c.i: cmake_force
@@ -475,7 +215,7 @@ app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_inet.c.s: cmake_force
 
 app/src/CMakeFiles/vx-mpp.dir/common/omx_create_loaders_linux.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
 app/src/CMakeFiles/vx-mpp.dir/common/omx_create_loaders_linux.c.o: ../../../app/src/common/omx_create_loaders_linux.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/omx_create_loaders_linux.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/omx_create_loaders_linux.c.o"
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/common/omx_create_loaders_linux.c.o   -c /home/youliang/code/vx-mpp/app/src/common/omx_create_loaders_linux.c
 
 app/src/CMakeFiles/vx-mpp.dir/common/omx_create_loaders_linux.c.i: cmake_force
@@ -488,7 +228,7 @@ app/src/CMakeFiles/vx-mpp.dir/common/omx_create_loaders_linux.c.s: cmake_force
 
 app/src/CMakeFiles/vx-mpp.dir/common/omxcore.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
 app/src/CMakeFiles/vx-mpp.dir/common/omxcore.c.o: ../../../app/src/common/omxcore.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/omxcore.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/omxcore.c.o"
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/common/omxcore.c.o   -c /home/youliang/code/vx-mpp/app/src/common/omxcore.c
 
 app/src/CMakeFiles/vx-mpp.dir/common/omxcore.c.i: cmake_force
@@ -501,7 +241,7 @@ app/src/CMakeFiles/vx-mpp.dir/common/omxcore.c.s: cmake_force
 
 app/src/CMakeFiles/vx-mpp.dir/common/omxregister.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
 app/src/CMakeFiles/vx-mpp.dir/common/omxregister.c.o: ../../../app/src/common/omxregister.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/omxregister.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/omxregister.c.o"
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/common/omxregister.c.o   -c /home/youliang/code/vx-mpp/app/src/common/omxregister.c
 
 app/src/CMakeFiles/vx-mpp.dir/common/omxregister.c.i: cmake_force
@@ -514,7 +254,7 @@ app/src/CMakeFiles/vx-mpp.dir/common/omxregister.c.s: cmake_force
 
 app/src/CMakeFiles/vx-mpp.dir/common/queue.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
 app/src/CMakeFiles/vx-mpp.dir/common/queue.c.o: ../../../app/src/common/queue.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/queue.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/queue.c.o"
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/common/queue.c.o   -c /home/youliang/code/vx-mpp/app/src/common/queue.c
 
 app/src/CMakeFiles/vx-mpp.dir/common/queue.c.i: cmake_force
@@ -527,7 +267,7 @@ app/src/CMakeFiles/vx-mpp.dir/common/queue.c.s: cmake_force
 
 app/src/CMakeFiles/vx-mpp.dir/common/st_static_component_loader.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
 app/src/CMakeFiles/vx-mpp.dir/common/st_static_component_loader.c.o: ../../../app/src/common/st_static_component_loader.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/st_static_component_loader.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/st_static_component_loader.c.o"
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/common/st_static_component_loader.c.o   -c /home/youliang/code/vx-mpp/app/src/common/st_static_component_loader.c
 
 app/src/CMakeFiles/vx-mpp.dir/common/st_static_component_loader.c.i: cmake_force
@@ -540,7 +280,7 @@ app/src/CMakeFiles/vx-mpp.dir/common/st_static_component_loader.c.s: cmake_force
 
 app/src/CMakeFiles/vx-mpp.dir/common/tsemaphore.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
 app/src/CMakeFiles/vx-mpp.dir/common/tsemaphore.c.o: ../../../app/src/common/tsemaphore.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/tsemaphore.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object app/src/CMakeFiles/vx-mpp.dir/common/tsemaphore.c.o"
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/common/tsemaphore.c.o   -c /home/youliang/code/vx-mpp/app/src/common/tsemaphore.c
 
 app/src/CMakeFiles/vx-mpp.dir/common/tsemaphore.c.i: cmake_force
@@ -550,6 +290,266 @@ app/src/CMakeFiles/vx-mpp.dir/common/tsemaphore.c.i: cmake_force
 app/src/CMakeFiles/vx-mpp.dir/common/tsemaphore.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/common/tsemaphore.c.s"
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/common/tsemaphore.c -o CMakeFiles/vx-mpp.dir/common/tsemaphore.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o: ../../../app/src/osal/mpp_allocator.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/mpp_allocator.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/mpp_allocator.c > CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/mpp_allocator.c -o CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.c.o: ../../../app/src/osal/mpp_env.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/mpp_env.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/mpp_env.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/mpp_env.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/mpp_env.c > CMakeFiles/vx-mpp.dir/osal/mpp_env.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/mpp_env.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/mpp_env.c -o CMakeFiles/vx-mpp.dir/osal/mpp_env.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o: ../../../app/src/osal/mpp_log.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/mpp_log.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/mpp_log.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/mpp_log.c > CMakeFiles/vx-mpp.dir/osal/mpp_log.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/mpp_log.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/mpp_log.c -o CMakeFiles/vx-mpp.dir/osal/mpp_log.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o: ../../../app/src/osal/mpp_mem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.o -c /home/youliang/code/vx-mpp/app/src/osal/mpp_mem.cpp
+
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/mpp_mem.cpp > CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/mpp_mem.cpp -o CMakeFiles/vx-mpp.dir/osal/mpp_mem.cpp.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.o: ../../../app/src/osal/allocator/allocator_dma.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_dma.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_dma.c > CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_dma.c -o CMakeFiles/vx-mpp.dir/osal/allocator/allocator_dma.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o: ../../../app/src/osal/allocator/allocator_drm.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_drm.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_drm.c > CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_drm.c -o CMakeFiles/vx-mpp.dir/osal/allocator/allocator_drm.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.o: ../../../app/src/osal/allocator/allocator_ion.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_ion.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_ion.c > CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_ion.c -o CMakeFiles/vx-mpp.dir/osal/allocator/allocator_ion.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.o: ../../../app/src/osal/allocator/allocator_std.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_std.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_std.c > CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_std.c -o CMakeFiles/vx-mpp.dir/osal/allocator/allocator_std.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o: ../../../app/src/osal/android/os_allocator.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/android/os_allocator.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/android/os_allocator.c > CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/android/os_allocator.c -o CMakeFiles/vx-mpp.dir/osal/android/os_allocator.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.o: ../../../app/src/osal/android/os_env.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/android/os_env.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/android/os_env.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/android/os_env.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/android/os_env.c > CMakeFiles/vx-mpp.dir/osal/android/os_env.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/android/os_env.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/android/os_env.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/android/os_env.c -o CMakeFiles/vx-mpp.dir/osal/android/os_env.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.o: ../../../app/src/osal/android/os_log.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/android/os_log.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/android/os_log.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/android/os_log.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/android/os_log.c > CMakeFiles/vx-mpp.dir/osal/android/os_log.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/android/os_log.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/android/os_log.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/android/os_log.c -o CMakeFiles/vx-mpp.dir/osal/android/os_log.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.o: ../../../app/src/osal/android/os_mem.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/android/os_mem.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/android/os_mem.c > CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/android/os_mem.c -o CMakeFiles/vx-mpp.dir/osal/android/os_mem.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o: ../../../app/src/osal/linux/os_allocator.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/linux/os_allocator.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/linux/os_allocator.c > CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/linux/os_allocator.c -o CMakeFiles/vx-mpp.dir/osal/linux/os_allocator.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.o: ../../../app/src/osal/linux/os_env.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/linux/os_env.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/linux/os_env.c > CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/linux/os_env.c -o CMakeFiles/vx-mpp.dir/osal/linux/os_env.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.o: ../../../app/src/osal/linux/os_log.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/linux/os_log.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/linux/os_log.c > CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/linux/os_log.c -o CMakeFiles/vx-mpp.dir/osal/linux/os_log.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.o: ../../../app/src/osal/linux/os_mem.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/linux/os_mem.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/linux/os_mem.c > CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/linux/os_mem.c -o CMakeFiles/vx-mpp.dir/osal/linux/os_mem.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.o: ../../../app/src/osal/windows/os_allocator.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/windows/os_allocator.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/windows/os_allocator.c > CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/windows/os_allocator.c -o CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.o: ../../../app/src/osal/windows/os_env.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/windows/os_env.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/windows/os_env.c > CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/windows/os_env.c -o CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.o: ../../../app/src/osal/windows/os_log.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/windows/os_log.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/windows/os_log.c > CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/windows/os_log.c -o CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.s
+
+app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o: app/src/CMakeFiles/vx-mpp.dir/flags.make
+app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o: ../../../app/src/osal/windows/os_mem.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o   -c /home/youliang/code/vx-mpp/app/src/osal/windows/os_mem.c
+
+app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/osal/windows/os_mem.c > CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.i
+
+app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/osal/windows/os_mem.c -o CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.s
 
 # Object files for target vx-mpp
 vx__mpp_OBJECTS = \
@@ -562,6 +562,15 @@ vx__mpp_OBJECTS = \
 "CMakeFiles/vx-mpp.dir/base/omx_base_sink.c.o" \
 "CMakeFiles/vx-mpp.dir/base/omx_base_source.c.o" \
 "CMakeFiles/vx-mpp.dir/base/omx_base_video_port.c.o" \
+"CMakeFiles/vx-mpp.dir/common/common.c.o" \
+"CMakeFiles/vx-mpp.dir/common/content_pipe_file.c.o" \
+"CMakeFiles/vx-mpp.dir/common/content_pipe_inet.c.o" \
+"CMakeFiles/vx-mpp.dir/common/omx_create_loaders_linux.c.o" \
+"CMakeFiles/vx-mpp.dir/common/omxcore.c.o" \
+"CMakeFiles/vx-mpp.dir/common/omxregister.c.o" \
+"CMakeFiles/vx-mpp.dir/common/queue.c.o" \
+"CMakeFiles/vx-mpp.dir/common/st_static_component_loader.c.o" \
+"CMakeFiles/vx-mpp.dir/common/tsemaphore.c.o" \
 "CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o" \
 "CMakeFiles/vx-mpp.dir/osal/mpp_env.c.o" \
 "CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o" \
@@ -581,16 +590,7 @@ vx__mpp_OBJECTS = \
 "CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.o" \
 "CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.o" \
 "CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.o" \
-"CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o" \
-"CMakeFiles/vx-mpp.dir/common/common.c.o" \
-"CMakeFiles/vx-mpp.dir/common/content_pipe_file.c.o" \
-"CMakeFiles/vx-mpp.dir/common/content_pipe_inet.c.o" \
-"CMakeFiles/vx-mpp.dir/common/omx_create_loaders_linux.c.o" \
-"CMakeFiles/vx-mpp.dir/common/omxcore.c.o" \
-"CMakeFiles/vx-mpp.dir/common/omxregister.c.o" \
-"CMakeFiles/vx-mpp.dir/common/queue.c.o" \
-"CMakeFiles/vx-mpp.dir/common/st_static_component_loader.c.o" \
-"CMakeFiles/vx-mpp.dir/common/tsemaphore.c.o"
+"CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o"
 
 # External object files for target vx-mpp
 vx__mpp_EXTERNAL_OBJECTS =
@@ -604,6 +604,15 @@ bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/base/omx_base_port.c.o
 bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/base/omx_base_sink.c.o
 bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/base/omx_base_source.c.o
 bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/base/omx_base_video_port.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/common.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_file.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_inet.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/omx_create_loaders_linux.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/omxcore.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/omxregister.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/queue.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/st_static_component_loader.c.o
+bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/tsemaphore.c.o
 bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_allocator.c.o
 bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_env.c.o
 bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/mpp_log.c.o
@@ -624,15 +633,6 @@ bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_allocator.c.o
 bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_env.c.o
 bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_log.c.o
 bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/osal/windows/os_mem.c.o
-bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/common.c.o
-bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_file.c.o
-bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/content_pipe_inet.c.o
-bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/omx_create_loaders_linux.c.o
-bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/omxcore.c.o
-bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/omxregister.c.o
-bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/queue.c.o
-bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/st_static_component_loader.c.o
-bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/common/tsemaphore.c.o
 bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/build.make
 bin/libvx-mpp.a: app/src/CMakeFiles/vx-mpp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Linking CXX static library ../../bin/libvx-mpp.a"

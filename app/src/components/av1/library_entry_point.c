@@ -33,7 +33,7 @@
 */
 
 #include <st_static_component_loader.h>
-#include <config.h>
+//#include <config.h>
 #include "omx_videodec_component.h"
 #include  "omx_videoenc_component.h"
 
@@ -55,63 +55,59 @@ int omx_component_library_Setup(stLoaderComponentType **stComponents) {
   OMX_U32 i;
   DEBUG(DEB_LEV_FUNCTION_NAME, "In %s \n",__func__);
 
-  printf("%s %d\n",__FUNCTION__,__LINE__);
   if (stComponents == NULL) {
       return 2;
   }
-  printf("%s %d\n",__FUNCTION__,__LINE__);
+  
   /** component 0 - video encoder */
   stComponents[0]->componentVersion.s.nVersionMajor = 1; 
-  printf("%s %d\n",__FUNCTION__,__LINE__);
   stComponents[0]->componentVersion.s.nVersionMinor = 1; 
   stComponents[0]->componentVersion.s.nRevision = 1;
   stComponents[0]->componentVersion.s.nStep = 1;
-   printf("%s %d\n",__FUNCTION__,__LINE__);
   stComponents[0]->name = calloc(1, OMX_MAX_STRINGNAME_SIZE);
   if (stComponents[0]->name == NULL) {
     return OMX_ErrorInsufficientResources;
   }
-   printf("%s %d\n",__FUNCTION__,__LINE__);
-  strcpy(stComponents[0]->name, "OMX.av1.video_encoder");
+  strcpy(stComponents[1]->name, "OMX.av1.video_encoder");
   stComponents[0]->name_specific_length = 1; 
   stComponents[0]->constructor = omx_videoenc_component_Constructor;  
 
-  stComponents[0]->name_specific = calloc(stComponents[3]->name_specific_length,sizeof(char *));  
-  stComponents[0]->role_specific = calloc(stComponents[3]->name_specific_length,sizeof(char *));  
-  printf("%s %d\n",__FUNCTION__,__LINE__);
+  stComponents[0]->name_specific = calloc(stComponents[0]->name_specific_length,sizeof(char *));  
+  stComponents[0]->role_specific = calloc(stComponents[0]->name_specific_length,sizeof(char *));  
+
   for(i=0;i<stComponents[0]->name_specific_length;i++) {
     stComponents[0]->name_specific[i] = calloc(1, OMX_MAX_STRINGNAME_SIZE);
     if (stComponents[0]->name_specific[i] == NULL) {
       return OMX_ErrorInsufficientResources;
     }
   }
-   printf("%s %d\n",__FUNCTION__,__LINE__);
+
   for(i=0;i<stComponents[0]->name_specific_length;i++) {
     stComponents[0]->role_specific[i] = calloc(1, OMX_MAX_STRINGNAME_SIZE);
     if (stComponents[0]->role_specific[i] == NULL) {
       return OMX_ErrorInsufficientResources;
     }
   }
-  printf("%s %d\n",__FUNCTION__,__LINE__);
+
   strcpy(stComponents[0]->name_specific[0], "OMX.st.video_encoder.mpeg4");
   strcpy(stComponents[0]->role_specific[0], "video_encoder.mpeg4");
-  printf("%s %d\n",__FUNCTION__,__LINE__);
+
   /** component 1 - video decoder */
   stComponents[1]->componentVersion.s.nVersionMajor = 1; 
   stComponents[1]->componentVersion.s.nVersionMinor = 1; 
   stComponents[1]->componentVersion.s.nRevision = 1;
   stComponents[1]->componentVersion.s.nStep = 1;
-  printf("%s %d\n",__FUNCTION__,__LINE__);
   stComponents[1]->name = calloc(1, OMX_MAX_STRINGNAME_SIZE);
   if (stComponents[1]->name == NULL) {
     return OMX_ErrorInsufficientResources;
   }
+
   strcpy(stComponents[1]->name, "OMX.av1.video_decoder");
   stComponents[1]->name_specific_length = 2; 
   stComponents[1]->constructor = omx_videodec_component_Constructor;  
-  printf("%s %d\n",__FUNCTION__,__LINE__);
+
   stComponents[1]->name_specific = calloc(stComponents[1]->name_specific_length,sizeof(char *));  
-  stComponents[1]->role_specific = calloc(stComponents[1]->name_specific_length,sizeof(char *));  
+  stComponents[1]->role_specific = calloc(stComponents[1]->name_specific_length,sizeof(char *)); 
 
   for(i=0;i<stComponents[1]->name_specific_length;i++) {
     stComponents[1]->name_specific[i] = calloc(1, OMX_MAX_STRINGNAME_SIZE);
@@ -119,14 +115,15 @@ int omx_component_library_Setup(stLoaderComponentType **stComponents) {
       return OMX_ErrorInsufficientResources;
     }
   }
+
   for(i=0;i<stComponents[1]->name_specific_length;i++) {
     stComponents[1]->role_specific[i] = calloc(1, OMX_MAX_STRINGNAME_SIZE);
     if (stComponents[1]->role_specific[i] == NULL) {
       return OMX_ErrorInsufficientResources;
     }
   }
-   printf("%s %d\n",__FUNCTION__,__LINE__);
-   strcpy(stComponents[1]->name_specific[0], "OMX.st.video_decoder.mpeg4");
-   strcpy(stComponents[1]->role_specific[0], "video_decoder.mpeg4");
-   return 2;
+  strcpy(stComponents[1]->name_specific[0], "OMX.st.video_decoder.mpeg4");
+  strcpy(stComponents[1]->role_specific[0], "video_decoder.mpeg4");
+
+  return 2;
 }
