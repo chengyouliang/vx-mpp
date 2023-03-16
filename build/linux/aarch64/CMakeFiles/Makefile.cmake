@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../../../app/CMakeLists.txt"
   "../../../app/src/CMakeLists.txt"
   "../../../app/src/components/av1/CMakeLists.txt"
+  "../../../app/src/components/vedec/CMakeLists.txt"
   "../../../app/test/CMakeLists.txt"
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
@@ -51,6 +52,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "app/CMakeFiles/CMakeDirectoryInformation.cmake"
   "app/src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "app/src/components/av1/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "app/src/components/vedec/CMakeFiles/CMakeDirectoryInformation.cmake"
   "app/test/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -60,6 +62,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "app/src/CMakeFiles/vx_mpp_share.dir/DependInfo.cmake"
   "app/src/CMakeFiles/vx-mpp.dir/DependInfo.cmake"
   "app/src/components/av1/CMakeFiles/vx-av1.dir/DependInfo.cmake"
+  "app/src/components/vedec/CMakeFiles/vx-h26x.dir/DependInfo.cmake"
   "app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/DependInfo.cmake"
   "app/test/CMakeFiles/vdec_test.dir/DependInfo.cmake"
   "app/test/CMakeFiles/mpp_mem_test.dir/DependInfo.cmake"

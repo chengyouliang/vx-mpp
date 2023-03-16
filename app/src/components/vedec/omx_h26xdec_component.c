@@ -28,7 +28,7 @@
 */
 #include <omxcore.h>
 #include <omx_base_video_port.h>
-#include "omx_videodec_component.h"
+#include "omx_h26xdec_component.h"
 #include <OMX_Video.h>
 
 /** Maximum Number of Video Component Instance*/

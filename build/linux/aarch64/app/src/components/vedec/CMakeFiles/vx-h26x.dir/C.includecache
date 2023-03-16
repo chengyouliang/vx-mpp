@@ -140,17 +140,17 @@ pthread.h
 
 ../../../app/src/common/inc/tsemaphore.h
 
-/home/youliang/code/vx-mpp/app/src/components/av1/omx_videodec_component.c
+/home/youliang/code/vx-mpp/app/src/components/vedec/omx_h26xdec_component.c
 omxcore.h
 -
 omx_base_video_port.h
 -
-omx_videodec_component.h
-/home/youliang/code/vx-mpp/app/src/components/av1/omx_videodec_component.h
+omx_h26xdec_component.h
+/home/youliang/code/vx-mpp/app/src/components/vedec/omx_h26xdec_component.h
 OMX_Video.h
 -
 
-/home/youliang/code/vx-mpp/app/src/components/av1/omx_videodec_component.h
+/home/youliang/code/vx-mpp/app/src/components/vedec/omx_h26xdec_component.h
 OMX_Types.h
 -
 OMX_Component.h

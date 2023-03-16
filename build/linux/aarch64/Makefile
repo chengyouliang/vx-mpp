@@ -163,6 +163,19 @@ vx-av1/fast:
 .PHONY : vx-av1/fast
 
 #=============================================================================
+# Target rules for targets named vx-h26x
+
+# Build rule for target.
+vx-h26x: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vx-h26x
+.PHONY : vx-h26x
+
+# fast build rule for target.
+vx-h26x/fast:
+	$(MAKE) -f app/src/components/vedec/CMakeFiles/vx-h26x.dir/build.make app/src/components/vedec/CMakeFiles/vx-h26x.dir/build
+.PHONY : vx-h26x/fast
+
+#=============================================================================
 # Target rules for targets named mpp_dmabuffer_driver_test
 
 # Build rule for target.
@@ -239,6 +252,7 @@ help:
 	@echo "... vx_mpp_share"
 	@echo "... vx-mpp"
 	@echo "... vx-av1"
+	@echo "... vx-h26x"
 	@echo "... mpp_dmabuffer_driver_test"
 	@echo "... vdec_test"
 	@echo "... mpp_mem_test"

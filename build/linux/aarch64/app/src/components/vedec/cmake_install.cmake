@@ -1,4 +1,4 @@
-# Install script for directory: /home/youliang/code/vx-mpp/app
+# Install script for directory: /home/youliang/code/vx-mpp/app/src/components/vedec
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,14 +35,5 @@ endif()
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "TRUE")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/cmake_install.cmake")
-  include("/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/av1/cmake_install.cmake")
-  include("/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/vedec/cmake_install.cmake")
-  include("/home/youliang/code/vx-mpp/build/linux/aarch64/app/test/cmake_install.cmake")
-
 endif()
 
