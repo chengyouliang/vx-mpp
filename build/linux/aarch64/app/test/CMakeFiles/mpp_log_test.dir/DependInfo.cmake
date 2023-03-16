@@ -23,7 +23,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../../../app/test/../src/osal/inc"
   "../../../app/test/../src/base/inc"
   "../../../app/test/../src/common/inc"
-  "../../../app/test/../src/components/av1"
+  "../../../app/test/../src/components/avq"
   )
 
 # Targets to which this target links.

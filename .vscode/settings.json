@@ -13,6 +13,8 @@
         "omx_types.h": "c",
         "component_loader.h": "c",
         "omx_base_component.h": "c",
-        "omx_h26xdec_component.h": "c"
+        "omx_h26xdec_component.h": "c",
+        "mpp_log.h": "c",
+        "tsemaphore.h": "c"
     }
 }

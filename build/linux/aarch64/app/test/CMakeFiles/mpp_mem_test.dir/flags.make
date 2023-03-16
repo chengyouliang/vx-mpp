@@ -6,5 +6,5 @@ C_FLAGS = -O3 -DNDEBUG   -fPIC
 
 C_DEFINES = -DARMLINUX -D__gnu_linux__
 
-C_INCLUDES = -I/home/youliang/code/vx-mpp/app/test/../include -I/home/youliang/code/vx-mpp/app/test/../include/omx_il -I/home/youliang/code/vx-mpp/app/test/../src/osal -I/home/youliang/code/vx-mpp/app/test/../src/osal/allocator -I/home/youliang/code/vx-mpp/app/test/../src/osal/inc -I/home/youliang/code/vx-mpp/app/test/../src/base/inc -I/home/youliang/code/vx-mpp/app/test/../src/common/inc -I/home/youliang/code/vx-mpp/app/test/../src/components/av1 
+C_INCLUDES = -I/home/youliang/code/vx-mpp/app/test/../include -I/home/youliang/code/vx-mpp/app/test/../include/omx_il -I/home/youliang/code/vx-mpp/app/test/../src/osal -I/home/youliang/code/vx-mpp/app/test/../src/osal/allocator -I/home/youliang/code/vx-mpp/app/test/../src/osal/inc -I/home/youliang/code/vx-mpp/app/test/../src/base/inc -I/home/youliang/code/vx-mpp/app/test/../src/common/inc -I/home/youliang/code/vx-mpp/app/test/../src/components/avq 
 

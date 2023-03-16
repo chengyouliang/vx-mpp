@@ -99,18 +99,14 @@ OMX_ERRORTYPE OMX_Init() {
   OMX_ERRORTYPE err;
 
   DEBUG(DEB_LEV_FUNCTION_NAME, "In %s \n", __func__);
-  printf("%s %d\n",__FUNCTION__,__LINE__);
   if(initialized == 0) {
     initialized = 1;
     if (createComponentLoaders()) {
     	return OMX_ErrorInsufficientResources;
     }
-    printf("%s %d\n",__FUNCTION__,__LINE__);
     for (i = 0; i < bosa_loaders; i++)
     {
-      printf("%s %d\n",__FUNCTION__,__LINE__);
       err = loadersList[i]->BOSA_InitComponentLoader(loadersList[i]);
-      printf("%s %d\n",__FUNCTION__,__LINE__);
       if (err != OMX_ErrorNone)
       {
         DEBUG(DEB_LEV_ERR, "A Component loader constructor fails. Exiting\n");
@@ -118,7 +114,6 @@ OMX_ERRORTYPE OMX_Init() {
       }
     }
   }
-  printf("%s %d\n",__FUNCTION__,__LINE__);
   DEBUG(DEB_LEV_FUNCTION_NAME, "Out of %s\n", __func__);
   return OMX_ErrorNone;
 }

@@ -11,5 +11,6 @@ app/test/CMakeFiles/vdec_test.dir/vdec_test.c.o
  ../../../app/include/omx_il/OMX_Other.h
  ../../../app/include/omx_il/OMX_Types.h
  ../../../app/include/omx_il/OMX_Video.h
+ ../../../app/src/common/inc/omx_comp_debug_levels.h
  ../../../app/src/common/inc/tsemaphore.h
  /home/youliang/code/vx-mpp/app/test/vdec_test.c

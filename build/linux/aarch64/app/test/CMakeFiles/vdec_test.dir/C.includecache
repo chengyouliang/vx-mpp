@@ -68,6 +68,10 @@ OMX_Core.h
 OMX_IVCommon.h
 -
 
+../../../app/src/common/inc/omx_comp_debug_levels.h
+stdio.h
+-
+
 ../../../app/src/common/inc/tsemaphore.h
 
 /home/youliang/code/vx-mpp/app/test/vdec_test.c
@@ -92,5 +96,9 @@ OMX_Types.h
 OMX_Video.h
 -
 tsemaphore.h
+-
+tsemaphore.h
+-
+omx_comp_debug_levels.h
 -
 

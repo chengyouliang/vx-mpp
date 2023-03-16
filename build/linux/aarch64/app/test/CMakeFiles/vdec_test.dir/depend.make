@@ -10,6 +10,7 @@ app/test/CMakeFiles/vdec_test.dir/vdec_test.c.o: ../../../app/include/omx_il/OMX
 app/test/CMakeFiles/vdec_test.dir/vdec_test.c.o: ../../../app/include/omx_il/OMX_Other.h
 app/test/CMakeFiles/vdec_test.dir/vdec_test.c.o: ../../../app/include/omx_il/OMX_Types.h
 app/test/CMakeFiles/vdec_test.dir/vdec_test.c.o: ../../../app/include/omx_il/OMX_Video.h
+app/test/CMakeFiles/vdec_test.dir/vdec_test.c.o: ../../../app/src/common/inc/omx_comp_debug_levels.h
 app/test/CMakeFiles/vdec_test.dir/vdec_test.c.o: ../../../app/src/common/inc/tsemaphore.h
 app/test/CMakeFiles/vdec_test.dir/vdec_test.c.o: ../../../app/test/vdec_test.c
 
