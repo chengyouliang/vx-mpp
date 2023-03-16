@@ -7,6 +7,7 @@ add_definitions(-W)
 include_directories(${PROJECT_SOURCE_DIR}/include/omx_il)
 include_directories(${PROJECT_SOURCE_DIR}/src/base/inc)
 include_directories(${PROJECT_SOURCE_DIR}/src/common/inc)
+include_directories(./vdec)
 include_directories(.)
 
 message(WARNING  "${PROJECT_SOURCE_DIR}")
@@ -16,9 +17,11 @@ aux_source_directory(.  SRC_LIST)
 link_directories(${CMAKE_BINARY_DIR}/bin)
 #lib
 ADD_LIBRARY(vx-h26x SHARED  ${SRC_LIST})
-target_link_libraries(vx-h26x vx_mpp_share)
+target_link_libraries(vx-h26x  vdec)
 
-
+file(COPY lib/libvdec.so DESTINATION  ${CMAKE_BINARY_DIR}/bin)
+file(COPY lib/libvdec.so.1  DESTINATION  ${CMAKE_BINARY_DIR}/bin)
+file(COPY lib/libvdec.so.1.0.1 DESTINATION  ${CMAKE_BINARY_DIR}/bin)
 
 set_target_properties(vx-h26x PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/component )
 

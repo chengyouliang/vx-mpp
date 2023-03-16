@@ -21,12 +21,12 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../../../app/include/omx_il"
   "../../../app/src/base/inc"
   "../../../app/src/common/inc"
+  "../../../app/src/components/vedec/./vdec"
   "../../../app/src/components/vedec/."
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

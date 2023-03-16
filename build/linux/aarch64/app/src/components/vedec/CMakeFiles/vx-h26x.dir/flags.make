@@ -6,5 +6,5 @@ C_FLAGS = -O3 -DNDEBUG -fPIC   -fPIC -g -W
 
 C_DEFINES = -DARMLINUX -D__gnu_linux__ -Dvx_h26x_EXPORTS
 
-C_INCLUDES = -I/home/youliang/code/vx-mpp/app/include/omx_il -I/home/youliang/code/vx-mpp/app/src/base/inc -I/home/youliang/code/vx-mpp/app/src/common/inc -I/home/youliang/code/vx-mpp/app/src/components/vedec/. 
+C_INCLUDES = -I/home/youliang/code/vx-mpp/app/include/omx_il -I/home/youliang/code/vx-mpp/app/src/base/inc -I/home/youliang/code/vx-mpp/app/src/common/inc -I/home/youliang/code/vx-mpp/app/src/components/vedec/./vdec -I/home/youliang/code/vx-mpp/app/src/components/vedec/. 
 

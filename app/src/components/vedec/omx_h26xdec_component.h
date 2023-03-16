@@ -38,6 +38,7 @@
 #include <string.h>
 #include <omx_base_filter.h>
 #include <string.h>
+#include <vdec.h>
 
 
 #define VIDEO_DEC_BASE_NAME "OMX.st.video_decoder"
@@ -52,26 +53,14 @@ DERIVEDCLASS(omx_videodec_component_PrivateType, omx_base_filter_PrivateType)
 #define omx_videodec_component_PrivateType_FIELDS omx_base_filter_PrivateType_FIELDS \
   /** @param semaphore for avcodec access syncrhonization */\
   tsem_t* avCodecSyncSem; \
-  /** @param pVideoAv1 Reference to OMX_VIDEO_PARAM_AV1TYPE structure */ \
-  OMX_VIDEO_PARAM_AV1TYPE pVideoAv1;  \
-  /** @param avcodecReady boolean flag that is true when the video coded has been initialized */ \
-  OMX_BOOL avcodecReady;  \
-  /** @param minBufferLength Field that stores the minimun allowed size for FFmpeg decoder */ \
-  OMX_U16 minBufferLength; \
-  /** @param inputCurrBuffer Field that stores pointer of the current input buffer position */ \
-  OMX_U8* inputCurrBuffer;\
-  /** @param inputCurrLength Field that stores current input buffer length in bytes */ \
-  OMX_U32 inputCurrLength;\
-  /** @param isFirstBuffer Field that the buffer is the first buffer */ \
-  OMX_S32 isFirstBuffer;\
-  /** @param isNewBuffer Field that indicate a new buffer has arrived*/ \
-  OMX_S32 isNewBuffer;  \
+  /** @param config Reference to VDecConfig structure */ \
+  VDecConfig config; \
+  /** @param dec Reference to VDecHandle structure */ \
+  VDecHandle dec;\
   /** @param video_coding_type Field that indicate the supported video format of video decoder */ \
   OMX_U32 video_coding_type;   \
-  /** @param extradata pointer to extradata*/ \
-  OMX_U8* extradata; \
-  /** @param extradata_size extradata size*/ \
-  OMX_U32 extradata_size;
+  /** @param avcodecReady boolean flag that is true when the video coded has been initialized */ \
+  OMX_BOOL avcodecReady; 
 ENDCLASS(omx_videodec_component_PrivateType)
 
 /* Component private entry points declaration */

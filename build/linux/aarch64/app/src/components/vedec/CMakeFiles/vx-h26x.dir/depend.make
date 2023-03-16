@@ -20,6 +20,7 @@ app/src/components/vedec/CMakeFiles/vx-h26x.dir/library_entry_point.c.o: ../../.
 app/src/components/vedec/CMakeFiles/vx-h26x.dir/library_entry_point.c.o: ../../../app/src/common/inc/queue.h
 app/src/components/vedec/CMakeFiles/vx-h26x.dir/library_entry_point.c.o: ../../../app/src/common/inc/st_static_component_loader.h
 app/src/components/vedec/CMakeFiles/vx-h26x.dir/library_entry_point.c.o: ../../../app/src/common/inc/tsemaphore.h
+app/src/components/vedec/CMakeFiles/vx-h26x.dir/library_entry_point.c.o: ../../../app/src/components/vedec/vdec/vdec.h
 app/src/components/vedec/CMakeFiles/vx-h26x.dir/library_entry_point.c.o: ../../../app/src/components/vedec/library_entry_point.c
 app/src/components/vedec/CMakeFiles/vx-h26x.dir/library_entry_point.c.o: ../../../app/src/components/vedec/omx_h26xdec_component.h
 
@@ -42,6 +43,7 @@ app/src/components/vedec/CMakeFiles/vx-h26x.dir/omx_h26xdec_component.c.o: ../..
 app/src/components/vedec/CMakeFiles/vx-h26x.dir/omx_h26xdec_component.c.o: ../../../app/src/common/inc/omxcore.h
 app/src/components/vedec/CMakeFiles/vx-h26x.dir/omx_h26xdec_component.c.o: ../../../app/src/common/inc/queue.h
 app/src/components/vedec/CMakeFiles/vx-h26x.dir/omx_h26xdec_component.c.o: ../../../app/src/common/inc/tsemaphore.h
+app/src/components/vedec/CMakeFiles/vx-h26x.dir/omx_h26xdec_component.c.o: ../../../app/src/components/vedec/vdec/vdec.h
 app/src/components/vedec/CMakeFiles/vx-h26x.dir/omx_h26xdec_component.c.o: ../../../app/src/components/vedec/omx_h26xdec_component.c
 app/src/components/vedec/CMakeFiles/vx-h26x.dir/omx_h26xdec_component.c.o: ../../../app/src/components/vedec/omx_h26xdec_component.h
 

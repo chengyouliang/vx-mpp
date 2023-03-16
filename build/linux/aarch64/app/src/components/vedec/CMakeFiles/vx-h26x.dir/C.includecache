@@ -140,6 +140,10 @@ pthread.h
 
 ../../../app/src/common/inc/tsemaphore.h
 
+../../../app/src/components/vedec/vdec/vdec.h
+stdint.h
+-
+
 /home/youliang/code/vx-mpp/app/src/components/vedec/omx_h26xdec_component.c
 omxcore.h
 -
@@ -166,5 +170,7 @@ string.h
 omx_base_filter.h
 -
 string.h
+-
+vdec.h
 -
 

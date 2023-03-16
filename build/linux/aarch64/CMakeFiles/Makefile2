@@ -309,7 +309,7 @@ app/src/components/av1/CMakeFiles/vx-av1.dir/clean:
 # Target rules for target app/src/components/vedec/CMakeFiles/vx-h26x.dir
 
 # All Build rule for target.
-app/src/components/vedec/CMakeFiles/vx-h26x.dir/all: app/src/CMakeFiles/vx_mpp_share.dir/all
+app/src/components/vedec/CMakeFiles/vx-h26x.dir/all:
 	$(MAKE) -f app/src/components/vedec/CMakeFiles/vx-h26x.dir/build.make app/src/components/vedec/CMakeFiles/vx-h26x.dir/depend
 	$(MAKE) -f app/src/components/vedec/CMakeFiles/vx-h26x.dir/build.make app/src/components/vedec/CMakeFiles/vx-h26x.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=15,16,17 "Built target vx-h26x"
@@ -317,7 +317,7 @@ app/src/components/vedec/CMakeFiles/vx-h26x.dir/all: app/src/CMakeFiles/vx_mpp_s
 
 # Build rule for subdir invocation for target.
 app/src/components/vedec/CMakeFiles/vx-h26x.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles 42
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 app/src/components/vedec/CMakeFiles/vx-h26x.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles 0
 .PHONY : app/src/components/vedec/CMakeFiles/vx-h26x.dir/rule
