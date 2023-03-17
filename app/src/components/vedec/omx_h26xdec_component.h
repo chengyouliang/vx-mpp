@@ -41,10 +41,7 @@
 #include <vdec.h>
 
 
-#define VIDEO_DEC_BASE_NAME "OMX.st.video_decoder"
-#define VIDEO_DEC_MPEG4_NAME "OMX.st.video_decoder.mpeg4"
-#define VIDEO_DEC_H264_NAME "OMX.st.video_decoder.avc"
-#define VIDEO_DEC_MPEG4_ROLE "video_decoder.mpeg4"
+#define VIDEO_DEC_BASE_NAME "OMX.h26x.video_encoder"
 #define VIDEO_DEC_H264_ROLE "video_decoder.avc"
 
 /** Video Decoder component private structure.

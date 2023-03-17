@@ -124,12 +124,8 @@ OMX_ERRORTYPE omx_videodec_component_Constructor(OMX_COMPONENTTYPE *openmaxStand
   //outPort->sVideoParam.xFramerate = 25;
 
   /** now it's time to know the video coding type of the component */
-  if(!strcmp(cComponentName, VIDEO_DEC_MPEG4_NAME)) {
-    omx_videodec_component_Private->video_coding_type = OMX_VIDEO_CodingMPEG4;
-  } else if(!strcmp(cComponentName, VIDEO_DEC_H264_NAME)) {
+  if(!strcmp(cComponentName, VIDEO_DEC_BASE_NAME)) {
     omx_videodec_component_Private->video_coding_type = OMX_VIDEO_CodingAVC;
-  } else if (!strcmp(cComponentName, VIDEO_DEC_BASE_NAME)) {
-    omx_videodec_component_Private->video_coding_type = OMX_VIDEO_CodingUnused;
   } else {
     // IL client specified an invalid component name
     return OMX_ErrorInvalidComponentName;

@@ -104,7 +104,7 @@ OMX_ERRORTYPE base_port_Constructor(OMX_COMPONENTTYPE *openmaxStandComp,omx_base
   (*openmaxStandPort)->sPortParam.nPortIndex = nPortIndex;
   (*openmaxStandPort)->sPortParam.nBufferCountActual = DEFAULT_NUMBER_BUFFERS_PER_PORT;
   (*openmaxStandPort)->sPortParam.nBufferCountMin = DEFAULT_MIN_NUMBER_BUFFERS_PER_PORT;
-  (*openmaxStandPort)->sPortParam.bEnabled = OMX_TRUE;
+  (*openmaxStandPort)->sPortParam.bEnabled = OMX_FALSE;
   (*openmaxStandPort)->sPortParam.bPopulated = OMX_FALSE;
   (*openmaxStandPort)->sPortParam.eDir  =  (isInput == OMX_TRUE)?OMX_DirInput:OMX_DirOutput;
 

@@ -66,7 +66,7 @@ int omx_component_library_Setup(stLoaderComponentType **stComponents) {
   if (stComponents[0]->name == NULL) {
     return OMX_ErrorInsufficientResources;
   }
-  strcpy(stComponents[0]->name, "OMX.av1.video_encoder");
+  strcpy(stComponents[0]->name, "OMX.h26x.video_encoder");
   stComponents[0]->name_specific_length = 1; 
   stComponents[0]->constructor = omx_videodec_component_Constructor;  
 

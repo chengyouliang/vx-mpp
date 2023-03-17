@@ -1,7 +1,6 @@
 cmake_minimum_required (VERSION 3.0.0)
 
-add_definitions(-g)
-add_definitions(-W)
+add_definitions("-Wall -g")
 
 # include
 include_directories(${PROJECT_SOURCE_DIR}/include/omx_il)
@@ -18,6 +17,7 @@ link_directories(${CMAKE_BINARY_DIR}/bin)
 #lib
 ADD_LIBRARY(vx-h26x SHARED  ${SRC_LIST})
 target_link_libraries(vx-h26x  vdec)
+target_link_libraries(vx-h26x  vx_mpp_share)
 
 file(COPY lib/libvdec.so DESTINATION  ${CMAKE_BINARY_DIR}/bin)
 file(COPY lib/libvdec.so.1  DESTINATION  ${CMAKE_BINARY_DIR}/bin)

@@ -94,6 +94,7 @@ vx__h26x_EXTERNAL_OBJECTS =
 bin/component/libvx-h26x.so: app/src/components/vedec/CMakeFiles/vx-h26x.dir/library_entry_point.c.o
 bin/component/libvx-h26x.so: app/src/components/vedec/CMakeFiles/vx-h26x.dir/omx_h26xdec_component.c.o
 bin/component/libvx-h26x.so: app/src/components/vedec/CMakeFiles/vx-h26x.dir/build.make
+bin/component/libvx-h26x.so: bin/libvx_mpp_share.so
 bin/component/libvx-h26x.so: app/src/components/vedec/CMakeFiles/vx-h26x.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library ../../../../bin/component/libvx-h26x.so"
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/vedec && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vx-h26x.dir/link.txt --verbose=$(VERBOSE)

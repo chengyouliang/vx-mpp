@@ -1,7 +1,6 @@
 cmake_minimum_required (VERSION 3.0.0)
 
-add_definitions(-g)
-add_definitions(-W)
+add_definitions("-Wall -g")
 
 # include
 include_directories(${PROJECT_SOURCE_DIR}/include/omx_il)
