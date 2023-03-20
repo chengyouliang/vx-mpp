@@ -233,7 +233,7 @@ int main(int argc, char** argv) {
     printf("OMX_CommandStateSet error...\n");
     exit(1);
   }
-   printf("%s %d\n",__FUNCTION__,__LINE__);
+  printf("%s %d\n",__FUNCTION__,__LINE__);
   /** sending command to video decoder component to go to executing state */
   err = OMX_SendCommand(appPriv->videodechandle, OMX_CommandStateSet, OMX_StateExecuting, NULL);
   tsem_down(appPriv->decoderEventSem);

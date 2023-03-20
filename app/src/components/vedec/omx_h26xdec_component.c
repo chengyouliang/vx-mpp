@@ -174,8 +174,7 @@ OMX_ERRORTYPE omx_videodec_component_Constructor(OMX_COMPONENTTYPE *openmaxStand
 /** The destructor of the video decoder component
   */
 OMX_ERRORTYPE omx_videodec_component_Destructor(OMX_COMPONENTTYPE *openmaxStandComp) {
-  omx_videodec_component_PrivateType* omx_videodec_component_Private = openmaxStandComp->pComponentPrivate;
-  OMX_U32 i;
+  //omx_videodec_component_PrivateType* omx_videodec_component_Private = openmaxStandComp->pComponentPrivate;
 
   return OMX_ErrorNone;
 }
@@ -227,7 +226,6 @@ static void omx_hander_to_buffer(OMX_BUFFERHEADERTYPE*dec_buf, FrameHandle frame
 	decodeGetFrameData(frame, data);
 	decodeGetFrameStride(frame, pitch);
 	str_fmt = format;
-
 	if (height % 2 != 0)
 		height +=1;
 	if (width % 2 != 0)
@@ -238,36 +236,36 @@ static void omx_hander_to_buffer(OMX_BUFFERHEADERTYPE*dec_buf, FrameHandle frame
 	case VDEC_FORMAT_I444:
 	case VDEC_FORMAT_I4AL:
 		width = (format == VDEC_FORMAT_I4AL) ? width * 2 : width;
-		omx_writePlane(dec_buf, data[0], width, height, pitch[0]);
-		omx_writePlane(dec_buf, data[1], width, height, pitch[1]);
-		omx_writePlane(dec_buf, data[2], width, height, pitch[2]);
+		omx_writePlane(dec_buf->pBuffer, data[0], width, height, pitch[0]);
+		omx_writePlane(dec_buf->pBuffer, data[1], width, height, pitch[1]);
+		omx_writePlane(dec_buf->pBuffer, data[2], width, height, pitch[2]);
 		break;
 	case VDEC_FORMAT_NV12:
 	case VDEC_FORMAT_P010:
 		width = (format == VDEC_FORMAT_P010) ? width * 2 : width;
-		omx_writePlane(dec_buf, data[0], width, height, pitch[0]);
-		omx_writePlane(dec_buf, data[1], width, height / 2, pitch[1]);
+		omx_writePlane(dec_buf->pBuffer, data[0], width, height, pitch[0]);
+		omx_writePlane(dec_buf->pBuffer, data[1], width, height / 2, pitch[1]);
 		break;
 	case VDEC_FORMAT_NV16:
 	case VDEC_FORMAT_P210:
 		width = (format == VDEC_FORMAT_P210) ? width * 2 : width;
-		omx_writePlane(dec_buf, data[0], width, height, pitch[0]);
-		omx_writePlane(dec_buf, data[1], width, height, pitch[1]);
+		omx_writePlane(dec_buf->pBuffer, data[0], width, height, pitch[0]);
+		omx_writePlane(dec_buf->pBuffer, data[1], width, height, pitch[1]);
 		break;
 	case VDEC_FORMAT_T608:
 	case VDEC_FORMAT_T60A:
-		memcpy(dec_buf+dec_buf->nFilledLen, data[0], pitch[0] * height);
+		memcpy(dec_buf->pBuffer+dec_buf->nFilledLen, data[0], pitch[0] * height);
     dec_buf->nFilledLen += pitch[0] * height;
-		memcpy(dec_buf+dec_buf->nFilledLen, data[1], pitch[1] * height / 2);
+		memcpy(dec_buf->pBuffer+dec_buf->nFilledLen, data[1], pitch[1] * height / 2);
     dec_buf->nFilledLen +=pitch[1] * height / 2;
 		break;
 	case VDEC_FORMAT_T628:
 	case VDEC_FORMAT_T62A:
   case VDEC_FORMAT_T648:
 	case VDEC_FORMAT_T64A:
-		memcpy(dec_buf+dec_buf->nFilledLen, data[0], pitch[0] * height);
+		memcpy(dec_buf->pBuffer+dec_buf->nFilledLen, data[0], pitch[0] * height);
     dec_buf->nFilledLen += pitch[0] * height;
-		memcpy(dec_buf+dec_buf->nFilledLen, data[1], pitch[1] * height);
+		memcpy(dec_buf->pBuffer+dec_buf->nFilledLen, data[1], pitch[1] * height);
     dec_buf->nFilledLen += pitch[1] * height;
 		break;
 	default:
