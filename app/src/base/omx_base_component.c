@@ -1134,6 +1134,7 @@ OMX_ERRORTYPE omx_base_component_SendCommand(
   OMX_U32 i,j,k;
   omx_base_PortType *pPort;
   OMX_ERRORTYPE err = OMX_ErrorNone;
+  printf("%s %d\n",__FUNCTION__,__LINE__);
   DEBUG(DEB_LEV_FUNCTION_NAME, "In %s\n", __func__);
 
   messageQueue = omx_base_component_Private->messageQueue;
@@ -1142,12 +1143,13 @@ OMX_ERRORTYPE omx_base_component_SendCommand(
   if (omx_base_component_Private->state == OMX_StateInvalid) {
     return OMX_ErrorInvalidState;
   }
-
+  printf("%s %d\n",__FUNCTION__,__LINE__);
   message = calloc(1,sizeof(internalRequestMessageType));
   message->messageParam = nParam;
   message->pCmdData=pCmdData;
   /** Fill in the message */
   switch (Cmd) {
+  printf("%s %d\n",__FUNCTION__,__LINE__);
   case OMX_CommandStateSet:
     message->messageType = OMX_CommandStateSet;
     if ((nParam == OMX_StateIdle) && (omx_base_component_Private->state == OMX_StateLoaded)) {
@@ -1248,6 +1250,7 @@ OMX_ERRORTYPE omx_base_component_SendCommand(
 
   if (err == OMX_ErrorNone)
   {
+    printf("%s %d\n",__FUNCTION__,__LINE__);
     queue(messageQueue, message);
     tsem_up(messageSem);
   }

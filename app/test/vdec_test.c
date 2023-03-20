@@ -114,7 +114,7 @@ OMX_ERRORTYPE videodecEmptyBufferDone(
   OMX_OUT OMX_HANDLETYPE hComponent,
   OMX_OUT OMX_PTR pAppData,
   OMX_OUT OMX_BUFFERHEADERTYPE* pBuffer) {
-  OMX_ERRORTYPE err;
+  OMX_ERRORTYPE err = OMX_ErrorNone;
   int data_read;
   static int iBufferDropped=0;
 
@@ -142,7 +142,7 @@ OMX_ERRORTYPE videodecEmptyBufferDone(
   } else {
     DEBUG(DEB_LEV_FULL_SEQ, "In %s Dropping Empty This buffer to Audio Dec\n", __func__);
   }
-  return OMX_ErrorNone;
+  return err;
 }
 
 
@@ -150,8 +150,8 @@ OMX_ERRORTYPE videodecFillBufferDone(
   OMX_OUT OMX_HANDLETYPE hComponent,
   OMX_OUT OMX_PTR pAppData,
   OMX_OUT OMX_BUFFERHEADERTYPE* pBuffer) {
-  OMX_ERRORTYPE err;
-  OMX_STATETYPE eState;
+  OMX_ERRORTYPE err = OMX_ErrorNone;
+
   fwrite(pBuffer->pBuffer, 1,  pBuffer->nFilledLen, appPriv->outfile);    
   pBuffer->nFilledLen = 0;
   if(pBuffer->nFlags == OMX_BUFFERFLAG_EOS) {
@@ -161,7 +161,7 @@ OMX_ERRORTYPE videodecFillBufferDone(
   if(!bEOS) {
     err = OMX_FillThisBuffer(hComponent, pBuffer);
   }
-  return OMX_ErrorNone;  
+  return err;  
 }
 
 
@@ -174,10 +174,8 @@ OMX_CALLBACKTYPE videodeccallbacks = {
 int main(int argc, char** argv) {
   int err;
   char *full_component_name;
-  OMX_HANDLETYPE videodechandle;
   /** used with video decoder */
   OMX_BUFFERHEADERTYPE *pInBuffer[2], *pOutBuffer[2];
-  OMX_U32 buffer_out_size;
 
   err = OMX_Init();
   if (err != OMX_ErrorNone) {
@@ -207,7 +205,7 @@ int main(int argc, char** argv) {
   printf("The component selected for decoding is %s\n", full_component_name);
 
   /** getting video decoder handle */
-  err = OMX_GetHandle(&videodechandle, full_component_name, NULL, &videodeccallbacks);
+  err = OMX_GetHandle(&appPriv->videodechandle, full_component_name, NULL, &videodeccallbacks);
   if(err != OMX_ErrorNone){
     printf("No video decoder component found. Exiting...\n");
     exit(1);
@@ -216,37 +214,38 @@ int main(int argc, char** argv) {
   }
    /** sending command to video decoder component to go to idle state */
   pInBuffer[0] = pInBuffer[1] = NULL;
-  err = OMX_SendCommand(videodechandle, OMX_CommandStateSet, OMX_StateIdle, NULL);
+  err = OMX_SendCommand(appPriv->videodechandle, OMX_CommandStateSet, OMX_StateIdle, NULL);
   if(err != OMX_ErrorNone){
     printf("OMX_CommandStateSet error...\n");
     exit(1);
   }
   tsem_down(appPriv->decoderEventSem);
-  err = OMX_AllocateBuffer(videodechandle, &pInBuffer[0], 0, NULL, buffer_in_size);
-  err = OMX_AllocateBuffer(videodechandle, &pInBuffer[1], 0, NULL, buffer_in_size);
+  err = OMX_AllocateBuffer(appPriv->videodechandle, &pInBuffer[0], 0, NULL, buffer_in_size);
+  err = OMX_AllocateBuffer(appPriv->videodechandle, &pInBuffer[1], 0, NULL, buffer_in_size);
   if(err != OMX_ErrorNone){
     printf("OMX_CommandStateSet error...\n");
     exit(1);
   }
   pOutBuffer[0] = pOutBuffer[1] = NULL;
-  err = OMX_AllocateBuffer(videodechandle, &pOutBuffer[0], 1, NULL, buffer_in_size);
-  err = OMX_AllocateBuffer(videodechandle, &pOutBuffer[1], 1, NULL, buffer_in_size);
+  err = OMX_AllocateBuffer(appPriv->videodechandle, &pOutBuffer[0], 1, NULL, buffer_in_size);
+  err = OMX_AllocateBuffer(appPriv->videodechandle, &pOutBuffer[1], 1, NULL, buffer_in_size);
   if(err != OMX_ErrorNone){
     printf("OMX_CommandStateSet error...\n");
     exit(1);
   }
-
+   printf("%s %d\n",__FUNCTION__,__LINE__);
   /** sending command to video decoder component to go to executing state */
-  err = OMX_SendCommand(videodechandle, OMX_CommandStateSet, OMX_StateExecuting, NULL);
+  err = OMX_SendCommand(appPriv->videodechandle, OMX_CommandStateSet, OMX_StateExecuting, NULL);
   tsem_down(appPriv->decoderEventSem);
 
- 
+  printf("%s %d\n",__FUNCTION__,__LINE__);
   err = OMX_SendCommand(appPriv->videodechandle, OMX_CommandPortEnable, 1, NULL);
   if(err != OMX_ErrorNone) {
     DEBUG(DEB_LEV_ERR,"video decoder port enable failed\n");
     exit(1);
   }
   tsem_down(appPriv->decoderEventSem);
+  printf("%s %d\n",__FUNCTION__,__LINE__);
   err = OMX_SendCommand(appPriv->videodechandle, OMX_CommandPortEnable, 0, NULL);
   if(err != OMX_ErrorNone) {
     DEBUG(DEB_LEV_ERR,"video decoder port enable failed\n");
@@ -268,7 +267,7 @@ int main(int argc, char** argv) {
   data_read = fread(pInBuffer[1]->pBuffer, 1, buffer_in_size, appPriv->fd);
   pInBuffer[1]->nFilledLen = data_read;
   pInBuffer[1]->nOffset = 0;
-   printf("%s %d\n",__FUNCTION__,__LINE__);
+  printf("%s %d\n",__FUNCTION__,__LINE__);
   DEBUG(DEB_LEV_PARAMS, "Empty first  buffer %p\n", pInBuffer[0]->pBuffer);
   err = OMX_EmptyThisBuffer(appPriv->videodechandle, pInBuffer[0]);
   DEBUG(DEB_LEV_PARAMS, "Empty second buffer %p\n", pInBuffer[1]->pBuffer);

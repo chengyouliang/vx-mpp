@@ -120,19 +120,25 @@ pthread.h
 
 ../../../app/src/common/inc/tsemaphore.h
 
-/home/youliang/code/vx-mpp/app/src/base/omx_base_port.c
+/home/youliang/code/vx-mpp/app/src/base/omx_base_component.c
+stdio.h
+-
 string.h
 -
 unistd.h
 -
-omxcore.h
+errno.h
 -
 OMX_Core.h
 -
 OMX_Component.h
 -
+omxcore.h
+/home/youliang/code/vx-mpp/app/src/base/omxcore.h
 omx_base_component.h
 /home/youliang/code/vx-mpp/app/src/base/omx_base_component.h
-omx_base_port.h
-/home/youliang/code/vx-mpp/app/src/base/omx_base_port.h
+tsemaphore.h
+/home/youliang/code/vx-mpp/app/src/base/tsemaphore.h
+queue.h
+/home/youliang/code/vx-mpp/app/src/base/queue.h
 
