@@ -107,11 +107,11 @@ OMX_U32 h264_parse(OMX_U32 buffer_start_addr, OMX_U32 buffer_size, OMX_U8 *src_m
 	while(i < buffer_size)
 	{
 		ptmp = src_mem + i;
-    printf("%s %d %d\n",__FUNCTION__,__LINE__,i);
+    //printf("%s %d %d\n",__FUNCTION__,__LINE__,i);
 		if (((*(ptmp)==0x00) && (*(ptmp+1)==0x00) && (*(ptmp+2)==0x00) && (*(ptmp+3)==0x01)) ||  //NAL前的起始码00000001||000001
 			((*(ptmp)==0x00) && (*(ptmp+1)==0x00) && (*(ptmp+2)==0x01)))
 		{
-      
+      printf("%s %d %d\n",__FUNCTION__,__LINE__,i);
       if((*(ptmp)==0x00) && (*(ptmp+1)==0x00) && (*(ptmp+2)==0x01))
       {
           len = 3;
@@ -120,7 +120,7 @@ OMX_U32 h264_parse(OMX_U32 buffer_start_addr, OMX_U32 buffer_size, OMX_U8 *src_m
       {
           len = 4;
       }
-      printf("%s %d %x\n",__FUNCTION__,__LINE__,*(ptmp + len +1));
+      printf("%s %d %x  %d\n",__FUNCTION__,__LINE__,*(ptmp + len),(ptmp-src_mem));
       i += len;
       pnext = ptmp;
       if (pnext != pbase)
@@ -131,11 +131,13 @@ OMX_U32 h264_parse(OMX_U32 buffer_start_addr, OMX_U32 buffer_size, OMX_U8 *src_m
          }
          else
          {
-            pctx->info[pctx->frameNum].offset += pctx->info[pctx->frameNum -1].offset + pctx->info[pctx->frameNum  -1].size;
+            pctx->info[pctx->frameNum].offset = pctx->info[pctx->frameNum -1].offset + pctx->info[pctx->frameNum  -1].size;
+            printf("%s %d %d %d\n",__FUNCTION__,__LINE__,pctx->info[pctx->frameNum-1].offset,pctx->info[pctx->frameNum-1].size);
          }
          pctx->info[pctx->frameNum].size = pnext - pbase;
-         pctx->info[pctx->frameNum].naltype = *(pbase + len +1);
-         printf("%x \n",pctx->info[pctx->frameNum].naltype);
+        printf("%s %d %d %d\n",__FUNCTION__,__LINE__,pctx->info[pctx->frameNum].offset,pctx->info[pctx->frameNum].size);
+         pctx->info[pctx->frameNum].naltype = *(pbase + len);
+         printf("%x  %d\n",pctx->info[pctx->frameNum].naltype,pctx->frameNum);
          pctx->frameNum ++;
          pbase = pnext;
       }
