@@ -82,6 +82,20 @@ omx_classmagic.h
 omx_base_port.h
 ../../../app/src/base/inc/omx_base_port.h
 
+../../../app/src/base/inc/omx_base_filter.h
+OMX_Types.h
+-
+OMX_Component.h
+-
+OMX_Core.h
+-
+pthread.h
+-
+stdlib.h
+-
+omx_base_component.h
+../../../app/src/base/inc/omx_base_component.h
+
 ../../../app/src/base/inc/omx_base_port.h
 tsemaphore.h
 ../../../app/src/base/inc/tsemaphore.h
@@ -120,25 +134,9 @@ pthread.h
 
 ../../../app/src/common/inc/tsemaphore.h
 
-/home/youliang/code/vx-mpp/app/src/base/omx_base_component.c
-stdio.h
--
-string.h
--
-unistd.h
--
-errno.h
--
-OMX_Core.h
--
-OMX_Component.h
--
+/home/youliang/code/vx-mpp/app/src/base/omx_base_filter.c
 omxcore.h
-/home/youliang/code/vx-mpp/app/src/base/omxcore.h
-omx_base_component.h
-/home/youliang/code/vx-mpp/app/src/base/omx_base_component.h
-tsemaphore.h
-/home/youliang/code/vx-mpp/app/src/base/tsemaphore.h
-queue.h
-/home/youliang/code/vx-mpp/app/src/base/queue.h
+-
+omx_base_filter.h
+/home/youliang/code/vx-mpp/app/src/base/omx_base_filter.h
 

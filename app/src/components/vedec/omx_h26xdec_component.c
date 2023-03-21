@@ -48,7 +48,7 @@ static OMX_U32 noVideoDecInstance = 0;
 
 #define DEFAULT_WIDTH 352
 #define DEFAULT_HEIGHT 288
-
+FILE *fd;
 /** The output decoded color format */
 #define OUTPUT_DECODED_COLOR_FMT OMX_COLOR_FormatYUV420Planar
 
@@ -110,7 +110,7 @@ OMX_ERRORTYPE omx_videodec_component_Constructor(OMX_COMPONENTTYPE *openmaxStand
     */
   //common parameters related to input port
   inPort = (omx_base_video_PortType *)omx_videodec_component_Private->ports[OMX_BASE_FILTER_INPUTPORT_INDEX];
-  inPort->sPortParam.nBufferSize = DEFAULT_OUT_BUFFER_SIZE;
+  inPort->sPortParam.nBufferSize = DEFAULT_IN_BUFFER_SIZE;
   inPort->sPortParam.format.video.xFramerate = 25;
 
   //common parameters related to output port
@@ -167,6 +167,7 @@ OMX_ERRORTYPE omx_videodec_component_Constructor(OMX_COMPONENTTYPE *openmaxStand
   if(noVideoDecInstance > MAX_COMPONENT_VIDEODEC) {
     return OMX_ErrorInsufficientResources;
   }
+  fd = fopen("test.h264", "rw");
   return eError;
 }
 
@@ -204,11 +205,11 @@ OMX_ERRORTYPE omx_videodec_component_Deinit(OMX_COMPONENTTYPE *openmaxStandComp)
 static void omx_writePlane(OMX_BUFFERHEADERTYPE* dec_buf, uint8_t* data, uint32_t width, uint32_t height, uint32_t stride)
 {
 	if (width == stride) {
-		memcpy(dec_buf+dec_buf->nFilledLen, data, width * height);
+		memcpy(dec_buf->pBuffer+dec_buf->nFilledLen, data, width * height);
     dec_buf->nFilledLen += width * height;
 	} else {
 		for (uint32_t  h = 0; h < height; h++) {
-      memcpy(dec_buf+dec_buf->nFilledLen, data,width);
+      memcpy(dec_buf->pBuffer+dec_buf->nFilledLen, data,width);
       dec_buf->nFilledLen += width;
 			data += stride;
 		}
@@ -223,7 +224,7 @@ static void omx_hander_to_buffer(OMX_BUFFERHEADERTYPE*dec_buf, FrameHandle frame
 	uint64_t str_fmt;
 	decodeGetFrameDim(frame, &width, &height);
 	decodeGetFrameFourCC(frame, &format);
-	decodeGetFrameData(frame, data);
+  decodeGetFrameData(frame, data);
 	decodeGetFrameStride(frame, pitch);
 	str_fmt = format;
 	if (height % 2 != 0)
@@ -236,21 +237,21 @@ static void omx_hander_to_buffer(OMX_BUFFERHEADERTYPE*dec_buf, FrameHandle frame
 	case VDEC_FORMAT_I444:
 	case VDEC_FORMAT_I4AL:
 		width = (format == VDEC_FORMAT_I4AL) ? width * 2 : width;
-		omx_writePlane(dec_buf->pBuffer, data[0], width, height, pitch[0]);
-		omx_writePlane(dec_buf->pBuffer, data[1], width, height, pitch[1]);
-		omx_writePlane(dec_buf->pBuffer, data[2], width, height, pitch[2]);
+		omx_writePlane(dec_buf, data[0], width, height, pitch[0]);
+		omx_writePlane(dec_buf, data[1], width, height, pitch[1]);
+		omx_writePlane(dec_buf, data[2], width, height, pitch[2]);
 		break;
 	case VDEC_FORMAT_NV12:
 	case VDEC_FORMAT_P010:
 		width = (format == VDEC_FORMAT_P010) ? width * 2 : width;
-		omx_writePlane(dec_buf->pBuffer, data[0], width, height, pitch[0]);
-		omx_writePlane(dec_buf->pBuffer, data[1], width, height / 2, pitch[1]);
+		omx_writePlane(dec_buf, data[0], width, height, pitch[0]);
+		omx_writePlane(dec_buf, data[1], width, height / 2, pitch[1]);
 		break;
 	case VDEC_FORMAT_NV16:
 	case VDEC_FORMAT_P210:
 		width = (format == VDEC_FORMAT_P210) ? width * 2 : width;
-		omx_writePlane(dec_buf->pBuffer, data[0], width, height, pitch[0]);
-		omx_writePlane(dec_buf->pBuffer, data[1], width, height, pitch[1]);
+		omx_writePlane(dec_buf, data[0], width, height, pitch[0]);
+		omx_writePlane(dec_buf, data[1], width, height, pitch[1]);
 		break;
 	case VDEC_FORMAT_T608:
 	case VDEC_FORMAT_T60A:
@@ -277,11 +278,12 @@ static void omx_hander_to_buffer(OMX_BUFFERHEADERTYPE*dec_buf, FrameHandle frame
 /** This function is used to process the input buffer and provide one output buffer
   */
 void omx_videodec_component_BufferMgmtCallback(OMX_COMPONENTTYPE *openmaxStandComp, OMX_BUFFERHEADERTYPE* pInputBuffer, OMX_BUFFERHEADERTYPE* pOutputBuffer) {
-    OMX_ERRORTYPE eError = OMX_ErrorNone;
     size_t n;
+#if 0
     omx_videodec_component_PrivateType* omx_videodec_component_Private = (omx_videodec_component_PrivateType*)openmaxStandComp->pComponentPrivate;
     pOutputBuffer->nFilledLen = 0;
-		decodePutStream(omx_videodec_component_Private->dec, pInputBuffer->pBuffer, pInputBuffer->nSize);
+		decodePutStream(omx_videodec_component_Private->dec, pInputBuffer->pBuffer, pInputBuffer->nFilledLen);
+    fwrite(pInputBuffer->pBuffer, 1,  pInputBuffer->nFilledLen, fd);
     FrameHandle hFrame;
 		n = decodeGetFrameSync(omx_videodec_component_Private->dec, &hFrame);
 		if (n == (size_t)VDEC_FRAME_CHANGE)
@@ -291,6 +293,11 @@ void omx_videodec_component_BufferMgmtCallback(OMX_COMPONENTTYPE *openmaxStandCo
       return;
 		}
     omx_hander_to_buffer(pOutputBuffer,hFrame);
+#endif
+    fwrite(pInputBuffer->pBuffer, 1,  pInputBuffer->nFilledLen, fd);
+    memcpy(pOutputBuffer->pBuffer,pInputBuffer->pBuffer,pInputBuffer->nFilledLen);
+    pOutputBuffer->nFilledLen = pInputBuffer->nFilledLen;
+    pInputBuffer->nFilledLen=0;
 }
 
 OMX_ERRORTYPE omx_videodec_component_SetParameter(
@@ -326,13 +333,13 @@ OMX_ERRORTYPE omx_videodec_component_MessageHandler(OMX_COMPONENTTYPE* openmaxSt
     else if ((message->messageParam == OMX_StateIdle ) && (omx_videodec_component_Private->state == OMX_StateLoaded)) {
       err = omx_videodec_component_Init(openmaxStandComp);
       if(err!=OMX_ErrorNone) {
-        DEBUG(DEB_LEV_ERR, "In %s Video Decoder Init Failed Error=%x\n",__func__,err);
+        DEBUG(DEB_LEV_ERR, "In %s Video Decoder Init Failed Error=%lu\n",__func__,err);
         return err;
       }
     } else if ((message->messageParam == OMX_StateLoaded) && (omx_videodec_component_Private->state == OMX_StateIdle)) {
       err = omx_videodec_component_Deinit(openmaxStandComp);
       if(err!=OMX_ErrorNone) {
-        DEBUG(DEB_LEV_ERR, "In %s Video Decoder Deinit Failed Error=%x\n",__func__,err);
+        DEBUG(DEB_LEV_ERR, "In %s Video Decoder Deinit Failed Error=%lu\n",__func__,err);
         return err;
       }
     }
@@ -354,4 +361,5 @@ OMX_ERRORTYPE omx_videodec_component_ComponentRoleEnum(
   OMX_IN OMX_HANDLETYPE hComponent,
   OMX_OUT OMX_U8 *cRole,
   OMX_IN OMX_U32 nIndex) {
+    return 0;
 }

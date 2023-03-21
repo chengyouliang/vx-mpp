@@ -153,6 +153,7 @@ void* omx_base_filter_BufferMgmtFunction (void* param) {
       if(pInputQueue->nelem>0){
         inBufExchanged++;
         isInputBufferNeeded=OMX_FALSE;
+        printf("%s %d pInputBuffer\n",__FUNCTION__,__LINE__);
         pInputBuffer = dequeue(pInputQueue);
         if(pInputBuffer == NULL){
           DEBUG(DEB_LEV_ERR, "Had NULL input buffer!!\n");
@@ -166,6 +167,7 @@ void* omx_base_filter_BufferMgmtFunction (void* param) {
       if(pOutputQueue->nelem>0){
         outBufExchanged++;
         isOutputBufferNeeded=OMX_FALSE;
+        printf("%s %d  pOutputBuffer\n",__FUNCTION__,__LINE__);
         pOutputBuffer = dequeue(pOutputQueue);
         if(pOutputBuffer == NULL){
           DEBUG(DEB_LEV_ERR, "Had NULL output buffer!! op is=%d,iq=%d\n",pOutputSem->semval,pOutputQueue->nelem);

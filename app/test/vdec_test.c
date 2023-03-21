@@ -60,8 +60,8 @@ typedef struct appPrivateType{
 
 appPrivateType* appPriv;
 
-#define BUFFER_IN_SIZE 2*8192
-int buffer_in_size = (BUFFER_IN_SIZE*2*1024); 
+#define BUFFER_IN_SIZE (4*1024)
+#define BUFFER_OUT_SIZE (4*1024*1024)
 
 static OMX_BOOL bEOS = OMX_FALSE;
 
@@ -120,7 +120,7 @@ OMX_ERRORTYPE videodecEmptyBufferDone(
 
   DEBUG(DEB_LEV_FULL_SEQ, "Hi there, I am in the %s callback.\n", __func__);
 
-  data_read = fread(pBuffer->pBuffer, 1, buffer_in_size, appPriv->fd);
+  data_read = fread(pBuffer->pBuffer, 1, BUFFER_IN_SIZE, appPriv->fd);
   pBuffer->nFilledLen = data_read;
   pBuffer->nOffset = 0;
   if (data_read <= 0) {
@@ -220,15 +220,15 @@ int main(int argc, char** argv) {
     exit(1);
   }
   tsem_down(appPriv->decoderEventSem);
-  err = OMX_AllocateBuffer(appPriv->videodechandle, &pInBuffer[0], 0, NULL, buffer_in_size);
-  err = OMX_AllocateBuffer(appPriv->videodechandle, &pInBuffer[1], 0, NULL, buffer_in_size);
+  err = OMX_AllocateBuffer(appPriv->videodechandle, &pInBuffer[0], 0, NULL, BUFFER_IN_SIZE);
+  err = OMX_AllocateBuffer(appPriv->videodechandle, &pInBuffer[1], 0, NULL, BUFFER_IN_SIZE);
   if(err != OMX_ErrorNone){
     printf("OMX_CommandStateSet error...\n");
     exit(1);
   }
   pOutBuffer[0] = pOutBuffer[1] = NULL;
-  err = OMX_AllocateBuffer(appPriv->videodechandle, &pOutBuffer[0], 1, NULL, buffer_in_size);
-  err = OMX_AllocateBuffer(appPriv->videodechandle, &pOutBuffer[1], 1, NULL, buffer_in_size);
+  err = OMX_AllocateBuffer(appPriv->videodechandle, &pOutBuffer[0], 1, NULL, BUFFER_OUT_SIZE);
+  err = OMX_AllocateBuffer(appPriv->videodechandle, &pOutBuffer[1], 1, NULL, BUFFER_OUT_SIZE);
   if(err != OMX_ErrorNone){
     printf("OMX_CommandStateSet error...\n");
     exit(1);
@@ -257,14 +257,14 @@ int main(int argc, char** argv) {
   err = OMX_FillThisBuffer(appPriv->videodechandle, pOutBuffer[1]);
   printf("%s %d\n",__FUNCTION__,__LINE__);
   int data_read;
-  data_read = fread(pInBuffer[0]->pBuffer, 1, buffer_in_size, appPriv->fd);
+  data_read = fread(pInBuffer[0]->pBuffer, 1, BUFFER_IN_SIZE, appPriv->fd);
   pInBuffer[0]->nFilledLen = data_read;
   pInBuffer[0]->nOffset = 0;
   printf("%s %d\n",__FUNCTION__,__LINE__);
   /** in non tunneled case use the 2nd input buffer for input read and procesing
     * in tunneled case, it will be used afterwards
     */
-  data_read = fread(pInBuffer[1]->pBuffer, 1, buffer_in_size, appPriv->fd);
+  data_read = fread(pInBuffer[1]->pBuffer, 1, BUFFER_IN_SIZE, appPriv->fd);
   pInBuffer[1]->nFilledLen = data_read;
   pInBuffer[1]->nOffset = 0;
   printf("%s %d\n",__FUNCTION__,__LINE__);
