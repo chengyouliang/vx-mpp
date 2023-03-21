@@ -285,18 +285,16 @@ void omx_videodec_component_BufferMgmtCallback(OMX_COMPONENTTYPE *openmaxStandCo
 		decodePutStream(omx_videodec_component_Private->dec, pInputBuffer->pBuffer, pInputBuffer->nFilledLen);
     fwrite(pInputBuffer->pBuffer, 1,  pInputBuffer->nFilledLen, fd);
     FrameHandle hFrame;
-		n = decodeGetFrameSync(omx_videodec_component_Private->dec, &hFrame);
-		if (n == (size_t)VDEC_FRAME_CHANGE)
-			 n = decodeGetFrameSync(omx_videodec_component_Private->dec, &hFrame);
-		if (n == (size_t)VMA_ERR_TIMEOUT) {
-      DEBUG(DEB_LEV_ERR, "In %s  Video Decoder out\n",__func__);
-      return;
-		}
-    omx_hander_to_buffer(pOutputBuffer,hFrame);
-#endif
+		if (decodeGetFrameAsync(omx_videodec_component_Private->dec, &hFrame) == 0)
+    {
+       printf("%s %d\n",__FUNCTION__,__LINE__);
+       omx_hander_to_buffer(pOutputBuffer,hFrame);
+    }
+#else
     fwrite(pInputBuffer->pBuffer, 1,  pInputBuffer->nFilledLen, fd);
     memcpy(pOutputBuffer->pBuffer,pInputBuffer->pBuffer,pInputBuffer->nFilledLen);
     pOutputBuffer->nFilledLen = pInputBuffer->nFilledLen;
+#endif
     pInputBuffer->nFilledLen=0;
 }
 

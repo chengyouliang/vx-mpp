@@ -44,6 +44,384 @@
 #include <tsemaphore.h>
 #include <omx_comp_debug_levels.h>
 
+typedef enum 
+{
+    NONE,
+    I_Frame,
+    P_Frame,
+    B_Frame,
+}FrameType;
+
+typedef enum 
+{
+  MPEG4_DEC,
+	DIVX311_DEC,
+	DIVX502_DEC,	
+	DIVX503_DEC,
+  DIVX412_DEC,
+  MPEG2_DEC,
+	XVID_DEC,
+  H263_DEC,
+  H264_DEC,
+} SSBSIP_MFC_CODEC_TYPE;
+
+typedef struct
+{
+	OMX_U8  bGetWH; //是否獲取分辨率
+  OMX_S32  width, height; //分辨率
+	OMX_S8  cType; //幀類型（'I' 'P' 'B'）
+} MPEG4_CONFIG_DATA;
+
+typedef struct
+{
+  OMX_U32 offset;
+  OMX_U32 size;
+}frameInfo;
+
+#define STREAM_BUF_SIZE (4*1024)
+typedef struct
+{
+  frameInfo *info;
+  OMX_U32 frameNum;
+  OMX_U32 lastFrameNum;
+  FILE *fin;
+  OMX_U8 aInputBuf[STREAM_BUF_SIZE];
+}CtxType;
+
+
+#define INFO_BUFF_SIZE 20000
+
+
+
+static OMX_U32 g_frame_num = 0;
+//读Buffer，直到找到完整的一帧数据才返回
+//返回值意义：
+// 0-- 已经找到完整的一帧
+// 1-- 找到一个帧的开头标志，但是没有确定帧的大小（说明输入的Buffer里不够一帧数据）
+// 2-- 没有找到帧的开头标志（可能输入的Buffer数据太少，或者数据非法）
+//
+OMX_U32 ue_v(unsigned char *nal)
+{
+  if (!nal)
+  {
+    return -1;
+  }
+  return (*nal & 31);
+}
+
+OMX_U32 h264_parse(OMX_U32 buffer_start_addr, OMX_U32 buffer_size, OMX_U8 *src_mem, OMX_U32 *frame_start_addr,  OMX_U32 *frame_size, OMX_U8 is_first_seq_header, MPEG4_CONFIG_DATA *conf_data)
+{
+	OMX_U32 i ;
+	OMX_U32 num_start_code ;
+	OMX_U32 hd_start_code ;
+	int rbsp_base;
+ 
+	OMX_U8  tmp_0, tmp_1 ;
+	OMX_U8  *tmp_mem ;
+ 
+	i              = 0 ;
+	num_start_code = 0 ;//帧头的计数（帧头的起始码为：0x000001或0x00000001, 注意一帧并不等同于一个NAL，这里的帧是指I/B/P或SEI/SPS/PPS帧，而NAL是帧的组成部分），
+	hd_start_code  = 0 ; //SEI/SPS/PPS帧的计数器
+	//找到一帧的条件是num_start_code = 2，即找到两个帧头，第一个帧头到第二个帧头前的数据为一帧。当第一个帧头后跟I/B/P时，num_start_code=1；当第二个帧头后跟I/B/P或SEI/SPS/PPS帧，则num_start_code = 2
+	//如果第一个帧头后跟SEI/SPS/PPS，num_start_code并不增加，但hd_start_code会增加1，并且记录当前的地址为起始地址；直到遇到下一个帧头为I/B/P帧时，num_start_code才加1
+ 
+	//u8* src_mem = (u8*)de_emulation_prevention(srcmem); 
+	OMX_U32 nal_count = 0;
+	while(1)
+	{
+		tmp_mem = src_mem + i;
+ 
+		if (((*(tmp_mem)==0x00) && (*(tmp_mem+1)==0x00) && (*(tmp_mem+2)==0x00) && (*(tmp_mem+3)==0x01)) ||  //NAL前的起始码00000001||000001
+			((*(tmp_mem)==0x00) && (*(tmp_mem+1)==0x00) && (*(tmp_mem+2)==0x01)))
+ 
+		{
+			rbsp_base = buffer_start_addr + i;
+      
+			if((*(tmp_mem)==0x00) && (*(tmp_mem+1)==0x00) && (*(tmp_mem+2)==0x00) && (*(tmp_mem+3)==0x01))
+			{
+				i++;
+				tmp_mem = src_mem + i;
+			}
+ 
+			nal_count++;
+ 
+			tmp_0 = *(tmp_mem+3) & 0x1f ; 
+      printf("%s %d  tmp_0 %d  %x\n",__FUNCTION__,__LINE__,tmp_0,*(tmp_mem+3));
+			if (tmp_0==0x06 || tmp_0==0x07 || tmp_0==0x08)  //=== SEI，SPS, PPS, ，i_nal_type的值等于0x7表示这个nalu是个sps数据包
+			{
+				hd_start_code++ ;
+				if (num_start_code==0 && hd_start_code==1) 
+					*frame_start_addr = rbsp_base;
+				if (num_start_code==1) num_start_code++ ;
+			}
+			
+			if (tmp_0==0x01 || tmp_0==0x05)    //=== non-IDR picture, IDR picture，0x01为non-IDR片，0x05为I片
+			{
+				unsigned char  umpt,*temp;
+
+				temp = tmp_mem+4;
+				umpt = ue_v(temp);
+ 
+			
+				if (is_first_seq_header) //遇到nal_unit_type为1，5的分片时，并且is_first_seq_header=true，表示只获取视频头信息（H264：SEI+SPS+PPS），马上返回
+				{                        //说明：is_first_seq_header一般在第一次调用VsParser函数时才传入true，目的是提取文件的视频头信息，但是这里有个问题：
+					                    //如果文件的前几帧或第一帧不是I帧，比如是P帧，而P帧前面是没有SPS/PPS的，所以返回的可能就是SEI信息里。
+					*frame_size     = rbsp_base - *frame_start_addr ;
+					num_start_code = 2 ;
+ 
+					break ;
+				}
+
+				tmp_1 = *(tmp_mem+4) & 0x80 ;  //== first_mb_in_slice，这个标志用来确定帧与帧的边界。判断该字节第一个bit是否为1，如果是1，就是一帧的第一片。
+				if (tmp_1==0x80) //帧的第一个分片
+				{ 
+					//这里可能是进入函数后遇到的第一个分片，也可能是下一个帧的第一个分片，是哪种情况由num_start_code 和 hd_start_code的值确定
+					num_start_code++ ;
+					if (num_start_code==1 && hd_start_code==0) *frame_start_addr = rbsp_base;
+				}
+ 
+				if (num_start_code == 1) //找到第一个I/B/P帧的开始头（函数还不能返回）
+				{
+					umpt = ue_v(temp); //slice_type
+					FrameType f_type = NONE;
+					OMX_U8 slice_type = umpt;
+					switch(slice_type)
+					{
+					case 2:case 7:
+					case 4:case 9:
+						f_type = I_Frame;
+						//ATLTRACE("I Frame\n");
+						if(conf_data) conf_data->cType = 'I';
+						break;
+					case 0:case 5:
+					case 3:case 8:
+						f_type = P_Frame;
+						//ATLTRACE("P Frame \n");
+						if(conf_data) conf_data->cType = 'P';
+						break;
+					case 1:case 6:
+						f_type = B_Frame;
+						//ATLTRACE("B Frame \n");
+						if(conf_data) conf_data->cType = 'B';
+						break;
+					default:
+						f_type = NONE;
+						//ATLTRACE("NON I P B Frame\n");
+						if(conf_data) conf_data->cType = 0;
+						break;
+					}
+					
+					//if(f_type != NONE) // 检查到帧类型
+					//{
+					//	  if(conf_data && conf_data->bGetWH == 0) //如果不是获取分辨率则跳出
+					//	    break;
+					//}
+				}
+ 
+			}
+ 
+			if (num_start_code==2) //找到两个I/B/P帧的帧头，或者第一个是I/B/P帧的帧头，第2个是SEI/SPS/PPS帧的帧头，函数可以返回了
+			{
+				*frame_size = rbsp_base - *frame_start_addr;
+				break ;
+			}
+ 
+			i+=3;
+		}
+		else
+		{
+			i++ ;
+		}
+		if (i>=buffer_size-4) break ;
+	}
+ 
+	//ATLTRACE("nal_count: %d, num_start_code: %d, hd_start_code: %d \n", nal_count - 1, num_start_code, hd_start_code); //打印变量信息
+ 
+	if (num_start_code==2) return(0) ;   
+	if (num_start_code==1) return(1) ;   
+	else                   return(2) ;  
+}
+
+// 返回值意义：
+// 0: one frame size is successfully determined AND there are still more frames
+// 1,2: the size of the last frame is successfully determined. 1，2表示不够一帧数据，需要读取更多，或者是到了文件尾部
+// 3: error (invalid standard)
+ 
+OMX_U32 VsParser(SSBSIP_MFC_CODEC_TYPE standard, OMX_U32 buffer_start_addr, OMX_U32 buffer_size, /*u8* src_mem,*/
+	OMX_U32 *frame_start_addr, OMX_U32 *frame_size,  OMX_U8 is_first_seq_header, MPEG4_CONFIG_DATA * conf_data)
+{
+	OMX_U32 ret_value;
+	
+	OMX_U8 *src_mem;
+	
+	src_mem = (OMX_U8 *)buffer_start_addr;
+	
+	switch(standard)
+	{
+		case MPEG4_DEC :
+		case DIVX311_DEC :	
+		case DIVX412_DEC :
+		case DIVX502_DEC :	
+		case DIVX503_DEC :
+		case XVID_DEC:
+		case H263_DEC :
+#if 0
+			ret_value = mpeg4_parse( buffer_start_addr, buffer_size, src_mem,
+											  frame_start_addr,  frame_size, is_first_seq_header, conf_data);
+			if(ret_value==1||ret_value==2)	*frame_size=buffer_size;			
+#endif
+			break ;
+		case MPEG2_DEC :
+#if 0
+			ret_value = mpeg2_parse(buffer_start_addr, buffer_size, src_mem,
+									frame_start_addr,  frame_size, is_first_seq_header, conf_data);
+			if(ret_value==1||ret_value==2)	*frame_size=buffer_size;
+#endif
+			break ;
+		case H264_DEC :
+			ret_value = h264_parse(buffer_start_addr, buffer_size, src_mem,
+								   frame_start_addr,  frame_size, is_first_seq_header, conf_data);
+			if(ret_value==1||ret_value==2)	*frame_size=buffer_size;
+			break ;
+ 
+		default :
+			ret_value = 3 ;
+			break ;
+	}
+	return ret_value ;
+}
+
+void *InitRawFrameExtract(char* pFilename, MPEG4_CONFIG_DATA * pconf_data)
+{
+	SSBSIP_MFC_CODEC_TYPE eMode;
+	char* pFileExt;
+	OMX_U32 uFrameInfo[2];
+	OMX_U32 uRemainSz, uRdPtr, uRet, uOneFrameAddr, uOneFrameSize, uFrameCnt, uFileOffset;
+  OMX_U8 parseHeader;
+	
+	unsigned int parser_loop_cnt=0;
+	int stuff_byte;
+	CtxType *pCtx;
+  eMode = H264_DEC;
+	pCtx = (CtxType *)malloc(sizeof(CtxType));
+	pCtx->lastFrameNum = -1;
+	pCtx->fin = fopen(pFilename,"rb");
+	if ( pCtx->fin==NULL )
+		return NULL;
+ 
+	pCtx->info = (frameInfo*)malloc(INFO_BUFF_SIZE);
+	pCtx->frameNum = 0;
+ 
+	uRemainSz = fread(pCtx->aInputBuf,1,STREAM_BUF_SIZE,pCtx->fin);	
+	uRdPtr = (OMX_U32)pCtx->aInputBuf;
+	uFrameCnt = 0;
+	uFileOffset = 0;
+  parseHeader  = 1;
+	uRet = VsParser(eMode, uRdPtr, uRemainSz, &uOneFrameAddr, &uOneFrameSize, parseHeader, pconf_data); //第一次调用VsParser 第6个参数：parseHeader = true，表示获取视频头信息（H264：SEI+SPS+PPS）
+ 
+	if (uRet == 1) //没有获取到一帧，已读到文件尾部
+	{
+		pCtx->info[pCtx->frameNum].offset = uFileOffset;
+		pCtx->info[pCtx->frameNum].size= uRemainSz;
+		pCtx->frameNum++;
+		fclose(pCtx->fin);
+		return pCtx;
+	}
+	else if (uRet!=0)
+	{
+		fclose(pCtx->fin);
+		return NULL;
+	}
+ 
+	stuff_byte = uOneFrameAddr - uRdPtr;
+	uRemainSz -= uOneFrameSize+stuff_byte;
+	uRdPtr = uOneFrameAddr+uOneFrameSize;
+	pCtx->info[pCtx->frameNum].offset = uFileOffset;
+	pCtx->info[pCtx->frameNum].size= uOneFrameSize+stuff_byte;
+	pCtx->frameNum++;
+ 
+	uFileOffset += uOneFrameSize+stuff_byte;
+	printf("\nStart Parsing.........\n");
+ 
+ 
+	while (1) {
+    //每次从文件读入一个块的数据到uRdPtr指向的缓冲区地址，然后调用VsParser提取出一帧数据出来，如果返回不足一帧，则继续读取下一个块。
+		//VsParser返回0表示已经获取到完整的一帧，并记录当前帧的地址和帧的大小，下次读该帧后面的数据；
+		//返回1或2表示数据不足或者缓冲区里找不到一帧的数据，这时候则需要读入文件的下一个块，如果已经读到文件尾部，则跳出循环。
+		uRet = VsParser(eMode, uRdPtr, uRemainSz, &uOneFrameAddr, &uOneFrameSize, 0, pconf_data);
+		if ( (uRet == 0) ) { /* Normal case. */
+			uRdPtr = uOneFrameAddr + uOneFrameSize;
+			uRemainSz -= uOneFrameSize;
+ 
+			pCtx->info[pCtx->frameNum].offset = uFileOffset;
+			pCtx->info[pCtx->frameNum].size= uOneFrameSize;
+ 
+			pCtx->frameNum++;
+			uFileOffset += uOneFrameSize;
+			printf("Frame info--- size: %d, type: %c \n", uOneFrameSize, pconf_data->cType);
+		}
+		else if ((uRet == 1) || (uRet == 2)) {  /* Last frame or insufficient stream. */
+ 
+			uOneFrameSize = uRemainSz;
+			fseek(pCtx->fin, uFileOffset, SEEK_SET);
+			uRemainSz = fread(pCtx->aInputBuf,1,STREAM_BUF_SIZE,pCtx->fin);	
+			uRdPtr = (OMX_U32)pCtx->aInputBuf;
+ 
+			if(uRemainSz==uOneFrameSize) {
+				pCtx->info[pCtx->frameNum].offset = uFileOffset;
+				pCtx->info[pCtx->frameNum].size= uOneFrameSize;
+				pCtx->lastFrameNum = (uRet == 1) ? pCtx->frameNum : pCtx->frameNum - 1;
+				break;
+			}
+			continue;
+		}
+		else
+		{
+			printf("[ERR] Parsing Error!!\n");
+			return NULL;
+		}
+ 
+		parser_loop_cnt++;
+	}
+	printf(">> VsParser loop count : %d <<\n", parser_loop_cnt);
+	fseek(pCtx->fin, 0, SEEK_SET);
+	return (void *)pCtx;	
+}
+
+void delRawFrameExtract(CtxType *pCtx)
+{
+    if (!pCtx)
+    {
+        return;
+    }
+    if(pCtx->info)
+    {
+       free(pCtx->info);
+    }
+    fclose(pCtx->fin);
+    free(pCtx);
+}
+
+
+
+int GetNextFrame(CtxType *pCtx,unsigned char *pFrameBuf, unsigned int *pSize)
+{
+	int isLastFrame;
+  OMX_U32 uFileOffset;
+  if (!pCtx || !pFrameBuf  || !pSize)
+  {
+      return -1;
+  }
+  if (g_frame_num > pCtx->lastFrameNum)
+  {
+     return 0;
+  }
+  *pSize = pCtx->info[g_frame_num].size;
+  uFileOffset = pCtx->info[g_frame_num].offset;
+  fseek(pCtx->fin, uFileOffset, SEEK_SET);
+  fread(pFrameBuf,1,*pSize,pCtx->fin);
+	return *pSize;
+}
 
 #define COMPONENT_NAME_BASE "OMX.h26x.video_encoder"
 #define COMPONENT_NAME_BASE_LEN 20
@@ -199,6 +577,14 @@ int main(int argc, char** argv) {
       DEBUG(DEB_LEV_ERR, "Error in opening output file \n");
       exit(1);
   }
+  MPEG4_CONFIG_DATA config_data;
+  CtxType *pctx = (CtxType *)InitRawFrameExtract("test.h264",&config_data);
+  if (pctx == NULL)
+  {
+      DEBUG(DEB_LEV_ERR, "Error in InitRawFrameExtract \n");
+      exit(1);
+  }
+
   full_component_name = malloc(sizeof(char*) * OMX_MAX_STRINGNAME_SIZE);
   strcpy(full_component_name, COMPONENT_NAME_BASE);
 
@@ -233,41 +619,35 @@ int main(int argc, char** argv) {
     printf("OMX_CommandStateSet error...\n");
     exit(1);
   }
-  printf("%s %d\n",__FUNCTION__,__LINE__);
+
   /** sending command to video decoder component to go to executing state */
   err = OMX_SendCommand(appPriv->videodechandle, OMX_CommandStateSet, OMX_StateExecuting, NULL);
   tsem_down(appPriv->decoderEventSem);
 
-  printf("%s %d\n",__FUNCTION__,__LINE__);
   err = OMX_SendCommand(appPriv->videodechandle, OMX_CommandPortEnable, 1, NULL);
   if(err != OMX_ErrorNone) {
     DEBUG(DEB_LEV_ERR,"video decoder port enable failed\n");
     exit(1);
   }
   tsem_down(appPriv->decoderEventSem);
-  printf("%s %d\n",__FUNCTION__,__LINE__);
   err = OMX_SendCommand(appPriv->videodechandle, OMX_CommandPortEnable, 0, NULL);
   if(err != OMX_ErrorNone) {
     DEBUG(DEB_LEV_ERR,"video decoder port enable failed\n");
     exit(1);
   }
   tsem_down(appPriv->decoderEventSem);
-  printf("%s %d\n",__FUNCTION__,__LINE__);
   err = OMX_FillThisBuffer(appPriv->videodechandle, pOutBuffer[0]);
   err = OMX_FillThisBuffer(appPriv->videodechandle, pOutBuffer[1]);
-  printf("%s %d\n",__FUNCTION__,__LINE__);
   int data_read;
   data_read = fread(pInBuffer[0]->pBuffer, 1, BUFFER_IN_SIZE, appPriv->fd);
   pInBuffer[0]->nFilledLen = data_read;
   pInBuffer[0]->nOffset = 0;
-  printf("%s %d\n",__FUNCTION__,__LINE__);
   /** in non tunneled case use the 2nd input buffer for input read and procesing
     * in tunneled case, it will be used afterwards
     */
   data_read = fread(pInBuffer[1]->pBuffer, 1, BUFFER_IN_SIZE, appPriv->fd);
   pInBuffer[1]->nFilledLen = data_read;
   pInBuffer[1]->nOffset = 0;
-  printf("%s %d\n",__FUNCTION__,__LINE__);
   DEBUG(DEB_LEV_PARAMS, "Empty first  buffer %p\n", pInBuffer[0]->pBuffer);
   err = OMX_EmptyThisBuffer(appPriv->videodechandle, pInBuffer[0]);
   DEBUG(DEB_LEV_PARAMS, "Empty second buffer %p\n", pInBuffer[1]->pBuffer);
