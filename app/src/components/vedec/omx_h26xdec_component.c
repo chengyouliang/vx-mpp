@@ -279,17 +279,37 @@ static void omx_hander_to_buffer(OMX_BUFFERHEADERTYPE*dec_buf, FrameHandle frame
   */
 void omx_videodec_component_BufferMgmtCallback(OMX_COMPONENTTYPE *openmaxStandComp, OMX_BUFFERHEADERTYPE* pInputBuffer, OMX_BUFFERHEADERTYPE* pOutputBuffer) {
     size_t n;
+    
 #if 0
+    
+     printf("%s %d %d\n",__FUNCTION__,__LINE__,pInputBuffer->nFilledLen);
+	    for(int k=0;k<100;k++){
+	        printf("%02x,",*(ptr + k));
+         } 
+	    printf("\n");
+#endif
+#if 1
     omx_videodec_component_PrivateType* omx_videodec_component_Private = (omx_videodec_component_PrivateType*)openmaxStandComp->pComponentPrivate;
     pOutputBuffer->nFilledLen = 0;
+#if 1
+      OMX_U8 *ptr = pInputBuffer->pBuffer;
+	    printf("%s %d %d\n",__FUNCTION__,__LINE__,pInputBuffer->nFilledLen);
+	    for(int k=0;k<100;k++){
+	        printf("%02x,",*(ptr + k));
+         } 
+	    printf("\n");
+        //memcpy(mBuffer,videoFrame.payload,videoFrame.nb);
+#endif
 		decodePutStream(omx_videodec_component_Private->dec, pInputBuffer->pBuffer, pInputBuffer->nFilledLen);
-    fwrite(pInputBuffer->pBuffer, 1,  pInputBuffer->nFilledLen, fd);
     FrameHandle hFrame;
-		if (decodeGetFrameAsync(omx_videodec_component_Private->dec, &hFrame) == 0)
-    {
-       printf("%s %d\n",__FUNCTION__,__LINE__);
-       omx_hander_to_buffer(pOutputBuffer,hFrame);
-    }
+    n = decodeGetFrameSync(omx_videodec_component_Private->dec, &hFrame);
+		if (n == VDEC_FRAME_CHANGE)
+				n = decodeGetFrameSync(omx_videodec_component_Private->dec, &hFrame);
+		if (n == VMA_ERR_TIMEOUT) {
+				DEBUG(DEB_LEV_ERR,"Decode timeout. ret=%ld\n", n);
+				return;
+		}
+      omx_hander_to_buffer(pOutputBuffer,hFrame);
 #else
     fwrite(pInputBuffer->pBuffer, 1,  pInputBuffer->nFilledLen, fd);
     memcpy(pOutputBuffer->pBuffer,pInputBuffer->pBuffer,pInputBuffer->nFilledLen);

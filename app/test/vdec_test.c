@@ -79,131 +79,30 @@ typedef struct
   OMX_U32 naltype;
 }frameInfo;
 
-#define STREAM_BUF_SIZE (4*1024)
+#define STREAM_BUF_SIZE (1024*1024)
 typedef struct
 {
   frameInfo *info;
   OMX_U32 frameNum;
   OMX_U32 lastFrameNum;
   FILE *fin;
-  OMX_U8 aInputBuf[STREAM_BUF_SIZE];
+  OMX_U8 *aInputBuf;
 }CtxType;
 
 
 #define INFO_BUFF_SIZE 20000
 
-
-
-static OMX_U32 g_frame_num = 0;
-
-OMX_U32 h264_parse(OMX_U32 buffer_start_addr, OMX_U32 buffer_size, OMX_U8 *src_mem,CtxType* pctx)
-{
-	OMX_U32 i ;
-  OMX_U8 *pbase,*pnext,*ptmp;
-  int len;
-  pbase = src_mem;
-  ptmp = src_mem;
-  i = 0;
-	while(i < buffer_size)
-	{
-		ptmp = src_mem + i;
-    //printf("%s %d %d\n",__FUNCTION__,__LINE__,i);
-		if (((*(ptmp)==0x00) && (*(ptmp+1)==0x00) && (*(ptmp+2)==0x00) && (*(ptmp+3)==0x01)) ||  //NAL前的起始码00000001||000001
-			((*(ptmp)==0x00) && (*(ptmp+1)==0x00) && (*(ptmp+2)==0x01)))
-		{
-      printf("%s %d %d\n",__FUNCTION__,__LINE__,i);
-      if((*(ptmp)==0x00) && (*(ptmp+1)==0x00) && (*(ptmp+2)==0x01))
-      {
-          len = 3;
-      }
-      else
-      {
-          len = 4;
-      }
-      printf("%s %d %x  %d\n",__FUNCTION__,__LINE__,*(ptmp + len),(ptmp-src_mem));
-      i += len;
-      pnext = ptmp;
-      if (pnext != pbase)
-      {
-         if ( pctx->frameNum == 0)
-         {
-              pctx->info[pctx->frameNum].offset  = 0;
-         }
-         else
-         {
-            pctx->info[pctx->frameNum].offset = pctx->info[pctx->frameNum -1].offset + pctx->info[pctx->frameNum  -1].size;
-            printf("%s %d %d %d\n",__FUNCTION__,__LINE__,pctx->info[pctx->frameNum-1].offset,pctx->info[pctx->frameNum-1].size);
-         }
-         pctx->info[pctx->frameNum].size = pnext - pbase;
-        printf("%s %d %d %d\n",__FUNCTION__,__LINE__,pctx->info[pctx->frameNum].offset,pctx->info[pctx->frameNum].size);
-         pctx->info[pctx->frameNum].naltype = *(pbase + len);
-         printf("%x  %d\n",pctx->info[pctx->frameNum].naltype,pctx->frameNum);
-         pctx->frameNum ++;
-         pbase = pnext;
-      }
-		}
-		else
-		{
-			i++ ;
-		}
-	}
-  return 1;
-}
-// 返回值意义：
-// 0: one frame size is successfully determined AND there are still more frames
-// 1,2: the size of the last frame is successfully determined. 1，2表示不够一帧数据，需要读取更多，或者是到了文件尾部
-// 3: error (invalid standard)
- 
-OMX_U32 VsParser(SSBSIP_MFC_CODEC_TYPE standard, OMX_U32 buffer_start_addr, OMX_U32 buffer_size, /*u8* src_mem,*/
-	CtxType * pctx)
-{
-	OMX_U32 ret_value;
-	
-	OMX_U8 *src_mem;
-	
-	src_mem = (OMX_U8 *)buffer_start_addr;
-	
-	switch(standard)
-	{
-		case MPEG4_DEC :
-		case DIVX311_DEC :	
-		case DIVX412_DEC :
-		case DIVX502_DEC :	
-		case DIVX503_DEC :
-		case XVID_DEC:
-		case H263_DEC :
-#if 0
-			ret_value = mpeg4_parse( buffer_start_addr, buffer_size, src_mem,
-											  frame_start_addr,  frame_size, is_first_seq_header, conf_data);
-			if(ret_value==1||ret_value==2)	*frame_size=buffer_size;			
-#endif
-			break ;
-		case MPEG2_DEC :
-#if 0
-			ret_value = mpeg2_parse(buffer_start_addr, buffer_size, src_mem,
-									frame_start_addr,  frame_size, is_first_seq_header, conf_data);
-			if(ret_value==1||ret_value==2)	*frame_size=buffer_size;
-#endif
-			break ;
-		case H264_DEC :
-			ret_value = h264_parse(buffer_start_addr, buffer_size, src_mem,
-								   pctx);
-			break ;
- 
-		default :
-			ret_value = 3 ;
-			break ;
-	}
-	return ret_value ;
-}
+static OMX_U32 g_frame_num = 1;
 
 void *InitRawFrameExtract(char* pFilename)
 {
 	SSBSIP_MFC_CODEC_TYPE eMode;
 	char* pFileExt;
 	OMX_U32 uFrameInfo[2];
-	OMX_U32 uRemainSz,fileoffset;
+	OMX_U32 uRemainSz,fileoffset,fileoffset2;;
   frameInfo *ptmpinfo;
+  OMX_U8 *pbase,*pnext,*ptmp;
+  OMX_U32 i,len,perlen,filesize;
 
 	CtxType *pCtx;
   eMode = H264_DEC;
@@ -213,21 +112,72 @@ void *InitRawFrameExtract(char* pFilename)
 	if ( pCtx->fin==NULL )
 		return NULL;
  
+  fseek(pCtx->fin,0L,SEEK_END);
+  filesize = ftell(pCtx->fin);
+  fseek(pCtx->fin,0L,SEEK_SET);
 	pCtx->info = (frameInfo*)malloc(INFO_BUFF_SIZE);
+  pCtx->aInputBuf = malloc(STREAM_BUF_SIZE);
 	pCtx->frameNum = 0;
   fileoffset = 0;
+  fileoffset2 = 0;
   while(1)
   {  
-      fseek(pCtx->fin, fileoffset, SEEK_SET);
+      if (filesize  < fileoffset2 + 1000)
+      {
+        break;
+      }
+      fseek(pCtx->fin, fileoffset2, SEEK_SET);
+      uRemainSz = 0;
 	    uRemainSz = fread(pCtx->aInputBuf,1,STREAM_BUF_SIZE,pCtx->fin);
-      if (uRemainSz <= 0)
+      if (uRemainSz <  0)
       {
          break;
       }
-      VsParser(eMode, (OMX_U32)pCtx->aInputBuf, uRemainSz, pCtx); //第一次调用VsParser 第6个参数：parseHeader = true，表示获取视频头信息（H264：SEI+SPS+PPS）
-      ptmpinfo =  (pCtx->info + pCtx->frameNum -1);
-      fileoffset = ptmpinfo->offset +  ptmpinfo->size;
-  }
+      pbase = pCtx->aInputBuf;
+      ptmp = pCtx->aInputBuf;
+      i = 0;
+      while(i < uRemainSz)
+      {
+        if (((*(pCtx->aInputBuf + i)==0x00) && (*(pCtx->aInputBuf + i +1)==0x00) && (*(pCtx->aInputBuf + i + 2)==0x00) && (*(pCtx->aInputBuf + i +3)==0x01)) ||  //NAL前的起始码00000001||000001
+          ((*(pCtx->aInputBuf + i)==0x00) && (*(pCtx->aInputBuf + i+1)==0x00) && (*(pCtx->aInputBuf + i+2)==0x01)))
+        {
+          ptmp  = pCtx->aInputBuf + i;
+          perlen = len;
+          if((*(pCtx->aInputBuf + i)==0x00) && (*(pCtx->aInputBuf + i+1)==0x00) && (*(pCtx->aInputBuf + i+2)==0x01))
+          {
+              len = 3;
+          }
+          else
+          {
+              len = 4;
+          }
+          i += len;
+          pnext = ptmp;
+          if (pnext != pbase)
+          {
+             pCtx->frameNum ++;
+            if ( pCtx->frameNum == 1)
+            {
+                  pCtx->info[pCtx->frameNum -1].offset  = 0;
+            }
+            else
+            {
+                fileoffset += pCtx->info[pCtx->frameNum -2].size;
+                pCtx->info[pCtx->frameNum -1].offset = fileoffset;
+            }
+            pCtx->info[pCtx->frameNum-1].size = pnext - pbase;
+            pCtx->info[pCtx->frameNum-1].naltype = *(pbase + perlen);
+            //printf("%s %d  %d %x %d\n",__FUNCTION__,__LINE__,pCtx->info[pCtx->frameNum-1].size,pCtx->info[pCtx->frameNum-1].naltype,pCtx->frameNum);
+            pbase = pnext;
+          }
+        }
+        else
+        {
+          i++;
+        }
+      }
+      fileoffset2 = pCtx->info[pCtx->frameNum -1].offset + pCtx->info[pCtx->frameNum -1].size;
+	}
   fseek(pCtx->fin, 0, SEEK_SET);
 	return (void *)pCtx;	
 }
@@ -252,6 +202,7 @@ int GetNextFrame(CtxType *pCtx,unsigned char *pFrameBuf, unsigned int *pSize)
 {
 	int isLastFrame;
   OMX_U32 uFileOffset;
+  frameInfo *pinfo;
   if (!pCtx || !pFrameBuf  || !pSize)
   {
       return -1;
@@ -260,8 +211,20 @@ int GetNextFrame(CtxType *pCtx,unsigned char *pFrameBuf, unsigned int *pSize)
   {
      return 0;
   }
-  *pSize = pCtx->info[g_frame_num].size;
-  uFileOffset = pCtx->info[g_frame_num].offset;
+  pinfo = &pCtx->info[g_frame_num - 1];
+  if (pinfo->naltype == 0x67)   // sps pps I  
+  {
+    *pSize = pCtx->info[g_frame_num -1].size + pCtx->info[g_frame_num].size +  pCtx->info[g_frame_num + 1].size;
+    uFileOffset = pCtx->info[g_frame_num-1].offset;
+    g_frame_num += 3;
+  }
+  else
+  {
+    *pSize = pCtx->info[g_frame_num -1].size;
+     uFileOffset = pCtx->info[g_frame_num-1].offset;
+     g_frame_num ++;
+  }
+  
   fseek(pCtx->fin, uFileOffset, SEEK_SET);
   fread(pFrameBuf,1,*pSize,pCtx->fin);
 	return *pSize;
@@ -282,11 +245,11 @@ typedef struct appPrivateType{
 
 appPrivateType* appPriv;
 
-#define BUFFER_IN_SIZE (4*1024)
+#define BUFFER_IN_SIZE (4*1024*1024)
 #define BUFFER_OUT_SIZE (4*1024*1024)
 
 static OMX_BOOL bEOS = OMX_FALSE;
-
+static CtxType *pctx;
 /** Callbacks implementation of the video decoder component*/
 OMX_ERRORTYPE videodecEventHandler(
   OMX_OUT OMX_HANDLETYPE hComponent,
@@ -338,12 +301,13 @@ OMX_ERRORTYPE videodecEmptyBufferDone(
   OMX_OUT OMX_BUFFERHEADERTYPE* pBuffer) {
   OMX_ERRORTYPE err = OMX_ErrorNone;
   int data_read;
+  OMX_U32 size;
   static int iBufferDropped=0;
 
   DEBUG(DEB_LEV_FULL_SEQ, "Hi there, I am in the %s callback.\n", __func__);
-
-  data_read = fread(pBuffer->pBuffer, 1, BUFFER_IN_SIZE, appPriv->fd);
-  pBuffer->nFilledLen = data_read;
+  data_read = GetNextFrame(pctx,pBuffer->pBuffer,&size);
+  //data_read = fread(pBuffer->pBuffer, 1, BUFFER_IN_SIZE, appPriv->fd);
+  pBuffer->nFilledLen = size;
   pBuffer->nOffset = 0;
   if (data_read <= 0) {
     DEBUG(DEB_LEV_SIMPLE_SEQ, "In the %s no more input data available\n", __func__);
@@ -396,6 +360,7 @@ OMX_CALLBACKTYPE videodeccallbacks = {
 int main(int argc, char** argv) {
   int err;
   char *full_component_name;
+  OMX_U32 size;
   /** used with video decoder */
   OMX_BUFFERHEADERTYPE *pInBuffer[2], *pOutBuffer[2];
 
@@ -422,7 +387,7 @@ int main(int argc, char** argv) {
       exit(1);
   }
   MPEG4_CONFIG_DATA config_data;
-  CtxType *pctx = (CtxType *)InitRawFrameExtract("test.h264");
+  pctx = (CtxType *)InitRawFrameExtract("test.h264");
   if (pctx == NULL)
   {
       DEBUG(DEB_LEV_ERR, "Error in InitRawFrameExtract \n");
@@ -483,14 +448,24 @@ int main(int argc, char** argv) {
   err = OMX_FillThisBuffer(appPriv->videodechandle, pOutBuffer[0]);
   err = OMX_FillThisBuffer(appPriv->videodechandle, pOutBuffer[1]);
   int data_read;
-  data_read = fread(pInBuffer[0]->pBuffer, 1, BUFFER_IN_SIZE, appPriv->fd);
-  pInBuffer[0]->nFilledLen = data_read;
+  printf("%s %d\n",__FUNCTION__,__LINE__);
+  data_read = GetNextFrame(pctx,pInBuffer[0]->pBuffer,&size);
+   OMX_U8 *ptr = pInBuffer[0]->pBuffer;
+     printf("%s %d\n",__FUNCTION__,__LINE__);
+	    for(int k=0;k<100;k++){
+	        printf("%02x,",*(ptr + k));
+         } 
+	    printf("\n");
+  //data_read = fread(pInBuffer[0]->pBuffer, 1, BUFFER_IN_SIZE, appPriv->fd);
+  pInBuffer[0]->nFilledLen = size;
   pInBuffer[0]->nOffset = 0;
   /** in non tunneled case use the 2nd input buffer for input read and procesing
     * in tunneled case, it will be used afterwards
     */
-  data_read = fread(pInBuffer[1]->pBuffer, 1, BUFFER_IN_SIZE, appPriv->fd);
-  pInBuffer[1]->nFilledLen = data_read;
+   printf("%s %d\n",__FUNCTION__,__LINE__);
+  GetNextFrame(pctx,pInBuffer[1]->pBuffer,&size);
+  //data_read = fread(pInBuffer[1]->pBuffer, 1, BUFFER_IN_SIZE, appPriv->fd);
+  pInBuffer[1]->nFilledLen = size;
   pInBuffer[1]->nOffset = 0;
   DEBUG(DEB_LEV_PARAMS, "Empty first  buffer %p\n", pInBuffer[0]->pBuffer);
   err = OMX_EmptyThisBuffer(appPriv->videodechandle, pInBuffer[0]);
