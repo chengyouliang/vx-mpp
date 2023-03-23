@@ -6,6 +6,7 @@ add_definitions(" -g")
 include_directories(${PROJECT_SOURCE_DIR}/include/omx_il)
 include_directories(${PROJECT_SOURCE_DIR}/src/base/inc)
 include_directories(${PROJECT_SOURCE_DIR}/src/common/inc)
+include_directories(./drm)
 include_directories(.)
 
 message(WARNING  "${PROJECT_SOURCE_DIR}")

@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../../bin/component/libvx-kmssink.pdb"
   "../../../../bin/component/libvx-kmssink.so"
   "CMakeFiles/vx-kmssink.dir/library_entry_point.c.o"
+  "CMakeFiles/vx-kmssink.dir/omx_drm.c.o"
   "CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o"
 )
 

@@ -70,9 +70,22 @@ app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.s: cm
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-kmssink.dir/library_entry_point.c.s"
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/kmssink && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/components/kmssink/library_entry_point.c -o CMakeFiles/vx-kmssink.dir/library_entry_point.c.s
 
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/flags.make
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/src/components/kmssink/omx_drm.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/kmssink && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-kmssink.dir/omx_drm.c.o   -c /home/youliang/code/vx-mpp/app/src/components/kmssink/omx_drm.c
+
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vx-kmssink.dir/omx_drm.c.i"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/kmssink && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/youliang/code/vx-mpp/app/src/components/kmssink/omx_drm.c > CMakeFiles/vx-kmssink.dir/omx_drm.c.i
+
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vx-kmssink.dir/omx_drm.c.s"
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/kmssink && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/youliang/code/vx-mpp/app/src/components/kmssink/omx_drm.c -o CMakeFiles/vx-kmssink.dir/omx_drm.c.s
+
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/flags.make
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: ../../../app/src/components/kmssink/omx_kms_sink_component.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o"
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/kmssink && /home/youliang/code/sdk/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o   -c /home/youliang/code/vx-mpp/app/src/components/kmssink/omx_kms_sink_component.c
 
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.i: cmake_force
@@ -86,17 +99,19 @@ app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.s:
 # Object files for target vx-kmssink
 vx__kmssink_OBJECTS = \
 "CMakeFiles/vx-kmssink.dir/library_entry_point.c.o" \
+"CMakeFiles/vx-kmssink.dir/omx_drm.c.o" \
 "CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o"
 
 # External object files for target vx-kmssink
 vx__kmssink_EXTERNAL_OBJECTS =
 
 bin/component/libvx-kmssink.so: app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o
+bin/component/libvx-kmssink.so: app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o
 bin/component/libvx-kmssink.so: app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o
 bin/component/libvx-kmssink.so: app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/build.make
 bin/component/libvx-kmssink.so: bin/libvx_mpp_share.so
 bin/component/libvx-kmssink.so: app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library ../../../../bin/component/libvx-kmssink.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library ../../../../bin/component/libvx-kmssink.so"
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/kmssink && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vx-kmssink.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

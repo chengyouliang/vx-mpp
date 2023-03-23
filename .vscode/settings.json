@@ -15,6 +15,7 @@
         "omx_base_component.h": "c",
         "omx_h26xdec_component.h": "c",
         "mpp_log.h": "c",
-        "tsemaphore.h": "c"
+        "tsemaphore.h": "c",
+        "limits": "c"
     }
 }

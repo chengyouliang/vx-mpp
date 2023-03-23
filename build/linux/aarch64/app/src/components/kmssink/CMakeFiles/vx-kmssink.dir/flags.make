@@ -6,5 +6,5 @@ C_FLAGS = -O3 -DNDEBUG -fPIC   -fPIC  -g
 
 C_DEFINES = -DARMLINUX -D__gnu_linux__ -Dvx_kmssink_EXPORTS
 
-C_INCLUDES = -I/home/youliang/code/vx-mpp/app/include/omx_il -I/home/youliang/code/vx-mpp/app/src/base/inc -I/home/youliang/code/vx-mpp/app/src/common/inc -I/home/youliang/code/vx-mpp/app/src/components/kmssink/. 
+C_INCLUDES = -I/home/youliang/code/vx-mpp/app/include/omx_il -I/home/youliang/code/vx-mpp/app/src/base/inc -I/home/youliang/code/vx-mpp/app/src/common/inc -I/home/youliang/code/vx-mpp/app/src/components/kmssink/./drm -I/home/youliang/code/vx-mpp/app/src/components/kmssink/. 
 

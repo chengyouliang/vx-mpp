@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/youliang/code/vx-mpp/app/src/components/kmssink/library_entry_point.c" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o"
+  "/home/youliang/code/vx-mpp/app/src/components/kmssink/omx_drm.c" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o"
   "/home/youliang/code/vx-mpp/app/src/components/kmssink/omx_kms_sink_component.c" "/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
@@ -21,6 +22,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../../../app/include/omx_il"
   "../../../app/src/base/inc"
   "../../../app/src/common/inc"
+  "../../../app/src/components/kmssink/./drm"
   "../../../app/src/components/kmssink/."
   )
 

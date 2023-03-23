@@ -24,6 +24,25 @@ app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o: ..
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o: ../../../app/src/components/kmssink/omx_kms_sink_component.h
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o: ../../../app/src/components/kmssink/library_entry_point.c
 
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/include/omx_il/OMX_Audio.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/include/omx_il/OMX_Component.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/include/omx_il/OMX_Core.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/include/omx_il/OMX_IVCommon.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/include/omx_il/OMX_Image.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/include/omx_il/OMX_Index.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/include/omx_il/OMX_Other.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/include/omx_il/OMX_Types.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/include/omx_il/OMX_Video.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/src/components/kmssink/drm/dc_sw_tb_utils.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/src/components/kmssink/drm/drm.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/src/components/kmssink/drm/drm_fourcc.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/src/components/kmssink/drm/drm_mode.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/src/components/kmssink/drm/vx_drm.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/src/components/kmssink/drm/xf86drm.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/src/components/kmssink/drm/xf86drmMode.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/src/components/kmssink/omx_drm.c
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o: ../../../app/src/components/kmssink/omx_drm.h
+
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: ../../../app/include/omx_il/OMX_Audio.h
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: ../../../app/include/omx_il/OMX_Component.h
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: ../../../app/include/omx_il/OMX_Core.h

@@ -152,6 +152,33 @@ library_entry_point.c.s:
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/build.make app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.s
 .PHONY : library_entry_point.c.s
 
+omx_drm.o: omx_drm.c.o
+
+.PHONY : omx_drm.o
+
+# target to build an object file
+omx_drm.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/build.make app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o
+.PHONY : omx_drm.c.o
+
+omx_drm.i: omx_drm.c.i
+
+.PHONY : omx_drm.i
+
+# target to preprocess a source file
+omx_drm.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/build.make app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.i
+.PHONY : omx_drm.c.i
+
+omx_drm.s: omx_drm.c.s
+
+.PHONY : omx_drm.s
+
+# target to generate assembly for a file
+omx_drm.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/build.make app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.s
+.PHONY : omx_drm.c.s
+
 omx_kms_sink_component.o: omx_kms_sink_component.c.o
 
 .PHONY : omx_kms_sink_component.o
@@ -191,6 +218,9 @@ help:
 	@echo "... library_entry_point.o"
 	@echo "... library_entry_point.i"
 	@echo "... library_entry_point.s"
+	@echo "... omx_drm.o"
+	@echo "... omx_drm.i"
+	@echo "... omx_drm.s"
 	@echo "... omx_kms_sink_component.o"
 	@echo "... omx_kms_sink_component.i"
 	@echo "... omx_kms_sink_component.s"
