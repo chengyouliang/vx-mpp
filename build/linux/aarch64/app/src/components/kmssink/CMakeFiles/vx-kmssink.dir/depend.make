@@ -21,6 +21,14 @@ app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o: ..
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o: ../../../app/src/common/inc/queue.h
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o: ../../../app/src/common/inc/st_static_component_loader.h
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o: ../../../app/src/common/inc/tsemaphore.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o: ../../../app/src/components/kmssink/drm/dc_sw_tb_utils.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o: ../../../app/src/components/kmssink/drm/drm.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o: ../../../app/src/components/kmssink/drm/drm_fourcc.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o: ../../../app/src/components/kmssink/drm/drm_mode.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o: ../../../app/src/components/kmssink/drm/vx_drm.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o: ../../../app/src/components/kmssink/drm/xf86drm.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o: ../../../app/src/components/kmssink/drm/xf86drmMode.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o: ../../../app/src/components/kmssink/omx_drm.h
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o: ../../../app/src/components/kmssink/omx_kms_sink_component.h
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/library_entry_point.c.o: ../../../app/src/components/kmssink/library_entry_point.c
 
@@ -62,6 +70,14 @@ app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o:
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: ../../../app/src/common/inc/omxcore.h
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: ../../../app/src/common/inc/queue.h
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: ../../../app/src/common/inc/tsemaphore.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: ../../../app/src/components/kmssink/drm/dc_sw_tb_utils.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: ../../../app/src/components/kmssink/drm/drm.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: ../../../app/src/components/kmssink/drm/drm_fourcc.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: ../../../app/src/components/kmssink/drm/drm_mode.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: ../../../app/src/components/kmssink/drm/vx_drm.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: ../../../app/src/components/kmssink/drm/xf86drm.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: ../../../app/src/components/kmssink/drm/xf86drmMode.h
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: ../../../app/src/components/kmssink/omx_drm.h
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: ../../../app/src/components/kmssink/omx_kms_sink_component.h
 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o: ../../../app/src/components/kmssink/omx_kms_sink_component.c
 

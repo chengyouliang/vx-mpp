@@ -183,8 +183,18 @@ OMX_ERRORTYPE omx_kms_sink_component_Init(OMX_COMPONENTTYPE *openmaxStandComp) {
   omx_kms_sink_component_PortType* pPort = (omx_kms_sink_component_PortType *) omx_kms_sink_component_Private->ports[OMX_BASE_SINK_INPUTPORT_INDEX];
   int yuv_width  = pPort->sPortParam.format.video.nFrameWidth;
   int yuv_height = pPort->sPortParam.format.video.nFrameHeight;
+  int yuv_Format = pPort->sPortParam.format.video.eColorFormat;
+  if (IMG_FMT_NV12 == OMX_COLOR_FormatYUV420Planar)
+  {
+      yuv_Format = IMG_FMT_NV12;
+  }
   unsigned int err,i;
-
+  omx_kms_sink_component_Private->pdev  = device_create(yuv_width,yuv_height,0,yuv_Format);
+  if (omx_kms_sink_component_Private->pdev)
+  {
+      DEBUG(DEB_LEV_ERR, "In %s, device_create error\n", __func__);
+      return OMX_ErrorInsufficientResources;
+  }
  
   /*Signal kms Initialized*/
   tsem_up(omx_kms_sink_component_Private->kmsSyncSem);
@@ -199,7 +209,7 @@ OMX_ERRORTYPE omx_kms_sink_component_Deinit(OMX_COMPONENTTYPE *openmaxStandComp)
   omx_kms_sink_component_PrivateType* omx_kms_sink_component_Private = openmaxStandComp->pComponentPrivate;
 
   omx_kms_sink_component_Private->bIskmsInit = OMX_FALSE;
-
+  device_destroy(omx_kms_sink_component_Private->pdev);
   return OMX_ErrorNone;
 }
 
@@ -209,6 +219,12 @@ OMX_ERRORTYPE omx_kms_sink_component_Deinit(OMX_COMPONENTTYPE *openmaxStandComp)
   */
 void omx_kms_sink_component_BufferMgmtCallback(OMX_COMPONENTTYPE *openmaxStandComp, OMX_BUFFERHEADERTYPE* pInputBuffer) {
   omx_kms_sink_component_PrivateType* omx_kms_sink_component_Private = openmaxStandComp->pComponentPrivate;
+  OMX_S32 ret;
+  ret = drm_show(omx_kms_sink_component_Private->pdev,pInputBuffer->pBuffer,pInputBuffer->nFilledLen);
+  if (ret < 0)
+  {
+     DEBUG(DEB_LEV_ERR, "In %s, drm_show error\n", __func__);
+  }
   pInputBuffer->nFilledLen = 0;
 }
 

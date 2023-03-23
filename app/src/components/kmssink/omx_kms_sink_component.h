@@ -44,6 +44,7 @@
 
 #include <omx_base_video_port.h>
 #include <omx_base_sink.h>
+#include "omx_drm.h"
 
 /**  Filename of devnode for framebuffer device
   *  Should somehow be passed from client
@@ -88,7 +89,8 @@ DERIVEDCLASS(omx_kms_sink_component_PrivateType, omx_base_sink_PrivateType)
   OMX_BOOL                    bIskmsInit;\
   tsem_t*                     kmsSyncSem; \
   long                        old_time; \
-  long                        new_time;
+  long                        new_time;\
+  struct drm_dev              *pdev;
 ENDCLASS(omx_kms_sink_component_PrivateType)
 
 /* Component private entry points declaration */
