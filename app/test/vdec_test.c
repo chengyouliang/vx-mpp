@@ -1,5 +1,5 @@
 /**
-  @file test/components/video/omxvideodectest.c
+  @file test/components/video/omkmsdectest.c
   
   Test application that uses a OpenMAX component, a generic video decoder. 
   The application receives an video stream (.m4v or .264) decoded by a multiple format decoder component.
@@ -212,6 +212,7 @@ int GetNextFrame(CtxType *pCtx,unsigned char *pFrameBuf, unsigned int *pSize)
      return 0;
   }
   pinfo = &pCtx->info[g_frame_num - 1];
+
   if (pinfo->naltype == 0x67)   // sps pps I  
   {
     *pSize = pCtx->info[g_frame_num -1].size + pCtx->info[g_frame_num].size +  pCtx->info[g_frame_num + 1].size;
@@ -357,12 +358,25 @@ OMX_CALLBACKTYPE videodeccallbacks = {
     .FillBufferDone = videodecFillBufferDone
   };
 
+
+
+/** help display */
+void display_help() {
+  printf("\n");
+  printf("Usage:  ./vdec_test  input_filename output_filename\n");
+  printf("\n");
+  exit(1);
+}
 int main(int argc, char** argv) {
   int err;
   char *full_component_name;
   OMX_U32 size;
   /** used with video decoder */
   OMX_BUFFERHEADERTYPE *pInBuffer[2], *pOutBuffer[2];
+  if (argc < 3)
+  {
+      display_help();
+  }
 
   err = OMX_Init();
   if (err != OMX_ErrorNone) {
@@ -376,12 +390,12 @@ int main(int argc, char** argv) {
   appPriv->decoderEventSem = malloc(sizeof(tsem_t));
   tsem_init(appPriv->decoderEventSem, 0);
 
-  appPriv->fd = fopen("test.h264", "rb");
+  appPriv->fd = fopen(argv[1], "rb");
   if(appPriv->fd == NULL) {
     DEBUG(DEB_LEV_ERR, "Error in opening input file \n");
     exit(1);
   }
-  appPriv->outfile = fopen("test.yuv", "wb");
+  appPriv->outfile = fopen(argv[2], "wb");
   if(appPriv->outfile == NULL) {
       DEBUG(DEB_LEV_ERR, "Error in opening output file \n");
       exit(1);
@@ -448,6 +462,7 @@ int main(int argc, char** argv) {
   err = OMX_FillThisBuffer(appPriv->videodechandle, pOutBuffer[0]);
   err = OMX_FillThisBuffer(appPriv->videodechandle, pOutBuffer[1]);
   int data_read;
+#if 0
   printf("%s %d\n",__FUNCTION__,__LINE__);
   data_read = GetNextFrame(pctx,pInBuffer[0]->pBuffer,&size);
    OMX_U8 *ptr = pInBuffer[0]->pBuffer;
@@ -456,13 +471,13 @@ int main(int argc, char** argv) {
 	        printf("%02x,",*(ptr + k));
          } 
 	    printf("\n");
+#endif
   //data_read = fread(pInBuffer[0]->pBuffer, 1, BUFFER_IN_SIZE, appPriv->fd);
   pInBuffer[0]->nFilledLen = size;
   pInBuffer[0]->nOffset = 0;
   /** in non tunneled case use the 2nd input buffer for input read and procesing
     * in tunneled case, it will be used afterwards
     */
-   printf("%s %d\n",__FUNCTION__,__LINE__);
   GetNextFrame(pctx,pInBuffer[1]->pBuffer,&size);
   //data_read = fread(pInBuffer[1]->pBuffer, 1, BUFFER_IN_SIZE, appPriv->fd);
   pInBuffer[1]->nFilledLen = size;

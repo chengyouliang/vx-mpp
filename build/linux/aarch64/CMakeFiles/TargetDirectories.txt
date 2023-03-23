@@ -15,6 +15,9 @@
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/vedec/CMakeFiles/rebuild_cache.dir
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/vedec/CMakeFiles/edit_cache.dir
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/vedec/CMakeFiles/vx-h26x.dir
+/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/rebuild_cache.dir
+/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/edit_cache.dir
+/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/vx-kmssink.dir
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/edit_cache.dir
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/rebuild_cache.dir

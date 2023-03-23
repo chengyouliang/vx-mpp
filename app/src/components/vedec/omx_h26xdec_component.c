@@ -158,8 +158,9 @@ OMX_ERRORTYPE omx_videodec_component_Constructor(OMX_COMPONENTTYPE *openmaxStand
   noVideoDecInstance++;
   
   // set default config
-  omx_videodec_component_Private->config.splitInput  = 0;
-	omx_videodec_component_Private->config.tiledFmt    = 1;
+  omx_videodec_component_Private->config.splitInput  = 1;
+  omx_videodec_component_Private->config.zBufSize = 0x400000;	// 4M byte buffer size
+	omx_videodec_component_Private->config.tiledFmt    = 0;
 	omx_videodec_component_Private->config.mutiChunk   = 0;
 	omx_videodec_component_Private->config.latencyMode = 0;
 	omx_videodec_component_Private->config.type        = VDEC_CODEC_AVC;
@@ -279,19 +280,10 @@ static void omx_hander_to_buffer(OMX_BUFFERHEADERTYPE*dec_buf, FrameHandle frame
   */
 void omx_videodec_component_BufferMgmtCallback(OMX_COMPONENTTYPE *openmaxStandComp, OMX_BUFFERHEADERTYPE* pInputBuffer, OMX_BUFFERHEADERTYPE* pOutputBuffer) {
     size_t n;
-    
-#if 0
-    
-     printf("%s %d %d\n",__FUNCTION__,__LINE__,pInputBuffer->nFilledLen);
-	    for(int k=0;k<100;k++){
-	        printf("%02x,",*(ptr + k));
-         } 
-	    printf("\n");
-#endif
 #if 1
     omx_videodec_component_PrivateType* omx_videodec_component_Private = (omx_videodec_component_PrivateType*)openmaxStandComp->pComponentPrivate;
     pOutputBuffer->nFilledLen = 0;
-#if 1
+#if 0
       OMX_U8 *ptr = pInputBuffer->pBuffer;
 	    printf("%s %d %d\n",__FUNCTION__,__LINE__,pInputBuffer->nFilledLen);
 	    for(int k=0;k<100;k++){
@@ -304,12 +296,15 @@ void omx_videodec_component_BufferMgmtCallback(OMX_COMPONENTTYPE *openmaxStandCo
     FrameHandle hFrame;
     n = decodeGetFrameSync(omx_videodec_component_Private->dec, &hFrame);
 		if (n == VDEC_FRAME_CHANGE)
+    {
 				n = decodeGetFrameSync(omx_videodec_component_Private->dec, &hFrame);
+    }
 		if (n == VMA_ERR_TIMEOUT) {
 				DEBUG(DEB_LEV_ERR,"Decode timeout. ret=%ld\n", n);
 				return;
 		}
-      omx_hander_to_buffer(pOutputBuffer,hFrame);
+    omx_hander_to_buffer(pOutputBuffer,hFrame);
+    decodeReleaseFrame(omx_videodec_component_Private->dec, hFrame);
 #else
     fwrite(pInputBuffer->pBuffer, 1,  pInputBuffer->nFilledLen, fd);
     memcpy(pOutputBuffer->pBuffer,pInputBuffer->pBuffer,pInputBuffer->nFilledLen);

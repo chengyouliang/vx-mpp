@@ -116,6 +116,10 @@ omx_base_port.h
 OMX_Core.h
 -
 
+../../../app/src/common/inc/omx_comp_debug_levels.h
+stdio.h
+-
+
 ../../../app/src/common/inc/omxcore.h
 OMX_Component.h
 -

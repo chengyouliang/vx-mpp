@@ -77,6 +77,7 @@ clean: app/clean
 app/all: app/src/all
 app/all: app/src/components/av1/all
 app/all: app/src/components/vedec/all
+app/all: app/src/components/kmssink/all
 app/all: app/test/all
 
 .PHONY : app/all
@@ -85,6 +86,7 @@ app/all: app/test/all
 app/preinstall: app/src/preinstall
 app/preinstall: app/src/components/av1/preinstall
 app/preinstall: app/src/components/vedec/preinstall
+app/preinstall: app/src/components/kmssink/preinstall
 app/preinstall: app/test/preinstall
 
 .PHONY : app/preinstall
@@ -93,6 +95,7 @@ app/preinstall: app/test/preinstall
 app/clean: app/src/clean
 app/clean: app/src/components/av1/clean
 app/clean: app/src/components/vedec/clean
+app/clean: app/src/components/kmssink/clean
 app/clean: app/test/clean
 
 .PHONY : app/clean
@@ -134,6 +137,24 @@ app/src/components/av1/preinstall:
 app/src/components/av1/clean: app/src/components/av1/CMakeFiles/vx-av1.dir/clean
 
 .PHONY : app/src/components/av1/clean
+
+#=============================================================================
+# Directory level rules for directory app/src/components/kmssink
+
+# Recursive "all" directory target.
+app/src/components/kmssink/all: app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/all
+
+.PHONY : app/src/components/kmssink/all
+
+# Recursive "preinstall" directory target.
+app/src/components/kmssink/preinstall:
+
+.PHONY : app/src/components/kmssink/preinstall
+
+# Recursive "clean" directory target.
+app/src/components/kmssink/clean: app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/clean
+
+.PHONY : app/src/components/kmssink/clean
 
 #=============================================================================
 # Directory level rules for directory app/src/components/vedec
@@ -231,7 +252,7 @@ driver/CMakeFiles/codec.dir/clean:
 app/src/CMakeFiles/vx_mpp_share.dir/all:
 	$(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/depend
 	$(MAKE) -f app/src/CMakeFiles/vx_mpp_share.dir/build.make app/src/CMakeFiles/vx_mpp_share.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95 "Built target vx_mpp_share"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98 "Built target vx_mpp_share"
 .PHONY : app/src/CMakeFiles/vx_mpp_share.dir/all
 
 # Build rule for subdir invocation for target.
@@ -258,7 +279,7 @@ app/src/CMakeFiles/vx_mpp_share.dir/clean:
 app/src/CMakeFiles/vx-mpp.dir/all:
 	$(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/depend
 	$(MAKE) -f app/src/CMakeFiles/vx-mpp.dir/build.make app/src/CMakeFiles/vx-mpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56 "Built target vx-mpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59 "Built target vx-mpp"
 .PHONY : app/src/CMakeFiles/vx-mpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -331,6 +352,33 @@ vx-h26x: app/src/components/vedec/CMakeFiles/vx-h26x.dir/rule
 app/src/components/vedec/CMakeFiles/vx-h26x.dir/clean:
 	$(MAKE) -f app/src/components/vedec/CMakeFiles/vx-h26x.dir/build.make app/src/components/vedec/CMakeFiles/vx-h26x.dir/clean
 .PHONY : app/src/components/vedec/CMakeFiles/vx-h26x.dir/clean
+
+#=============================================================================
+# Target rules for target app/src/components/kmssink/CMakeFiles/vx-kmssink.dir
+
+# All Build rule for target.
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/all: app/src/CMakeFiles/vx_mpp_share.dir/all
+	$(MAKE) -f app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/build.make app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/depend
+	$(MAKE) -f app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/build.make app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles --progress-num=18,19,20 "Built target vx-kmssink"
+.PHONY : app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/all
+
+# Build rule for subdir invocation for target.
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles 42
+	$(MAKE) -f CMakeFiles/Makefile2 app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/youliang/code/vx-mpp/build/linux/aarch64/CMakeFiles 0
+.PHONY : app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/rule
+
+# Convenience name for target.
+vx-kmssink: app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/rule
+
+.PHONY : vx-kmssink
+
+# clean rule for target.
+app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/clean:
+	$(MAKE) -f app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/build.make app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/clean
+.PHONY : app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/clean
 
 #=============================================================================
 # Target rules for target app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir

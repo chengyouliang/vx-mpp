@@ -82,20 +82,6 @@ omx_classmagic.h
 omx_base_port.h
 ../../../app/src/base/inc/omx_base_port.h
 
-../../../app/src/base/inc/omx_base_filter.h
-OMX_Types.h
--
-OMX_Component.h
--
-OMX_Core.h
--
-pthread.h
--
-stdlib.h
--
-omx_base_component.h
-../../../app/src/base/inc/omx_base_component.h
-
 ../../../app/src/base/inc/omx_base_port.h
 tsemaphore.h
 ../../../app/src/base/inc/tsemaphore.h
@@ -105,6 +91,8 @@ omx_classmagic.h
 ../../../app/src/base/inc/omx_classmagic.h
 
 ../../../app/src/base/inc/omx_classmagic.h
+
+../../../app/src/common/inc/common.h
 
 ../../../app/src/common/inc/component_loader.h
 OMX_Core.h
@@ -132,11 +120,35 @@ omx_comp_debug_levels.h
 pthread.h
 -
 
+../../../app/src/common/inc/st_static_component_loader.h
+omxcore.h
+../../../app/src/common/inc/omxcore.h
+
 ../../../app/src/common/inc/tsemaphore.h
 
-/home/youliang/code/vx-mpp/app/src/base/omx_base_filter.c
-omxcore.h
+/home/youliang/code/vx-mpp/app/src/common/st_static_component_loader.c
+stdio.h
 -
-omx_base_filter.h
-/home/youliang/code/vx-mpp/app/src/base/omx_base_filter.h
+stdlib.h
+-
+string.h
+-
+dlfcn.h
+-
+sys/types.h
+-
+dirent.h
+-
+strings.h
+-
+errno.h
+-
+assert.h
+-
+common.h
+/home/youliang/code/vx-mpp/app/src/common/common.h
+st_static_component_loader.h
+/home/youliang/code/vx-mpp/app/src/common/st_static_component_loader.h
+omx_base_component.h
+/home/youliang/code/vx-mpp/app/src/common/omx_base_component.h
 

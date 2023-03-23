@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 3.0.0)
 
-add_definitions("-Wall -g")
+add_definitions(" -g")
 
 #关闭警告
 #add_definitions(-w)

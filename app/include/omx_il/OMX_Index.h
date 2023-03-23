@@ -150,7 +150,7 @@ typedef enum OMX_INDEXTYPE {
     OMX_IndexParamHuffmanTable,      /**< For jpeg, refer to OMX_IMAGE_PARAM_HUFFMANTTABLETYPE */
 
     /* Video specific parameters and configurations */
-    OMX_IndexVideoStartUnused = 0x06000000,
+    OMX_IndekmsStartUnused = 0x06000000,
     OMX_IndexParamVideoPortFormat,   /**< reference: OMX_VIDEO_PARAM_PORTFORMATTYPE */
     OMX_IndexParamVideoQuantization, /**< reference: OMX_VIDEO_PARAM_QUANTIZATIONPARAMTYPE */
     OMX_IndexParamVideoFastUpdate,   /**< reference: OMX_VIDEO_PARAM_VIDEOFASTUPDATETYPE */

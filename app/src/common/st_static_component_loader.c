@@ -245,7 +245,7 @@ OMX_ERRORTYPE BOSA_ST_CreateComponent(
   OMX_PTR pAppData,
   OMX_CALLBACKTYPE* pCallBacks) {
 
-  int i;
+  int i = 0;
   unsigned int j;
   int componentPosition = -1;
   OMX_ERRORTYPE eError = OMX_ErrorNone;
@@ -255,7 +255,6 @@ OMX_ERRORTYPE BOSA_ST_CreateComponent(
 
   DEBUG(DEB_LEV_FUNCTION_NAME, "In %s\n", __func__);
   templateList = (stLoaderComponentType**)loader->loaderPrivate;
-  DEBUG(DEB_LEV_FUNCTION_NAME, "In %s %p\n", __func__,templateList[i]);
   i = 0;
   while(templateList[i]) {
     DEBUG(DEB_LEV_PARAMS, "In %s\n", __func__,templateList[i]->name,cComponentName);
