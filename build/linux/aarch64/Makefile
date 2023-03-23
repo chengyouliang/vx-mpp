@@ -189,6 +189,19 @@ vx-kmssink/fast:
 .PHONY : vx-kmssink/fast
 
 #=============================================================================
+# Target rules for targets named vdec_kmssink_test
+
+# Build rule for target.
+vdec_kmssink_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vdec_kmssink_test
+.PHONY : vdec_kmssink_test
+
+# fast build rule for target.
+vdec_kmssink_test/fast:
+	$(MAKE) -f app/test/CMakeFiles/vdec_kmssink_test.dir/build.make app/test/CMakeFiles/vdec_kmssink_test.dir/build
+.PHONY : vdec_kmssink_test/fast
+
+#=============================================================================
 # Target rules for targets named mpp_dmabuffer_driver_test
 
 # Build rule for target.
@@ -267,6 +280,7 @@ help:
 	@echo "... vx-av1"
 	@echo "... vx-h26x"
 	@echo "... vx-kmssink"
+	@echo "... vdec_kmssink_test"
 	@echo "... mpp_dmabuffer_driver_test"
 	@echo "... vdec_test"
 	@echo "... mpp_mem_test"

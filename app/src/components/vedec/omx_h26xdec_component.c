@@ -1,11 +1,9 @@
 /**
-  @file src/components/ffmpeg/omx_videodec_component.c
+  @file src/components/kms/library_entry_point.c
+  
+  OpenMAX kms sink component. 
 
-  This component implements H.264 / MPEG-4 AVC video decoder.
-  The H.264 / MPEG-4 AVC Video decoder is based on the FFmpeg software library.
-
-  Copyright (C) 2007-2008 STMicroelectronics
-  Copyright (C) 2007-2008 Nokia Corporation and/or its subsidiary(-ies)
+  Copyright (C) 2023-2024 vanxum
 
   This library is free software; you can redistribute it and/or modify it under
   the terms of the GNU Lesser General Public License as published by the Free
@@ -20,12 +18,12 @@
   You should have received a copy of the GNU Lesser General Public License
   along with this library; if not, write to the Free Software Foundation, Inc.,
   51 Franklin St, Fifth Floor, Boston, MA
-  02110-1301  USA
-
-  $Date$
-  Revision $Rev$
-  Author $Author$
+ 
+  $Date: 2023/3/23 +0530 (Tue, 02 Sep 2008) $
+  Revision $Rev: 593 $
+  Author $Author: chengyouliang $
 */
+
 #include <omxcore.h>
 #include <omx_base_video_port.h>
 #include "omx_h26xdec_component.h"

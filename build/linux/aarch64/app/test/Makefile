@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+app/test/CMakeFiles/vdec_kmssink_test.dir/rule:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/vdec_kmssink_test.dir/rule
+.PHONY : app/test/CMakeFiles/vdec_kmssink_test.dir/rule
+
+# Convenience name for target.
+vdec_kmssink_test: app/test/CMakeFiles/vdec_kmssink_test.dir/rule
+
+.PHONY : vdec_kmssink_test
+
+# fast build rule for target.
+vdec_kmssink_test/fast:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/vdec_kmssink_test.dir/build.make app/test/CMakeFiles/vdec_kmssink_test.dir/build
+.PHONY : vdec_kmssink_test/fast
+
+# Convenience name for target.
 app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/rule:
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f CMakeFiles/Makefile2 app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/rule
 .PHONY : app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/rule
@@ -293,6 +308,33 @@ mpp_mem_test.c.s:
 	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/mpp_mem_test.dir/build.make app/test/CMakeFiles/mpp_mem_test.dir/mpp_mem_test.c.s
 .PHONY : mpp_mem_test.c.s
 
+vdec_kmssink_test.o: vdec_kmssink_test.c.o
+
+.PHONY : vdec_kmssink_test.o
+
+# target to build an object file
+vdec_kmssink_test.c.o:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/vdec_kmssink_test.dir/build.make app/test/CMakeFiles/vdec_kmssink_test.dir/vdec_kmssink_test.c.o
+.PHONY : vdec_kmssink_test.c.o
+
+vdec_kmssink_test.i: vdec_kmssink_test.c.i
+
+.PHONY : vdec_kmssink_test.i
+
+# target to preprocess a source file
+vdec_kmssink_test.c.i:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/vdec_kmssink_test.dir/build.make app/test/CMakeFiles/vdec_kmssink_test.dir/vdec_kmssink_test.c.i
+.PHONY : vdec_kmssink_test.c.i
+
+vdec_kmssink_test.s: vdec_kmssink_test.c.s
+
+.PHONY : vdec_kmssink_test.s
+
+# target to generate assembly for a file
+vdec_kmssink_test.c.s:
+	cd /home/youliang/code/vx-mpp/build/linux/aarch64 && $(MAKE) -f app/test/CMakeFiles/vdec_kmssink_test.dir/build.make app/test/CMakeFiles/vdec_kmssink_test.dir/vdec_kmssink_test.c.s
+.PHONY : vdec_kmssink_test.c.s
+
 vdec_test.o: vdec_test.c.o
 
 .PHONY : vdec_test.o
@@ -327,6 +369,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... vdec_kmssink_test"
 	@echo "... mpp_dmabuffer_driver_test"
 	@echo "... rebuild_cache"
 	@echo "... vdec_test"
@@ -345,6 +388,9 @@ help:
 	@echo "... mpp_mem_test.o"
 	@echo "... mpp_mem_test.i"
 	@echo "... mpp_mem_test.s"
+	@echo "... vdec_kmssink_test.o"
+	@echo "... vdec_kmssink_test.i"
+	@echo "... vdec_kmssink_test.s"
 	@echo "... vdec_test.o"
 	@echo "... vdec_test.i"
 	@echo "... vdec_test.s"

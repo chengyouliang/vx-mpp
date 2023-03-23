@@ -55,4 +55,7 @@ add_mpp_osal_test(mpp_dmabuffer_driver)
 #dma  test
 add_mpp_osal_test(vdec)
 
+#kms sink
+add_mpp_osal_test(vdec_kmssink)
+
 

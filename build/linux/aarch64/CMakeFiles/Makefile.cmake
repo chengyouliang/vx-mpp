@@ -66,6 +66,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "app/src/components/av1/CMakeFiles/vx-av1.dir/DependInfo.cmake"
   "app/src/components/vedec/CMakeFiles/vx-h26x.dir/DependInfo.cmake"
   "app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/DependInfo.cmake"
+  "app/test/CMakeFiles/vdec_kmssink_test.dir/DependInfo.cmake"
   "app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir/DependInfo.cmake"
   "app/test/CMakeFiles/vdec_test.dir/DependInfo.cmake"
   "app/test/CMakeFiles/mpp_mem_test.dir/DependInfo.cmake"

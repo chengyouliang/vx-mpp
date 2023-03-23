@@ -1,3 +1,30 @@
+/**
+  @file src/components/kms/library_entry_point.c
+  
+  OpenMAX kms sink component. 
+
+  Copyright (C) 2023-2024 vanxum
+
+  This library is free software; you can redistribute it and/or modify it under
+  the terms of the GNU Lesser General Public License as published by the Free
+  Software Foundation; either version 2.1 of the License, or (at your option)
+  any later version.
+
+  This library is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more
+  details.
+
+  You should have received a copy of the GNU Lesser General Public License
+  along with this library; if not, write to the Free Software Foundation, Inc.,
+  51 Franklin St, Fifth Floor, Boston, MA
+ 
+  $Date: 2023/3/23 +0530 (Tue, 02 Sep 2008) $
+  Revision $Rev: 593 $
+  Author $Author: chengyouliang $
+*/
+
+
 #include "omx_drm.h"
 
 static s32 get_prop_id(s32 fd, drmModeObjectProperties *props, const char *name)
@@ -18,7 +45,6 @@ static s32 get_prop_id(s32 fd, drmModeObjectProperties *props, const char *name)
 
 	return -1;
 }
-
 static s32 get_prop_value(s32 fd, drmModeObjectProperties *props,
 			  const char *name, u32 *value)
 {

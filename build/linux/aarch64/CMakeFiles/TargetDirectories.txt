@@ -19,6 +19,7 @@
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/edit_cache.dir
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/vx-kmssink.dir
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/edit_cache.dir
+/home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/vdec_kmssink_test.dir
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/mpp_dmabuffer_driver_test.dir
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/rebuild_cache.dir
 /home/youliang/code/vx-mpp/build/linux/aarch64/app/test/CMakeFiles/vdec_test.dir

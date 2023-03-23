@@ -1,15 +1,9 @@
 /**
-  @file src/components/ffmpeg/library_entry_point.c
+  @file src/components/kms/library_entry_point.c
   
-  The library entry point. It must have the same name for each
-  library of the components loaded by the ST static component loader.
-  This function fills the version, the component name and if existing also the roles
-  and the specific names for each role. This base function is only an explanation.
-  For each library it must be implemented, and it must fill data of any component
-  in the library
-  
-  Copyright (C) 2007-2008 STMicroelectronics
-  Copyright (C) 2007-2008 Nokia Corporation and/or its subsidiary(-ies).
+  OpenMAX kms sink component. 
+
+  Copyright (C) 2023-2024 vanxum
 
   This library is free software; you can redistribute it and/or modify it under
   the terms of the GNU Lesser General Public License as published by the Free
@@ -24,13 +18,12 @@
   You should have received a copy of the GNU Lesser General Public License
   along with this library; if not, write to the Free Software Foundation, Inc.,
   51 Franklin St, Fifth Floor, Boston, MA
-  02110-1301  USA
-  
-  $Date$
-  Revision $Rev$
-  Author $Author$
-
+ 
+  $Date: 2023/3/23 +0530 (Tue, 02 Sep 2008) $
+  Revision $Rev: 593 $
+  Author $Author: chengyouliang $
 */
+
 
 #include <st_static_component_loader.h>
 //#include <config.h>
