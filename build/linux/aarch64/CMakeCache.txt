@@ -246,7 +246,7 @@ vx-av1_LIB_DEPENDS:STATIC=general;vx_mpp_share;
 vx-h26x_LIB_DEPENDS:STATIC=general;vdec;general;vx_mpp_share;
 
 //Dependencies for the target
-vx-kmssink_LIB_DEPENDS:STATIC=general;vx_mpp_share;
+vx-kmssink_LIB_DEPENDS:STATIC=general;drm;general;vx_mpp_share;
 
 //Value Computed by CMake
 vx_av1_BINARY_DIR:STATIC=/home/youliang/code/vx-mpp/build/linux/aarch64/app/src/components/av1

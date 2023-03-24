@@ -16,11 +16,12 @@ aux_source_directory(.  SRC_LIST)
 link_directories(${CMAKE_BINARY_DIR}/bin)
 #lib
 ADD_LIBRARY(vx-kmssink SHARED  ${SRC_LIST})
+target_link_libraries(vx-kmssink  drm)
 target_link_libraries(vx-kmssink  vx_mpp_share)
 
-#file(COPY lib/libvdec.so DESTINATION  ${CMAKE_BINARY_DIR}/bin)
-#file(COPY lib/libvdec.so.1  DESTINATION  ${CMAKE_BINARY_DIR}/bin)
-#file(COPY lib/libvdec.so.1.0.1 DESTINATION  ${CMAKE_BINARY_DIR}/bin)
+file(COPY lib/libdrm.so DESTINATION  ${CMAKE_BINARY_DIR}/bin)
+file(COPY lib/libdrm.so.2  DESTINATION  ${CMAKE_BINARY_DIR}/bin)
+file(COPY lib/libdrm.so.2.4.0 DESTINATION  ${CMAKE_BINARY_DIR}/bin)
 
 set_target_properties(vx-kmssink PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/component )
 

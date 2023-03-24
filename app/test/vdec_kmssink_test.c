@@ -445,6 +445,14 @@ int main(int argc, char** argv) {
   } else {
     printf("Found The component for decoding is %s\n", full_component_name);
   }
+
+   err = OMX_GetHandle(&appPriv->videodechandle, "OMX.st.video.kms_sink", NULL, &videodeccallbacks);
+  if(err != OMX_ErrorNone){
+    printf("No video decoder component found. Exiting...\n");
+    exit(1);
+  } else {
+    printf("Found The component for decoding is %s\n", "OMX.st.video.kms_sink");
+  }
    /** sending command to video decoder component to go to idle state */
   pInBuffer[0] = pInBuffer[1] = NULL;
   err = OMX_SendCommand(appPriv->videodechandle, OMX_CommandStateSet, OMX_StateIdle, NULL);
