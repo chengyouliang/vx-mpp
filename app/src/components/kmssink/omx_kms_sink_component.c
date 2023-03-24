@@ -90,11 +90,11 @@ OMX_ERRORTYPE omx_kms_sink_component_Constructor(OMX_COMPONENTTYPE *openmaxStand
 
   /** Domain specific section for the allocated port. */
 
-  pPort->sPortParam.format.video.nFrameWidth = 352;
-  pPort->sPortParam.format.video.nFrameHeight = 288;
+  pPort->sPortParam.format.video.nFrameWidth = 1920;
+  pPort->sPortParam.format.video.nFrameHeight = 1080;
   pPort->sPortParam.format.video.nBitrate = 0;
   pPort->sPortParam.format.video.xFramerate = 25;
-  pPort->sPortParam.format.video.eColorFormat = OMX_COLOR_FormatYUV420Planar;
+  pPort->sPortParam.format.video.eColorFormat = DRM_FORMAT_NV12;
 
   //  Figure out stride, slice height, min buffer size
 
@@ -184,18 +184,20 @@ OMX_ERRORTYPE omx_kms_sink_component_Init(OMX_COMPONENTTYPE *openmaxStandComp) {
   int yuv_width  = pPort->sPortParam.format.video.nFrameWidth;
   int yuv_height = pPort->sPortParam.format.video.nFrameHeight;
   int yuv_Format = pPort->sPortParam.format.video.eColorFormat;
+  printf("%s %d\n",__FUNCTION__,__LINE__);
   if (IMG_FMT_NV12 == OMX_COLOR_FormatYUV420Planar)
   {
       yuv_Format = IMG_FMT_NV12;
   }
   unsigned int err,i;
-  omx_kms_sink_component_Private->pdev  = device_create(yuv_width,yuv_height,0,yuv_Format);
-  if (omx_kms_sink_component_Private->pdev)
+  printf("%s %d\n",__FUNCTION__,__LINE__);
+  omx_kms_sink_component_Private->pdev  = drm_device_create(yuv_width,yuv_height,1,yuv_Format);
+  if (!omx_kms_sink_component_Private->pdev)
   {
       DEBUG(DEB_LEV_ERR, "In %s, device_create error\n", __func__);
       return OMX_ErrorInsufficientResources;
   }
- 
+   printf("%s %d\n",__FUNCTION__,__LINE__);
   /*Signal kms Initialized*/
   tsem_up(omx_kms_sink_component_Private->kmsSyncSem);
 
@@ -209,7 +211,7 @@ OMX_ERRORTYPE omx_kms_sink_component_Deinit(OMX_COMPONENTTYPE *openmaxStandComp)
   omx_kms_sink_component_PrivateType* omx_kms_sink_component_Private = openmaxStandComp->pComponentPrivate;
 
   omx_kms_sink_component_Private->bIskmsInit = OMX_FALSE;
-  device_destroy(omx_kms_sink_component_Private->pdev);
+  drm_device_destroy(omx_kms_sink_component_Private->pdev);
   return OMX_ErrorNone;
 }
 
@@ -430,6 +432,7 @@ OMX_ERRORTYPE omx_kms_sink_component_SetParameter(
   OMX_PARAM_PORTDEFINITIONTYPE *pPortDef;
   OMX_VIDEO_PARAM_PORTFORMATTYPE *pVideoPortFormat;
   OMX_U32 portIndex;
+   printf("%s %d\n",__FUNCTION__,__LINE__);
 
   /* Check which structure we are being fed and make control its header */
   OMX_COMPONENTTYPE *openmaxStandComp = (OMX_COMPONENTTYPE *)hComponent;
@@ -532,7 +535,8 @@ OMX_ERRORTYPE omx_kms_sink_component_GetParameter(
   OMX_COMPONENTTYPE *openmaxStandComp = (OMX_COMPONENTTYPE *)hComponent;
   omx_kms_sink_component_PrivateType* omx_kms_sink_component_Private = openmaxStandComp->pComponentPrivate;
   omx_kms_sink_component_PortType *pPort = (omx_kms_sink_component_PortType *) omx_kms_sink_component_Private->ports[OMX_BASE_SINK_INPUTPORT_INDEX];  
-  
+  printf("%s %d\n",__FUNCTION__,__LINE__);
+
   if (ComponentParameterStructure == NULL) {
     return OMX_ErrorBadParameter;
   }

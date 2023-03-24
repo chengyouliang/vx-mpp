@@ -281,7 +281,7 @@ void omx_videodec_component_BufferMgmtCallback(OMX_COMPONENTTYPE *openmaxStandCo
 #if 1
     omx_videodec_component_PrivateType* omx_videodec_component_Private = (omx_videodec_component_PrivateType*)openmaxStandComp->pComponentPrivate;
     pOutputBuffer->nFilledLen = 0;
-#if 0
+#if 1
       OMX_U8 *ptr = pInputBuffer->pBuffer;
 	    printf("%s %d %d\n",__FUNCTION__,__LINE__,pInputBuffer->nFilledLen);
 	    for(int k=0;k<100;k++){
@@ -315,17 +315,49 @@ OMX_ERRORTYPE omx_videodec_component_SetParameter(
 OMX_IN  OMX_HANDLETYPE hComponent,
 OMX_IN  OMX_INDEXTYPE nParamIndex,
 OMX_IN  OMX_PTR ComponentParameterStructure) {
-
-  OMX_ERRORTYPE eError = OMX_ErrorNone;
-
-  return eError;
+ 
+  return OMX_ErrorNone;
 }
 
 OMX_ERRORTYPE omx_videodec_component_GetParameter(
   OMX_IN  OMX_HANDLETYPE hComponent,
   OMX_IN  OMX_INDEXTYPE nParamIndex,
   OMX_INOUT OMX_PTR ComponentParameterStructure) {
+  omx_base_video_PortType *port;
+  OMX_ERRORTYPE eError = OMX_ErrorNone;
 
+  OMX_COMPONENTTYPE *openmaxStandComp = hComponent;
+  omx_videodec_component_PrivateType* omx_videodec_component_Private = openmaxStandComp->pComponentPrivate;
+  if (ComponentParameterStructure == NULL) {
+    return OMX_ErrorBadParameter;
+  }
+  DEBUG(DEB_LEV_SIMPLE_SEQ, "   Getting parameter %i\n", nParamIndex);
+  /* Check which structure we are being fed and fill its header */
+  switch(nParamIndex) {
+    case OMX_IndexParamVideoInit:
+      if ((eError = checkHeader(ComponentParameterStructure, sizeof(OMX_PORT_PARAM_TYPE))) != OMX_ErrorNone) {
+        break;
+      }
+      memcpy(ComponentParameterStructure, &omx_videodec_component_Private->sPortTypesParam[OMX_PortDomainVideo], sizeof(OMX_PORT_PARAM_TYPE));
+      break;
+    case OMX_IndexParamVideoPortFormat:
+      {
+        OMX_VIDEO_PARAM_PORTFORMATTYPE *pVideoPortFormat;
+        pVideoPortFormat = ComponentParameterStructure;
+        if ((eError = checkHeader(ComponentParameterStructure, sizeof(OMX_VIDEO_PARAM_PORTFORMATTYPE))) != OMX_ErrorNone) {
+          break;
+        }
+        if (pVideoPortFormat->nPortIndex <= 1) {
+          port = (omx_base_video_PortType *)omx_videodec_component_Private->ports[pVideoPortFormat->nPortIndex];
+          memcpy(pVideoPortFormat, &port->sVideoParam, sizeof(OMX_VIDEO_PARAM_PORTFORMATTYPE));
+        } else {
+          return OMX_ErrorBadPortIndex;
+        }
+        break;
+      }
+      default: /*Call the base component function*/
+        return omx_base_component_GetParameter(hComponent, nParamIndex, ComponentParameterStructure);
+  }
   return OMX_ErrorNone;
 }
 

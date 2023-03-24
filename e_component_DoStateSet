@@ -1,0 +1,2619 @@
+[1mdiff --git a/app/src/base/omx_base_port.c b/app/src/base/omx_base_port.c[m
+[1mindex 5b81fbf..5d1545a 100755[m
+[1m--- a/app/src/base/omx_base_port.c[m
+[1m+++ b/app/src/base/omx_base_port.c[m
+[36m@@ -910,6 +910,7 @@[m [mOMX_ERRORTYPE base_port_ComponentTunnelRequest(omx_base_PortType* openmaxStandPo[m
+   }[m
+ [m
+   if (openmaxStandPort->sPortParam.eDir == OMX_DirInput) {[m
+[32m+[m[32m     printf("%s %d\n",__FUNCTION__,__LINE__);[m
+     /* Get Port Definition of the Tunnelled Component*/[m
+     param.nPortIndex=nTunneledPort;[m
+     setHeader(&param, sizeof(OMX_PARAM_PORTDEFINITIONTYPE));[m
+[36m@@ -920,19 +921,24 @@[m [mOMX_ERRORTYPE base_port_ComponentTunnelRequest(omx_base_PortType* openmaxStandPo[m
+       // compatibility not reached[m
+       return OMX_ErrorPortsNotCompatible;[m
+     }[m
+[32m+[m[32m     printf("%s %d\n",__FUNCTION__,__LINE__);[m
+     openmaxStandPort->nNumTunnelBuffer=param.nBufferCountMin;[m
+     if(param.eDomain!=openmaxStandPort->sPortParam.eDomain) {[m
+[32m+[m[32m       printf("%s %d\n",__FUNCTION__,__LINE__);[m
+       return OMX_ErrorPortsNotCompatible;[m
+     }[m
+     if(param.eDomain==OMX_PortDomainAudio) {[m
+[32m+[m[32m       printf("%s %d\n",__FUNCTION__,__LINE__);[m
+       if(param.format.audio.eEncoding == OMX_AUDIO_CodingMax) {[m
+         return OMX_ErrorPortsNotCompatible;[m
+       }[m
+     } else if(param.eDomain==OMX_PortDomainVideo) {[m
+[32m+[m[32m       printf("%s %d\n",__FUNCTION__,__LINE__);[m
+       if(param.format.video.eCompressionFormat == OMX_VIDEO_CodingMax) {[m
+         return OMX_ErrorPortsNotCompatible;[m
+       }[m
+     } else if(param.eDomain==OMX_PortDomainOther) {[m
+[32m+[m[32m       printf("%s %d\n",__FUNCTION__,__LINE__);[m
+       if(param.format.other.eFormat == OMX_OTHER_FormatMax) {[m
+         return OMX_ErrorPortsNotCompatible;[m
+       }[m
+[36m@@ -1001,6 +1007,7 @@[m [mOMX_ERRORTYPE base_port_ComponentTunnelRequest(omx_base_PortType* openmaxStandPo[m
+       openmaxStandPort->nTunnelFlags=0;[m
+       return OMX_ErrorPortsNotCompatible;[m
+     }[m
+[32m+[m[32m     printf("%s %d\n",__FUNCTION__,__LINE__);[m
+   } else {[m
+     // output port[m
+     // all the consistency checks are under other component responsibility[m
+[36m@@ -1014,24 +1021,28 @@[m [mOMX_ERRORTYPE base_port_ComponentTunnelRequest(omx_base_PortType* openmaxStandPo[m
+       // compatibility not reached[m
+       return OMX_ErrorPortsNotCompatible;[m
+     }[m
+[32m+[m[32m    printf("%s %d\n",__FUNCTION__,__LINE__);[m
+     if(param.eDomain!=openmaxStandPort->sPortParam.eDomain) {[m
+       return OMX_ErrorPortsNotCompatible;[m
+     }[m
+[31m-[m
+[32m+[m[32m    printf("%s %d\n",__FUNCTION__,__LINE__);[m
+     if(param.eDomain==OMX_PortDomainAudio) {[m
+[32m+[m[32m      printf("%s %d\n",__FUNCTION__,__LINE__);[m
+       if(param.format.audio.eEncoding == OMX_AUDIO_CodingMax) {[m
+         return OMX_ErrorPortsNotCompatible;[m
+       }[m
+     } else if(param.eDomain==OMX_PortDomainVideo) {[m
+[32m+[m[32m      printf("%s %d\n",__FUNCTION__,__LINE__);[m
+       if(param.format.video.eCompressionFormat == OMX_VIDEO_CodingMax) {[m
+         return OMX_ErrorPortsNotCompatible;[m
+       }[m
+     } else if(param.eDomain==OMX_PortDomainOther) {[m
+[32m+[m[32m      printf("%s %d\n",__FUNCTION__,__LINE__);[m
+       if(param.format.other.eFormat == OMX_OTHER_FormatMax) {[m
+         return OMX_ErrorPortsNotCompatible;[m
+       }[m
+     }[m
+[31m-[m
+[32m+[m[32m  printf("%s %d\n",__FUNCTION__,__LINE__);[m
+     /*Check for and set proprietary communication flag*/[m
+     if(PORT_IS_DEEP_TUNNELED(openmaxStandPort)) {[m
+       OMX_VENDOR_PROP_TUNNELSETUPTYPE pPropTunnelSetup;[m
+[36m@@ -1060,6 +1071,6 @@[m [mOMX_ERRORTYPE base_port_ComponentTunnelRequest(omx_base_PortType* openmaxStandPo[m
+ [m
+     openmaxStandPort->eBufferSupplier=OMX_BufferSupplyOutput;[m
+   }[m
+[31m-[m
+[32m+[m[32m    printf("%s %d\n",__FUNCTION__,__LINE__);[m
+   return OMX_ErrorNone;[m
+ }[m
+[1mdiff --git a/app/src/components/kmssink/omx_drm.c b/app/src/components/kmssink/omx_drm.c[m
+[1mindex a803ee0..a258128 100644[m
+[1m--- a/app/src/components/kmssink/omx_drm.c[m
+[1m+++ b/app/src/components/kmssink/omx_drm.c[m
+[36m@@ -199,6 +199,7 @@[m [mstatic s32 create_pipeline(struct drm_dev *dev, s32 index)[m
+ 	s32 i, overlay_cnt;[m
+ [m
+ 	list_for_each_entry(crtc, &dev->crtcs, link) {[m
+[32m+[m		[32mprintf("%s %d %d %d\n",__FUNCTION__,__LINE__,crtc->pipe,index);[m
+ 		if (crtc->pipe == index)[m
+ 			goto found_crtc;[m
+ 	}[m
+[36m@@ -460,6 +461,7 @@[m [mint set_mode(struct drm_dev *dev,u32 width, u32 height)[m
+     int ret = 0;[m
+ 	drmModeConnector *conn;[m
+     struct drm_connector *connector;[m
+[32m+[m	[32mcrtc = dev->curcrtc;[m
+     connector = crtc->encoder->connector;[m
+ 	conn = connector->conn;[m
+     int i;[m
+[36m@@ -540,9 +542,9 @@[m [mstruct drm_dev *device_create(u32 width, u32 height,u32 index,u32 fourcc)[m
+ {[m
+ 	s32 ret, i;[m
+     struct drm_connector *connector;[m
+[31m-[m
+[32m+[m	[32m printf("%s %d\n",__FUNCTION__,__LINE__);[m
+ 	struct drm_dev *dev = calloc(1, sizeof(*dev));[m
+[31m-[m
+[32m+[m	[32m printf("%s %d\n",__FUNCTION__,__LINE__);[m
+ 	if (!dev)[m
+ 		return NULL;[m
+ [m
+[36m@@ -610,17 +612,19 @@[m [mstruct drm_dev *device_create(u32 width, u32 height,u32 index,u32 fourcc)[m
+     {[m
+         return NULL;[m
+     }[m
+[31m-    [m
+     ret  = set_mode(dev,width,height);[m
+     if (ret < 0)   [m
+     {[m
+[32m+[m		[32mprintf("%s %d  set_mode error\n",__FUNCTION__,__LINE__);[m
+         return NULL;[m
+     }[m
+     dev->buf = dma_buf_create(dev->fd,width,height,fourcc,0);[m
+     if (dev->buf  == NULL)[m
+     {[m
+[32m+[m		[32mprintf("%s %d  dma_buf_create error\n",__FUNCTION__,__LINE__);[m
+         return NULL;[m
+     }[m
+[32m+[m	[32mprintf("%s %d\n",__FUNCTION__,__LINE__);[m
+ 	return dev;[m
+ }[m
+ [m
+[36m@@ -638,17 +642,23 @@[m [mint drm_show(struct drm_dev *dev,OMX_U8 *buf,OMX_U32 size)[m
+     u32 height;[m
+ 	u32 flags;[m
+ 	s32 i, j;[m
+[32m+[m	[32mprintf("%s %d\n",__FUNCTION__,__LINE__);[m
+ 	u32 zpos_base[2] = {0, 3};[m
+[32m+[m	[32mprintf("%s %d %p\n",__FUNCTION__,__LINE__,dev);[m
+[32m+[m	[32mcrtc = dev->curcrtc;[m
+     connector = crtc->encoder->connector;[m
+ 	primary = crtc->primary;[m
+[32m+[m	[32mprintf("%s %d\n",__FUNCTION__,__LINE__);[m
+ 	width = dev->buf->width;[m
+     height = dev->buf->height;[m
+[31m-[m
+[32m+[m	[32mprintf("%s %d\n",__FUNCTION__,__LINE__);[m
+     flags = DRM_MODE_ATOMIC_ALLOW_MODESET;[m
+     [m
+     req = drmModeAtomicAlloc();[m
+     dmabuf = dev->buf;[m
+[32m+[m	[32mprintf("%s %d\n",__FUNCTION__,__LINE__);[m
+     memcpy(dmabuf->maps[0],buf,size);[m
+[32m+[m	[32mprintf("%s %d\n",__FUNCTION__,__LINE__);[m
+ 	ret = drmModeAtomicAddProperty(req, connector->id,[m
+ 				       connector->prop_crtc_id, crtc->id);[m
+ 	[m
+[36m@@ -689,7 +699,7 @@[m [mint drm_show(struct drm_dev *dev,OMX_U8 *buf,OMX_U32 size)[m
+ 	ret = drmModeAtomicAddProperty(req, primary->id,[m
+ 					       primary->prop_zpos,[m
+ 					       zpos_base[j] + 0);[m
+[31m-[m
+[32m+[m	[32mprintf("%s %d\n",__FUNCTION__,__LINE__);[m
+ 	ret = drmModeAtomicCommit(dev->fd, req, flags, dev);[m
+ 	if (ret) {[m
+ 	    fprintf(stderr, "failed to commit (%s)\n",strerror(errno));[m
+[1mdiff --git a/app/src/components/kmssink/omx_kms_sink_component.c b/app/src/components/kmssink/omx_kms_sink_component.c[m
+[1mindex e0a7661..85210e8 100755[m
+[1m--- a/app/src/components/kmssink/omx_kms_sink_component.c[m
+[1m+++ b/app/src/components/kmssink/omx_kms_sink_component.c[m
+[36m@@ -90,8 +90,8 @@[m [mOMX_ERRORTYPE omx_kms_sink_component_Constructor(OMX_COMPONENTTYPE *openmaxStand[m
+ [m
+   /** Domain specific section for the allocated port. */[m
+ [m
+[31m-  pPort->sPortParam.format.video.nFrameWidth = 352;[m
+[31m-  pPort->sPortParam.format.video.nFrameHeight = 288;[m
+[32m+[m[32m  pPort->sPortParam.format.video.nFrameWidth = 1920;[m
+[32m+[m[32m  pPort->sPortParam.format.video.nFrameHeight = 1080;[m
+   pPort->sPortParam.format.video.nBitrate = 0;[m
+   pPort->sPortParam.format.video.xFramerate = 25;[m
+   pPort->sPortParam.format.video.eColorFormat = OMX_COLOR_FormatYUV420Planar;[m
+[36m@@ -184,18 +184,20 @@[m [mOMX_ERRORTYPE omx_kms_sink_component_Init(OMX_COMPONENTTYPE *openmaxStandComp) {[m
+   int yuv_width  = pPort->sPortParam.format.video.nFrameWidth;[m
+   int yuv_height = pPort->sPortParam.format.video.nFrameHeight;[m
+   int yuv_Format = pPort->sPortParam.format.video.eColorFormat;[m
+[32m+[m[32m  printf("%s %d\n",__FUNCTION__,__LINE__);[m
+   if (IMG_FMT_NV12 == OMX_COLOR_FormatYUV420Planar)[m
+   {[m
+       yuv_Format = IMG_FMT_NV12;[m
+   }[m
+   unsigned int err,i;[m
+[31m-  omx_kms_sink_component_Private->pdev  = device_create(yuv_width,yuv_height,0,yuv_Format);[m
+[32m+[m[32m  printf("%s %d\n",__FUNCTION__,__LINE__);[m
+[32m+[m[32m  omx_kms_sink_component_Private->pdev  = device_create(yuv_width,yuv_height,1,yuv_Format);[m
+   if (omx_kms_sink_component_Private->pdev)[m
+   {[m
+       DEBUG(DEB_LEV_ERR, "In %s, device_create error\n", __func__);[m
+       return OMX_ErrorInsufficientResources;[m
+   }[m
+[31m- [m
+[32m+[m[32m   printf("%s %d\n",__FUNCTION__,__LINE__);[m
+   /*Signal kms Initialized*/[m
+   tsem_up(omx_kms_sink_component_Private->kmsSyncSem);[m
+ [m
+[36m@@ -430,6 +432,7 @@[m [mOMX_ERRORTYPE omx_kms_sink_component_SetParameter([m
+   OMX_PARAM_PORTDEFINITIONTYPE *pPortDef;[m
+   OMX_VIDEO_PARAM_PORTFORMATTYPE *pVideoPortFormat;[m
+   OMX_U32 portIndex;[m
+[32m+[m[32m   printf("%s %d\n",__FUNCTION__,__LINE__);[m
+ [m
+   /* Check which structure we are being fed and make control its header */[m
+   OMX_COMPONENTTYPE *openmaxStandComp = (OMX_COMPONENTTYPE *)hComponent;[m
+[36m@@ -532,7 +535,8 @@[m [mOMX_ERRORTYPE omx_kms_sink_component_GetParameter([m
+   OMX_COMPONENTTYPE *openmaxStandComp = (OMX_COMPONENTTYPE *)hComponent;[m
+   omx_kms_sink_component_PrivateType* omx_kms_sink_component_Private = openmaxStandComp->pComponentPrivate;[m
+   omx_kms_sink_component_PortType *pPort = (omx_kms_sink_component_PortType *) omx_kms_sink_component_Private->ports[OMX_BASE_SINK_INPUTPORT_INDEX];  [m
+[31m-  [m
+[32m+[m[32m  printf("%s %d\n",__FUNCTION__,__LINE__);[m
+[32m+[m
+   if (ComponentParameterStructure == NULL) {[m
+     return OMX_ErrorBadParameter;[m
+   }[m
+[1mdiff --git a/app/src/components/vedec/omx_h26xdec_component.c b/app/src/components/vedec/omx_h26xdec_component.c[m
+[1mindex ef300bf..b47d841 100755[m
+[1m--- a/app/src/components/vedec/omx_h26xdec_component.c[m
+[1m+++ b/app/src/components/vedec/omx_h26xdec_component.c[m
+[36m@@ -281,7 +281,7 @@[m [mvoid omx_videodec_component_BufferMgmtCallback(OMX_COMPONENTTYPE *openmaxStandCo[m
+ #if 1[m
+     omx_videodec_component_PrivateType* omx_videodec_component_Private = (omx_videodec_component_PrivateType*)openmaxStandComp->pComponentPrivate;[m
+     pOutputBuffer->nFilledLen = 0;[m
+[31m-#if 0[m
+[32m+[m[32m#if 1[m
+       OMX_U8 *ptr = pInputBuffer->pBuffer;[m
+ 	    printf("%s %d %d\n",__FUNCTION__,__LINE__,pInputBuffer->nFilledLen);[m
+ 	    for(int k=0;k<100;k++){[m
+[36m@@ -315,17 +315,49 @@[m [mOMX_ERRORTYPE omx_videodec_component_SetParameter([m
+ OMX_IN  OMX_HANDLETYPE hComponent,[m
+ OMX_IN  OMX_INDEXTYPE nParamIndex,[m
+ OMX_IN  OMX_PTR ComponentParameterStructure) {[m
+[31m-[m
+[31m-  OMX_ERRORTYPE eError = OMX_ErrorNone;[m
+[31m-[m
+[31m-  return eError;[m
+[32m+[m[41m [m
+[32m+[m[32m  return OMX_ErrorNone;[m
+ }[m
+ [m
+ OMX_ERRORTYPE omx_videodec_component_GetParameter([m
+   OMX_IN  OMX_HANDLETYPE hComponent,[m
+   OMX_IN  OMX_INDEXTYPE nParamIndex,[m
+   OMX_INOUT OMX_PTR ComponentParameterStructure) {[m
+[32m+[m[32m  omx_base_video_PortType *port;[m
+[32m+[m[32m  OMX_ERRORTYPE eError = OMX_ErrorNone;[m
+ [m
+[32m+[m[32m  OMX_COMPONENTTYPE *openmaxStandComp = hComponent;[m
+[32m+[m[32m  omx_videodec_component_PrivateType* omx_videodec_component_Private = openmaxStandComp->pComponentPrivate;[m
+[32m+[m[32m  if (ComponentParameterStructure == NULL) {[m
+[32m+[m[32m    return OMX_ErrorBadParameter;[m
+[32m+[m[32m  }[m
+[32m+[m[32m  DEBUG(DEB_LEV_SIMPLE_SEQ, "   Getting parameter %i\n", nParamIndex);[m
+[32m+[m[32m  /* Check which structure we are being fed and fill its header */[m
+[32m+[m[32m  switch(nParamIndex) {[m
+[32m+[m[32m    case OMX_IndexParamVideoInit:[m
+[32m+[m[32m      if ((eError = checkHeader(ComponentParameterStructure, sizeof(OMX_PORT_PARAM_TYPE))) != OMX_ErrorNone) {[m
+[32m+[m[32m        break;[m
+[32m+[m[32m      }[m
+[32m+[m[32m      memcpy(ComponentParameterStructure, &omx_videodec_component_Private->sPortTypesParam[OMX_PortDomainVideo], sizeof(OMX_PORT_PARAM_TYPE));[m
+[32m+[m[32m      break;[m
+[32m+[m[32m    case OMX_IndexParamVideoPortFormat:[m
+[32m+[m[32m      {[m
+[32m+[m[32m        OMX_VIDEO_PARAM_PORTFORMATTYPE *pVideoPortFormat;[m
+[32m+[m[32m        pVideoPortFormat = ComponentParameterStructure;[m
+[32m+[m[32m        if ((eError = checkHeader(ComponentParameterStructure, sizeof(OMX_VIDEO_PARAM_PORTFORMATTYPE))) != OMX_ErrorNone) {[m
+[32m+[m[32m          break;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        if (pVideoPortFormat->nPortIndex <= 1) {[m
+[32m+[m[32m          port = (omx_base_video_PortType *)omx_videodec_component_Private->ports[pVideoPortFormat->nPortIndex];[m
+[32m+[m[32m          memcpy(pVideoPortFormat, &port->sVideoParam, sizeof(OMX_VIDEO_PARAM_PORTFORMATTYPE));[m
+[32m+[m[32m        } else {[m
+[32m+[m[32m          return OMX_ErrorBadPortIndex;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        break;[m
+[32m+[m[32m      }[m
+[32m+[m[32m      default: /*Call the base component function*/[m
+[32m+[m[32m        return omx_base_component_GetParameter(hComponent, nParamIndex, ComponentParameterStructure);[m
+[32m+[m[32m  }[m
+   return OMX_ErrorNone;[m
+ }[m
+ [m
+[36m@@ -373,4 +405,4 @@[m [mOMX_ERRORTYPE omx_videodec_component_ComponentRoleEnum([m
+   OMX_OUT OMX_U8 *cRole,[m
+   OMX_IN OMX_U32 nIndex) {[m
+     return 0;[m
+[31m-}[m
+\ No newline at end of file[m
+[32m+[m[32m}[m
+[1mdiff --git a/app/test/vdec_kmssink_test.c b/app/test/vdec_kmssink_test.c[m
+[1mindex d655796..366e217 100644[m
+[1m--- a/app/test/vdec_kmssink_test.c[m
+[1m+++ b/app/test/vdec_kmssink_test.c[m
+[36m@@ -262,14 +262,18 @@[m [mint GetNextFrame(CtxType *pCtx,unsigned char *pFrameBuf, unsigned int *pSize)[m
+ /* Application's private data */[m
+ typedef struct appPrivateType{[m
+   tsem_t* decoderEventSem;[m
+[32m+[m[32m  tsem_t* videoSinkEventSem;[m
+   tsem_t* eofSem;[m
+   FILE *fd;[m
+   FILE *outfile;[m
+   OMX_HANDLETYPE videodechandle;[m
+[32m+[m[32m  OMX_HANDLETYPE video_sink_handle;[m
+ }appPrivateType;[m
+ [m
+ appPrivateType* appPriv;[m
+ [m
+[32m+[m[32mint flagSetupTunnel; // 创建隧道标志[m
+[32m+[m
+ #define BUFFER_IN_SIZE (4*1024*1024)[m
+ #define BUFFER_OUT_SIZE (4*1024*1024)[m
+ [m
+[36m@@ -283,8 +287,8 @@[m [mOMX_ERRORTYPE videodecEventHandler([m
+   OMX_OUT OMX_U32 Data1,[m
+   OMX_OUT OMX_U32 Data2,[m
+   OMX_OUT OMX_PTR pEventData) {[m
+[31m-  OMX_ERRORTYPE err = OMX_ErrorNone;[m
+ [m
+[32m+[m[32m  OMX_ERRORTYPE err = OMX_ErrorNone;[m
+   DEBUG(DEB_LEV_SIMPLE_SEQ, "Hi there, I am in the %s callback\n", __func__);[m
+   if(eEvent == OMX_EventCmdComplete) {[m
+     if (Data1 == OMX_CommandStateSet) {[m
+[36m@@ -315,7 +319,139 @@[m [mOMX_ERRORTYPE videodecEventHandler([m
+       tsem_up(appPriv->decoderEventSem);[m
+     } [m
+   } else if(eEvent == OMX_EventPortSettingsChanged) {[m
+[31m-     tsem_up(appPriv->decoderEventSem);[m
+[32m+[m[32m    DEBUG(DEB_LEV_SIMPLE_SEQ, "\n port settings change event handler in %s \n", __func__);[m
+[32m+[m[32m    if(Data2 == 0) {[m
+[32m+[m
+[32m+[m[32m      /** before setting port parameters , first check if tunneled case[m[41m [m
+[32m+[m[32m        * if so, then disable the output port of video decoder[m
+[32m+[m[32m        * and generate dummy up signal, so that in main thread[m
+[32m+[m[32m        * the color conv and sink comp ports are disabled and[m[41m [m
+[32m+[m[32m        * port parameter settings changes are done properly[m
+[32m+[m[32m        */[m
+[32m+[m[32m      if(flagSetupTunnel) {[m
+[32m+[m[32m        DEBUG(DEB_LEV_SIMPLE_SEQ,"Sending Port Disable Command\n");[m
+[32m+[m[32m        err = OMX_SendCommand(appPriv->videodechandle, OMX_CommandPortDisable, 1, NULL);[m
+[32m+[m[32m        if(err != OMX_ErrorNone) {[m
+[32m+[m[32m          DEBUG(DEB_LEV_ERR,"video decoder port disable failed\n");[m
+[32m+[m[32m          exit(1);[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        err = OMX_SendCommand(appPriv->video_sink_handle, OMX_CommandPortDisable, 0, NULL);[m
+[32m+[m[32m        if(err != OMX_ErrorNone) {[m
+[32m+[m[32m            DEBUG(DEB_LEV_ERR,"video sink input port disable failed\n");[m
+[32m+[m[32m            exit(1);[m
+[32m+[m[32m         }[m
+[32m+[m
+[32m+[m[32m        // dummy up signal - caught in main thread to resume processing from there[m
+[32m+[m[32m        tsem_up(appPriv->decoderEventSem);[m
+[32m+[m[32m      }[m
+[32m+[m
+[32m+[m[32m      /** in non tunneled case, if color converter and sink component are selected[m[41m [m
+[32m+[m[32m        * then set their port parameters according to input tream characteristics and[m[41m [m
+[32m+[m[32m        * send command to them to go to idle state and executing state[m
+[32m+[m[32m        */[m
+[32m+[m[32m      if(!flagSetupTunnel) {[m
+[32m+[m[32m    #if 0[m
+[32m+[m[32m        if(flagIsColorConvRequested) {[m
+[32m+[m[32m          setPortParameters();[m
+[32m+[m[32m          pOutBufferColorConv[0] = pOutBufferColorConv[1] = NULL;[m
+[32m+[m[32m          err = OMX_SendCommand(appPriv->colorconv_handle, OMX_CommandStateSet, OMX_StateIdle, NULL);[m
+[32m+[m
+[32m+[m[32m          /** in non tunneled case, using buffers in color conv input port, allocated by video dec component output port */[m
+[32m+[m[32m          err = OMX_UseBuffer(appPriv->colorconv_handle, &pInBufferColorConv[0], 0, NULL, buffer_out_size, pOutBuffer[0]->pBuffer);[m
+[32m+[m[32m          if(err != OMX_ErrorNone) {[m
+[32m+[m[32m            DEBUG(DEB_LEV_ERR, "Unable to use the video dec comp allocate buffer\n");[m
+[32m+[m[32m            exit(1);[m
+[32m+[m[32m          }[m
+[32m+[m[32m          err = OMX_UseBuffer(appPriv->colorconv_handle, &pInBufferColorConv[1], 0, NULL, buffer_out_size, pOutBuffer[1]->pBuffer);[m
+[32m+[m[32m          if(err != OMX_ErrorNone) {[m
+[32m+[m[32m            DEBUG(DEB_LEV_ERR, "Unable to use the video dec comp allocate buffer\n");[m
+[32m+[m[32m            exit(1);[m
+[32m+[m[32m          }[m
+[32m+[m
+[32m+[m[32m          /** allocating buffers in the color converter compoennt output port */[m
+[32m+[m[32m          omx_colorconvPortDefinition.nPortIndex = 1;[m
+[32m+[m[32m          setHeader(&omx_colorconvPortDefinition, sizeof(OMX_PARAM_PORTDEFINITIONTYPE));[m
+[32m+[m[32m          err = OMX_GetParameter(appPriv->colorconv_handle, OMX_IndexParamPortDefinition, &omx_colorconvPortDefinition);[m
+[32m+[m[32m          outbuf_colorconv_size = omx_colorconvPortDefinition.nBufferSize;[m
+[32m+[m[32m          DEBUG(DEB_LEV_SIMPLE_SEQ, " outbuf_colorconv_size : %d \n", (int)outbuf_colorconv_size);[m
+[32m+[m
+[32m+[m[32m          err = OMX_AllocateBuffer(appPriv->colorconv_handle, &pOutBufferColorConv[0], 1, NULL, outbuf_colorconv_size);[m
+[32m+[m[32m          if(err != OMX_ErrorNone) {[m
+[32m+[m[32m            DEBUG(DEB_LEV_ERR, "Unable to allocate buffer in color conv\n");[m
+[32m+[m[32m            exit(1);[m
+[32m+[m[32m          }[m
+[32m+[m[32m          err = OMX_AllocateBuffer(appPriv->colorconv_handle, &pOutBufferColorConv[1], 1, NULL, outbuf_colorconv_size);[m
+[32m+[m[32m          if(err != OMX_ErrorNone) {[m
+[32m+[m[32m            DEBUG(DEB_LEV_ERR, "Unable to allocate buffer in colro conv\n");[m
+[32m+[m[32m            exit(1);[m
+[32m+[m[32m          }[m
+[32m+[m
+[32m+[m[32m          DEBUG(DEB_LEV_FULL_SEQ, "Before locking on idle wait semaphore (line %d)\n",__LINE__);[m
+[32m+[m[32m          tsem_down(appPriv->colorconvEventSem);[m
+[32m+[m[32m        } else {[m
+[32m+[m[32m          setPortParameters_xvideo();[m
+[32m+[m[32m        }[m
+[32m+[m[32m        if(flagIsSinkRequested) {[m
+[32m+[m[32m          err = OMX_SendCommand(appPriv->video_sink_handle, OMX_CommandStateSet, OMX_StateIdle, NULL);[m
+[32m+[m
+[32m+[m[32m          DEBUG(DEB_ALL_MESS, "Sent idle command\n");[m
+[32m+[m
+[32m+[m[32m          if(flagIsColorConvRequested) {[m
+[32m+[m[32m            err = OMX_UseBuffer(appPriv->video_sink_handle, &pInBufferSink[0], 0, NULL, outbuf_colorconv_size, pOutBufferColorConv[0]->pBuffer);[m
+[32m+[m[32m            if(err != OMX_ErrorNone) {[m
+[32m+[m[32m              DEBUG(DEB_LEV_ERR, "Unable to use the color conv comp allocate buffer\n");[m
+[32m+[m[32m              exit(1);[m
+[32m+[m[32m            }[m
+[32m+[m[32m            err = OMX_UseBuffer(appPriv->video_sink_handle, &pInBufferSink[1], 0, NULL, outbuf_colorconv_size, pOutBufferColorConv[1]->pBuffer);[m
+[32m+[m[32m            if(err != OMX_ErrorNone) {[m
+[32m+[m[32m              DEBUG(DEB_LEV_ERR, "Unable to use the color conv comp allocate buffer\n");[m
+[32m+[m[32m              exit(1);[m
+[32m+[m[32m            }[m
+[32m+[m[32m          } else {[m
+[32m+[m[32m            err = OMX_UseBuffer(appPriv->video_sink_handle, &pInBufferSink[0], 0, NULL, buffer_out_size, pOutBuffer[0]->pBuffer);[m
+[32m+[m[32m            if(err != OMX_ErrorNone) {[m
+[32m+[m[32m              DEBUG(DEB_LEV_ERR, "Unable to use the color conv comp allocate buffer\n");[m
+[32m+[m[32m              exit(1);[m
+[32m+[m[32m            }[m
+[32m+[m[32m            DEBUG(DEB_LEV_FULL_SEQ, "In %s pInBufferSink[0]->pBuffer=%x pBuffer=%x\n", __func__,(int)pInBufferSink[0]->pBuffer,(int)pOutBuffer[0]->pBuffer);[m
+[32m+[m[32m            err = OMX_UseBuffer(appPriv->video_sink_handle, &pInBufferSink[1], 0, NULL, buffer_out_size, pOutBuffer[1]->pBuffer);[m
+[32m+[m[32m            if(err != OMX_ErrorNone) {[m
+[32m+[m[32m              DEBUG(DEB_LEV_ERR, "Unable to use the color conv comp allocate buffer\n");[m
+[32m+[m[32m              exit(1);[m
+[32m+[m[32m            }[m
+[32m+[m[32m            DEBUG(DEB_LEV_FULL_SEQ, "In %s pInBufferSink[1]->pBuffer=%x pBuffer=%x\n", __func__,(int)pInBufferSink[1]->pBuffer,(int)pOutBuffer[1]->pBuffer);[m
+[32m+[m[32m          }[m
+[32m+[m
+[32m+[m[32m          DEBUG(DEB_LEV_FULL_SEQ, "Before locking on idle wait semaphore (line %d)\n",__LINE__);[m
+[32m+[m[32m          tsem_down(appPriv->videoSinkEventSem);[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        if(flagIsColorConvRequested) {[m
+[32m+[m[32m          err = OMX_SendCommand(appPriv->colorconv_handle, OMX_CommandStateSet, OMX_StateExecuting, NULL);[m
+[32m+[m[32m          tsem_down(appPriv->colorconvEventSem);[m
+[32m+[m[32m        }[m
+[32m+[m[32m        if(flagIsSinkRequested) {[m[41m    [m
+[32m+[m[32m          err = OMX_SendCommand(appPriv->video_sink_handle, OMX_CommandStateSet, OMX_StateExecuting, NULL);[m
+[32m+[m[32m          tsem_down(appPriv->videoSinkEventSem);[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        if(flagIsColorConvRequested) {[m[41m [m
+[32m+[m[32m          err = OMX_FillThisBuffer(appPriv->colorconv_handle, pOutBufferColorConv[0]);[m
+[32m+[m[32m          err = OMX_FillThisBuffer(appPriv->colorconv_handle, pOutBufferColorConv[1]);[m
+[32m+[m[32m          DEBUG(DEB_LEV_SIMPLE_SEQ, "---> After fill this buffer function calls to the color conv output buffers\n");[m
+[32m+[m[32m        }[m
+[32m+[m[32m        #endif[m
+[32m+[m[32m      }[m
+[32m+[m[32m    }[m
+[32m+[m[32m  } else if(eEvent == OMX_EventBufferFlag) {[m
+[32m+[m[32m    DEBUG(DEB_LEV_ERR, "In %s OMX_BUFFERFLAG_EOS\n", __func__);[m
+[32m+[m[32m    if((int)Data2 == OMX_BUFFERFLAG_EOS) {[m
+[32m+[m[32m      tsem_up(appPriv->eofSem);[m
+[32m+[m[32m    }[m
+[32m+[m[32m  } else {[m
+[32m+[m[32m    DEBUG(DEB_LEV_SIMPLE_SEQ, "Param1 is %i\n", (int)Data1);[m
+[32m+[m[32m    DEBUG(DEB_LEV_SIMPLE_SEQ, "Param2 is %i\n", (int)Data2);[m
+   }[m
+   return err; [m
+ }[m
+[36m@@ -375,6 +511,85 @@[m [mOMX_ERRORTYPE videodecFillBufferDone([m
+   return err;  [m
+ }[m
+ [m
+[32m+[m[32m/** callbacks implementation of video sink component */[m
+[32m+[m[32mOMX_ERRORTYPE video_sinkEventHandler([m
+[32m+[m[32m  OMX_OUT OMX_HANDLETYPE hComponent,[m
+[32m+[m[32m  OMX_OUT OMX_PTR pAppData,[m
+[32m+[m[32m  OMX_OUT OMX_EVENTTYPE eEvent,[m
+[32m+[m[32m  OMX_OUT OMX_U32 Data1,[m
+[32m+[m[32m  OMX_OUT OMX_U32 Data2,[m
+[32m+[m[32m  OMX_OUT OMX_PTR pEventData) {[m
+[32m+[m
+[32m+[m[32m  DEBUG(DEB_LEV_SIMPLE_SEQ, "Hi there, I am in the %s callback\n", __func__);[m
+[32m+[m[32m  if(eEvent == OMX_EventCmdComplete) {[m
+[32m+[m[32m    if (Data1 == OMX_CommandStateSet) {[m
+[32m+[m[32m      DEBUG(DEB_LEV_SIMPLE_SEQ, "State changed in ");[m
+[32m+[m[32m      switch ((int)Data2) {[m
+[32m+[m[32m        case OMX_StateInvalid:[m
+[32m+[m[32m          DEBUG(DEB_LEV_SIMPLE_SEQ, "OMX_StateInvalid\n");[m
+[32m+[m[32m          break;[m
+[32m+[m[32m        case OMX_StateLoaded:[m
+[32m+[m[32m          DEBUG(DEB_LEV_SIMPLE_SEQ, "OMX_StateLoaded\n");[m
+[32m+[m[32m          break;[m
+[32m+[m[32m        case OMX_StateIdle:[m
+[32m+[m[32m          DEBUG(DEB_LEV_SIMPLE_SEQ, "OMX_StateIdle ---- fbsink\n");[m
+[32m+[m[32m          break;[m
+[32m+[m[32m        case OMX_StateExecuting:[m
+[32m+[m[32m          DEBUG(DEB_LEV_SIMPLE_SEQ, "OMX_StateExecuting\n");[m
+[32m+[m[32m          break;[m
+[32m+[m[32m        case OMX_StatePause:[m
+[32m+[m[32m          DEBUG(DEB_LEV_SIMPLE_SEQ, "OMX_StatePause\n");[m
+[32m+[m[32m          break;[m
+[32m+[m[32m        case OMX_StateWaitForResources:[m
+[32m+[m[32m          DEBUG(DEB_LEV_SIMPLE_SEQ, "OMX_StateWaitForResources\n");[m
+[32m+[m[32m          break;[m
+[32m+[m[32m      }[m
+[32m+[m[32m      tsem_up(appPriv->videoSinkEventSem);[m
+[32m+[m[32m    } else if (OMX_CommandPortEnable || OMX_CommandPortDisable) {[m
+[32m+[m[32m      DEBUG(DEB_LEV_SIMPLE_SEQ, "In %s Received Port Enable/Disable Event\n",__func__);[m
+[32m+[m[32m      tsem_up(appPriv->videoSinkEventSem);[m
+[32m+[m[32m    }[m[41m [m
+[32m+[m[32m  } else if(eEvent == OMX_EventBufferFlag) {[m
+[32m+[m[32m    DEBUG(DEB_LEV_ERR, "In %s OMX_BUFFERFLAG_EOS\n", __func__);[m
+[32m+[m[32m    if((int)Data2 == OMX_BUFFERFLAG_EOS) {[m
+[32m+[m[32m      tsem_up(appPriv->eofSem);[m
+[32m+[m[32m    }[m
+[32m+[m[32m  } else {[m
+[32m+[m[32m    DEBUG(DEB_LEV_SIMPLE_SEQ, "Param1 is %i\n", (int)Data1);[m
+[32m+[m[32m    DEBUG(DEB_LEV_SIMPLE_SEQ, "Param2 is %i\n", (int)Data2);[m
+[32m+[m[32m  }[m
+[32m+[m[32m  return OMX_ErrorNone;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m[32mOMX_ERRORTYPE video_sinkEmptyBufferDone([m
+[32m+[m[32m  OMX_OUT OMX_HANDLETYPE hComponent,[m
+[32m+[m[32m  OMX_OUT OMX_PTR pAppData,[m
+[32m+[m[32m  OMX_OUT OMX_BUFFERHEADERTYPE* pBuffer) {[m
+[32m+[m[32m#if 1[m
+[32m+[m[32m  OMX_ERRORTYPE err;[m
+[32m+[m[32m  static int inputBufferDropped = 0;[m
+[32m+[m[32m  if(pBuffer != NULL) {[m
+[32m+[m[32m    if(!bEOS) {[m
+[32m+[m
+[32m+[m[32m    } else {[m
+[32m+[m[32m      DEBUG(DEB_LEV_ERR, "In %s: eos=%x Dropping Fill This Buffer\n", __func__,(int)pBuffer->nFlags);[m
+[32m+[m[32m      inputBufferDropped++;[m
+[32m+[m[32m      if(inputBufferDropped == 2) {[m
+[32m+[m[32m        tsem_up(appPriv->eofSem);[m
+[32m+[m[32m      }[m
+[32m+[m[32m    }[m
+[32m+[m[32m  } else {[m
+[32m+[m[32m    if(!bEOS) {[m
+[32m+[m[32m      bEOS =  OMX_TRUE;[m
+[32m+[m[32m      tsem_up(appPriv->eofSem);[m
+[32m+[m[32m    }[m
+[32m+[m[32m    DEBUG(DEB_LEV_ERR, "Ouch! In %s: had NULL buffer to output...\n", __func__);[m
+[32m+[m[32m  }[m
+[32m+[m[32m#endif[m
+[32m+[m[32m  return OMX_ErrorNone;[m
+[32m+[m[32m}[m
+[32m+[m
+ [m
+ OMX_CALLBACKTYPE videodeccallbacks = { [m
+     .EventHandler = videodecEventHandler,[m
+[36m@@ -383,7 +598,51 @@[m [mOMX_CALLBACKTYPE videodeccallbacks = {[m
+   };[m
+ [m
+ [m
+[32m+[m[32mOMX_CALLBACKTYPE video_sink_callbacks = {[m
+[32m+[m[32m    .EventHandler = video_sinkEventHandler,[m
+[32m+[m[32m    .EmptyBufferDone = video_sinkEmptyBufferDone,[m
+[32m+[m[32m    .FillBufferDone = NULL[m
+[32m+[m[32m  };[m
+[32m+[m
+[32m+[m[32m#if 0[m
+[32m+[m[32mOMX_U32 out_width = 0, new_out_width = 0;[m
+[32m+[m[32mOMX_U32 out_height = 0, new_out_height = 0;[m
+[32m+[m[32mOMX_PARAM_PORTDEFINITIONTYPE paramPort;[m
+[32m+[m
+[32m+[m[32mint setPortParameters_video_kms() {[m
+[32m+[m[32m  OMX_ERRORTYPE err = OMX_ErrorNone;[m
+[32m+[m
+[32m+[m[32m  paramPort.nPortIndex = 1;[m
+[32m+[m[32m  setHeader(&paramPort, sizeof(OMX_PARAM_PORTDEFINITIONTYPE));[m
+[32m+[m[32m  err = OMX_GetParameter(appPriv->videodechandle, OMX_IndexParamPortDefinition, &paramPort);[m
+[32m+[m[32m  new_out_width = paramPort.format.video.nFrameWidth;[m
+[32m+[m[32m  new_out_height = paramPort.format.video.nFrameHeight;[m
+[32m+[m[32m  DEBUG(DEB_LEV_SIMPLE_SEQ, "input picture width : %d height : %d \n", (int)new_out_width, (int)new_out_height);[m
+[32m+[m
+[32m+[m[32m  /** if video sink component is selected then set its input port settings[m[41m [m
+[32m+[m[32m    *  accroding to the output port settings of the color converter component[m[41m  [m
+[32m+[m[32m    */[m
+[32m+[m[32m  if(flagIsSinkRequested) {[m
+[32m+[m[32m    paramPort.nPortIndex = 0; //sink input port index[m
+[32m+[m[32m    err = OMX_SetParameter(appPriv->video_sink_handle, OMX_IndexParamPortDefinition, &paramPort);[m
+[32m+[m[32m    if(err != OMX_ErrorNone) {[m[41m  [m
+[32m+[m[32m      DEBUG(DEB_LEV_ERR,"\n error in setting the inputport param of the sink component- exiting\n");[m
+[32m+[m[32m      exit(1);[m
+[32m+[m[32m    }[m
+[32m+[m[32m    omxVideoParam.nPortIndex = 1; //video decoder converter output port index[m
+[32m+[m[32m    setHeader(&omxVideoParam, sizeof(OMX_VIDEO_PARAM_PORTFORMATTYPE));[m
+[32m+[m[32m    err = OMX_GetParameter(appPriv->videodechandle, OMX_IndexParamVideoPortFormat, &omxVideoParam);[m
+[32m+[m[32m    omxVideoParam.nPortIndex = 0; //sink input port index[m
+[32m+[m[32m    err = OMX_SetParameter(appPriv->video_sink_handle, OMX_IndexParamVideoPortFormat, &omxVideoParam);[m
+[32m+[m[32m    if(err != OMX_ErrorNone) {[m[41m  [m
+[32m+[m[32m      DEBUG(DEB_LEV_ERR,"\n error in setting the input video param of the sink component- exiting\n");[m
+[32m+[m[32m      exit(1);[m
+[32m+[m[32m    }[m
+[32m+[m[32m  }[m
+ [m
+[32m+[m[32m  return err;[m
+[32m+[m[32m}[m
+[32m+[m[32m#endif[m
+ /** help display */[m
+ void display_help() {[m
+   printf("\n");[m
+[36m@@ -446,12 +705,17 @@[m [mint main(int argc, char** argv) {[m
+     printf("Found The component for decoding is %s\n", full_component_name);[m
+   }[m
+ [m
+[31m-   err = OMX_GetHandle(&appPriv->videodechandle, "OMX.st.video.kms_sink", NULL, &videodeccallbacks);[m
+[32m+[m[32m  err = OMX_GetHandle(&appPriv->video_sink_handle, "OMX.st.video.kms_sink", NULL, &video_sink_callbacks);[m
+   if(err != OMX_ErrorNone){[m
+[31m-    printf("No video decoder component found. Exiting...\n");[m
+[32m+[m[32m    printf("No video kms component found. Exiting...\n");[m
+     exit(1);[m
+   } else {[m
+[31m-    printf("Found The component for decoding is %s\n", "OMX.st.video.kms_sink");[m
+[32m+[m[32m    printf("Found The component for kms sink is %s\n", "OMX.st.video.kms_sink");[m
+[32m+[m[32m  }[m
+[32m+[m[32m  err = OMX_SetupTunnel(appPriv->videodechandle, 1, appPriv->video_sink_handle, 0);[m
+[32m+[m[32m  if(err != OMX_ErrorNone) {[m
+[32m+[m[32m      DEBUG(DEB_LEV_ERR, "Set up Tunnel between video dec & X-video sink Failed\n");[m
+[32m+[m[32m      exit(1);[m
+   }[m
+    /** sending command to video decoder component to go to idle state */[m
+   pInBuffer[0] = pInBuffer[1] = NULL;[m
+[36m@@ -461,12 +725,20 @@[m [mint main(int argc, char** argv) {[m
+     exit(1);[m
+   }[m
+   tsem_down(appPriv->decoderEventSem);[m
+[32m+[m[32m  err = OMX_SendCommand(appPriv->video_sink_handle, OMX_CommandStateSet, OMX_StateIdle, NULL);[m
+[32m+[m[32m  if(err != OMX_ErrorNone){[m
+[32m+[m[32m    printf("OMX_CommandStateSet error...\n");[m
+[32m+[m[32m    exit(1);[m
+[32m+[m[32m  }[m
+[32m+[m[32m  tsem_down(appPriv->videoSinkEventSem);[m
+[32m+[m[41m [m
+   err = OMX_AllocateBuffer(appPriv->videodechandle, &pInBuffer[0], 0, NULL, BUFFER_IN_SIZE);[m
+   err = OMX_AllocateBuffer(appPriv->videodechandle, &pInBuffer[1], 0, NULL, BUFFER_IN_SIZE);[m
+   if(err != OMX_ErrorNone){[m
+     printf("OMX_CommandStateSet error...\n");[m
+     exit(1);[m
+   }[m
+[32m+[m[32m#if 0[m
+   pOutBuffer[0] = pOutBuffer[1] = NULL;[m
+   err = OMX_AllocateBuffer(appPriv->videodechandle, &pOutBuffer[0], 1, NULL, BUFFER_OUT_SIZE);[m
+   err = OMX_AllocateBuffer(appPriv->videodechandle, &pOutBuffer[1], 1, NULL, BUFFER_OUT_SIZE);[m
+[36m@@ -474,7 +746,7 @@[m [mint main(int argc, char** argv) {[m
+     printf("OMX_CommandStateSet error...\n");[m
+     exit(1);[m
+   }[m
+[31m-[m
+[32m+[m[32m#endif[m
+   /** sending command to video decoder component to go to executing state */[m
+   err = OMX_SendCommand(appPriv->videodechandle, OMX_CommandStateSet, OMX_StateExecuting, NULL);[m
+   tsem_down(appPriv->decoderEventSem);[m
+[36m@@ -491,10 +763,29 @@[m [mint main(int argc, char** argv) {[m
+     exit(1);[m
+   }[m
+   tsem_down(appPriv->decoderEventSem);[m
+[32m+[m
+[32m+[m[32m#if  0[m
+   err = OMX_FillThisBuffer(appPriv->videodechandle, pOutBuffer[0]);[m
+   err = OMX_FillThisBuffer(appPriv->videodechandle, pOutBuffer[1]);[m
+[32m+[m
+[32m+[m[32m#endif[m
+[32m+[m
+[32m+[m[32m  err = OMX_SendCommand(appPriv->video_sink_handle, OMX_CommandPortEnable, 0, NULL);[m
+[32m+[m[32m  if(err != OMX_ErrorNone) {[m
+[32m+[m[32m      DEBUG(DEB_LEV_ERR,"video sink input port enable failed\n");[m
+[32m+[m[32m      exit(1);[m
+[32m+[m[32m  }[m
+[32m+[m[32m  tsem_down(appPriv->videoSinkEventSem);[m
+[32m+[m
+[32m+[m
+[32m+[m[32m  err = OMX_SendCommand(appPriv->video_sink_handle, OMX_CommandStateSet, OMX_StateExecuting, NULL);[m
+[32m+[m[32m  if(err != OMX_ErrorNone) {[m
+[32m+[m[32m      DEBUG(DEB_LEV_ERR,"video sink OMX_StateExecuting  failed\n");[m
+[32m+[m[32m      exit(1);[m
+[32m+[m[32m  }[m
+[32m+[m[32m  tsem_down(appPriv->videoSinkEventSem);[m
+   int data_read;[m
+[31m-#if 0[m
+[32m+[m[32m#if 1[m
+   printf("%s %d\n",__FUNCTION__,__LINE__);[m
+   data_read = GetNextFrame(pctx,pInBuffer[0]->pBuffer,&size);[m
+    OMX_U8 *ptr = pInBuffer[0]->pBuffer;[m
+[1mdiff --git a/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/C.includecache b/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/C.includecache[m
+[1mindex 0606c83..e423d78 100644[m
+[1m--- a/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/C.includecache[m
+[1m+++ b/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/C.includecache[m
+[36m@@ -6,16 +6,6 @@[m
+ [m
+ #IncludeRegexTransform: [m
+ [m
+[31m-../../../app/include/mpp_buffer.h[m
+[31m-mpp_type.h[m
+[31m-../../../app/include/mpp_type.h[m
+[31m-mpp_err.h[m
+[31m-../../../app/include/mpp_err.h[m
+[31m-[m
+[31m-../../../app/include/mpp_type.h[m
+[31m-OMX_Types.h[m
+[31m-../../../app/include/OMX_Types.h[m
+[31m-[m
+ ../../../app/include/omx_il/OMX_Audio.h[m
+ OMX_Types.h[m
+ -[m
+[36m@@ -36,8 +26,6 @@[m [mOMX_Image.h[m
+ OMX_Other.h[m
+ -[m
+ [m
+[31m-../../../app/include/omx_il/OMX_ContentPipe.h[m
+[31m-[m
+ ../../../app/include/omx_il/OMX_Core.h[m
+ OMX_Types.h[m
+ -[m
+[36m@@ -80,18 +68,6 @@[m [mOMX_Core.h[m
+ OMX_IVCommon.h[m
+ -[m
+ [m
+[31m-../../../app/src/base/inc/omx_base_audio_port.h[m
+[31m-omx_classmagic.h[m
+[31m-../../../app/src/base/inc/omx_classmagic.h[m
+[31m-omx_base_port.h[m
+[31m-../../../app/src/base/inc/omx_base_port.h[m
+[31m-[m
+[31m-../../../app/src/base/inc/omx_base_clock_port.h[m
+[31m-omx_classmagic.h[m
+[31m-../../../app/src/base/inc/omx_classmagic.h[m
+[31m-omx_base_port.h[m
+[31m-../../../app/src/base/inc/omx_base_port.h[m
+[31m-[m
+ ../../../app/src/base/inc/omx_base_component.h[m
+ stdlib.h[m
+ -[m
+[36m@@ -106,26 +82,6 @@[m [momx_classmagic.h[m
+ omx_base_port.h[m
+ ../../../app/src/base/inc/omx_base_port.h[m
+ [m
+[31m-../../../app/src/base/inc/omx_base_filter.h[m
+[31m-OMX_Types.h[m
+[31m--[m
+[31m-OMX_Component.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-pthread.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-omx_base_component.h[m
+[31m-../../../app/src/base/inc/omx_base_component.h[m
+[31m-[m
+[31m-../../../app/src/base/inc/omx_base_image_port.h[m
+[31m-omx_classmagic.h[m
+[31m-../../../app/src/base/inc/omx_classmagic.h[m
+[31m-omx_base_port.h[m
+[31m-../../../app/src/base/inc/omx_base_port.h[m
+[31m-[m
+ ../../../app/src/base/inc/omx_base_port.h[m
+ tsemaphore.h[m
+ ../../../app/src/base/inc/tsemaphore.h[m
+[36m@@ -134,98 +90,16 @@[m [mqueue.h[m
+ omx_classmagic.h[m
+ ../../../app/src/base/inc/omx_classmagic.h[m
+ [m
+[31m-../../../app/src/base/inc/omx_base_sink.h[m
+[31m-OMX_Types.h[m
+[31m--[m
+[31m-OMX_Component.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-pthread.h[m
+[31m--[m
+[31m-omx_base_component.h[m
+[31m-../../../app/src/base/inc/omx_base_component.h[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-[m
+[31m-../../../app/src/base/inc/omx_base_source.h[m
+[31m-OMX_Types.h[m
+[31m--[m
+[31m-OMX_Component.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-pthread.h[m
+[31m--[m
+[31m-omx_base_component.h[m
+[31m-../../../app/src/base/inc/omx_base_component.h[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-[m
+[31m-../../../app/src/base/inc/omx_base_video_port.h[m
+[31m-omx_classmagic.h[m
+ ../../../app/src/base/inc/omx_classmagic.h[m
+[31m-omx_base_port.h[m
+[31m-../../../app/src/base/inc/omx_base_port.h[m
+[31m-[m
+[31m-../../../app/src/base/inc/omx_classmagic.h[m
+[31m-[m
+[31m-../../../app/src/common/inc/common.h[m
+ [m
+ ../../../app/src/common/inc/component_loader.h[m
+ OMX_Core.h[m
+ -[m
+ [m
+[31m-../../../app/src/common/inc/content_pipe_file.h[m
+[31m-unistd.h[m
+[31m--[m
+[31m-stdio.h[m
+[31m--[m
+[31m-malloc.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-fcntl.h[m
+[31m--[m
+[31m-OMX_Types.h[m
+[31m--[m
+[31m-OMX_ContentPipe.h[m
+[31m--[m
+[31m-omx_comp_debug_levels.h[m
+[31m-../../../app/src/common/inc/omx_comp_debug_levels.h[m
+[31m-[m
+[31m-../../../app/src/common/inc/content_pipe_inet.h[m
+[31m-sys/types.h[m
+[31m--[m
+[31m-sys/socket.h[m
+[31m--[m
+[31m-netinet/in.h[m
+[31m--[m
+[31m-netdb.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-malloc.h[m
+[31m--[m
+[31m-OMX_Types.h[m
+[31m--[m
+[31m-OMX_ContentPipe.h[m
+[31m--[m
+[31m-omx_comp_debug_levels.h[m
+[31m-../../../app/src/common/inc/omx_comp_debug_levels.h[m
+[31m-[m
+ ../../../app/src/common/inc/omx_comp_debug_levels.h[m
+ stdio.h[m
+ -[m
+ [m
+[31m-../../../app/src/common/inc/omx_create_loaders.h[m
+[31m-[m
+ ../../../app/src/common/inc/omxcore.h[m
+ OMX_Component.h[m
+ -[m
+[36m@@ -244,200 +118,8 @@[m [momx_comp_debug_levels.h[m
+ pthread.h[m
+ -[m
+ [m
+[31m-../../../app/src/common/inc/st_static_component_loader.h[m
+[31m-omxcore.h[m
+[31m-../../../app/src/common/inc/omxcore.h[m
+[31m-[m
+ ../../../app/src/common/inc/tsemaphore.h[m
+ [m
+[31m-../../../app/src/osal/allocator/allocator_dma.h[m
+[31m-os_allocator.h[m
+[31m-../../../app/src/osal/allocator/os_allocator.h[m
+[31m-[m
+[31m-../../../app/src/osal/allocator/allocator_drm.h[m
+[31m-os_allocator.h[m
+[31m-../../../app/src/osal/allocator/os_allocator.h[m
+[31m-[m
+[31m-../../../app/src/osal/allocator/allocator_ion.h[m
+[31m-os_allocator.h[m
+[31m-../../../app/src/osal/allocator/os_allocator.h[m
+[31m-[m
+[31m-../../../app/src/osal/allocator/allocator_std.h[m
+[31m-os_allocator.h[m
+[31m-../../../app/src/osal/allocator/os_allocator.h[m
+[31m-[m
+[31m-../../../app/src/osal/allocator/ion.h[m
+[31m-linux/types.h[m
+[31m--[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_allocator.h[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-mpp_buffer.h[m
+[31m-../../../app/src/osal/inc/mpp_buffer.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_common.h[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-stdio.h[m
+[31m--[m
+[31m-direct.h[m
+[31m--[m
+[31m-io.h[m
+[31m--[m
+[31m-sys/stat.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-stddef.h[m
+[31m--[m
+[31m-sys/stat.h[m
+[31m--[m
+[31m-sys/types.h[m
+[31m--[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_env.h[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_err.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_log.h[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_mem.h[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-mpp_err.h[m
+[31m-../../../app/src/osal/inc/mpp_err.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_thread.h[m
+[31m-semaphore.h[m
+[31m-../../../app/src/osal/inc/semaphore.h[m
+[31m-pthread.h[m
+[31m-../../../app/src/osal/inc/pthread.h[m
+[31m-unistd.h[m
+[31m--[m
+[31m-semaphore.h[m
+[31m--[m
+[31m-pthread.h[m
+[31m--[m
+[31m-sys/time.h[m
+[31m--[m
+[31m-mpp_log.h[m
+[31m-../../../app/src/osal/inc/mpp_log.h[m
+[31m-[m
+[31m-../../../app/src/osal/linux/drm.h[m
+[31m-linux/types.h[m
+[31m--[m
+[31m-asm/ioctl.h[m
+[31m--[m
+[31m-linux/types.h[m
+[31m--[m
+[31m-asm/ioctl.h[m
+[31m--[m
+[31m-sys/ioccom.h[m
+[31m--[m
+[31m-sys/types.h[m
+[31m--[m
+[31m-drm_mode.h[m
+[31m-../../../app/src/osal/linux/drm_mode.h[m
+[31m-[m
+[31m-../../../app/src/osal/linux/drm_mode.h[m
+[31m-[m
+[31m-../../../app/src/osal/os_allocator.h[m
+[31m-mpp_allocator.h[m
+[31m-../../../app/src/osal/mpp_allocator.h[m
+[31m-[m
+[31m-../../../app/src/osal/os_env.h[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/mpp_type.h[m
+[31m-[m
+[31m-../../../app/src/osal/os_mem.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_audio_port.c[m
+[31m-string.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-omxcore.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-OMX_Component.h[m
+[31m--[m
+[31m-omx_base_component.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_component.h[m
+[31m-omx_base_audio_port.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_audio_port.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_clock_port.c[m
+[31m-string.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-omxcore.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-OMX_Component.h[m
+[31m--[m
+[31m-omx_base_component.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_component.h[m
+[31m-omx_base_clock_port.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_clock_port.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_component.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-OMX_Component.h[m
+[31m--[m
+[31m-omxcore.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omxcore.h[m
+[31m-omx_base_component.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_component.h[m
+[31m-tsemaphore.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/tsemaphore.h[m
+[31m-queue.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/queue.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_filter.c[m
+[31m-omxcore.h[m
+[31m--[m
+[31m-omx_base_filter.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_filter.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_image_port.c[m
+[31m-string.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-omxcore.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-OMX_Component.h[m
+[31m--[m
+[31m-omx_base_component.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_component.h[m
+[31m-omx_base_image_port.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_image_port.h[m
+[31m-[m
+ /home/youliang/code/vx-mpp/app/src/base/omx_base_port.c[m
+ string.h[m
+ -[m
+[36m@@ -454,367 +136,3 @@[m [momx_base_component.h[m
+ omx_base_port.h[m
+ /home/youliang/code/vx-mpp/app/src/base/omx_base_port.h[m
+ [m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_sink.c[m
+[31m-omxcore.h[m
+[31m--[m
+[31m-omx_base_sink.h[m
+[31m--[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_source.c[m
+[31m-omxcore.h[m
+[31m--[m
+[31m-omx_base_source.h[m
+[31m--[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_video_port.c[m
+[31m-string.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-omxcore.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-OMX_Component.h[m
+[31m--[m
+[31m-omx_base_component.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_component.h[m
+[31m-omx_base_video_port.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_video_port.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/content_pipe_file.c[m
+[31m-content_pipe_file.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/content_pipe_file.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/content_pipe_inet.c[m
+[31m-content_pipe_inet.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/content_pipe_inet.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/omx_create_loaders_linux.c[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-dlfcn.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-sys/types.h[m
+[31m--[m
+[31m-sys/stat.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-dirent.h[m
+[31m--[m
+[31m-component_loader.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/component_loader.h[m
+[31m-omx_create_loaders.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/omx_create_loaders.h[m
+[31m-st_static_component_loader.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/st_static_component_loader.h[m
+[31m-common.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/common.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/omxcore.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-sys/types.h[m
+[31m--[m
+[31m-dirent.h[m
+[31m--[m
+[31m-strings.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-assert.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-OMX_ContentPipe.h[m
+[31m--[m
+[31m-omxcore.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/omxcore.h[m
+[31m-omx_create_loaders.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/omx_create_loaders.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/omxregister.c[m
+[31m-dlfcn.h[m
+[31m--[m
+[31m-dirent.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-sys/stat.h[m
+[31m--[m
+[31m-sys/types.h[m
+[31m--[m
+[31m-st_static_component_loader.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/st_static_component_loader.h[m
+[31m-common.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/common.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/st_static_component_loader.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-dlfcn.h[m
+[31m--[m
+[31m-sys/types.h[m
+[31m--[m
+[31m-dirent.h[m
+[31m--[m
+[31m-strings.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-assert.h[m
+[31m--[m
+[31m-common.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/common.h[m
+[31m-st_static_component_loader.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/st_static_component_loader.h[m
+[31m-omx_base_component.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/omx_base_component.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_dma.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-fcntl.h[m
+[31m--[m
+[31m-sys/ioctl.h[m
+[31m--[m
+[31m-sys/mman.h[m
+[31m--[m
+[31m-mpp_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_mem.h[m
+[31m-mpp_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_log.h[m
+[31m-os_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/os_mem.h[m
+[31m-mpp_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_env.h[m
+[31m-allocator_dma.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_dma.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_dma.h[m
+[31m-os_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/os_allocator.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_drm.c[m
+[31m-unistd.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-fcntl.h[m
+[31m--[m
+[31m-sys/ioctl.h[m
+[31m--[m
+[31m-sys/mman.h[m
+[31m--[m
+[31m-linux/drm.h[m
+[31m--[m
+[31m-linux/drm_mode.h[m
+[31m--[m
+[31m-os_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/os_mem.h[m
+[31m-allocator_drm.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_drm.h[m
+[31m-mpp_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_env.h[m
+[31m-mpp_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_mem.h[m
+[31m-mpp_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_log.h[m
+[31m-mpp_common.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_common.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_drm.h[m
+[31m-os_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/os_allocator.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_ion.c[m
+[31m-unistd.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-fcntl.h[m
+[31m--[m
+[31m-sys/ioctl.h[m
+[31m--[m
+[31m-sys/mman.h[m
+[31m--[m
+[31m-ion.h[m
+[31m--[m
+[31m-ion.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/ion.h[m
+[31m-os_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/os_mem.h[m
+[31m-allocator_ion.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_ion.h[m
+[31m-mpp_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_env.h[m
+[31m-mpp_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_mem.h[m
+[31m-mpp_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_log.h[m
+[31m-mpp_common.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_common.h[m
+[31m-mpp_thread.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_thread.h[m
+[31m-dirent.h[m
+[31m--[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_ion.h[m
+[31m-os_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/os_allocator.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_std.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-os_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/os_mem.h[m
+[31m-mpp_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_mem.h[m
+[31m-mpp_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_log.h[m
+[31m-allocator_std.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_std.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_std.h[m
+[31m-os_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/os_allocator.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/android/os_allocator.c[m
+[31m-allocator_drm.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/android/allocator_drm.h[m
+[31m-allocator_dma.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/android/allocator_dma.h[m
+[31m-allocator_ion.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/android/allocator_ion.h[m
+[31m-allocator_std.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/android/allocator_std.h[m
+[31m-mpp_runtime.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/android/mpp_runtime.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/android/os_env.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-os_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/android/os_env.h[m
+[31m-sys/system_properties.h[m
+[31m--[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/linux/os_allocator.c[m
+[31m-mpp_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/linux/mpp_log.h[m
+[31m-allocator_drm.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/linux/allocator_drm.h[m
+[31m-allocator_dma.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/linux/allocator_dma.h[m
+[31m-allocator_ion.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/linux/allocator_ion.h[m
+[31m-allocator_std.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/linux/allocator_std.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/linux/os_env.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-os_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/linux/os_env.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_allocator.c[m
+[31m-mpp_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_log.h[m
+[31m-mpp_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_mem.h[m
+[31m-mpp_common.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_common.h[m
+[31m-mpp_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_allocator.h[m
+[31m-mpp_allocator_impl.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_allocator_impl.h[m
+[31m-os_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_allocator.h[m
+[31m-linux/drm.h[m
+[31m--[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_allocator_impl.h[m
+[31m-mpp_thread.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_thread.h[m
+[31m-os_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_allocator.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_env.c[m
+[31m-mpp_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_env.h[m
+[31m-os_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_env.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_log.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdarg.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-mpp_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_log.h[m
+[31m-mpp_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_mem.h[m
+[31m-mpp_common.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_common.h[m
+[31m-os_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_log.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_allocator.h[m
+[31m-mpp_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_allocator.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_env.h[m
+[31m-mpp_type.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_type.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_log.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/windows/os_allocator.c[m
+[31m-os_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/windows/os_allocator.h[m
+[31m-allocator_std.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/windows/allocator_std.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/windows/os_env.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-os_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/windows/os_env.h[m
+[31m-[m
+[1mdiff --git a/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/CXX.includecache b/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/CXX.includecache[m
+[1mindex 46b3d99..8e54ca9 100644[m
+[1m--- a/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/CXX.includecache[m
+[1m+++ b/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/CXX.includecache[m
+[36m@@ -6,95 +6,3 @@[m
+ [m
+ #IncludeRegexTransform: [m
+ [m
+[31m-../../../app/include/mpp_type.h[m
+[31m-OMX_Types.h[m
+[31m-../../../app/include/OMX_Types.h[m
+[31m-[m
+[31m-../../../app/include/omx_il/OMX_Types.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_common.h[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-stdio.h[m
+[31m--[m
+[31m-direct.h[m
+[31m--[m
+[31m-io.h[m
+[31m--[m
+[31m-sys/stat.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-stddef.h[m
+[31m--[m
+[31m-sys/stat.h[m
+[31m--[m
+[31m-sys/types.h[m
+[31m--[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_env.h[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_err.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_list.h[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-mpp_thread.h[m
+[31m-../../../app/src/osal/inc/mpp_thread.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_log.h[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_mem.h[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-mpp_err.h[m
+[31m-../../../app/src/osal/inc/mpp_err.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_thread.h[m
+[31m-semaphore.h[m
+[31m-../../../app/src/osal/inc/semaphore.h[m
+[31m-pthread.h[m
+[31m-../../../app/src/osal/inc/pthread.h[m
+[31m-unistd.h[m
+[31m--[m
+[31m-semaphore.h[m
+[31m--[m
+[31m-pthread.h[m
+[31m--[m
+[31m-sys/time.h[m
+[31m--[m
+[31m-mpp_log.h[m
+[31m-../../../app/src/osal/inc/mpp_log.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_mem.cpp[m
+[31m-string.h[m
+[31m--[m
+[31m-mpp_type.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_type.h[m
+[31m-mpp_err.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_err.h[m
+[31m-mpp_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_log.h[m
+[31m-mpp_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_env.h[m
+[31m-mpp_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_mem.h[m
+[31m-mpp_list.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_list.h[m
+[31m-mpp_common.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_common.h[m
+[31m-os_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_mem.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_mem.h[m
+[31m-[m
+[1mdiff --git a/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/base/omx_base_port.c.o b/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/base/omx_base_port.c.o[m
+[1mindex e5edbac..0b493bd 100644[m
+Binary files a/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/base/omx_base_port.c.o and b/build/linux/aarch64/app/src/CMakeFiles/vx-mpp.dir/base/omx_base_port.c.o differ
+[1mdiff --git a/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/C.includecache b/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/C.includecache[m
+[1mindex 0606c83..e423d78 100644[m
+[1m--- a/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/C.includecache[m
+[1m+++ b/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/C.includecache[m
+[36m@@ -6,16 +6,6 @@[m
+ [m
+ #IncludeRegexTransform: [m
+ [m
+[31m-../../../app/include/mpp_buffer.h[m
+[31m-mpp_type.h[m
+[31m-../../../app/include/mpp_type.h[m
+[31m-mpp_err.h[m
+[31m-../../../app/include/mpp_err.h[m
+[31m-[m
+[31m-../../../app/include/mpp_type.h[m
+[31m-OMX_Types.h[m
+[31m-../../../app/include/OMX_Types.h[m
+[31m-[m
+ ../../../app/include/omx_il/OMX_Audio.h[m
+ OMX_Types.h[m
+ -[m
+[36m@@ -36,8 +26,6 @@[m [mOMX_Image.h[m
+ OMX_Other.h[m
+ -[m
+ [m
+[31m-../../../app/include/omx_il/OMX_ContentPipe.h[m
+[31m-[m
+ ../../../app/include/omx_il/OMX_Core.h[m
+ OMX_Types.h[m
+ -[m
+[36m@@ -80,18 +68,6 @@[m [mOMX_Core.h[m
+ OMX_IVCommon.h[m
+ -[m
+ [m
+[31m-../../../app/src/base/inc/omx_base_audio_port.h[m
+[31m-omx_classmagic.h[m
+[31m-../../../app/src/base/inc/omx_classmagic.h[m
+[31m-omx_base_port.h[m
+[31m-../../../app/src/base/inc/omx_base_port.h[m
+[31m-[m
+[31m-../../../app/src/base/inc/omx_base_clock_port.h[m
+[31m-omx_classmagic.h[m
+[31m-../../../app/src/base/inc/omx_classmagic.h[m
+[31m-omx_base_port.h[m
+[31m-../../../app/src/base/inc/omx_base_port.h[m
+[31m-[m
+ ../../../app/src/base/inc/omx_base_component.h[m
+ stdlib.h[m
+ -[m
+[36m@@ -106,26 +82,6 @@[m [momx_classmagic.h[m
+ omx_base_port.h[m
+ ../../../app/src/base/inc/omx_base_port.h[m
+ [m
+[31m-../../../app/src/base/inc/omx_base_filter.h[m
+[31m-OMX_Types.h[m
+[31m--[m
+[31m-OMX_Component.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-pthread.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-omx_base_component.h[m
+[31m-../../../app/src/base/inc/omx_base_component.h[m
+[31m-[m
+[31m-../../../app/src/base/inc/omx_base_image_port.h[m
+[31m-omx_classmagic.h[m
+[31m-../../../app/src/base/inc/omx_classmagic.h[m
+[31m-omx_base_port.h[m
+[31m-../../../app/src/base/inc/omx_base_port.h[m
+[31m-[m
+ ../../../app/src/base/inc/omx_base_port.h[m
+ tsemaphore.h[m
+ ../../../app/src/base/inc/tsemaphore.h[m
+[36m@@ -134,98 +90,16 @@[m [mqueue.h[m
+ omx_classmagic.h[m
+ ../../../app/src/base/inc/omx_classmagic.h[m
+ [m
+[31m-../../../app/src/base/inc/omx_base_sink.h[m
+[31m-OMX_Types.h[m
+[31m--[m
+[31m-OMX_Component.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-pthread.h[m
+[31m--[m
+[31m-omx_base_component.h[m
+[31m-../../../app/src/base/inc/omx_base_component.h[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-[m
+[31m-../../../app/src/base/inc/omx_base_source.h[m
+[31m-OMX_Types.h[m
+[31m--[m
+[31m-OMX_Component.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-pthread.h[m
+[31m--[m
+[31m-omx_base_component.h[m
+[31m-../../../app/src/base/inc/omx_base_component.h[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-[m
+[31m-../../../app/src/base/inc/omx_base_video_port.h[m
+[31m-omx_classmagic.h[m
+ ../../../app/src/base/inc/omx_classmagic.h[m
+[31m-omx_base_port.h[m
+[31m-../../../app/src/base/inc/omx_base_port.h[m
+[31m-[m
+[31m-../../../app/src/base/inc/omx_classmagic.h[m
+[31m-[m
+[31m-../../../app/src/common/inc/common.h[m
+ [m
+ ../../../app/src/common/inc/component_loader.h[m
+ OMX_Core.h[m
+ -[m
+ [m
+[31m-../../../app/src/common/inc/content_pipe_file.h[m
+[31m-unistd.h[m
+[31m--[m
+[31m-stdio.h[m
+[31m--[m
+[31m-malloc.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-fcntl.h[m
+[31m--[m
+[31m-OMX_Types.h[m
+[31m--[m
+[31m-OMX_ContentPipe.h[m
+[31m--[m
+[31m-omx_comp_debug_levels.h[m
+[31m-../../../app/src/common/inc/omx_comp_debug_levels.h[m
+[31m-[m
+[31m-../../../app/src/common/inc/content_pipe_inet.h[m
+[31m-sys/types.h[m
+[31m--[m
+[31m-sys/socket.h[m
+[31m--[m
+[31m-netinet/in.h[m
+[31m--[m
+[31m-netdb.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-malloc.h[m
+[31m--[m
+[31m-OMX_Types.h[m
+[31m--[m
+[31m-OMX_ContentPipe.h[m
+[31m--[m
+[31m-omx_comp_debug_levels.h[m
+[31m-../../../app/src/common/inc/omx_comp_debug_levels.h[m
+[31m-[m
+ ../../../app/src/common/inc/omx_comp_debug_levels.h[m
+ stdio.h[m
+ -[m
+ [m
+[31m-../../../app/src/common/inc/omx_create_loaders.h[m
+[31m-[m
+ ../../../app/src/common/inc/omxcore.h[m
+ OMX_Component.h[m
+ -[m
+[36m@@ -244,200 +118,8 @@[m [momx_comp_debug_levels.h[m
+ pthread.h[m
+ -[m
+ [m
+[31m-../../../app/src/common/inc/st_static_component_loader.h[m
+[31m-omxcore.h[m
+[31m-../../../app/src/common/inc/omxcore.h[m
+[31m-[m
+ ../../../app/src/common/inc/tsemaphore.h[m
+ [m
+[31m-../../../app/src/osal/allocator/allocator_dma.h[m
+[31m-os_allocator.h[m
+[31m-../../../app/src/osal/allocator/os_allocator.h[m
+[31m-[m
+[31m-../../../app/src/osal/allocator/allocator_drm.h[m
+[31m-os_allocator.h[m
+[31m-../../../app/src/osal/allocator/os_allocator.h[m
+[31m-[m
+[31m-../../../app/src/osal/allocator/allocator_ion.h[m
+[31m-os_allocator.h[m
+[31m-../../../app/src/osal/allocator/os_allocator.h[m
+[31m-[m
+[31m-../../../app/src/osal/allocator/allocator_std.h[m
+[31m-os_allocator.h[m
+[31m-../../../app/src/osal/allocator/os_allocator.h[m
+[31m-[m
+[31m-../../../app/src/osal/allocator/ion.h[m
+[31m-linux/types.h[m
+[31m--[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_allocator.h[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-mpp_buffer.h[m
+[31m-../../../app/src/osal/inc/mpp_buffer.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_common.h[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-stdio.h[m
+[31m--[m
+[31m-direct.h[m
+[31m--[m
+[31m-io.h[m
+[31m--[m
+[31m-sys/stat.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-stddef.h[m
+[31m--[m
+[31m-sys/stat.h[m
+[31m--[m
+[31m-sys/types.h[m
+[31m--[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_env.h[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_err.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_log.h[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_mem.h[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-mpp_err.h[m
+[31m-../../../app/src/osal/inc/mpp_err.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_thread.h[m
+[31m-semaphore.h[m
+[31m-../../../app/src/osal/inc/semaphore.h[m
+[31m-pthread.h[m
+[31m-../../../app/src/osal/inc/pthread.h[m
+[31m-unistd.h[m
+[31m--[m
+[31m-semaphore.h[m
+[31m--[m
+[31m-pthread.h[m
+[31m--[m
+[31m-sys/time.h[m
+[31m--[m
+[31m-mpp_log.h[m
+[31m-../../../app/src/osal/inc/mpp_log.h[m
+[31m-[m
+[31m-../../../app/src/osal/linux/drm.h[m
+[31m-linux/types.h[m
+[31m--[m
+[31m-asm/ioctl.h[m
+[31m--[m
+[31m-linux/types.h[m
+[31m--[m
+[31m-asm/ioctl.h[m
+[31m--[m
+[31m-sys/ioccom.h[m
+[31m--[m
+[31m-sys/types.h[m
+[31m--[m
+[31m-drm_mode.h[m
+[31m-../../../app/src/osal/linux/drm_mode.h[m
+[31m-[m
+[31m-../../../app/src/osal/linux/drm_mode.h[m
+[31m-[m
+[31m-../../../app/src/osal/os_allocator.h[m
+[31m-mpp_allocator.h[m
+[31m-../../../app/src/osal/mpp_allocator.h[m
+[31m-[m
+[31m-../../../app/src/osal/os_env.h[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/mpp_type.h[m
+[31m-[m
+[31m-../../../app/src/osal/os_mem.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_audio_port.c[m
+[31m-string.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-omxcore.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-OMX_Component.h[m
+[31m--[m
+[31m-omx_base_component.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_component.h[m
+[31m-omx_base_audio_port.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_audio_port.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_clock_port.c[m
+[31m-string.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-omxcore.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-OMX_Component.h[m
+[31m--[m
+[31m-omx_base_component.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_component.h[m
+[31m-omx_base_clock_port.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_clock_port.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_component.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-OMX_Component.h[m
+[31m--[m
+[31m-omxcore.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omxcore.h[m
+[31m-omx_base_component.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_component.h[m
+[31m-tsemaphore.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/tsemaphore.h[m
+[31m-queue.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/queue.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_filter.c[m
+[31m-omxcore.h[m
+[31m--[m
+[31m-omx_base_filter.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_filter.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_image_port.c[m
+[31m-string.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-omxcore.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-OMX_Component.h[m
+[31m--[m
+[31m-omx_base_component.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_component.h[m
+[31m-omx_base_image_port.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_image_port.h[m
+[31m-[m
+ /home/youliang/code/vx-mpp/app/src/base/omx_base_port.c[m
+ string.h[m
+ -[m
+[36m@@ -454,367 +136,3 @@[m [momx_base_component.h[m
+ omx_base_port.h[m
+ /home/youliang/code/vx-mpp/app/src/base/omx_base_port.h[m
+ [m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_sink.c[m
+[31m-omxcore.h[m
+[31m--[m
+[31m-omx_base_sink.h[m
+[31m--[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_source.c[m
+[31m-omxcore.h[m
+[31m--[m
+[31m-omx_base_source.h[m
+[31m--[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_video_port.c[m
+[31m-string.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-omxcore.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-OMX_Component.h[m
+[31m--[m
+[31m-omx_base_component.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_component.h[m
+[31m-omx_base_video_port.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/base/omx_base_video_port.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/content_pipe_file.c[m
+[31m-content_pipe_file.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/content_pipe_file.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/content_pipe_inet.c[m
+[31m-content_pipe_inet.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/content_pipe_inet.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/omx_create_loaders_linux.c[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-dlfcn.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-sys/types.h[m
+[31m--[m
+[31m-sys/stat.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-dirent.h[m
+[31m--[m
+[31m-component_loader.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/component_loader.h[m
+[31m-omx_create_loaders.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/omx_create_loaders.h[m
+[31m-st_static_component_loader.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/st_static_component_loader.h[m
+[31m-common.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/common.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/omxcore.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-sys/types.h[m
+[31m--[m
+[31m-dirent.h[m
+[31m--[m
+[31m-strings.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-assert.h[m
+[31m--[m
+[31m-OMX_Core.h[m
+[31m--[m
+[31m-OMX_ContentPipe.h[m
+[31m--[m
+[31m-omxcore.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/omxcore.h[m
+[31m-omx_create_loaders.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/omx_create_loaders.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/omxregister.c[m
+[31m-dlfcn.h[m
+[31m--[m
+[31m-dirent.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-sys/stat.h[m
+[31m--[m
+[31m-sys/types.h[m
+[31m--[m
+[31m-st_static_component_loader.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/st_static_component_loader.h[m
+[31m-common.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/common.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/st_static_component_loader.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-dlfcn.h[m
+[31m--[m
+[31m-sys/types.h[m
+[31m--[m
+[31m-dirent.h[m
+[31m--[m
+[31m-strings.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-assert.h[m
+[31m--[m
+[31m-common.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/common.h[m
+[31m-st_static_component_loader.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/st_static_component_loader.h[m
+[31m-omx_base_component.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/common/omx_base_component.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_dma.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-fcntl.h[m
+[31m--[m
+[31m-sys/ioctl.h[m
+[31m--[m
+[31m-sys/mman.h[m
+[31m--[m
+[31m-mpp_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_mem.h[m
+[31m-mpp_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_log.h[m
+[31m-os_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/os_mem.h[m
+[31m-mpp_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_env.h[m
+[31m-allocator_dma.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_dma.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_dma.h[m
+[31m-os_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/os_allocator.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_drm.c[m
+[31m-unistd.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-fcntl.h[m
+[31m--[m
+[31m-sys/ioctl.h[m
+[31m--[m
+[31m-sys/mman.h[m
+[31m--[m
+[31m-linux/drm.h[m
+[31m--[m
+[31m-linux/drm_mode.h[m
+[31m--[m
+[31m-os_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/os_mem.h[m
+[31m-allocator_drm.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_drm.h[m
+[31m-mpp_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_env.h[m
+[31m-mpp_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_mem.h[m
+[31m-mpp_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_log.h[m
+[31m-mpp_common.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_common.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_drm.h[m
+[31m-os_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/os_allocator.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_ion.c[m
+[31m-unistd.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-fcntl.h[m
+[31m--[m
+[31m-sys/ioctl.h[m
+[31m--[m
+[31m-sys/mman.h[m
+[31m--[m
+[31m-ion.h[m
+[31m--[m
+[31m-ion.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/ion.h[m
+[31m-os_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/os_mem.h[m
+[31m-allocator_ion.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_ion.h[m
+[31m-mpp_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_env.h[m
+[31m-mpp_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_mem.h[m
+[31m-mpp_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_log.h[m
+[31m-mpp_common.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_common.h[m
+[31m-mpp_thread.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_thread.h[m
+[31m-dirent.h[m
+[31m--[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_ion.h[m
+[31m-os_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/os_allocator.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_std.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-os_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/os_mem.h[m
+[31m-mpp_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_mem.h[m
+[31m-mpp_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/mpp_log.h[m
+[31m-allocator_std.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_std.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/allocator_std.h[m
+[31m-os_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/allocator/os_allocator.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/android/os_allocator.c[m
+[31m-allocator_drm.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/android/allocator_drm.h[m
+[31m-allocator_dma.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/android/allocator_dma.h[m
+[31m-allocator_ion.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/android/allocator_ion.h[m
+[31m-allocator_std.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/android/allocator_std.h[m
+[31m-mpp_runtime.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/android/mpp_runtime.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/android/os_env.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-os_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/android/os_env.h[m
+[31m-sys/system_properties.h[m
+[31m--[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/linux/os_allocator.c[m
+[31m-mpp_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/linux/mpp_log.h[m
+[31m-allocator_drm.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/linux/allocator_drm.h[m
+[31m-allocator_dma.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/linux/allocator_dma.h[m
+[31m-allocator_ion.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/linux/allocator_ion.h[m
+[31m-allocator_std.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/linux/allocator_std.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/linux/os_env.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-errno.h[m
+[31m--[m
+[31m-os_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/linux/os_env.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_allocator.c[m
+[31m-mpp_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_log.h[m
+[31m-mpp_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_mem.h[m
+[31m-mpp_common.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_common.h[m
+[31m-mpp_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_allocator.h[m
+[31m-mpp_allocator_impl.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_allocator_impl.h[m
+[31m-os_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_allocator.h[m
+[31m-linux/drm.h[m
+[31m--[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_allocator_impl.h[m
+[31m-mpp_thread.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_thread.h[m
+[31m-os_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_allocator.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_env.c[m
+[31m-mpp_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_env.h[m
+[31m-os_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_env.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_log.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdarg.h[m
+[31m--[m
+[31m-string.h[m
+[31m--[m
+[31m-mpp_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_log.h[m
+[31m-mpp_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_mem.h[m
+[31m-mpp_common.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_common.h[m
+[31m-os_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_log.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_allocator.h[m
+[31m-mpp_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_allocator.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_env.h[m
+[31m-mpp_type.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_type.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_log.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/windows/os_allocator.c[m
+[31m-os_allocator.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/windows/os_allocator.h[m
+[31m-allocator_std.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/windows/allocator_std.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/windows/os_env.c[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-os_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/windows/os_env.h[m
+[31m-[m
+[1mdiff --git a/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/CXX.includecache b/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/CXX.includecache[m
+[1mindex 46b3d99..8e54ca9 100644[m
+[1m--- a/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/CXX.includecache[m
+[1m+++ b/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/CXX.includecache[m
+[36m@@ -6,95 +6,3 @@[m
+ [m
+ #IncludeRegexTransform: [m
+ [m
+[31m-../../../app/include/mpp_type.h[m
+[31m-OMX_Types.h[m
+[31m-../../../app/include/OMX_Types.h[m
+[31m-[m
+[31m-../../../app/include/omx_il/OMX_Types.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_common.h[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-stdio.h[m
+[31m--[m
+[31m-direct.h[m
+[31m--[m
+[31m-io.h[m
+[31m--[m
+[31m-sys/stat.h[m
+[31m--[m
+[31m-unistd.h[m
+[31m--[m
+[31m-stddef.h[m
+[31m--[m
+[31m-sys/stat.h[m
+[31m--[m
+[31m-sys/types.h[m
+[31m--[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_env.h[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_err.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_list.h[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-mpp_thread.h[m
+[31m-../../../app/src/osal/inc/mpp_thread.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_log.h[m
+[31m-stdio.h[m
+[31m--[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_mem.h[m
+[31m-stdlib.h[m
+[31m--[m
+[31m-mpp_type.h[m
+[31m-../../../app/src/osal/inc/mpp_type.h[m
+[31m-mpp_err.h[m
+[31m-../../../app/src/osal/inc/mpp_err.h[m
+[31m-[m
+[31m-../../../app/src/osal/inc/mpp_thread.h[m
+[31m-semaphore.h[m
+[31m-../../../app/src/osal/inc/semaphore.h[m
+[31m-pthread.h[m
+[31m-../../../app/src/osal/inc/pthread.h[m
+[31m-unistd.h[m
+[31m--[m
+[31m-semaphore.h[m
+[31m--[m
+[31m-pthread.h[m
+[31m--[m
+[31m-sys/time.h[m
+[31m--[m
+[31m-mpp_log.h[m
+[31m-../../../app/src/osal/inc/mpp_log.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_mem.cpp[m
+[31m-string.h[m
+[31m--[m
+[31m-mpp_type.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_type.h[m
+[31m-mpp_err.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_err.h[m
+[31m-mpp_log.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_log.h[m
+[31m-mpp_env.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_env.h[m
+[31m-mpp_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_mem.h[m
+[31m-mpp_list.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_list.h[m
+[31m-mpp_common.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/mpp_common.h[m
+[31m-os_mem.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_mem.h[m
+[31m-[m
+[31m-/home/youliang/code/vx-mpp/app/src/osal/os_mem.h[m
+[31m-[m
+[1mdiff --git a/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_port.c.o b/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_port.c.o[m
+[1mindex e5edbac..0b493bd 100644[m
+Binary files a/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_port.c.o and b/build/linux/aarch64/app/src/CMakeFiles/vx_mpp_share.dir/base/omx_base_port.c.o differ
+[1mdiff --git a/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/C.includecache b/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/C.includecache[m
+[1mindex ffe076e..a6a2b8e 100755[m
+[1m--- a/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/C.includecache[m
+[1m+++ b/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/C.includecache[m
+[36m@@ -68,6 +68,78 @@[m [mOMX_Core.h[m
+ OMX_IVCommon.h[m
+ -[m
+ [m
+[32m+[m[32m../../../app/src/base/inc/omx_base_component.h[m
+[32m+[m[32mstdlib.h[m
+[32m+[m[32m-[m
+[32m+[m[32mpthread.h[m
+[32m+[m[32m-[m
+[32m+[m[32mtsemaphore.h[m
+[32m+[m[32m../../../app/src/base/inc/tsemaphore.h[m
+[32m+[m[32mqueue.h[m
+[32m+[m[32m../../../app/src/base/inc/queue.h[m
+[32m+[m[32momx_classmagic.h[m
+[32m+[m[32m../../../app/src/base/inc/omx_classmagic.h[m
+[32m+[m[32momx_base_port.h[m
+[32m+[m[32m../../../app/src/base/inc/omx_base_port.h[m
+[32m+[m
+[32m+[m[32m../../../app/src/base/inc/omx_base_port.h[m
+[32m+[m[32mtsemaphore.h[m
+[32m+[m[32m../../../app/src/base/inc/tsemaphore.h[m
+[32m+[m[32mqueue.h[m
+[32m+[m[32m../../../app/src/base/inc/queue.h[m
+[32m+[m[32momx_classmagic.h[m
+[32m+[m[32m../../../app/src/base/inc/omx_classmagic.h[m
+[32m+[m
+[32m+[m[32m../../../app/src/base/inc/omx_base_sink.h[m
+[32m+[m[32mOMX_Types.h[m
+[32m+[m[32m-[m
+[32m+[m[32mOMX_Component.h[m
+[32m+[m[32m-[m
+[32m+[m[32mOMX_Core.h[m
+[32m+[m[32m-[m
+[32m+[m[32mpthread.h[m
+[32m+[m[32m-[m
+[32m+[m[32momx_base_component.h[m
+[32m+[m[32m../../../app/src/base/inc/omx_base_component.h[m
+[32m+[m[32mstdlib.h[m
+[32m+[m[32m-[m
+[32m+[m
+[32m+[m[32m../../../app/src/base/inc/omx_base_video_port.h[m
+[32m+[m[32momx_classmagic.h[m
+[32m+[m[32m../../../app/src/base/inc/omx_classmagic.h[m
+[32m+[m[32momx_base_port.h[m
+[32m+[m[32m../../../app/src/base/inc/omx_base_port.h[m
+[32m+[m
+[32m+[m[32m../../../app/src/base/inc/omx_classmagic.h[m
+[32m+[m
+[32m+[m[32m../../../app/src/common/inc/component_loader.h[m
+[32m+[m[32mOMX_Core.h[m
+[32m+[m[32m-[m
+[32m+[m
+[32m+[m[32m../../../app/src/common/inc/omx_comp_debug_levels.h[m
+[32m+[m[32mstdio.h[m
+[32m+[m[32m-[m
+[32m+[m
+[32m+[m[32m../../../app/src/common/inc/omxcore.h[m
+[32m+[m[32mOMX_Component.h[m
+[32m+[m[32m-[m
+[32m+[m[32mOMX_Types.h[m
+[32m+[m[32m-[m
+[32m+[m[32mpthread.h[m
+[32m+[m[32m-[m
+[32m+[m[32msys/msg.h[m
+[32m+[m[32m-[m
+[32m+[m[32mcomponent_loader.h[m
+[32m+[m[32m../../../app/src/common/inc/component_loader.h[m
+[32m+[m[32momx_comp_debug_levels.h[m
+[32m+[m[32m../../../app/src/common/inc/omx_comp_debug_levels.h[m
+[32m+[m
+[32m+[m[32m../../../app/src/common/inc/queue.h[m
+[32m+[m[32mpthread.h[m
+[32m+[m[32m-[m
+[32m+[m
+[32m+[m[32m../../../app/src/common/inc/tsemaphore.h[m
+[32m+[m
+ ../../../app/src/components/kmssink/drm/dc_sw_tb_utils.h[m
+ stdint.h[m
+ -[m
+[36m@@ -126,6 +198,82 @@[m [mstddef.h[m
+ stdint.h[m
+ -[m
+ [m
+[32m+[m[32m../../../app/src/components/kmssink/omx_drm.h[m
+[32m+[m[32mstdlib.h[m
+[32m+[m[32m-[m
+[32m+[m[32mstring.h[m
+[32m+[m[32m-[m
+[32m+[m[32merrno.h[m
+[32m+[m[32m-[m
+[32m+[m[32mstdbool.h[m
+[32m+[m[32m-[m
+[32m+[m[32msys/mman.h[m
+[32m+[m[32m-[m
+[32m+[m[32mdrm_fourcc.h[m
+[32m+[m[32m-[m
+[32m+[m[32mfcntl.h[m
+[32m+[m[32m-[m
+[32m+[m[32munistd.h[m
+[32m+[m[32m-[m
+[32m+[m[32mgetopt.h[m
+[32m+[m[32m-[m
+[32m+[m[32mxf86drmMode.h[m
+[32m+[m[32m-[m
+[32m+[m[32mxf86drm.h[m
+[32m+[m[32m-[m
+[32m+[m[32mdc_sw_tb_utils.h[m
+[32m+[m[32m-[m
+[32m+[m[32mvx_drm.h[m
+[32m+[m[32m-[m
+[32m+[m[32mstdio.h[m
+[32m+[m[32m-[m
+[32m+[m[32mOMX_Types.h[m
+[32m+[m[32m-[m
+[32m+[m[32mOMX_Core.h[m
+[32m+[m[32m-[m
+[32m+[m
+[32m+[m[32m../../../app/src/components/kmssink/omx_kms_sink_component.h[m
+[32m+[m[32mOMX_Types.h[m
+[32m+[m[32m-[m
+[32m+[m[32mOMX_Component.h[m
+[32m+[m[32m-[m
+[32m+[m[32mOMX_Core.h[m
+[32m+[m[32m-[m
+[32m+[m[32mOMX_Video.h[m
+[32m+[m[32m-[m
+[32m+[m[32mOMX_IVCommon.h[m
+[32m+[m[32m-[m
+[32m+[m[32mpthread.h[m
+[32m+[m[32m-[m
+[32m+[m[32msys/ioctl.h[m
+[32m+[m[32m-[m
+[32m+[m[32msys/mman.h[m
+[32m+[m[32m-[m
+[32m+[m[32mfcntl.h[m
+[32m+[m[32m-[m
+[32m+[m[32munistd.h[m
+[32m+[m[32m-[m
+[32m+[m[32mstring.h[m
+[32m+[m[32m-[m
+[32m+[m[32msys/time.h[m
+[32m+[m[32m-[m
+[32m+[m[32merrno.h[m
+[32m+[m[32m-[m
+[32m+[m[32munistd.h[m
+[32m+[m[32m-[m
+[32m+[m[32msys/ipc.h[m
+[32m+[m[32m-[m
+[32m+[m[32msys/shm.h[m
+[32m+[m[32m-[m
+[32m+[m[32msys/resource.h[m
+[32m+[m[32m-[m
+[32m+[m[32momx_base_video_port.h[m
+[32m+[m[32m-[m
+[32m+[m[32momx_base_sink.h[m
+[32m+[m[32m-[m
+[32m+[m[32momx_drm.h[m
+[32m+[m[32m../../../app/src/components/kmssink/omx_drm.h[m
+[32m+[m
+ /home/youliang/code/vx-mpp/app/src/components/kmssink/omx_drm.c[m
+ omx_drm.h[m
+ /home/youliang/code/vx-mpp/app/src/components/kmssink/omx_drm.h[m
+[36m@@ -164,3 +312,9 @@[m [mOMX_Types.h[m
+ OMX_Core.h[m
+ -[m
+ [m
+[32m+[m[32m/home/youliang/code/vx-mpp/app/src/components/kmssink/omx_kms_sink_component.c[m
+[32m+[m[32momxcore.h[m
+[32m+[m[32m-[m
+[32m+[m[32momx_kms_sink_component.h[m
+[32m+[m[32m-[m
+[32m+[m
+[1mdiff --git a/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o b/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o[m
+[1mindex 8a13e21..eec1e1b 100644[m
+Binary files a/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o and b/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_drm.c.o differ
+[1mdiff --git a/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o b/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o[m
+[1mindex 16b1498..c5e705a 100644[m
+Binary files a/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o and b/build/linux/aarch64/app/src/components/kmssink/CMakeFiles/vx-kmssink.dir/omx_kms_sink_component.c.o differ
+[1mdiff --git a/build/linux/aarch64/app/src/components/vedec/CMakeFiles/vx-h26x.dir/C.includecache b/build/linux/aarch64/app/src/components/vedec/CMakeFiles/vx-h26x.dir/C.includecache[m
+[1mindex 597f2ef..4213e74 100644[m
+[1m--- a/build/linux/aarch64/app/src/components/vedec/CMakeFiles/vx-h26x.dir/C.includecache[m
+[1m+++ b/build/linux/aarch64/app/src/components/vedec/CMakeFiles/vx-h26x.dir/C.includecache[m
+[36m@@ -138,22 +138,12 @@[m [momx_comp_debug_levels.h[m
+ pthread.h[m
+ -[m
+ [m
+[31m-../../../app/src/common/inc/st_static_component_loader.h[m
+[31m-omxcore.h[m
+[31m-../../../app/src/common/inc/omxcore.h[m
+[31m-[m
+ ../../../app/src/common/inc/tsemaphore.h[m
+ [m
+ ../../../app/src/components/vedec/vdec/vdec.h[m
+ stdint.h[m
+ -[m
+ [m
+[31m-/home/youliang/code/vx-mpp/app/src/components/vedec/library_entry_point.c[m
+[31m-st_static_component_loader.h[m
+[31m--[m
+[31m-omx_h26xdec_component.h[m
+[31m-/home/youliang/code/vx-mpp/app/src/components/vedec/omx_h26xdec_component.h[m
+[31m-[m
+ /home/youliang/code/vx-mpp/app/src/components/vedec/omx_h26xdec_component.c[m
+ omxcore.h[m
+ -[m
+[1mdiff --git a/build/linux/aarch64/app/src/components/vedec/CMakeFiles/vx-h26x.dir/omx_h26xdec_component.c.o b/build/linux/aarch64/app/src/components/vedec/CMakeFiles/vx-h26x.dir/omx_h26xdec_component.c.o[m
+[1mindex 9496e25..00b738c 100644[m
+Binary files a/build/linux/aarch64/app/src/components/vedec/CMakeFiles/vx-h26x.dir/omx_h26xdec_component.c.o and b/build/linux/aarch64/app/src/components/vedec/CMakeFiles/vx-h26x.dir/omx_h26xdec_component.c.o differ
+[1mdiff --git a/build/linux/aarch64/app/test/CMakeFiles/vdec_kmssink_test.dir/vdec_kmssink_test.c.o b/build/linux/aarch64/app/test/CMakeFiles/vdec_kmssink_test.dir/vdec_kmssink_test.c.o[m
+[1mindex 8572e26..43ac61e 100644[m
+Binary files a/build/linux/aarch64/app/test/CMakeFiles/vdec_kmssink_test.dir/vdec_kmssink_test.c.o and b/build/linux/aarch64/app/test/CMakeFiles/vdec_kmssink_test.dir/vdec_kmssink_test.c.o differ
+[1mdiff --git a/build/linux/aarch64/bin/component/libvx-h26x.so b/build/linux/aarch64/bin/component/libvx-h26x.so[m
+[1mindex 7040fe4..459f2c9 100755[m
+Binary files a/build/linux/aarch64/bin/component/libvx-h26x.so and b/build/linux/aarch64/bin/component/libvx-h26x.so differ
+[1mdiff --git a/build/linux/aarch64/bin/component/libvx-kmssink.so b/build/linux/aarch64/bin/component/libvx-kmssink.so[m
+[1mindex bf7e2f5..4de3b33 100755[m
+Binary files a/build/linux/aarch64/bin/component/libvx-kmssink.so and b/build/linux/aarch64/bin/component/libvx-kmssink.so differ
+[1mdiff --git a/build/linux/aarch64/bin/libvx-mpp.a b/build/linux/aarch64/bin/libvx-mpp.a[m
+[1mindex 0e4bbe4..19759b6 100644[m
+Binary files a/build/linux/aarch64/bin/libvx-mpp.a and b/build/linux/aarch64/bin/libvx-mpp.a differ
+[1mdiff --git a/build/linux/aarch64/bin/libvx_mpp_share.so b/build/linux/aarch64/bin/libvx_mpp_share.so[m
+[1mindex 90cadb6..6a40613 100755[m
+Binary files a/build/linux/aarch64/bin/libvx_mpp_share.so and b/build/linux/aarch64/bin/libvx_mpp_share.so differ
+[1mdiff --git a/build/linux/aarch64/bin/vdec_kmssink_test b/build/linux/aarch64/bin/vdec_kmssink_test[m
+[1mindex a7d2aa2..a21d89e 100755[m
+Binary files a/build/linux/aarch64/bin/vdec_kmssink_test and b/build/linux/aarch64/bin/vdec_kmssink_test differ

@@ -175,8 +175,8 @@ struct drm_dev {
 };
 
 
-struct drm_dev *device_create(u32 width, u32 height,u32 index,u32 fourcc);
-void device_destroy(struct drm_dev *dev);
+struct drm_dev *drm_device_create(u32 width, u32 height,u32 index,u32 fourcc);
+void drm_device_destroy(struct drm_dev *dev);
 int drm_show(struct drm_dev *dev,OMX_U8 *buf,OMX_U32 size);
 
 

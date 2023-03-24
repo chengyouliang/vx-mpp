@@ -199,6 +199,7 @@ static s32 create_pipeline(struct drm_dev *dev, s32 index)
 	s32 i, overlay_cnt;
 
 	list_for_each_entry(crtc, &dev->crtcs, link) {
+		printf("%s %d %d %d\n",__FUNCTION__,__LINE__,crtc->pipe,index);
 		if (crtc->pipe == index)
 			goto found_crtc;
 	}
@@ -299,7 +300,7 @@ established:
 struct dma_buf *dma_buf_create(s32 fd, u32 width, u32 height, u32 fourcc,
 			       bool tiled4x4)
 {
-	struct dma_buf *buf;
+		struct dma_buf *buf;
 	struct drm_mode_create_dumb create_arg;
 	struct drm_mode_map_dumb map_arg;
 	s32 i, ret;
@@ -435,7 +436,7 @@ struct dma_buf *dma_buf_create(s32 fd, u32 width, u32 height, u32 fourcc,
 						 buf->height,
 						 buf->fourcc,
 						 buf->handles, buf->strides,
-						 buf->offsets, (const uint64_t *)buf->mods,
+						 buf->offsets, buf->mods,
 						 &buf->fb_id,
 						 DRM_MODE_FB_MODIFIERS);
 	} else {
@@ -448,7 +449,6 @@ struct dma_buf *dma_buf_create(s32 fd, u32 width, u32 height, u32 fourcc,
 	if (ret) {
 		fprintf(stderr, "failed to add fb %s\n", strerror(errno));
 	}
-
 	return buf;
 }
 
@@ -460,6 +460,7 @@ int set_mode(struct drm_dev *dev,u32 width, u32 height)
     int ret = 0;
 	drmModeConnector *conn;
     struct drm_connector *connector;
+	crtc = dev->curcrtc;
     connector = crtc->encoder->connector;
 	conn = connector->conn;
     int i;
@@ -487,7 +488,7 @@ int set_mode(struct drm_dev *dev,u32 width, u32 height)
     return ret;
 }
 
-void device_destroy(struct drm_dev *dev)
+void drm_device_destroy(struct drm_dev *dev)
 {
 	struct drm_connector *connector, *nconnector;
 	struct drm_encoder *encoder, *nencoder;
@@ -536,13 +537,13 @@ void device_destroy(struct drm_dev *dev)
 
 
 
-struct drm_dev *device_create(u32 width, u32 height,u32 index,u32 fourcc)
+struct drm_dev *drm_device_create(u32 width, u32 height,u32 index,u32 fourcc)
 {
 	s32 ret, i;
     struct drm_connector *connector;
-
+	 printf("%s %d\n",__FUNCTION__,__LINE__);
 	struct drm_dev *dev = calloc(1, sizeof(*dev));
-
+	 printf("%s %d\n",__FUNCTION__,__LINE__);
 	if (!dev)
 		return NULL;
 
@@ -567,14 +568,14 @@ struct drm_dev *device_create(u32 width, u32 height,u32 index,u32 fourcc)
 	dev->res = drmModeGetResources(dev->fd);
 	if (!dev->res) {
 		fprintf(stderr, "failed to get drm resources\n");
-		device_destroy(dev);
+		drm_device_destroy(dev);
 		return NULL;
 	}
 
 	dev->pres = drmModeGetPlaneResources(dev->fd);
 	if (!dev->pres) {
 		fprintf(stderr, "failed to get drm plane resources\n");
-		device_destroy(dev);
+		drm_device_destroy(dev);
 		return NULL;
 	}
 
@@ -610,17 +611,19 @@ struct drm_dev *device_create(u32 width, u32 height,u32 index,u32 fourcc)
     {
         return NULL;
     }
-    
     ret  = set_mode(dev,width,height);
     if (ret < 0)   
     {
+		printf("%s %d  set_mode error\n",__FUNCTION__,__LINE__);
         return NULL;
     }
     dev->buf = dma_buf_create(dev->fd,width,height,fourcc,0);
     if (dev->buf  == NULL)
     {
+		printf("%s %d  dma_buf_create error\n",__FUNCTION__,__LINE__);
         return NULL;
     }
+	printf("%s %d\n",__FUNCTION__,__LINE__);
 	return dev;
 }
 
@@ -638,17 +641,23 @@ int drm_show(struct drm_dev *dev,OMX_U8 *buf,OMX_U32 size)
     u32 height;
 	u32 flags;
 	s32 i, j;
+	printf("%s %d\n",__FUNCTION__,__LINE__);
 	u32 zpos_base[2] = {0, 3};
+	printf("%s %d %p\n",__FUNCTION__,__LINE__,dev);
+	crtc = dev->curcrtc;
     connector = crtc->encoder->connector;
 	primary = crtc->primary;
+	printf("%s %d\n",__FUNCTION__,__LINE__);
 	width = dev->buf->width;
     height = dev->buf->height;
-
+	printf("%s %d\n",__FUNCTION__,__LINE__);
     flags = DRM_MODE_ATOMIC_ALLOW_MODESET;
     
     req = drmModeAtomicAlloc();
     dmabuf = dev->buf;
+	printf("%s %d\n",__FUNCTION__,__LINE__);
     memcpy(dmabuf->maps[0],buf,size);
+	printf("%s %d\n",__FUNCTION__,__LINE__);
 	ret = drmModeAtomicAddProperty(req, connector->id,
 				       connector->prop_crtc_id, crtc->id);
 	
@@ -689,10 +698,11 @@ int drm_show(struct drm_dev *dev,OMX_U8 *buf,OMX_U32 size)
 	ret = drmModeAtomicAddProperty(req, primary->id,
 					       primary->prop_zpos,
 					       zpos_base[j] + 0);
-
+	printf("%s %d\n",__FUNCTION__,__LINE__);
 	ret = drmModeAtomicCommit(dev->fd, req, flags, dev);
 	if (ret) {
 	    fprintf(stderr, "failed to commit (%s)\n",strerror(errno));
 	}
+	printf("%s %d\n",__FUNCTION__,__LINE__);
     return ret;
 }

@@ -138,21 +138,11 @@ omx_comp_debug_levels.h
 pthread.h
 -
 
-../../../app/src/common/inc/st_static_component_loader.h
-omxcore.h
-../../../app/src/common/inc/omxcore.h
-
 ../../../app/src/common/inc/tsemaphore.h
 
 ../../../app/src/components/vedec/vdec/vdec.h
 stdint.h
 -
-
-/home/youliang/code/vx-mpp/app/src/components/vedec/library_entry_point.c
-st_static_component_loader.h
--
-omx_h26xdec_component.h
-/home/youliang/code/vx-mpp/app/src/components/vedec/omx_h26xdec_component.h
 
 /home/youliang/code/vx-mpp/app/src/components/vedec/omx_h26xdec_component.c
 omxcore.h

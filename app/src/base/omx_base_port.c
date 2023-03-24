@@ -910,6 +910,7 @@ OMX_ERRORTYPE base_port_ComponentTunnelRequest(omx_base_PortType* openmaxStandPo
   }
 
   if (openmaxStandPort->sPortParam.eDir == OMX_DirInput) {
+     printf("%s %d\n",__FUNCTION__,__LINE__);
     /* Get Port Definition of the Tunnelled Component*/
     param.nPortIndex=nTunneledPort;
     setHeader(&param, sizeof(OMX_PARAM_PORTDEFINITIONTYPE));
@@ -920,19 +921,24 @@ OMX_ERRORTYPE base_port_ComponentTunnelRequest(omx_base_PortType* openmaxStandPo
       // compatibility not reached
       return OMX_ErrorPortsNotCompatible;
     }
+     printf("%s %d\n",__FUNCTION__,__LINE__);
     openmaxStandPort->nNumTunnelBuffer=param.nBufferCountMin;
     if(param.eDomain!=openmaxStandPort->sPortParam.eDomain) {
+       printf("%s %d\n",__FUNCTION__,__LINE__);
       return OMX_ErrorPortsNotCompatible;
     }
     if(param.eDomain==OMX_PortDomainAudio) {
+       printf("%s %d\n",__FUNCTION__,__LINE__);
       if(param.format.audio.eEncoding == OMX_AUDIO_CodingMax) {
         return OMX_ErrorPortsNotCompatible;
       }
     } else if(param.eDomain==OMX_PortDomainVideo) {
+       printf("%s %d\n",__FUNCTION__,__LINE__);
       if(param.format.video.eCompressionFormat == OMX_VIDEO_CodingMax) {
         return OMX_ErrorPortsNotCompatible;
       }
     } else if(param.eDomain==OMX_PortDomainOther) {
+       printf("%s %d\n",__FUNCTION__,__LINE__);
       if(param.format.other.eFormat == OMX_OTHER_FormatMax) {
         return OMX_ErrorPortsNotCompatible;
       }
@@ -1001,6 +1007,7 @@ OMX_ERRORTYPE base_port_ComponentTunnelRequest(omx_base_PortType* openmaxStandPo
       openmaxStandPort->nTunnelFlags=0;
       return OMX_ErrorPortsNotCompatible;
     }
+     printf("%s %d\n",__FUNCTION__,__LINE__);
   } else {
     // output port
     // all the consistency checks are under other component responsibility
@@ -1014,24 +1021,28 @@ OMX_ERRORTYPE base_port_ComponentTunnelRequest(omx_base_PortType* openmaxStandPo
       // compatibility not reached
       return OMX_ErrorPortsNotCompatible;
     }
+    printf("%s %d\n",__FUNCTION__,__LINE__);
     if(param.eDomain!=openmaxStandPort->sPortParam.eDomain) {
       return OMX_ErrorPortsNotCompatible;
     }
-
+    printf("%s %d\n",__FUNCTION__,__LINE__);
     if(param.eDomain==OMX_PortDomainAudio) {
+      printf("%s %d\n",__FUNCTION__,__LINE__);
       if(param.format.audio.eEncoding == OMX_AUDIO_CodingMax) {
         return OMX_ErrorPortsNotCompatible;
       }
     } else if(param.eDomain==OMX_PortDomainVideo) {
+      printf("%s %d\n",__FUNCTION__,__LINE__);
       if(param.format.video.eCompressionFormat == OMX_VIDEO_CodingMax) {
         return OMX_ErrorPortsNotCompatible;
       }
     } else if(param.eDomain==OMX_PortDomainOther) {
+      printf("%s %d\n",__FUNCTION__,__LINE__);
       if(param.format.other.eFormat == OMX_OTHER_FormatMax) {
         return OMX_ErrorPortsNotCompatible;
       }
     }
-
+  printf("%s %d\n",__FUNCTION__,__LINE__);
     /*Check for and set proprietary communication flag*/
     if(PORT_IS_DEEP_TUNNELED(openmaxStandPort)) {
       OMX_VENDOR_PROP_TUNNELSETUPTYPE pPropTunnelSetup;
@@ -1060,6 +1071,6 @@ OMX_ERRORTYPE base_port_ComponentTunnelRequest(omx_base_PortType* openmaxStandPo
 
     openmaxStandPort->eBufferSupplier=OMX_BufferSupplyOutput;
   }
-
+    printf("%s %d\n",__FUNCTION__,__LINE__);
   return OMX_ErrorNone;
 }
