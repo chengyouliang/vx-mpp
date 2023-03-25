@@ -641,23 +641,17 @@ int drm_show(struct drm_dev *dev,OMX_U8 *buf,OMX_U32 size)
     u32 height;
 	u32 flags;
 	s32 i, j;
-	printf("%s %d\n",__FUNCTION__,__LINE__);
 	u32 zpos_base[2] = {0, 3};
-	printf("%s %d %p\n",__FUNCTION__,__LINE__,dev);
 	crtc = dev->curcrtc;
     connector = crtc->encoder->connector;
 	primary = crtc->primary;
-	printf("%s %d\n",__FUNCTION__,__LINE__);
 	width = dev->buf->width;
     height = dev->buf->height;
-	printf("%s %d\n",__FUNCTION__,__LINE__);
     flags = DRM_MODE_ATOMIC_ALLOW_MODESET;
     
     req = drmModeAtomicAlloc();
     dmabuf = dev->buf;
-	printf("%s %d\n",__FUNCTION__,__LINE__);
     memcpy(dmabuf->maps[0],buf,size);
-	printf("%s %d\n",__FUNCTION__,__LINE__);
 	ret = drmModeAtomicAddProperty(req, connector->id,
 				       connector->prop_crtc_id, crtc->id);
 	
@@ -698,11 +692,9 @@ int drm_show(struct drm_dev *dev,OMX_U8 *buf,OMX_U32 size)
 	ret = drmModeAtomicAddProperty(req, primary->id,
 					       primary->prop_zpos,
 					       zpos_base[j] + 0);
-	printf("%s %d\n",__FUNCTION__,__LINE__);
 	ret = drmModeAtomicCommit(dev->fd, req, flags, dev);
 	if (ret) {
 	    fprintf(stderr, "failed to commit (%s)\n",strerror(errno));
 	}
-	printf("%s %d\n",__FUNCTION__,__LINE__);
     return ret;
 }
