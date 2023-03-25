@@ -281,7 +281,7 @@ void omx_videodec_component_BufferMgmtCallback(OMX_COMPONENTTYPE *openmaxStandCo
 #if 1
     omx_videodec_component_PrivateType* omx_videodec_component_Private = (omx_videodec_component_PrivateType*)openmaxStandComp->pComponentPrivate;
     pOutputBuffer->nFilledLen = 0;
-#if 1
+#if 0
       OMX_U8 *ptr = pInputBuffer->pBuffer;
 	    printf("%s %d %d\n",__FUNCTION__,__LINE__,pInputBuffer->nFilledLen);
 	    for(int k=0;k<100;k++){
