@@ -300,7 +300,7 @@ established:
 struct dma_buf *dma_buf_create(s32 fd, u32 width, u32 height, u32 fourcc,
 			       bool tiled4x4)
 {
-		struct dma_buf *buf;
+	struct dma_buf *buf;
 	struct drm_mode_create_dumb create_arg;
 	struct drm_mode_map_dumb map_arg;
 	s32 i, ret;

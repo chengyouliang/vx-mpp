@@ -432,7 +432,6 @@ OMX_ERRORTYPE omx_kms_sink_component_SetParameter(
   OMX_PARAM_PORTDEFINITIONTYPE *pPortDef;
   OMX_VIDEO_PARAM_PORTFORMATTYPE *pVideoPortFormat;
   OMX_U32 portIndex;
-   printf("%s %d\n",__FUNCTION__,__LINE__);
 
   /* Check which structure we are being fed and make control its header */
   OMX_COMPONENTTYPE *openmaxStandComp = (OMX_COMPONENTTYPE *)hComponent;
