@@ -627,7 +627,29 @@ struct drm_dev *drm_device_create(u32 width, u32 height,u32 index,u32 fourcc)
 	return dev;
 }
 
-
+int plane_cpy(struct drm_dev *dev,OMX_U8 *buf,OMX_U32 size)
+{
+	struct dma_buf *pdma_buf;
+	int plane_len;
+	if (!dev  || !buf)
+	{
+		return -1;
+	}
+	pdma_buf = dev->buf;
+	switch (pdma_buf->fourcc){
+	case DRM_FORMAT_NV12:
+		plane_len = pdma_buf->width * pdma_buf->height;
+		// y plane;
+		memcpy(pdma_buf->maps[0],buf,plane_len);
+		// uv plane
+		memcpy(pdma_buf->maps[1],buf+plane_len,size-plane_len);
+		break;
+	default:
+		printf("[%d] format not supported.\n", pdma_buf->fourcc);
+		break;
+	}
+	return 0; 
+}
 
 int drm_show(struct drm_dev *dev,OMX_U8 *buf,OMX_U32 size)
 {
@@ -650,8 +672,10 @@ int drm_show(struct drm_dev *dev,OMX_U8 *buf,OMX_U32 size)
     flags = DRM_MODE_ATOMIC_ALLOW_MODESET;
     
     req = drmModeAtomicAlloc();
+	plane_cpy(dev,buf,size);
     dmabuf = dev->buf;
-    memcpy(dmabuf->maps[0],buf,size);
+    //memcpy(dmabuf->maps[0],buf,size);
+
 	ret = drmModeAtomicAddProperty(req, connector->id,
 				       connector->prop_crtc_id, crtc->id);
 	

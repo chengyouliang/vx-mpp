@@ -208,6 +208,7 @@ static void omx_writePlane(OMX_BUFFERHEADERTYPE* dec_buf, uint8_t* data, uint32_
     dec_buf->nFilledLen += width * height;
 	} else {
 		for (uint32_t  h = 0; h < height; h++) {
+      
       memcpy(dec_buf->pBuffer+dec_buf->nFilledLen, data,width);
       dec_buf->nFilledLen += width;
 			data += stride;
@@ -242,6 +243,7 @@ static void omx_hander_to_buffer(OMX_BUFFERHEADERTYPE*dec_buf, FrameHandle frame
 		break;
 	case VDEC_FORMAT_NV12:
 	case VDEC_FORMAT_P010:
+    printf("%s %d %d %d %d\n",__FUNCTION__,__LINE__,width,pitch[0],pitch[1]);
 		width = (format == VDEC_FORMAT_P010) ? width * 2 : width;
 		omx_writePlane(dec_buf, data[0], width, height, pitch[0]);
 		omx_writePlane(dec_buf, data[1], width, height / 2, pitch[1]);

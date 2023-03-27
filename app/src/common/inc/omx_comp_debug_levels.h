@@ -64,7 +64,7 @@
 
 /** All the messages - max value
  */
-#define DEB_ALL_MESS   0
+#define DEB_ALL_MESS   255
 
 /** \def DEBUG_LEVEL is the current level do debug output on standard err */
 #define DEBUG_LEVEL (DEB_ALL_MESS)
