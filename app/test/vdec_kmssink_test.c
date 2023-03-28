@@ -362,13 +362,13 @@ OMX_ERRORTYPE videodecEventHandler(
             DEBUG(DEB_LEV_ERR, "Unable to use the color conv comp allocate buffer\n");
             exit(1);
           }
-          DEBUG(DEB_LEV_FULL_SEQ, "In %s pInBufferSink[0]->pBuffer=%x pBuffer=%x\n", __func__,(int)pInBufferSink[0]->pBuffer,(int)pOutBuffer[0]->pBuffer);
+          DEBUG(DEB_LEV_FULL_SEQ, "In %s pInBufferSink[0]->pBuffer=%p pBuffer=%p\n", __func__,pInBufferSink[0]->pBuffer,pOutBuffer[0]->pBuffer);
           err = OMX_UseBuffer(appPriv->video_sink_handle, &pInBufferSink[1], 0, NULL, pOutBuffer[0]->nAllocLen, pOutBuffer[1]->pBuffer);
           if(err != OMX_ErrorNone) {
             DEBUG(DEB_LEV_ERR, "Unable to use the color conv comp allocate buffer\n");
             exit(1);
           }
-          DEBUG(DEB_LEV_FULL_SEQ, "In %s pInBufferSink[1]->pBuffer=%x pBuffer=%x\n", __func__,(int)pInBufferSink[1]->pBuffer,(int)pOutBuffer[1]->pBuffer);
+          DEBUG(DEB_LEV_FULL_SEQ, "In %s pInBufferSink[1]->pBuffer=%p pBuffer=%p\n", __func__,pInBufferSink[1]->pBuffer,pOutBuffer[1]->pBuffer);
           tsem_down(appPriv->videoSinkEventSem);
         }
         err = OMX_SendCommand(appPriv->video_sink_handle, OMX_CommandStateSet, OMX_StateExecuting, NULL);
@@ -577,8 +577,11 @@ int main(int argc, char** argv) {
     /* Initialize application private data */
   appPriv = malloc(sizeof(appPrivateType));  
   appPriv->decoderEventSem = malloc(sizeof(tsem_t));
+  appPriv->videoSinkEventSem = malloc(sizeof(tsem_t));
+  appPriv->eofSem = malloc(sizeof(tsem_t));
   tsem_init(appPriv->decoderEventSem, 0);
-
+  tsem_init(appPriv->videoSinkEventSem, 0);
+  tsem_init(appPriv->eofSem, 0);
   appPriv->fd = fopen(argv[1], "rb");
   if(appPriv->fd == NULL) {
     DEBUG(DEB_LEV_ERR, "Error in opening input file \n");
@@ -618,13 +621,6 @@ int main(int argc, char** argv) {
   } else {
     printf("Found The component for kms sink is %s\n", "OMX.st.video.kms_sink");
   }
-  #if 0
-  err = OMX_SetupTunnel(appPriv->videodechandle, 1, appPriv->video_sink_handle, 0);
-  if(err != OMX_ErrorNone) {
-      DEBUG(DEB_LEV_ERR, "Set up Tunnel between video dec & X-video sink Failed\n");
-      exit(1);
-  }
-#endif
    /** sending command to video decoder component to go to idle state */
   pInBuffer[0] = pInBuffer[1] = NULL;
   err = OMX_SendCommand(appPriv->videodechandle, OMX_CommandStateSet, OMX_StateIdle, NULL);
@@ -648,38 +644,40 @@ int main(int argc, char** argv) {
     printf("OMX_CommandStateSet error...\n");
     exit(1);
   }
-
   
   err = OMX_SendCommand(appPriv->video_sink_handle, OMX_CommandStateSet, OMX_StateIdle, NULL);
   if(err != OMX_ErrorNone){
     printf("OMX_CommandStateSet error...\n");
     exit(1);
   }
+  tsem_down(appPriv->videoSinkEventSem);
+
+   err = OMX_UseBuffer(appPriv->video_sink_handle, &pInBufferSink[0], 0, NULL, pOutBuffer[0]->nAllocLen, pOutBuffer[0]->pBuffer);
+  if(err != OMX_ErrorNone) {
+      DEBUG(DEB_LEV_ERR, "Unable to use the color conv comp allocate buffer\n");
+      exit(1);
+  }
+  DEBUG(DEB_LEV_FULL_SEQ, "In %s pInBufferSink[0]->pBuffer=%p pBuffer=%p\n", __func__,pInBufferSink[0]->pBuffer,pOutBuffer[0]->pBuffer);
+  err = OMX_UseBuffer(appPriv->video_sink_handle, &pInBufferSink[1], 0, NULL, pOutBuffer[0]->nAllocLen, pOutBuffer[1]->pBuffer);
+  if(err != OMX_ErrorNone) {
+      DEBUG(DEB_LEV_ERR, "Unable to use the color conv comp allocate buffer\n");
+      exit(1);
+  }
+
   err = OMX_SendCommand(appPriv->video_sink_handle, OMX_CommandPortEnable, 0, NULL);
   if(err != OMX_ErrorNone) {
       DEBUG(DEB_LEV_ERR,"video sink input port enable failed\n");
       exit(1);
   }
   tsem_down(appPriv->videoSinkEventSem);
-  err = OMX_UseBuffer(appPriv->video_sink_handle, &pInBufferSink[0], 0, NULL, pOutBuffer[0]->nAllocLen, pOutBuffer[0]->pBuffer);
-  if(err != OMX_ErrorNone) {
-      DEBUG(DEB_LEV_ERR, "Unable to use the color conv comp allocate buffer\n");
-      exit(1);
-  }
-  DEBUG(DEB_LEV_FULL_SEQ, "In %s pInBufferSink[0]->pBuffer=%x pBuffer=%x\n", __func__,(int)pInBufferSink[0]->pBuffer,(int)pOutBuffer[0]->pBuffer);
-  err = OMX_UseBuffer(appPriv->video_sink_handle, &pInBufferSink[1], 0, NULL, pOutBuffer[0]->nAllocLen, pOutBuffer[1]->pBuffer);
-  if(err != OMX_ErrorNone) {
-      DEBUG(DEB_LEV_ERR, "Unable to use the color conv comp allocate buffer\n");
-      exit(1);
-  }
-  DEBUG(DEB_LEV_FULL_SEQ, "In %s pInBufferSink[1]->pBuffer=%x pBuffer=%x\n", __func__,(int)pInBufferSink[1]->pBuffer,(int)pOutBuffer[1]->pBuffer);
-  tsem_down(appPriv->videoSinkEventSem);
+
+  DEBUG(DEB_LEV_FULL_SEQ, "In %s pInBufferSink[1]->pBuffer=%p pBuffer=%p\n", __func__,pInBufferSink[1]->pBuffer,pOutBuffer[1]->pBuffer);
   
   err = OMX_SendCommand(appPriv->video_sink_handle, OMX_CommandStateSet, OMX_StateExecuting, NULL);
   tsem_down(appPriv->videoSinkEventSem);
 
   /** sending command to video decoder component to go to executing state */
-  err = OMX_SendCommand(appPriv->videodechandle, OMX_CommandStateSet, OMX_StateExecuting, NULL);
+  err = OMX_SendCommand(appPriv->videodechandle, OMX_CommandStateSet, OMX_StateExecuting, NULL);\
   tsem_down(appPriv->decoderEventSem);
 
   err = OMX_SendCommand(appPriv->videodechandle, OMX_CommandPortEnable, 1, NULL);
@@ -698,23 +696,7 @@ int main(int argc, char** argv) {
   err = OMX_FillThisBuffer(appPriv->videodechandle, pOutBuffer[0]);
   err = OMX_FillThisBuffer(appPriv->videodechandle, pOutBuffer[1]);
 
-#if 0
-  err = OMX_SendCommand(appPriv->video_sink_handle, OMX_CommandPortEnable, 0, NULL);
-  if(err != OMX_ErrorNone) {
-      DEBUG(DEB_LEV_ERR,"video sink input port enable failed\n");
-      exit(1);
-  }
-  tsem_down(appPriv->videoSinkEventSem);
-
-
-  err = OMX_SendCommand(appPriv->video_sink_handle, OMX_CommandStateSet, OMX_StateExecuting, NULL);
-  if(err != OMX_ErrorNone) {
-      DEBUG(DEB_LEV_ERR,"video sink OMX_StateExecuting  failed\n");
-      exit(1);
-  }
-  tsem_down(appPriv->videoSinkEventSem);
-#endif
-  int data_read;
+ int data_read;
 #if 1
   printf("%s %d\n",__FUNCTION__,__LINE__);
   data_read = GetNextFrame(pctx,pInBuffer[0]->pBuffer,&size);
@@ -740,12 +722,56 @@ int main(int argc, char** argv) {
   DEBUG(DEB_LEV_PARAMS, "Empty second buffer %p\n", pInBuffer[1]->pBuffer);
   err = OMX_EmptyThisBuffer(appPriv->videodechandle, pInBuffer[1]);
 
-  while(1) {
-    if('Q' == toupper(getchar())) {
+  DEBUG(DEB_LEV_PARAMS,"Waiting for  EOS\n");
+#if 0
+  while(1) {    
+  if('Q' == toupper(getchar())) {
       bEOS = OMX_TRUE;
       break;
     }
   }
+#endif
+  tsem_down(appPriv->eofSem);
+  DEBUG(DEB_LEV_PARAMS, "The execution of the video decoding process is terminated\n");
+  /** state change of all components from executing to idle */
+  err = OMX_SendCommand(appPriv->videodechandle, OMX_CommandStateSet, OMX_StateIdle, NULL);
+  tsem_down(appPriv->decoderEventSem);
+  err = OMX_SendCommand(appPriv->video_sink_handle, OMX_CommandStateSet, OMX_StateIdle, NULL);
+  tsem_down(appPriv->videoSinkEventSem);
+
+
+  /** state change of all components from executing to OMX_StateLoaded */
+  err = OMX_SendCommand(appPriv->videodechandle, OMX_CommandStateSet, OMX_StateLoaded, NULL);
+ 
+  err = OMX_SendCommand(appPriv->video_sink_handle, OMX_CommandStateSet, OMX_StateLoaded, NULL);
+ 
+
+  err = OMX_FreeBuffer(appPriv->video_sink_handle, 0, pInBufferSink[0]);
+  err = OMX_FreeBuffer(appPriv->video_sink_handle, 0, pInBufferSink[1]);
+  /** freeing buffers of video decoder input ports */
+  DEBUG(DEB_LEV_PARAMS, "Video dec to loaded\n");
+  err = OMX_FreeBuffer(appPriv->videodechandle, 0, pInBuffer[0]);
+  err = OMX_FreeBuffer(appPriv->videodechandle, 0, pInBuffer[1]);
+  DEBUG(DEB_LEV_PARAMS, "Free Video dec output ports\n");
+  err = OMX_FreeBuffer(appPriv->videodechandle, 1, pOutBuffer[0]);
+  err = OMX_FreeBuffer(appPriv->videodechandle, 1, pOutBuffer[1]);
+  //等free buffer 完成。
+  tsem_down(appPriv->videoSinkEventSem);
+  tsem_down(appPriv->decoderEventSem);
+   
+  DEBUG(DEB_LEV_SIMPLE_SEQ, "All components released\n");
+  OMX_FreeHandle(appPriv->videodechandle);
+  DEBUG(DEB_LEV_SIMPLE_SEQ, "video dec freed\n");
+  OMX_FreeHandle(appPriv->video_sink_handle);
+  DEBUG(DEB_LEV_SIMPLE_SEQ, "video dec freed\n");
+  OMX_Deinit();
+  DEBUG(DEB_LEV_SIMPLE_SEQ, "All components freed. Closing...\n");
+  free(appPriv->decoderEventSem);
+  free(appPriv->videoSinkEventSem);
+  free(appPriv->eofSem);
+  delRawFrameExtract(pctx);
+  free(appPriv);
+
   return 0;
 }
 

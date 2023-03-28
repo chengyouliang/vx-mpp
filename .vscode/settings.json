@@ -17,6 +17,7 @@
         "mpp_log.h": "c",
         "tsemaphore.h": "c",
         "limits": "c",
-        "omx_base_video_port.h": "c"
+        "omx_base_video_port.h": "c",
+        "omx_base_sink.h": "c"
     }
 }
